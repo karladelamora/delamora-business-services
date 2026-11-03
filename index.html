@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De La Mora Business Services | San Diego, CA</title>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #2563EB;
+            --accent-glow: #3B82F6;
+            --secondary: #0D9488;
+            --bg-dark: #090D16;
+            --bg-card: rgba(15, 23, 42, 0.65);
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border-glass: rgba(255, 255, 255, 0.12);
+            --radius-lg: 16px;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 5%;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            background: rgba(9, 13, 22, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFF, var(--accent-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 5% 4rem;
+            background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.15), transparent 60%);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 99px;
+            color: var(--accent-glow);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(37, 99, 235, 0.4);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(37, 99, 235, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .service-card ul li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .service-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+
+        .estimator-section {
+            background: linear-gradient(180deg, transparent, rgba(13, 148, 136, 0.05));
+        }
+
+        .estimator-form {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 2.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-glass);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .estimate-output {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px dashed var(--accent);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        footer {
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid var(--border-glass);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">De La Mora</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#estimator">Estimate & Contact</a></li>
+            </ul>
+            <a href="#estimator" class="btn-primary">Consultation</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">San Diego's Premier Business Operations & Finance Partner</span>
+            <h1>Tailored Operational Precision & Financial Clarity</h1>
+            <p>Empowering San Diego enterprises with end-to-end warehouse inventory management, internal controls, accounting, and bookkeeping solutions.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#estimator" class="btn-primary">Request Consultation</a>
+                <a href="#services" class="glass-panel" style="padding: 0.75rem 1.5rem; color: #fff; text-decoration: none; font-weight: 600; border-radius: 99px;">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="container">
+        <div class="section-title">
+            <h2>Our Core Expertise</h2>
+            <p>Scalable, high-impact business services designed for seamless operations.</p>
+        </div>
+        <div class="services-grid">
+            <div class="glass-panel service-card">
+                <div class="service-icon">📦</div>
+                <h3>Warehouse Inventory Management</h3>
+                <ul>
+                    <li>Cycle counts & audits</li>
+                    <li>Receiving & fulfillment tracking</li>
+                    <li>SKU optimization</li>
+                    <li>Real-time inventory accuracy</li>
+                </ul>
+            </div>
+            <div class="glass-panel service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Internal Controls</h3>
+                <ul>
+                    <li>Operational audits</li>
+                    <li>Asset protection</li>
+                    <li>Standard Operating Procedures (SOPs)</li>
+                    <li>Workflow risk mitigation</li>
+                </ul>
+            </div>
+            <div class="glass-panel service-card">
+                <div class="service-icon">📊</div>
+                <h3>Accounting</h3>
+                <ul>
+                    <li>Financial reporting & analysis</li>
+                    <li>General ledger management</li>
+                    <li>Cash flow forecasting</li>
+                    <li>Month-end & year-end closings</li>
+                </ul>
+            </div>
+            <div class="glass-panel service-card">
+                <div class="service-icon">💼</div>
+                <h3>Bookkeeping</h3>
+                <ul>
+                    <li>Accounts Payable & Receivable (AP/AR)</li>
+                    <li>Bank & credit card reconciliations</li>
+                    <li>Expense categorization</li>
+                    <li>Comprehensive payroll support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="glass-panel about-content" style="padding: 3rem;">
+            <div>
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">Why Choose De La Mora?</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Based right here in San Diego, CA, De La Mora Business Services bridges the gap between daily operational logistics and high-level financial strategy.</p>
+                <p style="color: var(--text-muted);">Whether you need hands-on warehouse inventory control or rigorous financial accounting, our experienced team delivers local expertise, precision, and dependable execution.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
+                <div class="glass-panel" style="padding: 1.5rem;">
+                    <h3 style="font-size: 2rem; color: var(--accent-glow);">99.8%</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Inventory Accuracy Target</p>
+                </div>
+                <div class="glass-panel" style="padding: 1.5rem;">
+                    <h3 style="font-size: 2rem; color: var(--secondary);">100%</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Local SD Commitment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="estimator" class="container estimator-section">
+        <div class="section-title">
+            <h2>Interactive Service Estimator</h2>
+            <p>Customize your service package and request an instant consultation.</p>
+        </div>
+        <div class="glass-panel estimator-form">
+            <form id="consultationForm">
+                <div class="form-group">
+                    <label for="companyName">Business Name</label>
+                    <input type="text" id="companyName" class="form-control" placeholder="San Diego Enterprise LLC" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Contact Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="contact@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Select Required Services</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="inventory" class="svc-check"> Warehouse Inventory
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="controls" class="svc-check"> Internal Controls
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="accounting" class="svc-check"> Financial Accounting
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="bookkeeping" class="svc-check"> Bookkeeping & AP/AR
+                        </label>
+                    </div>
+                </div>
+                <div class="estimate-output" id="estimateBox">
+                    Estimated Monthly Hours / Scope: <strong id="estimateVal">Select options above</strong>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1.5rem;">Submit Consultation Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 De La Mora Business Services. San Diego, CA. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const checks = document.querySelectorAll('.svc-check');
+        const estimateVal = document.getElementById('estimateVal');
+
+        checks.forEach(check => {
+            check.addEventListener('change', updateEstimate);
+        });
+
+        function updateEstimate() {
+            let count = 0;
+            checks.forEach(c => { if(c.checked) count++; });
+            if (count === 0) {
+                estimateVal.textContent = 'Select options above';
+            } else if (count === 1) {
+                estimateVal.textContent = 'Basic Package (~15-25 hrs/mo)';
+            } else if (count === 2) {
+                estimateVal.textContent = 'Standard Package (~30-50 hrs/mo)';
+            } else if (count === 3) {
+                estimateVal.textContent = 'Advanced Operations (~60-90 hrs/mo)';
+            } else {
+                estimateVal.textContent = 'Full Enterprise Suite (Custom Hours)';
+            }
+        }
+
+        document.getElementById('consultationForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for reaching out! De La Mora Business Services will contact you shortly.');
+        });
+    </script>
+</body>
+</html>
