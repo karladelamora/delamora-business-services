@@ -8,7 +8,7 @@
         :root {
             --primary: #0F172A;
             --accent: #2563EB;
-            --accent-glow: #3B82F6;
+            --accent-glow: #3882F6;
             --secondary: #0D9488;
             --bg-dark: #090D16;
             --bg-card: rgba(15, 23, 42, 0.65);
@@ -47,31 +47,35 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            padding: 1rem 5%;
             transition: all 0.3s ease;
+            padding: 1.5rem 0;
         }
-        
+
         header.scrolled {
             background: rgba(9, 13, 22, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-glass);
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: clamp(1.2rem, 2vw, 1.6rem);
-            font-weight: 800;
-            background: linear-gradient(135deg, #FFF, var(--accent-glow));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
             text-decoration: none;
+            letter-spacing: -0.025em;
         }
 
         .nav-links {
@@ -83,122 +87,78 @@
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
             color: var(--text-main);
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent), var(--secondary));
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 99px;
-            text-decoration: none;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
-        }
-
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8rem 5% 4rem;
-            background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.15), transparent 60%);
+            padding: 12rem 0 6rem 0;
             text-align: center;
-        }
-
-        .hero-content {
-            max-width: 850px;
+            position: relative;
         }
 
         .badge {
             display: inline-block;
-            padding: 0.4rem 1rem;
+            padding: 0.5rem 1rem;
             background: rgba(37, 99, 235, 0.1);
             border: 1px solid rgba(37, 99, 235, 0.3);
-            border-radius: 99px;
+            border-radius: 9999px;
             color: var(--accent-glow);
             font-size: 0.875rem;
             margin-bottom: 1.5rem;
-            font-weight: 600;
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+        h1 {
+            font-size: 3.5rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            font-weight: 800;
+            background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
-            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            font-size: 1.25rem;
             color: var(--text-muted);
-            margin-bottom: 2.5rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5rem 5%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
-
-        .section-title h2 {
-            font-size: clamp(2rem, 3.5vw, 2.75rem);
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            margin-top: 4rem;
         }
 
         .service-card {
-            padding: 2rem;
+            padding: 2.5rem;
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
             border-color: rgba(37, 99, 235, 0.4);
         }
 
         .service-icon {
             width: 48px;
             height: 48px;
-            background: rgba(37, 99, 235, 0.15);
+            background: rgba(13, 148, 136, 0.1);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
         }
 
         .service-card h3 {
             font-size: 1.25rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
         }
 
         .service-card ul {
@@ -209,40 +169,15 @@
 
         .service-card ul li {
             margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.2rem;
-        }
-
-        .service-card ul li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                display: none;
-            }
         }
 
         .estimator-section {
-            background: linear-gradient(180deg, transparent, rgba(13, 148, 136, 0.05));
+            padding: 6rem 0;
         }
 
         .estimator-form {
-            max-width: 650px;
-            margin: 0 auto;
+            max-width: 600px;
+            margin: 2rem auto 0 auto;
             padding: 2.5rem;
         }
 
@@ -253,17 +188,18 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            font-weight: 500;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         .form-control {
             width: 100%;
-            padding: 0.8rem 1rem;
+            padding: 0.75rem 1rem;
             background: rgba(15, 23, 42, 0.8);
             border: 1px solid var(--border-glass);
             border-radius: 8px;
             color: var(--text-main);
-            font-size: 1rem;
+            font-family: inherit;
         }
 
         .form-control:focus {
@@ -272,61 +208,86 @@
         }
 
         .checkbox-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 0.75rem;
         }
 
         .checkbox-label {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             cursor: pointer;
-            font-size: 0.95rem;
-            color: var(--text-muted);
+            color: var(--text-main);
         }
 
         .estimate-output {
-            margin-top: 1.5rem;
-            padding: 1rem;
+            margin-top: 2rem;
+            padding: 1.5rem;
             background: rgba(37, 99, 235, 0.1);
-            border: 1px dashed var(--accent);
             border-radius: 8px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
             text-align: center;
         }
 
+        .btn-primary {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
         footer {
-            padding: 3rem 5%;
-            text-align: center;
             border-top: 1px solid var(--border-glass);
+            padding: 3rem 0;
+            text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
         }
     </style>
 </head>
 <body>
 
     <header id="header">
-        <div class="nav-container">
-            <a href="#" class="logo">De La Mora</a>
+        <div class="container nav-container">
+            <a href="#" class="logo">De La Mora Business Services</a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#estimator">Estimate & Contact</a></li>
+                <li><a href="#estimator">Estimator</a></li>
             </ul>
-            <a href="#estimator" class="btn-primary">Consultation</a>
         </div>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <span class="badge">San Diego's Premier Business Operations & Finance Partner</span>
-            <h1>Tailored Operational Precision & Financial Clarity</h1>
+        <div class="container">
+            <span class="badge">San Diego's Premier Business Operations & Financial Clarity</span>
+            <h1>Operational Efficiency.<br>Financial Precision.</h1>
             <p>Empowering San Diego enterprises with end-to-end warehouse inventory management, internal controls, accounting, and bookkeeping solutions.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#estimator" class="btn-primary">Request Consultation</a>
-                <a href="#services" class="glass-panel" style="padding: 0.75rem 1.5rem; color: #fff; text-decoration: none; font-weight: 600; border-radius: 99px;">Explore Services</a>
-            </div>
         </div>
     </section>
 
@@ -367,7 +328,7 @@
                 </ul>
             </div>
             <div class="glass-panel service-card">
-                <div class="service-icon">💼</div>
+                <div class="service-icon">💳</div>
                 <h3>Bookkeeping</h3>
                 <ul>
                     <li>Accounts Payable & Receivable (AP/AR)</li>
@@ -382,7 +343,7 @@
     <section id="about" class="container">
         <div class="glass-panel about-content" style="padding: 3rem;">
             <div>
-                <h2 style="font-size: 2rem; margin-bottom: 1rem;">Why Choose De La Mora?</h2>
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">Why Choose De La Mora Business Services?</h2>
                 <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Based right here in San Diego, CA, De La Mora Business Services bridges the gap between daily operational logistics and high-level financial strategy.</p>
                 <p style="color: var(--text-muted);">Whether you need hands-on warehouse inventory control or rigorous financial accounting, our experienced team delivers local expertise, precision, and dependable execution.</p>
             </div>
@@ -408,7 +369,7 @@
             <form id="consultationForm">
                 <div class="form-group">
                     <label for="companyName">Business Name</label>
-                    <input type="text" id="companyName" class="form-control" placeholder="San Diego Enterprise LLC" required>
+                    <input type="text" id="companyName" class="form-control" placeholder="De La Mora Business Services" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Contact Email</label>
@@ -462,7 +423,7 @@
 
         function updateEstimate() {
             let count = 0;
-            checks.forEach(c => { if(c.checked) count++; });
+            checks.forEach(c => { if (c.checked) count++; });
             if (count === 0) {
                 estimateVal.textContent = 'Select options above';
             } else if (count === 1) {
@@ -475,11 +436,6 @@
                 estimateVal.textContent = 'Full Enterprise Suite (Custom Hours)';
             }
         }
-
-        document.getElementById('consultationForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for reaching out! De La Mora Business Services will contact you shortly.');
-        });
     </script>
 </body>
 </html>
