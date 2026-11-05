@@ -3,7 +3,7 @@
 Website repository for **De La Mora Business Services** (San Diego, CA).
 
 ## Overview
-De La Mora Business Services provides operational efficiency and financial precision to San Diego enterprises:
+De La Mora Business Services provides operational efficiency and financial precision to San Diego businesses:
 - **Warehouse Inventory Management** (Cycle counts, SKU optimization, receiving/fulfillment tracking)
 - **Internal Controls** (Operational audits, asset protection, SOP documentation)
 - **Financial Accounting** (Reporting & analysis, GL management, cash flow forecasting)
