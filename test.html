@@ -1,22 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De La Mora Business Services | San Diego, CA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0F172A;
-            --accent: #2563EB;
-            --accent-glow: #3882F6;
-            --secondary: #0D9488;
-            --bg-dark: #090D16;
-            --bg-card: rgba(15, 23, 42, 0.65);
-            --text-main: #F8FAFC;
-            --text-muted: #94A3B8;
-            --border-glass: rgba(255, 255, 255, 0.12);
-            --radius-lg: 16px;
-            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --primary: #1E1B4B;
+            --primary-light: #2E1065;
+            --purple-dark: #5B21B6;
+            --purple-main: #6D28D9;
+            --purple-accent: #7C3AED;
+            --purple-soft: #8B5CF6;
+            --purple-tint: #F5F3FF;
+            --purple-border: #DDD6FE;
+            --lavender-subtle: #FAF8FF;
+            --bg-page: #FAF9FD;
+            --bg-surface: #FFFFFF;
+            --text-title: #0F172A;
+            --text-body: #334155;
+            --text-muted: #64748B;
+            --border-light: #E2E8F0;
+            --shadow-sm: 0 1px 3px rgba(30, 27, 75, 0.05);
+            --shadow-md: 0 4px 16px -2px rgba(109, 40, 217, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 12px 30px -4px rgba(109, 40, 217, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
         * {
@@ -25,438 +39,1824 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: var(--font-sans);
-            background-color: var(--bg-dark);
-            color: var(--text-main);
+            background-color: var(--bg-page);
+            color: var(--text-body);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .glass-panel {
-            background: var(--bg-card);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-lg);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        }
-
-        header {
-            position: fixed;
+        /* Top Staging Bar */
+        .staging-banner {
+            background: linear-gradient(90deg, #5B21B6, #7C3AED);
+            color: #ffffff;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            position: sticky;
             top: 0;
-            width: 100%;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            padding: 1.5rem 0;
+            z-index: 2000;
+        }
+        .staging-banner a {
+            color: #EDE9FE;
+            text-decoration: underline;
+            font-weight: 600;
+            margin-left: 0.5rem;
         }
 
-        header.scrolled {
-            background: rgba(9, 13, 22, 0.85);
+        /* Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-glass);
-            padding: 1rem 0;
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 33px;
+            z-index: 1000;
+            transition: all 0.25s ease;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1180px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
 
-        .nav-container {
+        .nav-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 72px;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-main);
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
             text-decoration: none;
-            letter-spacing: -0.025em;
+            color: var(--primary);
+        }
+
+        .logo-mark {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--purple-dark), var(--purple-accent));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: -0.05em;
+            box-shadow: 0 4px 10px rgba(109, 40, 217, 0.25);
+        }
+
+        .brand-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .brand-sub {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            display: block;
         }
 
         .nav-links {
             display: flex;
+            align-items: center;
             gap: 2rem;
             list-style: none;
         }
 
         .nav-links a {
-            color: var(--text-muted);
             text-decoration: none;
-            transition: color 0.2s ease;
+            color: var(--text-body);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
         }
 
         .nav-links a:hover {
-            color: var(--text-main);
+            color: var(--purple-main);
         }
 
-        .hero {
-            padding: 12rem 0 6rem 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: rgba(37, 99, 235, 0.1);
-            border: 1px solid rgba(37, 99, 235, 0.3);
+        .nav-contact-btn {
+            background: var(--purple-tint);
+            color: var(--purple-main) !important;
+            padding: 0.5rem 1.1rem;
             border-radius: 9999px;
-            color: var(--accent-glow);
-            font-size: 0.875rem;
-            margin-bottom: 1.5rem;
+            font-weight: 600 !important;
+            border: 1px solid var(--purple-border);
+            transition: all 0.2s ease !important;
         }
 
-        h1 {
-            font-size: 3.5rem;
-            line-height: 1.1;
+        .nav-contact-btn:hover {
+            background: var(--purple-main);
+            color: #FFFFFF !important;
+        }
+
+        /* Hero Section with Silky Waves */
+        .hero {
+            position: relative;
+            background: linear-gradient(180deg, #F5F3FF 0%, #EDE9FE 45%, #FAF9FD 100%);
+            padding: 5rem 0 4.5rem;
+            overflow: hidden;
+            border-bottom: 1px solid var(--purple-border);
+        }
+
+        .hero-wave-graphic {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.35;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #FFFFFF;
+            border: 1px solid var(--purple-border);
+            padding: 0.4rem 1.1rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--purple-main);
             margin-bottom: 1.5rem;
-            background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-pill-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--purple-main);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: 3.1rem;
+            line-height: 1.18;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.03em;
+            margin-bottom: 1.25rem;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 2.5rem auto;
+            font-size: 1.18rem;
+            line-height: 1.65;
+            color: var(--text-body);
+            max-width: 760px;
+            margin: 0 auto 2.25rem;
         }
 
-        .services-grid {
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.75rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.98rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--purple-main);
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(109, 40, 217, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: var(--purple-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(109, 40, 217, 0.45);
+        }
+
+        .btn-secondary {
+            background: #FFFFFF;
+            color: var(--primary);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--purple-border);
+            color: var(--purple-main);
+            background: #FAFAFD;
+        }
+
+        /* Core Services Triad */
+        .core-services-bar {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
         }
 
-        .service-card {
-            padding: 2.5rem;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+        .core-pill-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--purple-border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+            transition: all 0.25s ease;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(37, 99, 235, 0.4);
+        .core-pill-card:hover {
+            border-color: var(--purple-main);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
 
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(13, 148, 136, 0.1);
-            border-radius: 12px;
+        .core-pill-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--purple-tint);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
-        }
-
-        .service-card h3 {
+            color: var(--purple-main);
             font-size: 1.25rem;
-            margin-bottom: 1rem;
+            flex-shrink: 0;
         }
 
-        .service-card ul {
-            list-style: none;
+        .core-pill-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        .core-pill-desc {
+            font-size: 0.82rem;
             color: var(--text-muted);
-            font-size: 0.95rem;
         }
 
-        .service-card ul li {
+        /* Section Global */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-kicker {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            color: var(--purple-main);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.025em;
+            line-height: 1.25;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        /* Action Plan */
+        .action-plan-section {
+            background: #FFFFFF;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .action-plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .action-step-card {
+            background: var(--lavender-subtle);
+            border: 1px solid var(--purple-border);
+            border-radius: var(--radius-md);
+            padding: 2rem 1.5rem;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .action-step-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--purple-accent);
+        }
+
+        .step-badge {
+            width: 38px;
+            height: 38px;
+            background: var(--purple-main);
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 4px 10px rgba(109, 40, 217, 0.25);
+        }
+
+        .action-step-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
             margin-bottom: 0.5rem;
         }
 
-        .estimator-section {
-            padding: 6rem 0;
+        .action-step-card p {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            line-height: 1.55;
         }
 
-        .estimator-form {
-            max-width: 600px;
-            margin: 2rem auto 0 auto;
+        /* Clean-up Promo Banner */
+        .cleanup-banner {
+            background: linear-gradient(135deg, #2E1065 0%, #4C1D95 100%);
+            border-radius: var(--radius-md);
+            padding: 2rem 2.5rem;
+            color: #FFFFFF;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cleanup-content h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .cleanup-tag {
+            background: #7C3AED;
+            color: #FFFFFF;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .cleanup-content p {
+            font-size: 0.95rem;
+            color: #DDD6FE;
+            max-width: 650px;
+        }
+
+        .cleanup-price {
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .cleanup-price-val {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1;
+        }
+
+        .cleanup-price-sub {
+            font-size: 0.8rem;
+            color: #C4B5FD;
+            margin-top: 0.25rem;
+        }
+
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.25s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--purple-border);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--purple-main);
+            box-shadow: var(--shadow-md);
+            background: #FFFFFF;
+        }
+
+        .pricing-badge-popular {
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--purple-main);
+            color: #FFFFFF;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 1rem;
+            border-radius: 9999px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .pricing-step-num {
+            width: 32px;
+            height: 32px;
+            background: var(--purple-tint);
+            color: var(--purple-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card.featured .pricing-step-num {
+            background: var(--purple-main);
+            color: #FFFFFF;
+        }
+
+        .pricing-plan-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .price-amount {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .price-cadence {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            padding: 0.45rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+        }
+
+        .check-icon {
+            color: var(--purple-main);
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.4;
+            flex-shrink: 0;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+        }
+
+        /* Inventory Administration Section */
+        .inventory-section {
+            background: #FFFFFF;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .inventory-overview-box {
+            background: var(--lavender-subtle);
+            border: 1px solid var(--purple-border);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-body);
+            font-size: 1.05rem;
+            line-height: 1.65;
+        }
+
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .inventory-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            transition: all 0.25s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .inventory-card:hover {
+            border-color: var(--purple-border);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .inv-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .inv-number {
+            width: 34px;
+            height: 34px;
+            background: var(--purple-tint);
+            border: 1px solid var(--purple-border);
+            color: var(--purple-main);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .inv-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .inv-purpose {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+
+        .inv-details-block {
+            background: var(--purple-tint);
+            border-radius: var(--radius-sm);
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .inv-details-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--purple-dark);
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .inv-details-list {
+            list-style: none;
+            font-size: 0.88rem;
+            color: var(--text-body);
+        }
+
+        .inv-details-list li {
+            padding: 0.25rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .inv-details-list li::before {
+            content: "•";
+            color: var(--purple-main);
+            font-weight: bold;
+        }
+
+        .inv-deliverables-block {
+            border-top: 1px solid var(--border-light);
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .inv-deliverables-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            margin-bottom: 0.4rem;
+        }
+
+        .inv-deliverables-list {
+            list-style: none;
+            font-size: 0.88rem;
+            color: var(--text-body);
+        }
+
+        .inv-deliverables-list li {
+            padding: 0.2rem 0;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .inv-deliverables-list li::before {
+            content: "✓";
+            color: var(--purple-main);
+            font-weight: bold;
+        }
+
+        .inv-note-box {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            background: #F8FAFC;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-sm);
+            margin-top: 1rem;
+            border-left: 3px solid var(--purple-border);
+        }
+
+        /* Deloitte Collaboration Box */
+        .collab-callout {
+            background: linear-gradient(135deg, #FAF8FF 0%, #F5F3FF 100%);
+            border: 1px solid var(--purple-border);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .collab-badge {
+            background: #FFFFFF;
+            border: 1px solid var(--purple-border);
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            font-weight: 800;
+            color: var(--purple-main);
+            font-size: 1.1rem;
+            text-align: center;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .collab-text {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            line-height: 1.55;
+        }
+
+        /* Business Advisory Grid */
+        .advisory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .advisory-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            transition: all 0.25s ease;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .advisory-card:hover {
+            border-color: var(--purple-border);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .adv-icon {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .adv-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.65rem;
+        }
+
+        .adv-desc {
+            font-size: 0.9rem;
+            color: var(--text-body);
+            line-height: 1.55;
+        }
+
+        /* Target Customers Section */
+        .target-section {
+            background: #FFFFFF;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .target-desc-box h3 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .target-desc-box p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .target-chips {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .chip-card {
+            background: var(--purple-tint);
+            border: 1px solid var(--purple-border);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .chip-card:hover {
+            background: #FFFFFF;
+            border-color: var(--purple-main);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .chip-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--purple-main);
+            flex-shrink: 0;
+        }
+
+        /* Consultation / Contact Section */
+        .contact-section {
+            background: linear-gradient(180deg, #FAF9FD 0%, #F5F3FF 100%);
+            padding: 5rem 0;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-info-panel {
+            padding-right: 1rem;
+        }
+
+        .contact-info-panel h2 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .contact-info-panel p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .contact-direct-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-direct-item {
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s;
+        }
+
+        .contact-direct-item:hover {
+            border-color: var(--purple-border);
+            transform: translateX(4px);
+        }
+
+        .contact-icon-box {
+            width: 44px;
+            height: 44px;
+            background: var(--purple-tint);
+            color: var(--purple-main);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        .contact-item-value {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .cred-card {
+            background: #FFFFFF;
+            border-left: 4px solid var(--purple-main);
+            border-radius: 8px;
+            padding: 1.25rem;
+            font-size: 0.88rem;
+            color: var(--text-body);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-form-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--purple-border);
+            border-radius: var(--radius-lg);
             padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-form-card h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.75rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-body);
+            margin-bottom: 0.45rem;
         }
 
         .form-control {
             width: 100%;
-            padding: 0.75rem 1rem;
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid var(--border-glass);
+            padding: 0.8rem 1rem;
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
             border-radius: 8px;
-            color: var(--text-main);
+            color: var(--text-body);
+            font-size: 0.95rem;
             font-family: inherit;
+            transition: all 0.2s ease;
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--accent);
+            border-color: var(--purple-main);
+            box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.12);
         }
 
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
+        .services-selection-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 0.75rem;
+            margin-top: 0.5rem;
         }
 
-        .checkbox-label {
+        .checkbox-card {
+            background: var(--lavender-subtle);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.65rem;
             cursor: pointer;
-            color: var(--text-main);
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-body);
+            transition: all 0.2s;
         }
 
-        .estimate-output {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 8px;
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            text-align: center;
+        .checkbox-card:hover {
+            border-color: var(--purple-border);
+            background: var(--purple-tint);
         }
 
-        .btn-primary {
-            display: inline-block;
-            width: 100%;
-            padding: 1rem;
-            background: var(--accent);
-            color: white;
-            border: none;
+        .checkbox-card input[type="checkbox"] {
+            accent-color: var(--purple-main);
+            width: 16px;
+            height: 16px;
+        }
+
+        .plan-summary-box {
+            background: var(--purple-tint);
+            border: 1px solid var(--purple-border);
             border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .plan-summary-label {
+            font-size: 0.85rem;
             font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s ease;
+            color: var(--purple-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .btn-primary:hover {
-            background: #1d4ed8;
+        .plan-summary-val {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.05rem;
         }
 
+        /* Footer */
         footer {
-            border-top: 1px solid var(--border-glass);
-            padding: 3rem 0;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            background: #FFFFFF;
+            border-top: 1px solid var(--border-light);
+            padding: 3.5rem 0 2.5rem;
         }
 
-        .section-title {
-            text-align: center;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+            max-width: 380px;
+            line-height: 1.6;
+        }
+
+        .footer-col h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
             margin-bottom: 1rem;
         }
 
-        .section-title h2 {
-            font-size: 2.25rem;
+        .footer-col ul {
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li {
             margin-bottom: 0.5rem;
         }
 
-        .section-title p {
+        .footer-col ul li a {
+            text-decoration: none;
             color: var(--text-muted);
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--purple-main);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-light);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-disclaimer {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.4rem; }
+            .core-services-bar { grid-template-columns: 1fr; }
+            .action-plan-grid { grid-template-columns: 1fr 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .inventory-grid { grid-template-columns: 1fr; }
+            .advisory-grid { grid-template-columns: 1fr 1fr; }
+            .target-grid { grid-template-columns: 1fr; }
+            .contact-container { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        @media (max-width: 640px) {
+            .hero { padding: 3.5rem 0 3rem; }
+            .hero h1 { font-size: 2rem; }
+            .action-plan-grid { grid-template-columns: 1fr; }
+            .advisory-grid { grid-template-columns: 1fr; }
+            .target-chips { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .services-selection-grid { grid-template-columns: 1fr; }
+            .cleanup-banner { flex-direction: column; align-items: flex-start; text-align: left; }
+            .cleanup-price { text-align: left; }
+            .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
-    <div style="background: #2563eb; color: #ffffff; text-align: center; padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 600; position: sticky; top: 0; z-index: 2000; border-bottom: 1px solid rgba(255,255,255,0.2);">
-        <span>🛠️ Staging / Test Page (Work in progress)</span> &nbsp;|&nbsp; 
-        <a href="index.html" style="color: #93c5fd; text-decoration: underline;">View Live Coming Soon Page →</a>
+
+    <!-- Staging / Working Draft Notification -->
+    <div class="staging-banner">
+        <span>🛠️ Staging / Test Page (Working Draft)</span> &nbsp;|&nbsp;
+        <a href="index.html">View Live Coming Soon Page →</a>
     </div>
 
-    <header id="header">
-        <div class="container nav-container">
-            <a href="#" class="logo">De La Mora Business Services</a>
+    <!-- Navigation Header -->
+    <header id="mainHeader">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand-logo">
+                <div class="logo-mark">DLM</div>
+                <div>
+                    <span class="brand-name">De La Mora</span>
+                    <span class="brand-sub">Business Services</span>
+                </div>
+            </a>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
+                <li><a href="#action-plan">Action Plan</a></li>
+                <li><a href="#bookkeeping">Bookkeeping</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#advisory">Advisory</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#plans">Plans</a></li>
+                <li><a href="#contact" class="nav-contact-btn">Schedule Consultation</a></li>
             </ul>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <span class="badge">Bookkeeping &bull; Inventory Control &bull; Business Support</span>
+        <!-- SVG wave pattern evoking the smooth Gamma purple silk theme -->
+        <svg class="hero-wave-graphic" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120C240 210 480 30 720 110C960 190 1200 80 1440 140V0H0V120Z" fill="url(#waveGrad1)" />
+            <path d="M0 240C240 160 520 280 800 200C1080 120 1320 240 1440 190V0H0V240Z" fill="url(#waveGrad2)" opacity="0.6"/>
+            <defs>
+                <linearGradient id="waveGrad1" x1="0" y1="0" x2="1440" y2="200" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C4B5FD" stop-opacity="0.5"/>
+                    <stop offset="1" stop-color="#DDD6FE" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="waveGrad2" x1="1440" y1="50" x2="0" y2="220" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#A78BFA" stop-opacity="0.35"/>
+                    <stop offset="1" stop-color="#EDE9FE" stop-opacity="0.05"/>
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <div class="container hero-content">
+            <div class="hero-pill">
+                <span class="hero-pill-dot"></span>
+                <span>San Diego County Enterprise Support</span>
+            </div>
             <h1>We organize your finances and inventories, so you can focus on running your business.</h1>
-            <p>DE LA MORA Business Services is a team of professionals with 20 years of experience in financial auditing and accounting at leading international firms, providing professional support services to small and medium-sized businesses in San Diego County.</p>
-        </div>
-    </section>
+            <p>
+                De La Mora Business Services combines over 20 years of financial auditing and accounting experience from leading international firms to deliver organized financial records, stronger operational controls, and clear decision-making data for locally owned businesses.
+            </p>
+            <div class="hero-actions">
+                <a href="#action-plan" class="btn btn-primary">See 4-Step Action Plan</a>
+                <a href="#contact" class="btn btn-secondary">Request Diagnostic Consultation</a>
+            </div>
 
-    <section id="services" class="container">
-        <div class="section-title">
-            <h2>Our Services</h2>
-            <p>Professional support in plain language, so you can focus on the daily operation of your business.</p>
-        </div>
-        <div class="services-grid">
-            <div class="glass-panel service-card">
-                <div class="service-icon">📦</div>
-                <h3>Inventory Administration</h3>
-                <ul>
-                    <li>Physical counts</li>
-                    <li>Inventory valuation</li>
-                    <li>Internal control</li>
-                    <li>Priced after a diagnostic review</li>
-                </ul>
-            </div>
-            <div class="glass-panel service-card">
-                <div class="service-icon">📊</div>
-                <h3>Business Advisory</h3>
-                <ul>
-                    <li>Financial analysis and reporting</li>
-                    <li>Cash-flow analysis</li>
-                    <li>Management and performance reporting</li>
-                    <li>Operational support, including client and vendor portfolio analysis</li>
-                </ul>
-            </div>
-            <div class="glass-panel service-card">
-                <div class="service-icon">🛡️</div>
-                <h3>Audit Support</h3>
-                <ul>
-                    <li>Preparation of audit workpapers</li>
-                    <li>Financial audit support</li>
-                    <li>Internal-control recommendations</li>
-                    <li>Process improvement and cost reduction</li>
-                </ul>
-            </div>
-            <div class="glass-panel service-card">
-                <div class="service-icon">💳</div>
-                <h3>Bookkeeping</h3>
-                <ul>
-                    <li>Recording and classifying invoices (AP/AR)</li>
-                    <li>Bank & credit card reconciliations</li>
-                    <li>Expense categorization</li>
-                    <li>Monthly close, in three Plans below</li>
-                </ul>
+            <!-- Core Pillars Triad -->
+            <div class="core-services-bar">
+                <a href="#bookkeeping" class="core-pill-card" style="text-decoration: none;">
+                    <div class="core-pill-icon">📊</div>
+                    <div>
+                        <div class="core-pill-title">Bookkeeping Services</div>
+                        <div class="core-pill-desc">Accurate, tax-ready monthly reconciliations &amp; catch-up</div>
+                    </div>
+                </a>
+                <a href="#inventory" class="core-pill-card" style="text-decoration: none;">
+                    <div class="core-pill-icon">📦</div>
+                    <div>
+                        <div class="core-pill-title">Inventory Administration</div>
+                        <div class="core-pill-desc">Physical counts, costing valuation &amp; internal control design</div>
+                    </div>
+                </a>
+                <a href="#advisory" class="core-pill-card" style="text-decoration: none;">
+                    <div class="core-pill-icon">🛡️</div>
+                    <div>
+                        <div class="core-pill-title">Business Advisory</div>
+                        <div class="core-pill-desc">Cash-flow analysis, audit workpapers &amp; performance reviews</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="container">
-        <div class="glass-panel about-content" style="padding: 3rem;">
-            <div>
-                <h2 style="font-size: 2rem; margin-bottom: 1rem;">Why Choose De La Mora Business Services?</h2>
-                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Based in San Diego County, we organize your finances and your inventories, so you can focus on improving the daily operation of your business.</p>
-                <p style="color: var(--text-muted);">Tax services are offered by referral, not directly provided. Detailed reconciliation, payment identification and application, and collections are additional services beyond the bookkeeping Plans.</p>
+    <!-- Action Plan Section (Requested: "really simple with a easy to follow action plan") -->
+    <section id="action-plan" class="action-plan-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Simple &amp; Structured Process</span>
+                <h2 class="section-title">Our 4-Step Action Plan</h2>
+                <p class="section-subtitle">A straightforward, transparent engagement process to bring order and financial peace of mind to your business operations.</p>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
-                <div class="glass-panel" style="padding: 1.5rem;">
-                    <h3 style="font-size: 2rem; color: var(--accent-glow);">20 years</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-muted);">Experience in financial auditing and accounting</p>
+
+            <div class="action-plan-grid">
+                <div class="action-step-card">
+                    <div class="step-badge">1</div>
+                    <h3>Initial Diagnostic</h3>
+                    <p>We review your current systems, transaction volume, backlog, or inventory layout to pinpoint immediate risks and opportunities.</p>
                 </div>
-                <div class="glass-panel" style="padding: 1.5rem;">
-                    <h3 style="font-size: 2rem; color: var(--secondary);">36+</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-muted);">Audits led, across real estate, manufacturing, hospitality, mining, services and maquiladora</p>
+
+                <div class="action-step-card">
+                    <div class="step-badge">2</div>
+                    <h3>Tailored Scope</h3>
+                    <p>You receive a clear, flat-rate proposal—whether ongoing monthly bookkeeping, books clean-up, physical counts, or internal control design.</p>
+                </div>
+
+                <div class="action-step-card">
+                    <div class="step-badge">3</div>
+                    <h3>Implementation</h3>
+                    <p>We configure QuickBooks, document operating procedures, establish counting routines, and execute reconciliations systematically.</p>
+                </div>
+
+                <div class="action-step-card">
+                    <div class="step-badge">4</div>
+                    <h3>Clarity &amp; Review</h3>
+                    <p>Receive punctual monthly financial statements, documented inventory variances, and periodic reviews to guide your business growth.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="plans" class="container estimator-section">
-        <div class="section-title">
-            <h2>Bookkeeping Plans</h2>
-            <p>Monthly bookkeeping in USD. Inventory pricing is quoted after a diagnostic review.</p>
-        </div>
-        <div class="services-grid" style="margin-bottom: 2rem;">
-            <div class="glass-panel service-card">
-                <h3>Basic</h3>
-                <p style="color: var(--text-muted);"><strong style="color: var(--text-main);">$240 USD/month</strong></p>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Monthly bookkeeping, recording and classifying your transactions.</p>
+    <!-- Bookkeeping Services Section -->
+    <section id="bookkeeping">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Bookkeeping Services</span>
+                <h2 class="section-title">Clean, Tax-Ready Financials Every Month</h2>
+                <p class="section-subtitle">
+                    Premier bookkeeping designed to support your growth. We organize, correct, and reconcile your books so you always know exactly where your business stands.
+                </p>
             </div>
-            <div class="glass-panel service-card">
-                <h3>Standard</h3>
-                <p style="color: var(--text-muted);"><strong style="color: var(--text-main);">$450 USD/month</strong></p>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Monthly bookkeeping, recording and classifying your transactions.</p>
-            </div>
-            <div class="glass-panel service-card">
-                <h3>Premium</h3>
-                <p style="color: var(--text-muted);"><strong style="color: var(--text-main);">$690 USD/month</strong></p>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Monthly bookkeeping, recording and classifying your transactions.</p>
-            </div>
-        </div>
-        <p style="color: var(--text-muted); text-align: center; margin-bottom: 2rem;">Physical inventory counts can be scheduled on a monthly, quarterly, or annual basis, or as otherwise required and agreed upon with the client.</p>
-        <div class="glass-panel estimator-form">
-            <form id="consultationForm">
-                <div class="form-group">
-                    <label for="companyName">Business Name</label>
-                    <input type="text" id="companyName" class="form-control" placeholder="De La Mora Business Services" required>
+
+            <!-- Books Catch & Clean-Up Highlight -->
+            <div class="cleanup-banner">
+                <div class="cleanup-content">
+                    <h3>
+                        <span>Books Catch &amp; Clean-Up</span>
+                        <span class="cleanup-tag">Backlog Support</span>
+                    </h3>
+                    <p>Behind on your records? We create your QuickBooks file and bring your accounting records fully up to date for every month behind so your accountant has compliant records ready at any time.</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Contact Email</label>
-                    <input type="email" id="email" class="form-control" placeholder="contact@company.com" required>
+                <div class="cleanup-price">
+                    <div class="cleanup-price-val">$200 USD</div>
+                    <div class="cleanup-price-sub">per month of backlog (10% discount applied)</div>
                 </div>
-                <div class="form-group">
-                    <label>Select Required Services</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" value="inventory" class="svc-check"> Inventory Administration
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" value="controls" class="svc-check"> Internal Control &amp; Improvement
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" value="accounting" class="svc-check"> Business Advisory
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" value="bookkeeping" class="svc-check"> Bookkeeping
-                        </label>
+            </div>
+
+            <!-- Monthly Plans Grid -->
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-step-num">1</div>
+                    <h3 class="pricing-plan-title">Basic Plan</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">$240</span>
+                        <span class="price-cadence">USD / month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check-icon">✓</span> Up to ~150 monthly transactions</li>
+                        <li><span class="check-icon">✓</span> Up to 3 bank accounts or credit cards</li>
+                        <li><span class="check-icon">✓</span> Income &amp; expense classification</li>
+                        <li><span class="check-icon">✓</span> Monthly bank reconciliations</li>
+                        <li><span class="check-icon">✓</span> Income statement &amp; balance sheet</li>
+                        <li><span class="check-icon">✓</span> <strong>Close on the 20th</strong> of the following month</li>
+                        <li><span class="check-icon">✓</span> Email support for specific questions</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" onclick="selectPlan('Basic — $240/mo')">Select Basic</a>
+                </div>
+
+                <!-- Standard Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <span class="pricing-badge-popular">Most Popular</span>
+                    <div class="pricing-step-num">2</div>
+                    <h3 class="pricing-plan-title">Standard Plan</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">$450</span>
+                        <span class="price-cadence">USD / month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check-icon">✓</span> Up to 5 accounts &amp; ~300 transactions</li>
+                        <li><span class="check-icon">✓</span> <strong>Everything included in Basic</strong></li>
+                        <li><span class="check-icon">✓</span> Recording &amp; classification of AP &amp; AR</li>
+                        <li><span class="check-icon">✓</span> Monthly reports &amp; monthly financial review</li>
+                        <li><span class="check-icon">✓</span> <strong>Close on the 15th</strong> of the following month</li>
+                        <li><span class="check-icon">✓</span> Email support plus monthly phone consultation</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" onclick="selectPlan('Standard — $450/mo')">Select Standard</a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-step-num">3</div>
+                    <h3 class="pricing-plan-title">Premium Plan</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">$690</span>
+                        <span class="price-cadence">USD / month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check-icon">✓</span> Up to 8 accounts &amp; ~600 transactions</li>
+                        <li><span class="check-icon">✓</span> <strong>Everything included in Standard</strong></li>
+                        <li><span class="check-icon">✓</span> Budget vs. actual comparison</li>
+                        <li><span class="check-icon">✓</span> Cash flow review &amp; management reports</li>
+                        <li><span class="check-icon">✓</span> Quarterly review with the business owner</li>
+                        <li><span class="check-icon">✓</span> <strong>Close on the 10th</strong> of the following month</li>
+                        <li><span class="check-icon">✓</span> Priority support response</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" onclick="selectPlan('Premium — $690/mo')">Select Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Administration Section -->
+    <section id="inventory" class="inventory-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Inventory Administration &amp; Control</span>
+                <h2 class="section-title">Know Exactly What Is on Your Shelves</h2>
+                <p class="section-subtitle">
+                    Helping business owners understand inventory, identify physical vs. recorded differences, recognize improvement areas, and establish consistent counting practices.
+                </p>
+            </div>
+
+            <div class="inventory-overview-box">
+                Packages may be engaged individually or combined based on your business size, SKU count, record availability, and level of support required. <strong>Pricing is provided after an initial diagnostic review.</strong>
+            </div>
+
+            <div class="inventory-grid">
+                <!-- Checkup -->
+                <div class="inventory-card">
+                    <div class="inv-card-header">
+                        <div class="inv-number">1</div>
+                        <h3 class="inv-title">Inventory Checkup (Diagnostic)</h3>
+                    </div>
+                    <p class="inv-purpose">Initial assessment of inventory management practices, records, and procedures to establish a clear starting point.</p>
+                    <div class="inv-details-block">
+                        <div class="inv-details-title">What's Included:</div>
+                        <ul class="inv-details-list">
+                            <li>Initial site visit &amp; prior diagnostic review of inventory, records, and systems</li>
+                            <li>Interview with the owner or person responsible for inventory</li>
+                            <li>Review of purchasing, receiving, storage, and sales processes</li>
+                            <li>Review of product samples and available inventory records</li>
+                            <li>Identification of risks and operational improvement opportunities</li>
+                        </ul>
+                    </div>
+                    <div class="inv-deliverables-block">
+                        <div class="inv-deliverables-title">Client Deliverables:</div>
+                        <ul class="inv-deliverables-list">
+                            <li>Summary of current inventory practices</li>
+                            <li>Key weaknesses and risks identified</li>
+                            <li>Priority recommendations &amp; suggested action plan</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="estimate-output" id="estimateBox">
-                    Bookkeeping Plan: <strong id="estimateVal">Select options above</strong>
+
+                <!-- Physical Counts -->
+                <div class="inventory-card">
+                    <div class="inv-card-header">
+                        <div class="inv-number">2</div>
+                        <h3 class="inv-title">Physical Count &amp; Reconciliation</h3>
+                    </div>
+                    <p class="inv-purpose">Comprehensive coordination and supervision of your physical inventory counting process with variance reconciliation.</p>
+                    <div class="inv-details-block">
+                        <div class="inv-details-title">What's Included:</div>
+                        <ul class="inv-details-list">
+                            <li>Planning meeting to define scope, areas, and count cut-off date/time</li>
+                            <li>Organization of products by department or category</li>
+                            <li>Preparation of count sheets or digital data-capture tools</li>
+                            <li>Physical count supervision of products in agreed scope</li>
+                            <li>Reconciling physical counts against system balances to identify discrepancies</li>
+                        </ul>
+                    </div>
+                    <div class="inv-deliverables-block">
+                        <div class="inv-deliverables-title">Client Deliverables:</div>
+                        <ul class="inv-deliverables-list">
+                            <li>Structured electronic data file formatted for easy system upload/integration</li>
+                            <li>Comprehensive final inventory report presenting findings &amp; variances</li>
+                        </ul>
+                    </div>
+                    <div class="inv-note-box">
+                        <strong>Scope Note:</strong> DLM coordinates, organizes, and supervises. Physical counts are performed by client personnel (separate counting labor can be quoted upon request). Available monthly, quarterly, annually, or as needed.
+                    </div>
                 </div>
-                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1.5rem;">Submit Consultation Request</button>
-            </form>
+
+                <!-- Valuation & Analysis -->
+                <div class="inventory-card">
+                    <div class="inv-card-header">
+                        <div class="inv-number">3</div>
+                        <h3 class="inv-title">Inventory Valuation &amp; Analysis</h3>
+                    </div>
+                    <p class="inv-purpose">Ensuring inventory amounts and costing systems comply with your applicable financial reporting framework.</p>
+                    <div class="inv-details-block">
+                        <div class="inv-details-title">What's Included:</div>
+                        <ul class="inv-details-list">
+                            <li>Review of inventory recognition and indirect cost allocation</li>
+                            <li>Cost determination for items within agreed scope by turnover and risk</li>
+                            <li>Review of controls supporting inventory valuation</li>
+                            <li><strong>Inventory Allowance Review:</strong> analysis of obsolete, damaged, or slow-moving items and calculation of potential valuation adjustments</li>
+                        </ul>
+                    </div>
+                    <div class="inv-deliverables-block">
+                        <div class="inv-deliverables-title">Client Deliverables:</div>
+                        <ul class="inv-deliverables-list">
+                            <li>Inventory Valuation Assessment with identified deficiencies</li>
+                            <li>Inventory Cost Determination calculations &amp; allowance documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Internal Control Design -->
+                <div class="inventory-card">
+                    <div class="inv-card-header">
+                        <div class="inv-number">4</div>
+                        <h3 class="inv-title">Internal Control Design &amp; Improvement</h3>
+                    </div>
+                    <p class="inv-purpose">Evaluation and enhancement of operational controls through identification of operational risks and segregation of duties.</p>
+                    <div class="inv-details-block">
+                        <div class="inv-details-title">What's Included:</div>
+                        <ul class="inv-details-list">
+                            <li>Assessment of existing inventory policies &amp; procedures</li>
+                            <li>Definition of roles, responsibilities, and segregation of duties</li>
+                            <li>Controls to prevent/detect shrinkage, errors, and unauthorized transactions</li>
+                            <li>Enhancement of inventory reporting and management monitoring</li>
+                            <li>Support implementing and monitoring recommended changes</li>
+                        </ul>
+                    </div>
+                    <div class="inv-deliverables-block">
+                        <div class="inv-deliverables-title">4-Stage Methodology:</div>
+                        <ul class="inv-deliverables-list">
+                            <li>Diagnosis &amp; Understanding → Redesign &amp; Documentation → Implementation Support → Reviews &amp; Advisory</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deloitte Experience Callout -->
+            <div class="collab-callout">
+                <div class="collab-badge">20+ Years<br><span style="font-size:0.75rem; font-weight:600; color:var(--text-muted);">CONSULTING ROOTS</span></div>
+                <div class="collab-text">
+                    <strong>Professional Collaboration:</strong> We collaborate with consulting professionals with more than 20 years of experience at Deloitte specializing in process improvement, operational efficiency, risk management, and strengthening internal control.
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Business Advisory Section -->
+    <section id="advisory">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Business Advisory</span>
+                <h2 class="section-title">Actionable Insights to Run and Grow</h2>
+                <p class="section-subtitle">Financial guidance to help you streamline processes, reduce costs, and understand the true drivers of your business performance.</p>
+            </div>
+
+            <div class="advisory-grid">
+                <div class="advisory-card">
+                    <div class="adv-icon">💼</div>
+                    <h3 class="adv-title">Operational Support</h3>
+                    <p class="adv-desc">Client and vendor portfolio analysis, customer profitability evaluations, and support with material purchase quotations.</p>
+                </div>
+                <div class="advisory-card">
+                    <div class="adv-icon">📈</div>
+                    <h3 class="adv-title">Financial Analysis &amp; Reporting</h3>
+                    <p class="adv-desc">In-depth financial analysis, cash-flow forecasting, management summaries, and business performance tracking.</p>
+                </div>
+                <div class="advisory-card">
+                    <div class="adv-icon">⚙️</div>
+                    <h3 class="adv-title">Internal Control &amp; Improvement</h3>
+                    <p class="adv-desc">Clear internal control recommendations, standard operating procedure (SOP) documentation, and cost-reduction strategies.</p>
+                </div>
+                <div class="advisory-card">
+                    <div class="adv-icon">📑</div>
+                    <h3 class="adv-title">Audit Support</h3>
+                    <p class="adv-desc">Preparation of audit workpapers, financial audit assistance, and liaison support to streamline year-end audits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Customers Section -->
+    <section id="about" class="target-section">
+        <div class="container">
+            <div class="target-grid">
+                <div class="target-desc-box">
+                    <span class="section-kicker">Who We Serve</span>
+                    <h3>Tailored for San Diego County Small &amp; Medium Enterprises</h3>
+                    <p>
+                        We specialize in businesses that need high-level financial precision and inventory control without the overhead of a full-time in-house accounting department.
+                    </p>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">
+                        Founded by Karla De La Mora, our firm brings direct, bilingual, and accessible financial oversight to local entrepreneurs across San Diego County.
+                    </p>
+                </div>
+                <div class="target-chips">
+                    <div class="chip-card">
+                        <span class="chip-dot"></span>
+                        <span>Retail Stores</span>
+                    </div>
+                    <div class="chip-card">
+                        <span class="chip-dot"></span>
+                        <span>Latino Markets &amp; Grocery</span>
+                    </div>
+                    <div class="chip-card">
+                        <span class="chip-dot"></span>
+                        <span>Hospitality &amp; Food Service</span>
+                    </div>
+                    <div class="chip-card">
+                        <span class="chip-dot"></span>
+                        <span>Light Manufacturers</span>
+                    </div>
+                    <div class="chip-card">
+                        <span class="chip-dot"></span>
+                        <span>Family-Owned Businesses</span>
+                    </div>
+                    <div class="chip-card">
+                        <span class="chip-dot"></span>
+                        <span>Growing Startups without CFO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Consultation & Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Left info -->
+                <div class="contact-info-panel">
+                    <span class="section-kicker">Get Started</span>
+                    <h2>Let's Organize Your Business Finances</h2>
+                    <p>
+                        Whether you need your past months of bookkeeping caught up, a structured inventory count, or routine monthly closing, reach out directly or submit your details.
+                    </p>
+
+                    <div class="contact-direct-cards">
+                        <a href="tel:6198005102" class="contact-direct-item">
+                            <div class="contact-icon-box">📞</div>
+                            <div>
+                                <div class="contact-item-title">Phone Inquiries</div>
+                                <div class="contact-item-value">(619) 800-5102</div>
+                            </div>
+                        </a>
+
+                        <a href="mailto:Karla@DeLaMorabusiness.com" class="contact-direct-item">
+                            <div class="contact-icon-box">✉️</div>
+                            <div>
+                                <div class="contact-item-title">Direct Email</div>
+                                <div class="contact-item-value">Karla@DeLaMorabusiness.com</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="cred-card">
+                        <strong>Official Registration:</strong> De La Mora Business Services (Sole Proprietorship &bull; Karla De La Mora, Owner). Licensed in El Cajon, CA. Operating across San Diego County.
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="contact-form-card">
+                    <h3>Request an Initial Consultation</h3>
+                    <p>Fill out the form below and Karla will follow up to review your specific requirements.</p>
+
+                    <form id="leadForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="clientName">Your Name *</label>
+                                <input type="text" id="clientName" class="form-control" placeholder="Karla Smith" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="businessName">Business Name *</label>
+                                <input type="text" id="businessName" class="form-control" placeholder="Acme Market LLC" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row" style="margin-top: 1.25rem;">
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="clientEmail">Email Address *</label>
+                                <input type="email" id="clientEmail" class="form-control" placeholder="karla@example.com" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="clientPhone">Phone Number</label>
+                                <input type="tel" id="clientPhone" class="form-control" placeholder="(619) 000-0000">
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 1.25rem;">
+                            <label>Services of Interest</label>
+                            <div class="services-selection-grid">
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="Monthly Bookkeeping" id="chkBookkeeping" checked onchange="updateSummary()">
+                                    <span>Monthly Bookkeeping</span>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="Books Catch-Up ($200/mo)" id="chkCleanup" onchange="updateSummary()">
+                                    <span>Books Catch-Up ($200/mo)</span>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="Physical Inventory Counts" id="chkInvCount" onchange="updateSummary()">
+                                    <span>Inventory Physical Counts</span>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="Inventory Control & Valuation" id="chkInvVal" onchange="updateSummary()">
+                                    <span>Inventory Controls / Valuation</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="planPreference">Bookkeeping Tier Preference</label>
+                            <select id="planPreference" class="form-control" onchange="updateSummary()">
+                                <option value="Standard ($450/mo)">Standard Plan ($450 USD/month) — Recommended</option>
+                                <option value="Basic ($240/mo)">Basic Plan ($240 USD/month)</option>
+                                <option value="Premium ($690/mo)">Premium Plan ($690 USD/month)</option>
+                                <option value="Custom / Inventory Only">Custom / Inventory &amp; Advisory Only</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientNotes">Brief Note or Current Challenges</label>
+                            <textarea id="clientNotes" class="form-control" rows="3" placeholder="Tell us about your business type, SKU volume, or how many months of backlog you may have..."></textarea>
+                        </div>
+
+                        <div class="plan-summary-box">
+                            <div>
+                                <div class="plan-summary-label">Estimated Engagement</div>
+                                <div class="plan-summary-val" id="summaryEstimate">Standard Plan ($450/mo)</div>
+                            </div>
+                            <div style="font-size:0.8rem; color:var(--text-muted); text-align:right;">
+                                No obligation initial review
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">
+                            Send Consultation Request
+                        </button>
+                    </form>
+                    <div id="formFeedback" style="display:none; margin-top: 1rem; padding: 1rem; background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 8px; color: #065F46; font-size: 0.95rem; text-align: center;">
+                        Thank you! Your request details have been prepared for Karla De La Mora.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 De La Mora Business Services. San Diego, CA. All Rights Reserved.</p>`r`n        <p style="margin-top: 0.5rem;"><a href="mailto:Karla@DeLaMorabusiness.com" style="color: var(--accent-glow); text-decoration: none;">✉️ Karla@DeLaMorabusiness.com</a></p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <div class="logo-mark" style="width:34px; height:34px; font-size:0.95rem;">DLM</div>
+                        <div>
+                            <span class="brand-name" style="font-size:1.05rem;">De La Mora</span>
+                            <span class="brand-sub">Business Services</span>
+                        </div>
+                    </div>
+                    <p>
+                        Providing financial precision, cycle count supervision, and operational internal controls to San Diego County enterprises.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Core Services</h4>
+                    <ul>
+                        <li><a href="#bookkeeping">Monthly Bookkeeping</a></li>
+                        <li><a href="#bookkeeping">Books Catch &amp; Clean-Up</a></li>
+                        <li><a href="#inventory">Physical Inventory Counts</a></li>
+                        <li><a href="#inventory">Inventory Valuation &amp; Controls</a></li>
+                        <li><a href="#advisory">Business Advisory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact &amp; Details</h4>
+                    <ul>
+                        <li><a href="tel:6198005102">📞 (619) 800-5102</a></li>
+                        <li><a href="mailto:Karla@DeLaMorabusiness.com">✉️ Karla@DeLaMorabusiness.com</a></li>
+                        <li><span>📍 San Diego County, CA</span></li>
+                        <li><span>Lic: El Cajon</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 De La Mora Business Services. All Rights Reserved.
+                </div>
+                <div>
+                    Owner: Karla De La Mora &bull; (619) 800-5102
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <strong>Notice:</strong> Tax return preparation services are offered strictly by referral and are not directly provided. Detailed payment application, individual collections, and third-party audit representations are quoted outside standard bookkeeping packages.
+            </div>
+        </div>
     </footer>
 
+    <!-- Interactive Script -->
     <script>
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+        function selectPlan(planName) {
+            const select = document.getElementById('planPreference');
+            if (planName.includes('Basic')) {
+                select.value = 'Basic ($240/mo)';
+            } else if (planName.includes('Standard')) {
+                select.value = 'Standard ($450/mo)';
+            } else if (planName.includes('Premium')) {
+                select.value = 'Premium ($690/mo)';
             }
-        });
+            updateSummary();
+        }
 
-        const checks = document.querySelectorAll('.svc-check');
-        const estimateVal = document.getElementById('estimateVal');
+        function updateSummary() {
+            const plan = document.getElementById('planPreference').value;
+            const cleanup = document.getElementById('chkCleanup').checked;
+            const invCount = document.getElementById('chkInvCount').checked;
+            const invVal = document.getElementById('chkInvVal').checked;
 
-        checks.forEach(check => {
-            check.addEventListener('change', updateEstimate);
-        });
+            let text = plan;
+            let extras = [];
+            if (cleanup) extras.push('+ Clean-Up');
+            if (invCount || invVal) extras.push('+ Inventory Review');
 
-        function updateEstimate() {
-            let count = 0;
-            checks.forEach(c => { if (c.checked) count++; });
-            if (count === 0) {
-                estimateVal.textContent = 'Select options above';
-            } else if (count === 1) {
-                estimateVal.textContent = 'Basic Plan — $240 USD/month';
-            } else if (count === 2) {
-                estimateVal.textContent = 'Standard Plan — $450 USD/month';
-            } else if (count === 3) {
-                estimateVal.textContent = 'Premium Plan — $690 USD/month';
-            } else {
-                estimateVal.textContent = 'Premium Plan — $690 USD/month, plus inventory or advisory quoted separately';
+            if (extras.length > 0) {
+                text += ' (' + extras.join(', ') + ')';
             }
+
+            document.getElementById('summaryEstimate').textContent = text;
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('clientName').value;
+            const business = document.getElementById('businessName').value;
+            const email = document.getElementById('clientEmail').value;
+            const phone = document.getElementById('clientPhone').value;
+            const plan = document.getElementById('planPreference').value;
+            const notes = document.getElementById('clientNotes').value;
+
+            const selectedServices = [];
+            document.querySelectorAll('input[name="services"]:checked').forEach(cb => {
+                selectedServices.push(cb.value);
+            });
+
+            const subject = encodeURIComponent("Consultation Request: " + business + " (" + name + ")");
+            const body = encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Business: " + business + "\n" +
+                "Email: " + email + "\n" +
+                "Phone: " + phone + "\n" +
+                "Plan Preference: " + plan + "\n" +
+                "Services: " + selectedServices.join(", ") + "\n\n" +
+                "Notes / Current Situation:\n" + notes
+            );
+
+            // Show confirmation UI
+            const feedback = document.getElementById('formFeedback');
+            feedback.style.display = 'block';
+            feedback.innerHTML = "Opening email to send your consultation request to Karla at <strong>Karla@DeLaMorabusiness.com</strong>...";
+
+            // Launch mailto for direct client communication
+            window.location.href = "mailto:Karla@DeLaMorabusiness.com?subject=" + subject + "&body=" + body;
         }
     </script>
 </body>
