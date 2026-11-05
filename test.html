@@ -471,14 +471,14 @@
         }
 
         .cleanup-price-val {
-            font-size: 2rem;
-            font-weight: 800;
+            font-size: 1.4rem;
+            font-weight: 700;
             color: #FFFFFF;
-            line-height: 1;
+            line-height: 1.2;
         }
 
         .cleanup-price-sub {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #C4B5FD;
             margin-top: 0.25rem;
         }
@@ -1339,8 +1339,8 @@
                     <p>Behind on your records? We create your QuickBooks file and bring your accounting records fully up to date for every month behind so your accountant has compliant records ready at any time.</p>
                 </div>
                 <div class="cleanup-price">
-                    <div class="cleanup-price-val">$200 USD</div>
-                    <div class="cleanup-price-sub">per month of backlog (10% discount applied)</div>
+                    <div class="cleanup-price-val">Diagnostic Scope</div>
+                    <div class="cleanup-price-sub">Custom clean-up quote based on backlog months</div>
                 </div>
             </div>
 
@@ -1351,8 +1351,8 @@
                     <div class="pricing-step-num">1</div>
                     <h3 class="pricing-plan-title">Basic Plan</h3>
                     <div class="pricing-price">
-                        <span class="price-amount">$240</span>
-                        <span class="price-cadence">USD / month</span>
+                        <span class="price-amount" style="font-size: 1.35rem; font-weight: 700; color: var(--purple-main);">Essential Bookkeeping</span>
+                        <div class="price-cadence">Monthly flat-rate plan</div>
                     </div>
                     <ul class="pricing-features">
                         <li><span class="check-icon">✓</span> Up to ~150 monthly transactions</li>
@@ -1363,7 +1363,7 @@
                         <li><span class="check-icon">✓</span> <strong>Close on the 20th</strong> of the following month</li>
                         <li><span class="check-icon">✓</span> Email support for specific questions</li>
                     </ul>
-                    <a href="#contact" class="btn btn-secondary" onclick="selectPlan('Basic — $240/mo')">Select Basic</a>
+                    <a href="#contact" class="btn btn-secondary" onclick="selectPlan('Basic Plan')">Inquire for Basic</a>
                 </div>
 
                 <!-- Standard Plan (Featured) -->
@@ -1372,8 +1372,8 @@
                     <div class="pricing-step-num">2</div>
                     <h3 class="pricing-plan-title">Standard Plan</h3>
                     <div class="pricing-price">
-                        <span class="price-amount">$450</span>
-                        <span class="price-cadence">USD / month</span>
+                        <span class="price-amount" style="font-size: 1.35rem; font-weight: 700; color: var(--purple-main);">Growing Business</span>
+                        <div class="price-cadence">Monthly flat-rate plan</div>
                     </div>
                     <ul class="pricing-features">
                         <li><span class="check-icon">✓</span> Up to 5 accounts &amp; ~300 transactions</li>
@@ -1383,7 +1383,7 @@
                         <li><span class="check-icon">✓</span> <strong>Close on the 15th</strong> of the following month</li>
                         <li><span class="check-icon">✓</span> Email support plus monthly phone consultation</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary" onclick="selectPlan('Standard — $450/mo')">Select Standard</a>
+                    <a href="#contact" class="btn btn-primary" onclick="selectPlan('Standard Plan')">Inquire for Standard</a>
                 </div>
 
                 <!-- Premium Plan -->
@@ -1391,8 +1391,8 @@
                     <div class="pricing-step-num">3</div>
                     <h3 class="pricing-plan-title">Premium Plan</h3>
                     <div class="pricing-price">
-                        <span class="price-amount">$690</span>
-                        <span class="price-cadence">USD / month</span>
+                        <span class="price-amount" style="font-size: 1.35rem; font-weight: 700; color: var(--purple-main);">Comprehensive Control</span>
+                        <div class="price-cadence">Monthly flat-rate plan</div>
                     </div>
                     <ul class="pricing-features">
                         <li><span class="check-icon">✓</span> Up to 8 accounts &amp; ~600 transactions</li>
@@ -1403,7 +1403,7 @@
                         <li><span class="check-icon">✓</span> <strong>Close on the 10th</strong> of the following month</li>
                         <li><span class="check-icon">✓</span> Priority support response</li>
                     </ul>
-                    <a href="#contact" class="btn btn-secondary" onclick="selectPlan('Premium — $690/mo')">Select Premium</a>
+                    <a href="#contact" class="btn btn-secondary" onclick="selectPlan('Premium Plan')">Inquire for Premium</a>
                 </div>
             </div>
         </div>
@@ -1691,8 +1691,8 @@
                                     <span>Monthly Bookkeeping</span>
                                 </label>
                                 <label class="checkbox-card">
-                                    <input type="checkbox" name="services" value="Books Catch-Up ($200/mo)" id="chkCleanup" onchange="updateSummary()">
-                                    <span>Books Catch-Up ($200/mo)</span>
+                                    <input type="checkbox" name="services" value="Books Catch-Up & Clean-Up" id="chkCleanup" onchange="updateSummary()">
+                                    <span>Books Catch-Up &amp; Clean-Up</span>
                                 </label>
                                 <label class="checkbox-card">
                                     <input type="checkbox" name="services" value="Physical Inventory Counts" id="chkInvCount" onchange="updateSummary()">
@@ -1708,9 +1708,9 @@
                         <div class="form-group">
                             <label for="planPreference">Bookkeeping Tier Preference</label>
                             <select id="planPreference" class="form-control" onchange="updateSummary()">
-                                <option value="Standard ($450/mo)">Standard Plan ($450 USD/month) — Recommended</option>
-                                <option value="Basic ($240/mo)">Basic Plan ($240 USD/month)</option>
-                                <option value="Premium ($690/mo)">Premium Plan ($690 USD/month)</option>
+                                <option value="Standard Plan">Standard Plan — Recommended</option>
+                                <option value="Basic Plan">Basic Plan</option>
+                                <option value="Premium Plan">Premium Plan</option>
                                 <option value="Custom / Inventory Only">Custom / Inventory &amp; Advisory Only</option>
                             </select>
                         </div>
@@ -1723,7 +1723,7 @@
                         <div class="plan-summary-box">
                             <div>
                                 <div class="plan-summary-label">Estimated Engagement</div>
-                                <div class="plan-summary-val" id="summaryEstimate">Standard Plan ($450/mo)</div>
+                                <div class="plan-summary-val" id="summaryEstimate">Standard Plan</div>
                             </div>
                             <div style="font-size:0.8rem; color:var(--text-muted); text-align:right;">
                                 No obligation initial review
@@ -1798,11 +1798,11 @@
         function selectPlan(planName) {
             const select = document.getElementById('planPreference');
             if (planName.includes('Basic')) {
-                select.value = 'Basic ($240/mo)';
+                select.value = 'Basic Plan';
             } else if (planName.includes('Standard')) {
-                select.value = 'Standard ($450/mo)';
+                select.value = 'Standard Plan';
             } else if (planName.includes('Premium')) {
-                select.value = 'Premium ($690/mo)';
+                select.value = 'Premium Plan';
             }
             updateSummary();
         }
