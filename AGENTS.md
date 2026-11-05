@@ -1,14 +1,14 @@
 # Project Instructions: De La Mora Business Services
 
-## Admin & Commits
-- **Admin**: Wade Williams (`Waderaid@hotmail.com`).
-- **Auto-Commit & Push**: Whenever changes, edits, or improvements are made to website files in this workspace, **always automatically stage, commit as Wade Williams, and push directly to `main`**.
-- Do not wait to be asked to commit or push; proceed proactively as part of finishing tasks.
-- Note: Avoid creating `.github/workflows/` files unless explicitly requested, as GitHub PAT requires special `workflow` scope.
+## Collaborators & Commits
+- **Owner**: Karla De La Mora (`Karla@DeLaMorabusiness.com` / GitHub: `karladelamora`).
+- **Admin**: Wade Williams (`Waderaid@hotmail.com` / GitHub: `Waderaid`).
+- **Auto-Commit & Push**: Whenever changes or improvements are made to website files in this workspace, **always automatically stage, commit, and push directly to `main`**. Use the local machine's configured user identity or detect whether Karla or Wade is the session user.
+- Note: Avoid creating `.github/workflows/` files unless explicitly requested, as standard GitHub PATs require special `workflow` scope.
 
 ## Page Structure
-- **Live Page (`index.html`)**: Current public-facing page (Coming Soon landing page).
-- **Staging / Test Page (`test.html`)**: Interactive working draft containing the full website, services grid, interactive estimator, and new features being tested before going live.
+- **Live Page (`index.html`)**: Current public-facing page (Coming Soon landing page). Do not overwrite without explicit instruction to launch the site.
+- **Staging / Test Page (`test.html`)**: Working draft containing the full website, services grid, interactive estimator, and new features being tested before going live. All content edits and experiments belong here first.
 
 ## Automated Deployment
 - GitHub Pages is configured to deploy directly from `main` branch root (`/`). Every push automatically builds and updates the live site.
