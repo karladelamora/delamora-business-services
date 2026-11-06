@@ -101,9 +101,21 @@
         .brand-logo {
             display: flex;
             align-items: center;
-            gap: 0.85rem;
             text-decoration: none;
             color: var(--primary);
+        }
+
+        .header-logo-img {
+            height: 48px;
+            width: auto;
+            max-width: 195px;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .header-logo-img:hover {
+            transform: scale(1.03);
         }
 
         .logo-mark {
@@ -1780,6 +1792,7 @@
         }
 
         @media (max-width: 820px) {
+            .header-logo-img { height: 38px; max-width: 155px; }
             body { padding-bottom: 74px; } /* Ensures content never hides behind sticky bar */
             .mobile-sticky-bar { display: flex; }
 
@@ -1855,12 +1868,8 @@
     <!-- Navigation Header with Language Switcher and Mobile Drawer -->
     <header id="mainHeader">
         <div class="container nav-wrapper">
-            <a href="#" class="brand-logo">
-                <div class="logo-mark">DLM</div>
-                <div>
-                    <span class="brand-name">De La Mora</span>
-                    <span class="brand-sub">Business Services</span>
-                </div>
+            <a href="#" class="brand-logo" aria-label="De La Mora Business Services">
+                <img src="assets/dlm-logo.png" alt="De La Mora Business Services Logo" class="header-logo-img">
             </a>
 
             <div class="nav-right-cluster">
@@ -2650,13 +2659,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="brand-logo">
-                        <div class="logo-mark" style="width:36px; height:36px; font-size:0.95rem;">DLM</div>
-                        <div>
-                            <span class="brand-name" style="font-size:1.1rem;">De La Mora</span>
-                            <span class="brand-sub">Business Services</span>
-                        </div>
-                    </div>
+                    <a href="#" class="brand-logo" aria-label="De La Mora Business Services" style="text-decoration:none; margin-bottom: 0.85rem;">
+                        <img src="assets/dlm-logo.png" alt="De La Mora Business Services Logo" style="height: 44px; width: auto; max-width: 180px; object-fit: contain; display: block;">
+                    </a>
                     <p data-i18n="footer_brand_desc">
                         Providing financial precision, cycle count supervision, and operational internal controls to San Diego County businesses.
                     </p>

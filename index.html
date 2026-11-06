@@ -55,17 +55,23 @@
             gap: 1.5rem;
         }
 
-        .brand-logo-text {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            color: var(--brand-blue);
-            text-transform: uppercase;
-            text-decoration: none;
-            display: flex;
+        .brand-logo-link {
+            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .brand-logo-link:hover {
+            transform: scale(1.03);
+        }
+
+        .brand-logo-img {
+            height: 48px;
+            width: auto;
+            max-width: 220px;
+            object-fit: contain;
+            display: block;
         }
 
         .header-actions {
@@ -517,6 +523,11 @@
 
         /* Mobile Styles */
         @media (max-width: 768px) {
+            .brand-logo-img {
+                height: 40px;
+                max-width: 180px;
+            }
+
             .site-header {
                 padding: 1.25rem 1.25rem 0.5rem;
                 flex-direction: column;
@@ -558,8 +569,8 @@
 
     <!-- Site Header matching Canva top layout -->
     <header class="site-header">
-        <a href="/" class="brand-logo-text" data-i18n="brand_name">
-            De La Mora Business Services
+        <a href="/" class="brand-logo-link" aria-label="De La Mora Business Services">
+            <img src="assets/dlm-logo.png" alt="De La Mora Business Services Logo" class="brand-logo-img">
         </a>
 
         <div class="header-actions">
