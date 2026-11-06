@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon | De La Mora Business Services - San Diego, CA</title>
+    <meta name="description" content="De La Mora Business Services is getting ready to launch. Professional bookkeeping, warehouse inventory administration, and business advisory services in San Diego County, CA.">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #0F172A;
-            --accent: #2563EB;
-            --accent-glow: #3882F6;
-            --secondary: #0D9488;
-            --secondary-glow: #14B8A6;
-            --bg-dark: #090D16;
-            --bg-card: rgba(15, 23, 42, 0.7);
-            --text-main: #F8FAFC;
-            --text-muted: #94A3B8;
-            --border-glass: rgba(255, 255, 255, 0.1);
-            --radius-lg: 20px;
-            --radius-sm: 10px;
-            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --brand-blue: #004AAD;
+            --brand-blue-dark: #003680;
+            --brand-blue-light: #EBF3FC;
+            --brand-blue-border: #C8DCF5;
+            --text-main: #0B2545;
+            --text-body: #1E3A8A;
+            --text-muted: #3B5998;
+            --bg-page: #FFFFFF;
+            --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+            --font-body: 'Inter', system-ui, sans-serif;
         }
 
         * {
@@ -31,381 +32,476 @@
         }
 
         body {
-            font-family: var(--font-sans);
-            background-color: var(--bg-dark);
+            font-family: var(--font-body);
+            background-color: var(--bg-page);
             color: var(--text-main);
-            line-height: 1.6;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            position: relative;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Ambient background glow */
-        .glow-sphere-1 {
-            position: fixed;
-            top: -150px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 650px;
-            height: 450px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.22) 0%, rgba(13, 148, 136, 0.12) 50%, transparent 75%);
-            filter: blur(80px);
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .glow-sphere-2 {
-            position: fixed;
-            bottom: -150px;
-            right: -100px;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(13, 148, 136, 0.18) 0%, transparent 70%);
-            filter: blur(90px);
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            position: relative;
-            z-index: 1;
+        /* Top Header Navigation */
+        .site-header {
+            padding: 1.75rem 2rem 1rem;
             width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
         }
 
-        /* Glass Panel */
-        .glass-panel {
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-lg);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+        .brand-logo-text {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            color: var(--brand-blue);
+            text-transform: uppercase;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        /* Header */
-        header {
-            padding: 2.25rem 0 1rem 0;
-            text-align: center;
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
         }
 
-        .logo {
-            font-size: 1.4rem;
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-blue);
+            background: var(--brand-blue-light);
+            border: 1px solid var(--brand-blue-border);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--brand-blue);
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 74, 173, 0.25);
+        }
+
+        .social-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Language Toggle */
+        .lang-switcher {
+            display: inline-flex;
+            align-items: center;
+            background: var(--brand-blue-light);
+            border: 1.5px solid var(--brand-blue-border);
+            border-radius: 9999px;
+            padding: 2px 4px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--brand-blue);
+            padding: 4px 9px;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--brand-blue);
+            color: #FFFFFF;
+            box-shadow: 0 2px 6px rgba(0, 74, 173, 0.3);
+        }
+
+        .lang-divider {
+            color: var(--brand-blue-border);
+            font-size: 0.75rem;
+            user-select: none;
+        }
+
+        .btn-staging-preview {
+            font-family: var(--font-display);
+            font-size: 0.88rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text-main);
+            color: var(--brand-blue);
+            background: #FFFFFF;
+            border: 1.5px solid var(--brand-blue);
+            padding: 0.55rem 1.15rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-staging-preview:hover {
+            background: var(--brand-blue);
+            color: #FFFFFF;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(0, 74, 173, 0.22);
+        }
+
+        /* Main Coming Soon Presentation */
+        .main-hero {
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 1.5rem 2.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coming-soon-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+            font-weight: 800;
+            color: var(--brand-blue);
+            letter-spacing: -0.035em;
+            line-height: 1.05;
+            margin-bottom: 1.25rem;
+        }
+
+        .coming-soon-subtitle {
+            font-size: clamp(1rem, 1.35vw, 1.15rem);
+            line-height: 1.65;
+            color: var(--text-body);
+            max-width: 820px;
+            margin: 0 auto 1.25rem;
+            font-weight: 400;
+        }
+
+        .tagline-callout {
+            font-family: var(--font-display);
+            font-size: clamp(0.95rem, 1.25vw, 1.12rem);
+            font-weight: 700;
+            color: var(--brand-blue);
+            letter-spacing: -0.01em;
+            margin: 0 auto 2.25rem;
+            padding: 0.4rem 1.25rem;
+            background: var(--brand-blue-light);
+            border-radius: 9999px;
+            display: inline-block;
+        }
+
+        /* High-Res Isometric Illustration Container */
+        .illustration-wrapper {
+            width: 100%;
+            max-width: 920px;
+            margin: 0 auto 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .isometric-illustration {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 14px 28px rgba(0, 74, 173, 0.08));
+            transition: transform 0.35s ease;
+        }
+
+        .isometric-illustration:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Quick Action Bar */
+        .action-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary-action {
+            font-family: var(--font-display);
+            background: var(--brand-blue);
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.85rem 2rem;
+            border-radius: 9999px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-        }
-
-        .logo-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-glow), var(--secondary-glow));
-            box-shadow: 0 0 12px var(--accent-glow);
-        }
-
-        /* Hero Content */
-        main {
-            padding: 2rem 0 3.5rem 0;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-        }
-
-        .content-box {
-            padding: 3.5rem 2.5rem;
-            text-align: center;
-        }
-
-        /* Live pulse badge */
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.55rem;
-            padding: 0.45rem 1.1rem;
-            background: rgba(37, 99, 235, 0.12);
-            border: 1px solid rgba(37, 99, 235, 0.35);
-            border-radius: 9999px;
-            color: var(--accent-glow);
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            margin-bottom: 1.75rem;
-        }
-
-        .pulse-indicator {
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-glow);
-            border-radius: 50%;
-            position: relative;
-        }
-
-        .pulse-indicator::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: var(--accent-glow);
-            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-        }
-
-        @keyframes pulse-ring {
-            0% {
-                transform: scale(0.95);
-                opacity: 1;
-            }
-            80%, 100% {
-                transform: scale(2.8);
-                opacity: 0;
-            }
-        }
-
-        h1 {
-            font-size: clamp(2.3rem, 5.5vw, 3.8rem);
-            line-height: 1.15;
-            margin-bottom: 1.25rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            background: linear-gradient(180deg, #FFFFFF 20%, #94A3B8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .subtext {
-            font-size: clamp(1.05rem, 2vw, 1.25rem);
-            color: var(--text-muted);
-            max-width: 680px;
-            margin: 0 auto 2.5rem auto;
-            font-weight: 400;
-        }
-
-        /* Services preview pills */
-        .services-pill-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 2.75rem;
-        }
-
-        .service-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-glass);
-            padding: 0.6rem 1.1rem;
-            border-radius: 9999px;
-            font-size: 0.9rem;
-            color: var(--text-main);
+            box-shadow: 0 4px 16px rgba(0, 74, 173, 0.28);
             transition: all 0.25s ease;
         }
 
-        .service-pill:hover {
-            background: rgba(37, 99, 235, 0.12);
-            border-color: rgba(37, 99, 235, 0.4);
+        .btn-primary-action:hover {
+            background: var(--brand-blue-dark);
             transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 74, 173, 0.38);
         }
 
-        /* Inquiries card */
-        .inquiry-box {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-sm);
-            padding: 1.75rem 2rem;
-            max-width: 580px;
-            margin: 0 auto;
-        }
-
-        .inquiry-box h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.4rem;
-        }
-
-        .inquiry-box p {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 1.25rem;
-        }
-
-        .contact-actions {
-            display: flex;
-            gap: 0.85rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
+        .btn-secondary-action {
+            font-family: var(--font-display);
+            background: var(--brand-blue-light);
+            color: var(--brand-blue);
+            border: 1.5px solid var(--brand-blue-border);
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.85rem 1.85rem;
+            border-radius: 9999px;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 0.5rem;
-            padding: 0.8rem 1.6rem;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
+            transition: all 0.25s ease;
         }
 
-        .btn-primary {
-            background: var(--accent);
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main);
-            border: 1px solid var(--border-glass);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.25);
-            transform: translateY(-1px);
-        }
-
-        /* Location badge */
-        .location-tag {
-            margin-top: 1.5rem;
-            font-size: 0.88rem;
-            color: var(--secondary-glow);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.4rem;
+        .btn-secondary-action:hover {
+            background: #FFFFFF;
+            border-color: var(--brand-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 74, 173, 0.15);
         }
 
         /* Footer */
-        footer {
-            padding: 1.75rem 0 2rem 0;
-            border-top: 1px solid var(--border-glass);
+        .site-footer {
+            padding: 2rem 1.5rem;
+            border-top: 1px solid var(--brand-blue-light);
             text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
+            background: #FAFCFE;
+            width: 100%;
         }
 
         .footer-content {
+            max-width: 960px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            align-items: center;
             gap: 0.5rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
         }
 
-        .staging-link {
-            color: rgba(148, 163, 184, 0.6);
+        .footer-direct-line {
+            font-weight: 600;
+            color: var(--text-body);
+        }
+
+        .footer-direct-line a {
+            color: var(--brand-blue);
             text-decoration: none;
-            font-size: 0.8rem;
-            transition: color 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
+            font-weight: 700;
         }
 
-        .staging-link:hover {
-            color: var(--accent-glow);
+        .footer-direct-line a:hover {
             text-decoration: underline;
         }
 
-        @media (max-width: 640px) {
-            .content-box {
-                padding: 2.25rem 1.25rem;
-            }
-            .contact-actions {
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 1.25rem 1.25rem 0.5rem;
                 flex-direction: column;
+                gap: 1rem;
+                text-align: center;
             }
-            .btn {
+
+            .header-actions {
                 width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.85rem;
+            }
+
+            .main-hero {
+                padding: 1.5rem 1.25rem 2rem;
+            }
+
+            .action-row {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary-action,
+            .btn-secondary-action {
+                width: 100%;
+                justify-content: center;
+                padding: 0.95rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .illustration-wrapper {
+                margin-bottom: 2rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="glow-sphere-1"></div>
-    <div class="glow-sphere-2"></div>
+    <!-- Site Header matching Canva top layout -->
+    <header class="site-header">
+        <a href="/" class="brand-logo-text" data-i18n="brand_name">
+            De La Mora Business Services
+        </a>
 
-    <header>
-        <div class="container">
-            <a href="#" class="logo">
-                <span class="logo-dot"></span>
-                De La Mora Business Services
+        <div class="header-actions">
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                <span class="lang-divider">|</span>
+                <button type="button" class="lang-btn" data-lang="es">ES</button>
+            </div>
+
+            <!-- Social & Contact Quick Links -->
+            <div class="social-links">
+                <!-- Telephone -->
+                <a href="tel:6198005102" class="social-btn" title="Call Karla De La Mora (619) 800-5102" aria-label="Phone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/16198005102" class="social-btn" target="_blank" rel="noopener" title="WhatsApp Karla De La Mora" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                </a>
+                <!-- Email Direct -->
+                <a href="mailto:Karla@DeLaMorabusiness.com" class="social-btn" title="Email Karla@DeLaMorabusiness.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Preview Draft / Staging Site Link -->
+            <a href="/test" class="btn-staging-preview" data-i18n="preview_link">
+                <span data-i18n="btn_preview_text">Preview Site</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="glass-panel content-box">
-                <div class="badge">
-                    <span class="pulse-indicator"></span>
-                    Website Launching Soon
-                </div>
+    <!-- Main Canva Coming Soon Content -->
+    <main class="main-hero">
+        <h1 class="coming-soon-title" data-i18n="cs_title">Coming Soon</h1>
 
-                <h1>Operational Efficiency.<br>Financial Precision.</h1>
+        <p class="coming-soon-subtitle" data-i18n="cs_desc">
+            We are getting ready to launch our website, where you'll discover how our bookkeeping, inventory administration, and business advisory services can help your business stay organized, operate efficiently, and grow with confidence.
+        </p>
 
-                <p class="subtext">
-                    We're preparing our new digital home. De La Mora Business Services partners with San Diego businesses to streamline operations, enhance internal controls, and master financial workflows.
-                </p>
+        <div class="tagline-callout" data-i18n="cs_tagline">
+            Better organization. Stronger controls. Smarter business decisions.
+        </div>
 
-                <div class="services-pill-container">
-                    <span class="service-pill">📦 Warehouse Inventory Management</span>
-                    <span class="service-pill">🛡️ Internal Controls & SOPs</span>
-                    <span class="service-pill">📊 Financial Accounting</span>
-                    <span class="service-pill">💳 Bookkeeping & AP/AR</span>
-                </div>
+        <!-- Authentic High-Res Canva Isometric Illustration -->
+        <div class="illustration-wrapper">
+            <img src="assets/coming-soon-illustration.png" alt="De La Mora Business Services - Warehouse Inventory, Bookkeeping & Financial Reporting" class="isometric-illustration">
+        </div>
 
-                <div class="inquiry-box">
-                    <h3>Need Assistance In The Meantime?</h3>
-                    <p>We are actively taking on new clients and consultations across San Diego County.</p>
-                    <div class="contact-actions">
-                        <a href="mailto:Karla@DeLaMorabusiness.com?subject=Consultation%20Inquiry%20-%20De%20La%20Mora%20Business%20Services" class="btn btn-primary">
-                            ✉️ Email: Karla@DeLaMorabusiness.com
-                        </a>
-                    </div>
-                    <div class="location-tag">
-                        📍 Proudly Serving San Diego, CA & Surrounding Areas
-                    </div>
-                </div>
-            </div>
+        <!-- Direct Actions -->
+        <div class="action-row">
+            <a href="mailto:Karla@DeLaMorabusiness.com?subject=Inquiry%20from%20De%20La%20Mora%20Coming%20Soon%20Page" class="btn-primary-action">
+                <span data-i18n="btn_contact">Contact Karla De La Mora</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="/test" class="btn-secondary-action">
+                <span data-i18n="btn_test">View Working Draft Site</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
         </div>
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 De La Mora Business Services. San Diego, CA. All Rights Reserved.</p>
-            <p>
-                <a href="test.html" class="staging-link">
-                    ⚙️ Admin Staging Preview (Test Page)
-                </a>
-            </p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-direct-line">
+                <span data-i18n="footer_contact">Direct Inquiries:</span>
+                <a href="tel:6198005102">(619) 800-5102</a> &bull; 
+                <a href="mailto:Karla@DeLaMorabusiness.com">Karla@DeLaMorabusiness.com</a>
+            </div>
+            <div>
+                &copy; 2026 De La Mora Business Services &bull; San Diego County, CA &bull; Lic: El Cajon, CA
+            </div>
         </div>
     </footer>
 
+    <!-- Bilingual Client-side Switcher -->
+    <script>
+        const translations = {
+            en: {
+                brand_name: "De La Mora Business Services",
+                btn_preview_text: "Preview Site",
+                cs_title: "Coming Soon",
+                cs_desc: "We are getting ready to launch our website, where you'll discover how our bookkeeping, inventory administration, and business advisory services can help your business stay organized, operate efficiently, and grow with confidence.",
+                cs_tagline: "Better organization. Stronger controls. Smarter business decisions.",
+                btn_contact: "Contact Karla De La Mora",
+                btn_test: "View Working Draft Site",
+                footer_contact: "Direct Inquiries:"
+            },
+            es: {
+                brand_name: "De La Mora Business Services",
+                btn_preview_text: "Vista Previa",
+                cs_title: "Próximamente",
+                cs_desc: "Nos estamos preparando para el lanzamiento de nuestro sitio web, donde descubrirá cómo nuestros servicios de contabilidad, administración de inventarios y asesoría de negocios pueden ayudar a su empresa a mantenerse organizada, operar con eficiencia y crecer con confianza.",
+                cs_tagline: "Mejor organización. Controles más sólidos. Decisiones de negocio más inteligentes.",
+                btn_contact: "Contactar a Karla De La Mora",
+                btn_test: "Ver Sitio en Construcción",
+                footer_contact: "Contacto Directo:"
+            }
+        };
+
+        function setLang(lang) {
+            localStorage.setItem('dlm_cs_lang', lang);
+            document.documentElement.lang = lang;
+
+            document.querySelectorAll('.lang-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.lang === lang);
+            });
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const k = el.dataset.i18n;
+                if (translations[lang] && translations[lang][k]) {
+                    el.textContent = translations[lang][k];
+                }
+            });
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => setLang(btn.dataset.lang));
+        });
+
+        // Initialize language from storage or default
+        const saved = localStorage.getItem('dlm_cs_lang') || 'en';
+        setLang(saved);
+    </script>
 </body>
 </html>
