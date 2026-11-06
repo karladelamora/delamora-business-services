@@ -6,7 +6,7 @@
     <title>De La Mora Business Services | San Diego, CA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #1E1B4B;
@@ -295,72 +295,334 @@
             gap: 0.85rem;
         }
 
-        /* Hero Section with Real Gamma Silk Waves */
-        .hero {
+        /* ==========================================================================
+           Editorial Showcase Hero (Matching Reference Style, Palette & New Model Photo)
+           ========================================================================== */
+        .hero-editorial-section {
             position: relative;
-            background: #FAF9FD;
-            padding: 0 0 5rem 0;
+            background: linear-gradient(115deg, #447496 0%, #5B8BAE 38%, #72A2C3 72%, #8BB5D3 100%);
+            color: #FFFFFF;
             overflow: hidden;
+            padding: clamp(3.5rem, 6vw, 6rem) 0 clamp(3.5rem, 6vw, 5.5rem);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .hero-editorial-section::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -15%;
+            width: 60%;
+            height: 160%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-editorial-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 3.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-editorial-text {
+            max-width: 660px;
+        }
+
+        /* Reference Eyebrow Badge */
+        .hero-editorial-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            background: #FFFFFF;
+            padding: 6px 16px 6px 10px;
+            border-radius: 9999px;
+            box-shadow: 0 4px 14px rgba(15, 34, 51, 0.12);
+            margin-bottom: 1.75rem;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hero-editorial-badge:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(15, 34, 51, 0.18);
+        }
+
+        .hero-badge-tag {
+            background: #FEF3C7;
+            color: #92400E;
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 3px 8px;
+            border-radius: 9999px;
+        }
+
+        .hero-badge-message {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: #1E293B;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        /* Dual-Font Headline (Sans Bold + Serif Italic Contrast) */
+        .hero-editorial-headline {
+            margin: 0 0 1.35rem 0;
+            line-height: 1.12;
+        }
+
+        .hero-headline-primary {
+            display: block;
+            font-family: var(--font-display);
+            font-size: clamp(2.1rem, 4.2vw, 3.45rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: #FFFFFF;
+        }
+
+        .hero-headline-italic {
+            display: block;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(2.1rem, 4.2vw, 3.45rem);
+            letter-spacing: -0.01em;
+            color: #F0F7FC;
+            margin-top: 0.2rem;
+        }
+
+        .hero-editorial-desc {
+            font-size: clamp(1rem, 1.3vw, 1.14rem);
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.92);
+            margin: 0 0 2rem 0;
+            max-width: 580px;
+        }
+
+        /* Action Buttons */
+        .hero-editorial-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.35rem;
+        }
+
+        .btn-hero-solid {
+            background: #FFFFFF;
+            color: #234E6F;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.98rem;
+            padding: 0.88rem 1.85rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 6px 20px rgba(15, 34, 51, 0.22);
+            transition: all 0.22s ease;
+        }
+
+        .btn-hero-solid:hover {
+            transform: translateY(-2px);
+            background: #F8FAFC;
+            box-shadow: 0 10px 26px rgba(15, 34, 51, 0.28);
+            color: #173852;
+        }
+
+        .btn-hero-ghost {
+            background: rgba(255, 255, 255, 0.14);
+            border: 1.5px solid rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #FFFFFF;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.98rem;
+            padding: 0.88rem 1.75rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.22s ease;
+        }
+
+        .btn-hero-ghost:hover {
+            background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+            color: #FFFFFF;
+        }
+
+        /* Direct Consultation Micro-Link */
+        .hero-micro-support {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.84);
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-micro-support a {
+            color: #FFFFFF;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s;
+        }
+
+        .hero-micro-support a:hover {
+            opacity: 0.85;
+        }
+
+        /* Model Photo Visual Display */
+        .hero-editorial-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-model-frame {
+            position: relative;
+            width: 100%;
+            max-width: 490px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 48px -8px rgba(15, 35, 52, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-model-img {
+            width: 100%;
+            height: auto;
+            max-height: 540px;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+        }
+
+        /* Credential Card on Model Frame */
+        .hero-photo-credential {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-cred-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #447496, #5B8BAE);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-weight: 800;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .hero-cred-name {
+            font-family: var(--font-display);
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: #0F172A;
+            line-height: 1.2;
+        }
+
+        .hero-cred-desc {
+            font-size: 0.78rem;
+            color: #475569;
+            line-height: 1.3;
+        }
+
+        /* Core Triad Section Beneath Hero */
+        .core-triad-section {
+            padding: 3rem 0 4.5rem 0;
+            background: #FAF9FD;
             border-bottom: 1px solid var(--purple-border);
         }
 
-        .hero-banner-image-wrapper {
-            position: relative;
-            width: 100%;
-            height: 280px;
-            overflow: hidden;
+        .core-triad-section .core-services-bar {
+            margin-top: 0;
         }
 
-        .hero-banner-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center bottom;
-            display: block;
-            filter: saturate(1.1) contrast(1.02);
+        /* Responsive Layout for Tablets & Phones */
+        @media (max-width: 991px) {
+            .hero-editorial-grid {
+                grid-template-columns: 1fr;
+                gap: 2.75rem;
+                text-align: left;
+            }
+
+            .hero-editorial-text {
+                max-width: 100%;
+            }
+
+            .hero-model-frame {
+                max-width: 440px;
+                margin: 0 auto;
+            }
         }
 
-        .hero-banner-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 120px;
-            background: linear-gradient(180deg, rgba(250, 249, 253, 0) 0%, #FAF9FD 100%);
-            pointer-events: none;
-        }
+        @media (max-width: 576px) {
+            .hero-editorial-section {
+                padding: 2.75rem 0 3rem;
+            }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            margin: -2.5rem auto 0 auto;
-            text-align: center;
-        }
+            .hero-editorial-actions {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.75rem;
+            }
 
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: clamp(2.1rem, 5vw, 3.35rem);
-            line-height: 1.15;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: -0.035em;
-            margin-bottom: 1.5rem;
-        }
+            .btn-hero-solid,
+            .btn-hero-ghost {
+                width: 100%;
+                justify-content: center;
+                padding: 0.92rem 1.25rem;
+                font-size: 0.95rem;
+            }
 
-        .hero p {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            color: var(--text-body);
-            max-width: 780px;
-            margin: 0 auto 2.5rem;
-        }
+            .hero-micro-support {
+                font-size: 0.85rem;
+                line-height: 1.45;
+            }
 
-        .hero-actions {
-            display: flex;
-            justify-content: center;
-            gap: 1.25rem;
-            flex-wrap: wrap;
+            .hero-photo-credential {
+                bottom: 12px;
+                left: 12px;
+                right: 12px;
+                padding: 10px 12px;
+            }
+
+            .hero-cred-name {
+                font-size: 0.85rem;
+            }
+
+            .hero-cred-desc {
+                font-size: 0.74rem;
+            }
         }
 
         .btn {
@@ -1672,27 +1934,59 @@
         </div>
     </header>
 
-    <!-- Hero Section (Featuring exact upscaled Gamma silk wave header) -->
-    <section class="hero">
-        <div class="hero-banner-image-wrapper">
-            <img src="assets/gamma-silk-header.jpg" alt="De La Mora Purple Silk Waves" class="hero-banner-image">
-            <div class="hero-banner-overlay"></div>
-        </div>
-
-        <div class="container hero-content">
-            <h1 data-i18n="hero_title">We organize your finances and inventories, so you can focus on running your business.</h1>
-            <p data-i18n="hero_desc">
-                De La Mora Business Services combines over 20 years of financial auditing and accounting experience from leading international firms to deliver organized financial records, stronger operational controls, and clear decision-making data for locally owned businesses.
-            </p>
-            <div class="hero-actions">
-                <a href="#action-plan" class="btn btn-primary">
-                    <span data-i18n="hero_btn_plan">See 4-Step Action Plan</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    <!-- Editorial Showcase Hero Section (Matching Reference Style, Palette & New Model Photo) -->
+    <section class="hero-editorial-section">
+        <div class="container hero-editorial-grid">
+            <div class="hero-editorial-text">
+                <a href="#contact" class="hero-editorial-badge">
+                    <span class="hero-badge-tag" data-i18n="hero_badge_tag">What's new:</span>
+                    <span class="hero-badge-message">
+                        <span data-i18n="hero_badge_text">Free Initial Diagnostic Review for Local Businesses</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </span>
                 </a>
-                <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_consult">Request Diagnostic Consultation</a>
+
+                <div class="hero-editorial-headline">
+                    <span class="hero-headline-primary" data-i18n="hero_title_sans">Financial records are predictable.</span>
+                    <span class="hero-headline-italic" data-i18n="hero_title_serif">Financial clarity is achievable.</span>
+                </div>
+
+                <p class="hero-editorial-desc" data-i18n="hero_desc">
+                    Over 20 years of audit and financial accounting experience from leading international firms to deliver organized books, physical inventory controls, and operational peace of mind for San Diego business owners.
+                </p>
+
+                <div class="hero-editorial-actions">
+                    <a href="#contact" class="btn-hero-solid">
+                        <span data-i18n="hero_btn_plan">Schedule Diagnostic Review</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#action-plan" class="btn-hero-ghost" data-i18n="hero_btn_consult">Explore Services</a>
+                </div>
+
+                <div class="hero-micro-support">
+                    <span data-i18n="hero_sub_prefix">Need immediate assistance?</span>
+                    <a href="tel:6198005102" data-i18n="hero_sub_call">Call Karla directly: (619) 800-5102</a>
+                </div>
             </div>
 
-            <!-- Core Pillars Triad (Matching Gamma PDF Page 2 with exact vector icons) -->
+            <div class="hero-editorial-visual">
+                <div class="hero-model-frame">
+                    <img src="assets/hero-model.jpg" alt="Karla De La Mora - Financial Consultant" class="hero-model-img" loading="eager">
+                    <div class="hero-photo-credential">
+                        <div class="hero-cred-icon">DLM</div>
+                        <div>
+                            <div class="hero-cred-name" data-i18n="hero_cred_title">Karla De La Mora</div>
+                            <div class="hero-cred-desc" data-i18n="hero_cred_sub">20+ Years Financial Auditing &amp; Accounting</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Pillars Triad (Matching Gamma PDF Page 2 with exact vector icons) -->
+    <section class="core-triad-section">
+        <div class="container">
             <div class="core-services-bar">
                 <a href="#bookkeeping" class="core-pill-card" style="text-decoration: none;">
                     <div class="core-pill-top">
@@ -2455,10 +2749,17 @@
                 nav_contact: "Schedule Consultation",
                 lang_select_title: "Language / Idioma:",
                 mobile_call: "📞 Call (619) 800-5102",
-                hero_title: "We organize your finances and inventories, so you can focus on running your business.",
-                hero_desc: "De La Mora Business Services combines over 20 years of financial auditing and accounting experience from leading international firms to deliver organized financial records, stronger operational controls, and clear decision-making data for locally owned businesses.",
-                hero_btn_plan: "See 4-Step Action Plan",
-                hero_btn_consult: "Request Diagnostic Consultation",
+                hero_badge_tag: "What's new:",
+                hero_badge_text: "Free Initial Diagnostic Review for Local Businesses",
+                hero_title_sans: "Financial records are predictable.",
+                hero_title_serif: "Financial clarity is achievable.",
+                hero_desc: "Over 20 years of audit and financial accounting experience from leading international firms to deliver organized books, physical inventory controls, and operational peace of mind for San Diego business owners.",
+                hero_btn_plan: "Schedule Diagnostic Review",
+                hero_btn_consult: "Explore Services",
+                hero_sub_prefix: "Need immediate assistance?",
+                hero_sub_call: "Call Karla directly: (619) 800-5102",
+                hero_cred_title: "Karla De La Mora",
+                hero_cred_sub: "20+ Years Financial Auditing & Accounting",
                 core_bk_title: "Bookkeeping Services",
                 core_bk_desc: "Accurate, tax-ready monthly reconciliations & catch-up records.",
                 core_inv_title: "Inventory Administration",
@@ -2647,10 +2948,17 @@
                 nav_contact: "Agendar Consulta",
                 lang_select_title: "Idioma / Language:",
                 mobile_call: "📞 Llamar al (619) 800-5102",
-                hero_title: "Organizamos sus finanzas e inventarios, para que usted se enfoque en hacer crecer su negocio.",
-                hero_desc: "De La Mora Business Services combina más de 20 años de experiencia en auditoría financiera y contabilidad en firmas internacionales líderes para brindar registros financieros organizados, mejores controles operativos y datos claros para la toma de decisiones en empresas locales.",
-                hero_btn_plan: "Ver Plan de Acción (4 Pasos)",
-                hero_btn_consult: "Solicitar Consulta Diagnóstica",
+                hero_badge_tag: "Novedades:",
+                hero_badge_text: "Diagnóstico Financiero Inicial de Cortesía para Negocios Locales",
+                hero_title_sans: "Los registros contables son predecibles.",
+                hero_title_serif: "La tranquilidad financiera es alcanzable.",
+                hero_desc: "Más de 20 años de experiencia en auditoría financiera y contabilidad en firmas internacionales líderes para brindar orden contable, control físico de inventarios y tranquilidad operativa a dueños de negocios en San Diego.",
+                hero_btn_plan: "Agendar Diagnóstico Inicial",
+                hero_btn_consult: "Explorar Servicios",
+                hero_sub_prefix: "¿Necesita apoyo inmediato?",
+                hero_sub_call: "Llame directamente a Karla: (619) 800-5102",
+                hero_cred_title: "Karla De La Mora",
+                hero_cred_sub: "Más de 20 Años de Experiencia en Auditoría Contable",
                 core_bk_title: "Servicios Contables",
                 core_bk_desc: "Conciliaciones mensuales precisas, listas para impuestos y regularización.",
                 core_inv_title: "Administración de Inventarios",
