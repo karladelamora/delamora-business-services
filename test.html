@@ -95,7 +95,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 76px;
+            min-height: 86px;
+            padding: 0.5rem 0;
         }
 
         .brand-logo {
@@ -106,9 +107,9 @@
         }
 
         .header-logo-img {
-            height: 48px;
+            height: 68px;
             width: auto;
-            max-width: 195px;
+            max-width: 270px;
             object-fit: contain;
             display: block;
             transition: transform 0.2s ease;
@@ -1792,7 +1793,8 @@
         }
 
         @media (max-width: 820px) {
-            .header-logo-img { height: 38px; max-width: 155px; }
+            .nav-wrapper { min-height: 74px; }
+            .header-logo-img { height: 52px; max-width: 220px; }
             body { padding-bottom: 74px; } /* Ensures content never hides behind sticky bar */
             .mobile-sticky-bar { display: flex; }
 
@@ -2660,7 +2662,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="brand-logo" aria-label="De La Mora Business Services" style="text-decoration:none; margin-bottom: 0.85rem;">
-                        <img src="assets/dlm-logo.png" alt="De La Mora Business Services Logo" style="height: 44px; width: auto; max-width: 180px; object-fit: contain; display: block;">
+                        <img src="assets/dlm-logo.png" alt="De La Mora Business Services Logo" style="height: 62px; width: auto; max-width: 250px; object-fit: contain; display: block;">
                     </a>
                     <p data-i18n="footer_brand_desc">
                         Providing financial precision, cycle count supervision, and operational internal controls to San Diego County businesses.
