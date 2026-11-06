@@ -211,28 +211,219 @@
             display: inline-block;
         }
 
-        /* High-Res Isometric Illustration Container */
+        /* High-Res Isometric Illustration Container with Multi-Layer Animation */
         .illustration-wrapper {
+            position: relative;
             width: 100%;
-            max-width: 920px;
+            max-width: 980px;
             margin: 0 auto 2.5rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            perspective: 1200px;
+        }
+
+        .illustration-glow {
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            background: radial-gradient(ellipse at center, rgba(0, 74, 173, 0.16) 0%, rgba(200, 220, 245, 0.35) 45%, transparent 72%);
+            filter: blur(50px);
+            z-index: 0;
+            pointer-events: none;
+            animation: pulseGlow 5.5s ease-in-out infinite;
+        }
+
+        .illustration-card {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: floatIsometric 6s ease-in-out infinite;
+            transform-style: preserve-3d;
+            transition: transform 0.25s ease-out;
+            overflow: hidden;
+            border-radius: 20px;
         }
 
         .isometric-illustration {
             width: 100%;
             height: auto;
-            max-height: 480px;
+            max-height: 520px;
             object-fit: contain;
             display: block;
-            filter: drop-shadow(0 14px 28px rgba(0, 74, 173, 0.08));
-            transition: transform 0.35s ease;
+            filter: drop-shadow(0 16px 36px rgba(0, 74, 173, 0.12));
+            user-select: none;
+            -webkit-user-drag: none;
         }
 
-        .isometric-illustration:hover {
-            transform: translateY(-4px);
+        /* Diagonal Light Sheen Sweep */
+        .illustration-sheen {
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 45%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%);
+            transform: skewX(-28deg);
+            pointer-events: none;
+            animation: sheenSweep 7.5s infinite ease-in-out 1.5s;
+        }
+
+        /* Floating Animated Accent Particles (Over the financial report & dollar burst) */
+        .floating-accents {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 48%;
+            height: 70%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .particle {
+            position: absolute;
+            color: var(--brand-blue);
+            font-family: var(--font-display);
+            font-weight: 800;
+            text-shadow: 0 2px 8px rgba(0, 74, 173, 0.35);
+            animation: floatParticle 4s infinite ease-in-out;
+            opacity: 0;
+        }
+
+        .p-dollar-1 {
+            top: 18%;
+            right: 30%;
+            font-size: 1.45rem;
+            animation-delay: 0s;
+        }
+
+        .p-star-1 {
+            top: 10%;
+            right: 20%;
+            font-size: 1.15rem;
+            animation-delay: 1.2s;
+            color: #2563EB;
+        }
+
+        .p-dollar-2 {
+            top: 30%;
+            right: 14%;
+            font-size: 1.6rem;
+            animation-delay: 2.1s;
+        }
+
+        .p-star-2 {
+            top: 25%;
+            right: 40%;
+            font-size: 1.3rem;
+            animation-delay: 2.8s;
+            color: #38BDF8;
+        }
+
+        .p-dollar-3 {
+            top: 12%;
+            right: 46%;
+            font-size: 1.25rem;
+            animation-delay: 3.4s;
+        }
+
+        .p-star-3 {
+            top: 36%;
+            right: 26%;
+            font-size: 1.05rem;
+            animation-delay: 0.6s;
+            color: #60A5FA;
+        }
+
+        /* Pulsing data beacon near the computer monitor */
+        .pulse-beacon {
+            position: absolute;
+            top: 50%;
+            left: 14%;
+            width: 10px;
+            height: 10px;
+            background: #2563EB;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #2563EB;
+        }
+
+        .pulse-beacon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #2563EB;
+            border-radius: 50%;
+            animation: radarPulse 2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+        }
+
+        /* Keyframe Animations */
+        @keyframes floatIsometric {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(0.18deg);
+            }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                opacity: 0.55;
+                transform: scale(0.96);
+            }
+            50% {
+                opacity: 0.95;
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(12px) scale(0.65) rotate(-8deg);
+                opacity: 0;
+            }
+            30% {
+                opacity: 0.95;
+            }
+            75% {
+                transform: translateY(-24px) scale(1.12) rotate(8deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-38px) scale(0.75) rotate(16deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes radarPulse {
+            0% {
+                transform: scale(0.6);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2.4);
+                opacity: 0;
+            }
+        }
+
+        @keyframes sheenSweep {
+            0%, 70% {
+                left: -120%;
+                opacity: 0;
+            }
+            78% {
+                opacity: 0.65;
+            }
+            100% {
+                left: 170%;
+                opacity: 0;
+            }
         }
 
         /* Quick Action Bar */
@@ -422,9 +613,24 @@
             Better organization. Stronger controls. Smarter business decisions.
         </div>
 
-        <!-- Authentic High-Res Canva Isometric Illustration -->
-        <div class="illustration-wrapper">
-            <img src="assets/coming-soon-illustration.png" alt="De La Mora Business Services - Warehouse Inventory, Bookkeeping & Financial Reporting" class="isometric-illustration">
+        <!-- Authentic High-Res Canva Isometric Illustration with Multi-Layer Animation -->
+        <div class="illustration-wrapper" id="illustrationContainer">
+            <div class="illustration-glow"></div>
+            <div class="illustration-card" id="illustrationCard">
+                <img src="assets/coming-soon-illustration.jpg" alt="De La Mora Business Services - Warehouse Inventory, Bookkeeping & Financial Reporting" class="isometric-illustration">
+                <div class="illustration-sheen"></div>
+                
+                <!-- Floating Animated Accent Elements (Aligned over the Report & Dollar burst) -->
+                <div class="floating-accents">
+                    <span class="particle p-star-1">✦</span>
+                    <span class="particle p-dollar-1">$</span>
+                    <span class="particle p-star-2">✦</span>
+                    <span class="particle p-dollar-2">$</span>
+                    <span class="particle p-star-3">✦</span>
+                    <span class="particle p-dollar-3">$</span>
+                    <span class="pulse-beacon" title="Live Financial Systems"></span>
+                </div>
+            </div>
         </div>
 
         <!-- Direct Actions -->
@@ -502,6 +708,29 @@
         // Initialize language from storage or default
         const saved = localStorage.getItem('dlm_cs_lang') || 'en';
         setLang(saved);
+
+        // Subtle 3D Interactive Parallax on Desktop
+        const wrapper = document.getElementById('illustrationContainer');
+        const card = document.getElementById('illustrationCard');
+
+        if (wrapper && card && window.matchMedia('(min-width: 769px)').matches) {
+            wrapper.addEventListener('mousemove', (e) => {
+                const rect = wrapper.getBoundingClientRect();
+                const x = e.clientX - rect.left - (rect.width / 2);
+                const y = e.clientY - rect.top - (rect.height / 2);
+                
+                const rotateX = (-y / rect.height) * 7;
+                const rotateY = (x / rect.width) * 7;
+
+                card.style.animation = 'none';
+                card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+
+            wrapper.addEventListener('mouseleave', () => {
+                card.style.animation = 'floatIsometric 6s ease-in-out infinite';
+                card.style.transform = '';
+            });
+        }
     </script>
 </body>
 </html>
