@@ -357,7 +357,7 @@
             border-bottom: 1px solid rgba(0, 74, 173, 0.12);
         }
 
-        /* Decorative Capsule Tube Pattern Overlay: extends across and fades smoothly into the image */
+        /* Non-repeating flowing capsule background: fewer dots, medium cyan on left fading to lighter on right */
         .hero-editorial-pattern {
             position: absolute;
             top: 0;
@@ -365,27 +365,14 @@
             bottom: 0;
             right: 0;
             width: 100%;
-            background-image: url('assets/hero-capsules-pattern-transparent.png');
-            background-repeat: repeat;
-            background-size: 520px auto;
-            opacity: 0.85;
+            height: 100%;
+            background-image: url('assets/hero-capsules-flow.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+            opacity: 0.95;
             pointer-events: none;
             z-index: 1;
-            /* Fades smoothly directly into the lady image on the right */
-            -webkit-mask-image: linear-gradient(to right, 
-                #000000 0%, 
-                #000000 min(55%, calc(100% - 500px)), 
-                rgba(0, 0, 0, 0.6) min(72%, calc(100% - 320px)), 
-                rgba(0, 0, 0, 0.15) min(88%, calc(100% - 140px)), 
-                transparent 100%
-            );
-            mask-image: linear-gradient(to right, 
-                #000000 0%, 
-                #000000 min(55%, calc(100% - 500px)), 
-                rgba(0, 0, 0, 0.6) min(72%, calc(100% - 320px)), 
-                rgba(0, 0, 0, 0.15) min(88%, calc(100% - 140px)), 
-                transparent 100%
-            );
         }
 
         /* Desktop model photo: maintains exact natural proportions (535/359 ratio) with uncropped framing */
@@ -578,8 +565,9 @@
 
             .hero-editorial-pattern {
                 width: 100%;
-                max-width: 100%;
-                opacity: 0.45;
+                background-size: cover;
+                background-position: left center;
+                opacity: 0.55;
             }
 
             .hero-editorial-model-wrap {
