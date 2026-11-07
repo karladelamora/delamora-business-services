@@ -338,14 +338,14 @@
 
         /* ==========================================================================
            Editorial Showcase Hero (Banner with Capsule Pattern & 3 Service Pills)
+           Matching Australian AFCA Reference: Seamless gradual fade into lady photo
            ========================================================================== */
         .hero-editorial-section {
             position: relative;
             background: #FFFFFF;
-            background: linear-gradient(135deg, #FFFFFF 0%, #F5FAFD 50%, #E8F4FC 100%);
             color: var(--text-main);
             overflow: hidden;
-            min-height: 400px;
+            min-height: 410px;
             display: flex;
             align-items: center;
             border-bottom: 1px solid rgba(0, 74, 173, 0.12);
@@ -358,50 +358,58 @@
             left: 0;
             bottom: 0;
             width: 65%;
+            max-width: 850px;
             background-image: url('assets/hero-capsules-pattern-transparent.png');
             background-repeat: repeat;
             background-size: 520px auto;
             opacity: 0.85;
             pointer-events: none;
             z-index: 1;
-            -webkit-mask-image: linear-gradient(to right, #000000 55%, rgba(0, 0, 0, 0.3) 80%, transparent 100%);
-            mask-image: linear-gradient(to right, #000000 55%, rgba(0, 0, 0, 0.3) 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, #000000 45%, rgba(0, 0, 0, 0.35) 75%, transparent 100%);
+            mask-image: linear-gradient(to right, #000000 45%, rgba(0, 0, 0, 0.35) 75%, transparent 100%);
         }
 
-        /* Desktop model photo anchored on the right with seamless feather fade */
+        /* Desktop model photo anchored on the right with seamless feather fade matching Australian layout */
         .hero-editorial-model-wrap {
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
-            width: 48%;
-            max-width: 580px;
+            left: 44%;
             height: 100%;
             pointer-events: none;
             z-index: 1;
             overflow: hidden;
         }
 
+        @media (min-width: 1220px) {
+            .hero-editorial-model-wrap {
+                left: calc((100vw - 1220px) / 2 + 500px);
+            }
+        }
+
         .hero-crisp-model {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: 68% center;
+            object-position: right center;
             display: block;
-            /* Exact seamless fade into the light capsule panel */
+            /* Seamless gradual fade matching the Australian reference */
             -webkit-mask-image: linear-gradient(to right, 
                 transparent 0%, 
-                rgba(0, 0, 0, 0.04) 10%, 
-                rgba(0, 0, 0, 0.35) 28%, 
-                rgba(0, 0, 0, 0.85) 55%, 
-                #000000 75%
+                rgba(0, 0, 0, 0.02) 8%, 
+                rgba(0, 0, 0, 0.18) 22%, 
+                rgba(0, 0, 0, 0.6) 42%, 
+                rgba(0, 0, 0, 0.92) 62%, 
+                #000000 78%
             );
             mask-image: linear-gradient(to right, 
                 transparent 0%, 
-                rgba(0, 0, 0, 0.04) 10%, 
-                rgba(0, 0, 0, 0.35) 28%, 
-                rgba(0, 0, 0, 0.85) 55%, 
-                #000000 75%
+                rgba(0, 0, 0, 0.02) 8%, 
+                rgba(0, 0, 0, 0.18) 22%, 
+                rgba(0, 0, 0, 0.6) 42%, 
+                rgba(0, 0, 0, 0.92) 62%, 
+                #000000 78%
             );
         }
 
@@ -414,7 +422,7 @@
         }
 
         .hero-editorial-text {
-            max-width: 620px;
+            max-width: 580px;
         }
 
         /* Headline matching uploaded banner: "Stronger processes. Stronger business." */
@@ -529,7 +537,6 @@
         .hero-micro-support a:hover {
             color: #003680;
         }
-        }
 
         .hero-editorial-mobile-visual {
             display: none;
@@ -558,6 +565,7 @@
 
             .hero-editorial-pattern {
                 width: 100%;
+                max-width: 100%;
                 opacity: 0.45;
             }
 
@@ -577,16 +585,16 @@
             .hero-editorial-mobile-visual {
                 display: block;
                 width: 100%;
-                max-height: 360px;
+                max-height: 380px;
                 overflow: hidden;
             }
 
             .hero-mobile-model-img {
                 width: 100%;
                 height: 100%;
-                max-height: 360px;
+                max-height: 380px;
                 object-fit: cover;
-                object-position: center 20%;
+                object-position: center 15%;
                 display: block;
                 /* Seamless top fade so mobile model blends directly into the light gradient */
                 -webkit-mask-image: linear-gradient(to bottom, 
@@ -608,6 +616,19 @@
             .hero-editorial-container {
                 padding-top: 1.75rem;
                 padding-bottom: 1rem;
+            }
+
+            .hero-service-pills {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.65rem;
+            }
+
+            .hero-pill-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 0.75rem 1rem;
+                min-height: 48px;
             }
 
             .hero-editorial-actions {
@@ -2028,9 +2049,9 @@
         <!-- Decorative Capsule Tube Pattern Overlay matching uploaded pattern -->
         <div class="hero-editorial-pattern" aria-hidden="true"></div>
 
-        <!-- Crisp High-Res Model on Right with Seamless Fade -->
+        <!-- Crisp High-Res Model on Right with Seamless Fade matching Australian Layout -->
         <div class="hero-editorial-model-wrap">
-            <img src="assets/hero-model.jpg?v=3" alt="Karla De La Mora - Financial Consultant" class="hero-crisp-model" loading="eager">
+            <img src="assets/hero-model.jpg?v=5" alt="Karla De La Mora - Financial Consultant" class="hero-crisp-model" loading="eager">
         </div>
 
         <div class="container hero-editorial-container">
@@ -2063,7 +2084,7 @@
 
         <!-- Mobile model visual with smooth top-fade -->
         <div class="hero-editorial-mobile-visual">
-            <img src="assets/hero-model.jpg?v=3" alt="Karla De La Mora" class="hero-mobile-model-img">
+            <img src="assets/hero-model.jpg?v=5" alt="Karla De La Mora" class="hero-mobile-model-img">
         </div>
     </section>
 
