@@ -357,22 +357,36 @@
             border-bottom: 1px solid rgba(0, 74, 173, 0.12);
         }
 
-        /* Non-repeating flowing capsule background: smaller dots, medium cyan on left fading to lighter on right */
+        /* Hero capsule background: exact user uploaded artwork with small fade into photo */
         .hero-editorial-pattern {
             position: absolute;
             top: 0;
             left: 0;
             bottom: 0;
-            right: 0;
-            width: 100%;
+            width: 65%;
+            max-width: 900px;
             height: 100%;
-            background-image: url('assets/hero-capsules-flow.png?v=2');
+            background-image: url('assets/hero-capsules-custom.jpg?v=1');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: left center;
-            opacity: 0.95;
             pointer-events: none;
             z-index: 1;
+            /* Small fade into photo on the right edge */
+            -webkit-mask-image: linear-gradient(to right, 
+                #000000 0%, 
+                #000000 74%, 
+                rgba(0, 0, 0, 0.75) 86%, 
+                rgba(0, 0, 0, 0.2) 94%, 
+                transparent 100%
+            );
+            mask-image: linear-gradient(to right, 
+                #000000 0%, 
+                #000000 74%, 
+                rgba(0, 0, 0, 0.75) 86%, 
+                rgba(0, 0, 0, 0.2) 94%, 
+                transparent 100%
+            );
         }
 
         /* Desktop model photo: maintains exact natural proportions (535/359 ratio) with uncropped framing */
@@ -396,20 +410,18 @@
             object-fit: contain;
             object-position: right center;
             display: block;
-            /* Natural uncropped framing and smooth feather fade into the pattern */
+            /* Natural uncropped framing and small feather fade into pattern */
             -webkit-mask-image: linear-gradient(to right, 
                 transparent 0%, 
-                rgba(0, 0, 0, 0.2) 8%, 
-                rgba(0, 0, 0, 0.65) 20%, 
-                rgba(0, 0, 0, 0.95) 34%, 
-                #000000 48%
+                rgba(0, 0, 0, 0.15) 6%, 
+                rgba(0, 0, 0, 0.7) 18%, 
+                #000000 28%
             );
             mask-image: linear-gradient(to right, 
                 transparent 0%, 
-                rgba(0, 0, 0, 0.2) 8%, 
-                rgba(0, 0, 0, 0.65) 20%, 
-                rgba(0, 0, 0, 0.95) 34%, 
-                #000000 48%
+                rgba(0, 0, 0, 0.15) 6%, 
+                rgba(0, 0, 0, 0.7) 18%, 
+                #000000 28%
             );
         }
 
@@ -565,9 +577,12 @@
 
             .hero-editorial-pattern {
                 width: 100%;
+                max-width: 100%;
                 background-size: cover;
                 background-position: left center;
-                opacity: 0.55;
+                opacity: 0.7;
+                -webkit-mask-image: linear-gradient(to bottom, #000000 70%, transparent 100%);
+                mask-image: linear-gradient(to bottom, #000000 70%, transparent 100%);
             }
 
             .hero-editorial-model-wrap {
