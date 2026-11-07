@@ -313,15 +313,32 @@
            ========================================================================== */
         .hero-editorial-section {
             position: relative;
-            background: #6F9FC3;
-            background: linear-gradient(180deg, #B6D5E9 0%, #6F9FC3 50%, #4F81A4 100%);
-            color: #FFFFFF;
+            background: #F8FAFD;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F0F7FD 45%, #E3F2FC 100%);
+            color: var(--text-main);
             overflow: hidden;
-            min-height: 380px;
-            max-height: 440px;
+            min-height: 400px;
+            max-height: 460px;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+            border-bottom: 1px solid rgba(0, 74, 173, 0.12);
+        }
+
+        /* Decorative Capsule Tube Pattern Overlay matching uploaded pattern */
+        .hero-editorial-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 65%;
+            background-image: url('assets/hero-capsules-pattern-transparent.png');
+            background-repeat: repeat;
+            background-size: 520px auto;
+            opacity: 0.72;
+            pointer-events: none;
+            z-index: 1;
+            -webkit-mask-image: linear-gradient(to right, #000000 50%, rgba(0, 0, 0, 0.3) 80%, transparent 100%);
+            mask-image: linear-gradient(to right, #000000 50%, rgba(0, 0, 0, 0.3) 80%, transparent 100%);
         }
 
         /* Desktop model photo anchored on the right with seamless feather fade */
@@ -330,8 +347,8 @@
             top: 0;
             right: 0;
             bottom: 0;
-            width: 44%;
-            max-width: 520px;
+            width: 48%;
+            max-width: 580px;
             height: 100%;
             pointer-events: none;
             z-index: 1;
@@ -342,21 +359,21 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 25%;
+            object-position: 68% center;
             display: block;
-            /* Exact seamless fade into the gradient */
+            /* Exact seamless fade into the light capsule panel */
             -webkit-mask-image: linear-gradient(to right, 
                 transparent 0%, 
-                rgba(0, 0, 0, 0.05) 10%, 
-                rgba(0, 0, 0, 0.4) 28%, 
-                rgba(0, 0, 0, 0.85) 52%, 
+                rgba(0, 0, 0, 0.04) 10%, 
+                rgba(0, 0, 0, 0.35) 28%, 
+                rgba(0, 0, 0, 0.85) 55%, 
                 #000000 75%
             );
             mask-image: linear-gradient(to right, 
                 transparent 0%, 
-                rgba(0, 0, 0, 0.05) 10%, 
-                rgba(0, 0, 0, 0.4) 28%, 
-                rgba(0, 0, 0, 0.85) 52%, 
+                rgba(0, 0, 0, 0.04) 10%, 
+                rgba(0, 0, 0, 0.35) 28%, 
+                rgba(0, 0, 0, 0.85) 55%, 
                 #000000 75%
             );
         }
@@ -381,7 +398,8 @@
             background: #FFFFFF;
             padding: 4px 12px 4px 8px;
             border-radius: 9999px;
-            box-shadow: 0 3px 10px rgba(15, 34, 51, 0.12);
+            border: 1px solid rgba(0, 74, 173, 0.18);
+            box-shadow: 0 2px 8px rgba(11, 37, 69, 0.08);
             margin-bottom: 0.85rem;
             text-decoration: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -389,7 +407,7 @@
 
         .hero-editorial-badge:hover {
             transform: translateY(-1px);
-            box-shadow: 0 5px 14px rgba(15, 34, 51, 0.18);
+            box-shadow: 0 4px 12px rgba(0, 74, 173, 0.16);
         }
 
         .hero-badge-tag {
@@ -406,7 +424,7 @@
         .hero-badge-message {
             font-size: 0.78rem;
             font-weight: 600;
-            color: #1E293B;
+            color: #0B2545;
             display: flex;
             align-items: center;
             gap: 0.35rem;
@@ -424,24 +442,24 @@
             font-size: clamp(1.5rem, 2.6vw, 2.25rem);
             font-weight: 800;
             letter-spacing: -0.03em;
-            color: #FFFFFF;
+            color: #0B2545;
         }
 
         .hero-headline-italic {
             display: block;
             font-family: 'Playfair Display', Georgia, serif;
             font-style: italic;
-            font-weight: 500;
+            font-weight: 600;
             font-size: clamp(1.5rem, 2.6vw, 2.25rem);
             letter-spacing: -0.01em;
-            color: #F0F7FC;
+            color: #004AAD;
             margin-top: 0.15rem;
         }
 
         .hero-editorial-desc {
             font-size: clamp(0.86rem, 1.05vw, 0.95rem);
             line-height: 1.55;
-            color: rgba(255, 255, 255, 0.94);
+            color: #334155;
             margin: 0 0 1.25rem 0;
             max-width: 530px;
         }
@@ -456,8 +474,8 @@
         }
 
         .btn-hero-solid {
-            background: #FFFFFF;
-            color: #234E6F;
+            background: #004AAD;
+            color: #FFFFFF;
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 0.88rem;
@@ -467,23 +485,21 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            box-shadow: 0 4px 14px rgba(15, 34, 51, 0.18);
+            box-shadow: 0 4px 14px rgba(0, 74, 173, 0.28);
             transition: all 0.22s ease;
         }
 
         .btn-hero-solid:hover {
             transform: translateY(-2px);
-            background: #F8FAFC;
-            box-shadow: 0 8px 20px rgba(15, 34, 51, 0.24);
-            color: #173852;
+            background: #003680;
+            box-shadow: 0 8px 22px rgba(0, 74, 173, 0.38);
+            color: #FFFFFF;
         }
 
         .btn-hero-ghost {
-            background: rgba(255, 255, 255, 0.16);
-            border: 1.5px solid rgba(255, 255, 255, 0.55);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            color: #FFFFFF;
+            background: #FFFFFF;
+            border: 1.5px solid #004AAD;
+            color: #004AAD;
             font-family: var(--font-display);
             font-weight: 600;
             font-size: 0.88rem;
@@ -494,19 +510,20 @@
             align-items: center;
             gap: 0.45rem;
             transition: all 0.22s ease;
+            box-shadow: 0 2px 8px rgba(0, 74, 173, 0.08);
         }
 
         .btn-hero-ghost:hover {
-            background: rgba(255, 255, 255, 0.26);
-            border-color: rgba(255, 255, 255, 0.85);
+            background: #EBF3FC;
+            border-color: #003680;
+            color: #003680;
             transform: translateY(-2px);
-            color: #FFFFFF;
         }
 
         /* Direct Consultation Micro-Link */
         .hero-micro-support {
             font-size: 0.82rem;
-            color: rgba(255, 255, 255, 0.88);
+            color: #64748B;
             display: flex;
             align-items: center;
             gap: 0.35rem;
@@ -514,7 +531,7 @@
         }
 
         .hero-micro-support a {
-            color: #FFFFFF;
+            color: #004AAD;
             font-weight: 700;
             text-decoration: underline;
             text-underline-offset: 3px;
@@ -522,7 +539,7 @@
         }
 
         .hero-micro-support a:hover {
-            opacity: 0.85;
+            color: #003680;
         }
 
         .hero-editorial-mobile-visual {
@@ -543,11 +560,16 @@
         /* Responsive Layout for Tablets & Phones */
         @media (max-width: 991px) {
             .hero-editorial-section {
-                background: linear-gradient(180deg, #ABC9E3 0%, #739EBE 50%, #517DA0 100%);
+                background: linear-gradient(180deg, #FFFFFF 0%, #F1F8FD 60%, #E3F2FC 100%);
                 flex-direction: column;
                 align-items: stretch;
                 min-height: auto;
                 max-height: none;
+            }
+
+            .hero-editorial-pattern {
+                width: 100%;
+                opacity: 0.45;
             }
 
             .hero-editorial-model-wrap {
@@ -566,27 +588,27 @@
             .hero-editorial-mobile-visual {
                 display: block;
                 width: 100%;
-                max-height: 340px;
+                max-height: 360px;
                 overflow: hidden;
             }
 
             .hero-mobile-model-img {
                 width: 100%;
                 height: 100%;
-                max-height: 340px;
+                max-height: 360px;
                 object-fit: cover;
                 object-position: center 20%;
                 display: block;
-                /* Seamless top fade so mobile model blends directly into the gradient */
+                /* Seamless top fade so mobile model blends directly into the light gradient */
                 -webkit-mask-image: linear-gradient(to bottom, 
                     transparent 0%, 
-                    rgba(0, 0, 0, 0.15) 12%, 
+                    rgba(0, 0, 0, 0.12) 12%, 
                     rgba(0, 0, 0, 0.6) 28%, 
                     #000000 45%
                 );
                 mask-image: linear-gradient(to bottom, 
                     transparent 0%, 
-                    rgba(0, 0, 0, 0.15) 12%, 
+                    rgba(0, 0, 0, 0.12) 12%, 
                     rgba(0, 0, 0, 0.6) 28%, 
                     #000000 45%
                 );
@@ -1928,9 +1950,12 @@
 
     <!-- Editorial Top Showcase Banner (Compact, Crisp High-Res & Seamless Fade) -->
     <section class="hero-editorial-section">
+        <!-- Decorative Capsule Tube Pattern Overlay matching uploaded pattern -->
+        <div class="hero-editorial-pattern" aria-hidden="true"></div>
+
         <!-- Crisp High-Res Model on Right with Seamless Fade -->
         <div class="hero-editorial-model-wrap">
-            <img src="assets/hero-model.jpg" alt="Karla De La Mora - Financial Consultant" class="hero-crisp-model" loading="eager">
+            <img src="assets/hero-model.jpg?v=3" alt="Karla De La Mora - Financial Consultant" class="hero-crisp-model" loading="eager">
         </div>
 
         <div class="container hero-editorial-container">
@@ -1969,7 +1994,7 @@
 
         <!-- Mobile model visual with smooth top-fade -->
         <div class="hero-editorial-mobile-visual">
-            <img src="assets/hero-model.jpg" alt="Karla De La Mora" class="hero-mobile-model-img">
+            <img src="assets/hero-model.jpg?v=3" alt="Karla De La Mora" class="hero-mobile-model-img">
         </div>
     </section>
 
