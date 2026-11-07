@@ -207,18 +207,24 @@
         }
 
         .nav-contact-btn {
-            background: linear-gradient(135deg, #004AAD, #1E88E5);
+            background: linear-gradient(135deg, #FF7A00, #E87E1E);
             color: #FFFFFF !important;
-            padding: 0.6rem 1.35rem;
+            padding: 0.65rem 1.45rem;
             border-radius: 9999px;
-            font-weight: 600 !important;
-            box-shadow: 0 4px 12px rgba(0, 74, 173, 0.28);
-            transition: all 0.2s ease !important;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 14px rgba(232, 126, 30, 0.35);
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .nav-contact-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(0, 74, 173, 0.38);
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #FF881A, #D66E12);
+            box-shadow: 0 6px 18px rgba(232, 126, 30, 0.48);
+            color: #FFFFFF !important;
         }
 
         /* Bilingual Language Switcher */
@@ -1999,7 +2005,7 @@
                     <li><a href="#inventory" data-i18n="nav_inventory">Inventory</a></li>
                     <li><a href="#advisory" data-i18n="nav_advisory">Advisory</a></li>
                     <li><a href="#about" data-i18n="nav_about">About</a></li>
-                    <li><a href="#contact" class="nav-contact-btn" data-i18n="nav_contact">Schedule Consultation</a></li>
+                    <li><a href="#contact" class="nav-contact-btn" data-i18n="nav_contact">Book a free consultation</a></li>
                 </ul>
 
                 <!-- Desktop Language Switcher -->
@@ -2038,7 +2044,7 @@
                 <li><a href="#about" class="mobile-nav-link"><span data-i18n="nav_about">About</span> →</a></li>
             </ul>
             <div class="mobile-nav-cta">
-                <a href="#contact" class="btn btn-primary mobile-nav-link" style="width: 100%; padding: 0.95rem;" data-i18n="nav_contact">Schedule Consultation</a>
+                <a href="#contact" class="nav-contact-btn mobile-nav-link" style="width: 100%; padding: 0.95rem; text-align: center; justify-content: center;" data-i18n="nav_contact">Book a free consultation</a>
                 <a href="tel:6198005102" class="btn btn-secondary" style="width: 100%; padding: 0.85rem;"><span data-i18n="mobile_call">📞 Call (619) 800-5102</span></a>
             </div>
         </div>
@@ -2846,7 +2852,7 @@
                 nav_inventory: "Inventory",
                 nav_advisory: "Advisory",
                 nav_about: "About",
-                nav_contact: "Schedule Consultation",
+                nav_contact: "Book a free consultation",
                 lang_select_title: "Language / Idioma:",
                 mobile_call: "📞 Call (619) 800-5102",
                 hero_badge_tag: "San Diego County",
@@ -3046,7 +3052,7 @@
                 nav_inventory: "Inventarios",
                 nav_advisory: "Asesoría",
                 nav_about: "Nosotros",
-                nav_contact: "Agendar Consulta",
+                nav_contact: "Reserva una consulta gratis",
                 lang_select_title: "Idioma / Language:",
                 mobile_call: "📞 Llamar al (619) 800-5102",
                 hero_badge_tag: "Condado de San Diego",
