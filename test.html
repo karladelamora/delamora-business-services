@@ -943,25 +943,26 @@
             line-height: 1.6;
         }
 
-        /* Clean-up Promo Banner */
+        /* Clean-up Promo Banner: White Box with Orange Outline */
         .cleanup-banner {
-            background: linear-gradient(135deg, #0B2545 0%, #004AAD 50%, #1E88E5 100%);
+            background: #FFFFFF;
             border-radius: var(--radius-xl);
-            padding: 2.75rem 3rem;
-            color: #FFFFFF;
-            margin-bottom: 3.5rem;
+            padding: 2.25rem 2.75rem;
+            color: #111827;
+            margin-bottom: 2.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 2.5rem;
-            box-shadow: 0 16px 36px -6px rgba(0, 74, 173, 0.25);
-            border: 1px solid rgba(186, 230, 253, 0.25);
+            box-shadow: 0 8px 24px rgba(232, 126, 30, 0.12);
+            border: 2px solid #E87E1E;
         }
 
         .cleanup-content h3 {
             font-family: var(--font-display);
             font-size: 1.65rem;
             font-weight: 800;
+            color: #0B2545;
             margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
@@ -971,7 +972,7 @@
         .cleanup-tag {
             background: rgba(82, 193, 228, 0.28);
             border: 1px solid rgba(186, 230, 253, 0.6);
-            color: #FFFFFF;
+            color: #004AAD;
             font-size: 0.75rem;
             padding: 0.3rem 0.8rem;
             border-radius: 9999px;
@@ -981,10 +982,11 @@
         }
 
         .cleanup-content p {
-            font-size: 1.05rem;
-            color: #EBF3FC;
+            font-size: 1.02rem;
+            color: #374151;
             max-width: 680px;
             line-height: 1.6;
+            margin: 0;
         }
 
         .cleanup-right {
@@ -993,21 +995,59 @@
         }
 
         .cleanup-badge-large {
-            display: inline-block;
-            background: #FFFFFF;
-            color: var(--purple-dark);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #F1B808;
+            color: #1C1917;
             font-family: var(--font-display);
             font-weight: 800;
-            font-size: 1.1rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+            font-size: 1rem;
+            padding: 0.85rem 1.85rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 14px rgba(241, 184, 8, 0.35);
+            text-decoration: none;
+            transition: all 0.22s ease;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .cleanup-badge-large:hover {
+            background: #E5AC00;
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(241, 184, 8, 0.45);
         }
 
         .cleanup-badge-sub {
             font-size: 0.85rem;
-            color: #C4B5FD;
+            color: #64748B;
             margin-top: 0.4rem;
+        }
+
+        /* Monthly Services Plans Sub-section */
+        .monthly-plans-wrap {
+            margin-top: 3.5rem;
+        }
+
+        .monthly-plans-header {
+            margin-bottom: 2rem;
+        }
+
+        .monthly-plans-title {
+            font-family: var(--font-display);
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: #0B2545;
+            margin-bottom: 0.5rem;
+        }
+
+        .monthly-plans-sub {
+            font-size: 1.05rem;
+            color: #4B5563;
+            max-width: 760px;
+            margin: 0;
+            line-height: 1.55;
         }
 
         /* Bookkeeping Plans Grid */
@@ -1021,25 +1061,25 @@
 
         .pricing-card {
             background: #FFFFFF;
-            border: 1.5px solid var(--purple-border);
+            border: 1.5px solid #E2E8F0;
             border-radius: var(--radius-xl);
             padding: 2.75rem 2.25rem;
             display: flex;
             flex-direction: column;
             position: relative;
             transition: all 0.3s ease;
-            box-shadow: var(--shadow-card);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
         }
 
         .pricing-card:hover {
-            border-color: var(--purple-main);
-            box-shadow: var(--shadow-card-hover);
-            transform: translateY(-6px);
+            border-color: #CBD5E1;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
         }
 
         .pricing-card.featured {
-            border: 2px solid var(--purple-main);
-            box-shadow: var(--shadow-card-hover);
+            border: 2px solid #F1B808 !important;
+            box-shadow: 0 12px 30px rgba(241, 184, 8, 0.16) !important;
         }
 
         .pricing-badge-popular {
@@ -1047,23 +1087,20 @@
             top: -14px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--purple-dark), var(--purple-vibrant));
-            color: #FFFFFF;
-            font-size: 0.8rem;
+            background: #F1B808 !important;
+            color: #1C1917 !important;
+            font-size: 0.75rem;
             font-weight: 800;
             padding: 0.35rem 1.25rem;
             border-radius: 9999px;
             letter-spacing: 0.06em;
             text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(109, 40, 217, 0.3);
+            box-shadow: 0 4px 10px rgba(241, 184, 8, 0.3) !important;
         }
 
         .pricing-step-num {
             width: 36px;
             height: 36px;
-            background: var(--purple-tint);
-            border: 1.5px solid var(--purple-border);
-            color: var(--purple-main);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1074,27 +1111,50 @@
             margin-bottom: 1.25rem;
         }
 
-        .pricing-card.featured .pricing-step-num {
-            background: var(--purple-main);
-            color: #FFFFFF;
-            border-color: var(--purple-main);
+        .step-num-basic {
+            background: #E0F2FE;
+            color: #0284C7;
+            border: 1.5px solid #BAE6FD;
+        }
+
+        .step-num-std {
+            background: #FEF3C7;
+            color: #D97706;
+            border: 1.5px solid #FDE68A;
+        }
+
+        .step-num-prem {
+            background: #FFEDD5;
+            color: #EA580C;
+            border: 1.5px solid #FED7AA;
         }
 
         .pricing-plan-title {
             font-family: var(--font-display);
             font-size: 1.65rem;
             font-weight: 800;
-            color: var(--primary);
+            color: #0B2545;
             margin-bottom: 0.5rem;
         }
 
         .pricing-tier-desc {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
-            color: var(--purple-main);
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .tier-basic {
+            color: #0284C7 !important;
+        }
+
+        .tier-std {
+            color: #D97706 !important;
+        }
+
+        .tier-prem {
+            color: #EA580C !important;
         }
 
         .pricing-features {
@@ -1104,25 +1164,67 @@
         }
 
         .pricing-features li {
-            font-size: 0.95rem;
-            color: var(--text-body);
-            padding: 0.55rem 0;
+            font-size: 0.92rem;
+            color: #374151;
+            padding: 0.5rem 0;
             display: flex;
             align-items: flex-start;
-            gap: 0.75rem;
-            line-height: 1.5;
+            gap: 0.65rem;
+            line-height: 1.45;
         }
 
-        .check-svg {
-            width: 18px;
-            height: 18px;
-            color: var(--purple-main);
+        .pricing-features .check-svg {
+            width: 17px;
+            height: 17px;
+            color: #0284C7;
             flex-shrink: 0;
-            margin-top: 3px;
+            margin-top: 2px;
         }
 
-        .pricing-card .btn {
+        /* Outline & Primary buttons on cards */
+        .btn-outline-plan {
+            background: #FFFFFF;
+            border: 1.5px solid #CBD5E1;
+            color: #0F172A;
+            border-radius: 9999px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s ease;
+            display: inline-block;
             width: 100%;
+        }
+
+        .btn-outline-plan:hover {
+            border-color: #004AAD;
+            color: #004AAD;
+            background: #F8FAFC;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary-plan {
+            background: #F1B808;
+            border: none;
+            color: #1C1917;
+            border-radius: 9999px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(241, 184, 8, 0.35);
+            display: inline-block;
+            width: 100%;
+        }
+
+        .btn-primary-plan:hover {
+            background: #E5AC00;
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(241, 184, 8, 0.45);
         }
 
         /* Inventory Administration Section */
@@ -2171,143 +2273,154 @@
         </div>
     </section>
 
-    <!-- Bookkeeping Services Section (Matching Gamma Page 3) -->
-    <section id="bookkeeping">
+    <!-- Bookkeeping Services Section (Matching User Mockup) -->
+    <section id="bookkeeping" class="bookkeeping-section" style="padding: 3.5rem 0 4.5rem 0; background: #F8FAFC;">
         <div class="container">
-            <div class="section-header">
-                <span class="section-kicker" data-i18n="bk_kicker">Bookkeeping Services</span>
-                <h2 class="section-title" data-i18n="bk_title">Clean, Tax-Ready Financials Every Month</h2>
-                <p class="section-subtitle" data-i18n="bk_subtitle">
+            <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #0B2545; margin-bottom: 1.5rem;" data-i18n="bk_kicker">Bookkeeping Services</h2>
+
+            <!-- Top Clean-Up & Overview Box -->
+            <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3vw, 3rem); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid #E2E8F0; margin-bottom: 2.5rem;">
+                <h3 style="font-family: var(--font-display); font-size: clamp(1.65rem, 2.5vw, 2.15rem); font-weight: 800; color: #0B2545; margin-bottom: 0.75rem;" data-i18n="bk_title">Clean, Tax-Ready Financials Every Month</h3>
+                <p style="font-size: 1.05rem; color: #4B5563; line-height: 1.6; max-width: 820px; margin-bottom: 2rem;" data-i18n="bk_subtitle">
                     Premier bookkeeping designed to support your growth. We organize, correct, and reconcile your books so you always know exactly where your business stands.
                 </p>
+
+                <!-- Books Catch & Clean-Up: White Box with Orange Outline -->
+                <div class="cleanup-banner">
+                    <div class="cleanup-content">
+                        <h3>
+                            <span data-i18n="cleanup_heading">Books Catch &amp; Clean-Up</span>
+                        </h3>
+                        <p data-i18n="cleanup_text">Behind on your records? We create your QuickBooks file and bring your accounting records fully up to date for every month behind so your accountant has compliant records ready at any time.</p>
+                    </div>
+                    <div class="cleanup-right">
+                        <a href="#contact" class="cleanup-badge-large" onclick="selectPlan('Diagnostic Scope')" data-i18n="cleanup_scope">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
+                            <span>Diagnostic Scope</span>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <!-- Books Catch & Clean-Up Highlight -->
-            <div class="cleanup-banner">
-                <div class="cleanup-content">
-                    <h3>
-                        <span data-i18n="cleanup_heading">Books Catch &amp; Clean-Up</span>
-                        <span class="cleanup-tag" data-i18n="cleanup_badge">Backlog Support</span>
-                    </h3>
-                    <p data-i18n="cleanup_text">Behind on your records? We create your QuickBooks file and bring your accounting records fully up to date for every month behind so your accountant has compliant records ready at any time.</p>
-                </div>
-                <div class="cleanup-right">
-                    <div class="cleanup-badge-large" data-i18n="cleanup_scope">Diagnostic Scope</div>
-                    <div class="cleanup-badge-sub" data-i18n="cleanup_scope_sub">Custom clean-up quote based on backlog months</div>
-                </div>
-            </div>
-
-            <!-- Monthly Plans Grid -->
-            <div class="pricing-grid">
-                <!-- Basic Plan -->
-                <div class="pricing-card">
-                    <div class="pricing-step-num">1</div>
-                    <h3 class="pricing-plan-title" data-i18n="basic_title">Basic Plan</h3>
-                    <div class="pricing-tier-desc" data-i18n="basic_desc">Essential Bookkeeping &bull; Flat-Rate Monthly</div>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="basic_f1">Up to ~150 monthly transactions</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="basic_f2">Up to 3 bank accounts or credit cards</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="basic_f3">Income and expense classification</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="basic_f4">Monthly bank reconciliations</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="basic_f5">Income statement &amp; balance sheet</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="basic_f6"><strong>Close on the 20th</strong> of the following month</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="basic_f7">Email support for specific questions</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary" onclick="selectPlan('Basic Plan')" data-i18n="btn_inquire_basic">Inquire for Basic</a>
+            <!-- Monthly Services Plans Container -->
+            <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3vw, 3rem); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid #E2E8F0;">
+                <div class="monthly-plans-header">
+                    <h3 class="monthly-plans-title" data-i18n="bk_monthly_title">Monthly Services Plans</h3>
+                    <p class="monthly-plans-sub" data-i18n="bk_monthly_sub">Ongoing bookkeeping tailored to your business, in three plans, keeping your books accurate and up to date every month.</p>
                 </div>
 
-                <!-- Standard Plan (Featured) -->
-                <div class="pricing-card featured">
-                    <span class="pricing-badge-popular" data-i18n="badge_popular">Most Popular</span>
-                    <div class="pricing-step-num">2</div>
-                    <h3 class="pricing-plan-title" data-i18n="std_title">Standard Plan</h3>
-                    <div class="pricing-tier-desc" data-i18n="std_desc">Growing Business &bull; Flat-Rate Monthly</div>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="std_f1">Up to 5 accounts &amp; ~300 transactions</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="std_f2"><strong>Everything included in Basic</strong></span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="std_f3">Recording &amp; classification of accounts receivable and payable (AP/AR)</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="std_f4">Monthly reports &amp; monthly financial review</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="std_f5"><strong>Close on the 15th</strong> of the following month</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="std_f6">Email support plus monthly review call</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" onclick="selectPlan('Standard Plan')" data-i18n="btn_inquire_std">Inquire for Standard</a>
-                </div>
+                <!-- Monthly Plans Grid -->
+                <div class="pricing-grid">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-step-num step-num-basic">1</div>
+                        <h3 class="pricing-plan-title" data-i18n="basic_title">Basic Plan</h3>
+                        <div class="pricing-tier-desc tier-basic" data-i18n="basic_desc">Essential Bookkeeping &bull; Flat-Rate Monthly</div>
+                        <ul class="pricing-features">
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="basic_f1">Up to ~150 monthly transactions</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="basic_f2">Up to 3 bank accounts or credit cards</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="basic_f3">Income and expense classification</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="basic_f4">Monthly bank reconciliations</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="basic_f5">Income statement &amp; balance sheet</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="basic_f6"><strong>Close on the 20th</strong> of the following month</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="basic_f7">Email support for specific questions</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline-plan" onclick="selectPlan('Basic Plan')" data-i18n="btn_inquire_basic">Inquire for Basic</a>
+                    </div>
 
-                <!-- Premium Plan -->
-                <div class="pricing-card">
-                    <div class="pricing-step-num">3</div>
-                    <h3 class="pricing-plan-title" data-i18n="prem_title">Premium Plan</h3>
-                    <div class="pricing-tier-desc" data-i18n="prem_desc">Comprehensive Control &bull; Flat-Rate Monthly</div>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="prem_f1">Up to 8 accounts &amp; ~600 transactions</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="prem_f2"><strong>Everything included in Standard</strong></span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="prem_f3">Budget vs. actual variance analysis</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="prem_f4">Cash flow review &amp; management reporting</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="prem_f5">Quarterly review with the business owner</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="prem_f6"><strong>Close on the 10th</strong> of the following month</span>
-                        </li>
-                        <li>
-                            <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span data-i18n="prem_f7">Priority support response</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary" onclick="selectPlan('Premium Plan')" data-i18n="btn_inquire_prem">Inquire for Premium</a>
+                    <!-- Standard Plan (Featured) -->
+                    <div class="pricing-card featured">
+                        <span class="pricing-badge-popular" data-i18n="badge_popular">MOST POPULAR</span>
+                        <div class="pricing-step-num step-num-std">2</div>
+                        <h3 class="pricing-plan-title" data-i18n="std_title">Standard Plan</h3>
+                        <div class="pricing-tier-desc tier-std" data-i18n="std_desc">Growing Business &bull; Flat-Rate Monthly</div>
+                        <ul class="pricing-features">
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="std_f1">Up to 5 accounts &amp; ~300 transactions</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="std_f2"><strong>Everything included in Basic</strong></span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="std_f3">Recording &amp; classification of accounts receivable and payable (AP/AR)</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="std_f4">Monthly reports &amp; monthly financial review</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="std_f5"><strong>Close on the 15th</strong> of the following month</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="std_f6">Email support plus monthly review call</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary-plan" onclick="selectPlan('Standard Plan')" data-i18n="btn_inquire_std">Inquire for Standard</a>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-step-num step-num-prem">3</div>
+                        <h3 class="pricing-plan-title" data-i18n="prem_title">Premium Plan</h3>
+                        <div class="pricing-tier-desc tier-prem" data-i18n="prem_desc">Comprehensive Control &bull; Flat-Rate Monthly</div>
+                        <ul class="pricing-features">
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="prem_f1">Up to 8 accounts &amp; ~600 transactions</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="prem_f2"><strong>Everything included in Standard</strong></span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="prem_f3">Budget vs. actual variance analysis</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="prem_f4">Cash flow review &amp; management reporting</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="prem_f5">Quarterly review with the business owner</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="prem_f6"><strong>Close on the 10th</strong> of the following month</span>
+                            </li>
+                            <li>
+                                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span data-i18n="prem_f7">Priority support response</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline-plan" onclick="selectPlan('Premium Plan')" data-i18n="btn_inquire_prem">Inquire for Premium</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2873,6 +2986,8 @@
                 bk_kicker: "Bookkeeping Services",
                 bk_title: "Clean, Tax-Ready Financials Every Month",
                 bk_subtitle: "Premier bookkeeping designed to support your growth. We organize, correct, and reconcile your books so you always know exactly where your business stands.",
+                bk_monthly_title: "Monthly Services Plans",
+                bk_monthly_sub: "Ongoing bookkeeping tailored to your business, in three plans, keeping your books accurate and up to date every month.",
                 cleanup_heading: "Books Catch & Clean-Up",
                 cleanup_badge: "Backlog Support",
                 cleanup_text: "Behind on your records? We create your QuickBooks file and bring your accounting records fully up to date for every month behind so your accountant has compliant records ready at any time.",
@@ -3073,6 +3188,8 @@
                 bk_kicker: "Servicios Contables y Bookkeeping",
                 bk_title: "Finanzas Limpias y Listas para Impuestos Cada Mes",
                 bk_subtitle: "Contabilidad de primer nivel diseñada para respaldar su crecimiento. Organizamos, corregimos y conciliamos sus libros para que siempre sepa con exactitud la situación de su negocio.",
+                bk_monthly_title: "Planes Mensuales de Servicios",
+                bk_monthly_sub: "Contabilidad continua diseñada a la medida de su negocio, en tres planes que mantienen sus libros precisos y al día cada mes.",
                 cleanup_heading: "Puesta al Día y Regularización de Libros",
                 cleanup_badge: "Soporte por Atraso",
                 cleanup_text: "¿Atrasado con sus registros? Creamos su archivo de QuickBooks y ponemos al día su contabilidad por cada mes de rezago para que su preparador de impuestos tenga información lista en cualquier momento.",
