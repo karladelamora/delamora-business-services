@@ -2271,9 +2271,15 @@
                         <p data-i18n="cleanup_text">Behind on your books? We can create or organize your QuickBooks file and bring your records fully up to date for every month you're behind, so they're accurate, reliable, and ready for your accountant at any time.</p>
                     </div>
                     <div class="cleanup-right">
-                        <a href="#contact" class="cleanup-badge-large" onclick="selectPlan('Diagnostic Scope')" data-i18n="cleanup_scope">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
-                            <span>Diagnostic Scope</span>
+                        <a href="#contact" class="cleanup-badge-large" onclick="selectPlan('Start My Clean-Up')">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 4h-1a2 2 0 0 0-2 2v3.5a5.5 5.5 0 0 0 11 0V6a2 2 0 0 0-2-2h-1"/>
+                                <path d="M8 15a6 6 0 0 0 12 0v-3"/>
+                                <path d="M11 3v2"/>
+                                <path d="M6 3v2"/>
+                                <circle cx="20" cy="10" r="2"/>
+                            </svg>
+                            <span data-i18n="cleanup_scope">Start My Clean-Up</span>
                         </a>
                     </div>
                 </div>
@@ -2968,7 +2974,7 @@
                 cleanup_heading: "Books Catch & Clean-Up",
                 cleanup_badge: "Backlog Support",
                 cleanup_text: "Behind on your books? We can create or organize your QuickBooks file and bring your records fully up to date for every month you're behind, so they're accurate, reliable, and ready for your accountant at any time.",
-                cleanup_scope: "Diagnostic Scope",
+                cleanup_scope: "Start My Clean-Up",
                 cleanup_scope_sub: "Custom clean-up quote based on backlog months",
                 basic_title: "Basic Plan",
                 basic_desc: "Essential Bookkeeping • Flat-Rate Monthly",
@@ -3170,7 +3176,7 @@
                 cleanup_heading: "Puesta al Día y Regularización de Libros",
                 cleanup_badge: "Soporte por Atraso",
                 cleanup_text: "¿Atrasado con sus libros? Creamos u organizamos su archivo de QuickBooks y ponemos al día sus registros por cada mes de rezago, para que sean exactos, confiables y estén listos para su contador en cualquier momento.",
-                cleanup_scope: "Alcance de Diagnóstico",
+                cleanup_scope: "Iniciar Mi Regularización",
                 cleanup_scope_sub: "Cotización a la medida según los meses de atraso",
                 basic_title: "Plan Básico",
                 basic_desc: "Contabilidad Esencial • Tarifa Fija Mensual",
@@ -3410,6 +3416,10 @@
                 select.value = 'Standard Plan';
             } else if (planName.includes('Premium')) {
                 select.value = 'Premium Plan';
+            }
+            if (planName.includes('Clean-Up')) {
+                const chk = document.getElementById('chkCleanup');
+                if (chk) chk.checked = true;
             }
             updateSummary();
         }
