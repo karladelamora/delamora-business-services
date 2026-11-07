@@ -351,7 +351,7 @@
             background: #FFFFFF;
             color: var(--text-main);
             overflow: hidden;
-            min-height: 410px;
+            min-height: 380px;
             display: flex;
             align-items: center;
             border-bottom: 1px solid rgba(0, 74, 173, 0.12);
@@ -363,7 +363,7 @@
             top: 0;
             left: 0;
             bottom: 0;
-            width: 65%;
+            width: 62%;
             max-width: 850px;
             background-image: url('assets/hero-capsules-pattern-transparent.png');
             background-repeat: repeat;
@@ -375,13 +375,13 @@
             mask-image: linear-gradient(to right, #000000 45%, rgba(0, 0, 0, 0.35) 75%, transparent 100%);
         }
 
-        /* Desktop model photo anchored on the right with seamless feather fade matching Australian layout */
+        /* Desktop model photo anchored right beside text with subtle feather fade */
         .hero-editorial-model-wrap {
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
-            left: 44%;
+            left: 48%;
             height: 100%;
             pointer-events: none;
             z-index: 1;
@@ -390,7 +390,7 @@
 
         @media (min-width: 1220px) {
             .hero-editorial-model-wrap {
-                left: calc((100vw - 1220px) / 2 + 500px);
+                left: calc((100vw - 1220px) / 2 + 520px);
             }
         }
 
@@ -400,22 +400,18 @@
             object-fit: cover;
             object-position: right center;
             display: block;
-            /* Seamless gradual fade matching the Australian reference */
+            /* Subtle gentle feather fade into the picture */
             -webkit-mask-image: linear-gradient(to right, 
                 transparent 0%, 
-                rgba(0, 0, 0, 0.02) 8%, 
-                rgba(0, 0, 0, 0.18) 22%, 
-                rgba(0, 0, 0, 0.6) 42%, 
-                rgba(0, 0, 0, 0.92) 62%, 
-                #000000 78%
+                rgba(0, 0, 0, 0.25) 4%, 
+                rgba(0, 0, 0, 0.75) 10%, 
+                #000000 16%
             );
             mask-image: linear-gradient(to right, 
                 transparent 0%, 
-                rgba(0, 0, 0, 0.02) 8%, 
-                rgba(0, 0, 0, 0.18) 22%, 
-                rgba(0, 0, 0, 0.6) 42%, 
-                rgba(0, 0, 0, 0.92) 62%, 
-                #000000 78%
+                rgba(0, 0, 0, 0.25) 4%, 
+                rgba(0, 0, 0, 0.75) 10%, 
+                #000000 16%
             );
         }
 
@@ -450,7 +446,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.95rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
         }
 
         .hero-editorial-desc,
@@ -2055,9 +2051,9 @@
         <!-- Decorative Capsule Tube Pattern Overlay matching uploaded pattern -->
         <div class="hero-editorial-pattern" aria-hidden="true"></div>
 
-        <!-- Crisp High-Res Model on Right with Seamless Fade matching Australian Layout -->
+        <!-- Crisp High-Res Model on Right with Subtle Feather Fade matching User Mockup -->
         <div class="hero-editorial-model-wrap">
-            <img src="assets/hero-model.jpg?v=5" alt="Karla De La Mora - Financial Consultant" class="hero-crisp-model" loading="eager">
+            <img src="assets/hero-model.jpg?v=6" alt="Karla De La Mora - Financial Consultant" class="hero-crisp-model" loading="eager">
         </div>
 
         <div class="container hero-editorial-container">
@@ -2074,23 +2070,12 @@
                         Explore our services and discover how we can help your business work smarter and grow stronger.
                     </p>
                 </div>
-
-                <div class="hero-service-pills">
-                    <a href="#bookkeeping" class="hero-pill-btn hero-pill-bookkeeping" data-i18n="hero_pill_bookkeeping">Bookkeeping</a>
-                    <a href="#inventory" class="hero-pill-btn hero-pill-inventory" data-i18n="hero_pill_inventory">Inventory</a>
-                    <a href="#advisory" class="hero-pill-btn hero-pill-advisory" data-i18n="hero_pill_advisory">Business Advisory</a>
-                </div>
-
-                <div class="hero-micro-support">
-                    <span data-i18n="hero_sub_prefix">Need immediate assistance?</span>
-                    <a href="tel:6198005102" data-i18n="hero_sub_call">Call Karla directly: (619) 800-5102</a>
-                </div>
             </div>
         </div>
 
         <!-- Mobile model visual with smooth top-fade -->
         <div class="hero-editorial-mobile-visual">
-            <img src="assets/hero-model.jpg?v=5" alt="Karla De La Mora" class="hero-mobile-model-img">
+            <img src="assets/hero-model.jpg?v=6" alt="Karla De La Mora" class="hero-mobile-model-img">
         </div>
     </section>
 
