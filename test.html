@@ -1342,39 +1342,59 @@
         }
 
         /* Business Advisory Grid */
+        /* Business Advisory Section */
+        .advisory-section {
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF9 50%, #FFFFFF 100%);
+            border-top: 1px solid #FED7AA;
+            padding: 3.5rem 0 5rem 0;
+            position: relative;
+        }
+
         .advisory-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1.75rem;
+            gap: 1.5rem;
         }
 
         .advisory-card {
             background: #FFFFFF;
-            border: 1.5px solid var(--purple-border);
+            border: 1.5px solid rgba(232, 126, 30, 0.35);
             border-radius: var(--radius-lg);
             padding: 2.25rem 1.75rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-card);
             display: flex;
             flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advisory-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #E87E1E;
         }
 
         .advisory-card:hover {
-            border-color: var(--purple-main);
+            border-color: #E87E1E;
             transform: translateY(-4px);
-            box-shadow: var(--shadow-card-hover);
+            box-shadow: 0 14px 30px rgba(232, 126, 30, 0.16);
         }
 
         .adv-icon-badge {
             width: 50px;
             height: 50px;
-            background: var(--purple-tint);
-            border: 1.5px solid var(--purple-border);
+            background: #FFF7ED;
+            border: 1.5px solid #FDBA74;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--purple-main);
+            color: #E87E1E;
             margin-bottom: 1.25rem;
         }
 
@@ -1598,10 +1618,22 @@
 
         .contact-form-card {
             background: #FFFFFF;
-            border: 1.5px solid var(--purple-border);
+            border: 2px solid #E87E1E;
             border-radius: var(--radius-xl);
             padding: 3rem;
-            box-shadow: var(--shadow-card-hover);
+            box-shadow: 0 12px 32px rgba(232, 126, 30, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #E87E1E;
         }
 
         .contact-form-card h3 {
@@ -2217,7 +2249,8 @@
             <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #0B2545; margin-bottom: 1.5rem;" data-i18n="inv_kicker">Inventory Administration and Internal Control</h2>
 
             <!-- Inventory Control Process Split Card (Unified Single Container) -->
-            <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3.5vw, 3.25rem); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid #E2E8F0; margin-bottom: 2.5rem;">
+            <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3.5vw, 3.25rem); box-shadow: 0 8px 30px rgba(82, 193, 228, 0.15); border: 2px solid #52C1E4; margin-bottom: 2.5rem; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #52C1E4;"></div>
                 <div class="inv-split-layout">
                     <!-- Left Column: Heading, Subtitle & Graphic on bottom left -->
                     <div class="inv-split-left">
@@ -2283,13 +2316,23 @@
         </div>
     </section>
 
-    <!-- Business Advisory Section (Matching Gamma PDF Page 10) -->
-    <section id="advisory">
+    <!-- Business Advisory Section (Standardized with Orange Signature) -->
+    <section id="advisory" class="advisory-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-kicker" data-i18n="adv_kicker">Business Advisory</span>
-                <h2 class="section-title" data-i18n="adv_title">Actionable Insights to Run and Grow</h2>
-                <p class="section-subtitle" data-i18n="adv_subtitle">Financial guidance to help you streamline processes, reduce costs, and understand the true drivers of your business performance.</p>
+            <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #0B2545; margin-bottom: 1.5rem;" data-i18n="adv_kicker">Business Advisory</h2>
+
+            <!-- Top Overview Box (Matching Standard Services Layout with Orange Outline & Accent) -->
+            <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3.5vw, 3.25rem); box-shadow: 0 8px 30px rgba(232, 126, 30, 0.12); border: 2px solid #E87E1E; margin-bottom: 2.5rem; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #E87E1E;"></div>
+                <h3 style="font-family: var(--font-display); font-size: clamp(1.45rem, 2.2vw, 1.95rem); font-weight: 800; color: #0B2545; margin-bottom: 0.85rem; line-height: 1.35;" data-i18n="adv_title">Actionable Insights to Run and Grow</h3>
+                <p style="font-size: 1.05rem; color: #4B5563; line-height: 1.65; max-width: 860px; margin-bottom: 1.75rem;" data-i18n="adv_subtitle">
+                    Financial guidance to help you streamline processes, reduce costs, and understand the true drivers of your business performance.
+                </p>
+                <div>
+                    <a href="#contact" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #E87E1E; color: #FFFFFF; font-weight: 800; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 4px 14px rgba(232, 126, 30, 0.35); transition: transform 0.2s ease;" onclick="selectPlan('Business Advisory')" data-i18n="btn_inquire_adv">
+                        Inquire for Advisory
+                    </a>
+                </div>
             </div>
 
             <div class="advisory-grid">
@@ -2377,7 +2420,7 @@
                             </div>
                         </a>
 
-                        <a href="mailto:Karla@DeLaMorabusiness.com" class="contact-direct-item">
+                        <a href="mailto:Karla@Delamorabusiness.com" class="contact-direct-item">
                             <div class="contact-icon-box">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -2386,7 +2429,7 @@
                             </div>
                             <div>
                                 <div class="contact-item-title" data-i18n="label_email">Owner Direct Email</div>
-                                <div class="contact-item-value">Karla@DeLaMorabusiness.com</div>
+                                <div class="contact-item-value">Karla@Delamorabusiness.com</div>
                             </div>
                         </a>
                     </div>
@@ -2398,7 +2441,7 @@
                     <p data-i18n="form_desc">Fill out the form below and Karla will follow up to review your specific requirements.</p>
 
                     <form id="leadForm" onsubmit="handleFormSubmit(event)">
-                        <!-- Active Web3Forms Key connected to Karla@DeLaMorabusiness.com -->
+                        <!-- Active Web3Forms Key connected to Karla@Delamorabusiness.com -->
                         <input type="hidden" name="access_key" id="w3fKey" value="e872ed36-422d-4381-9ca4-d926e8b05a0c">
                         <input type="hidden" name="subject" value="New Consultation Request from De La Mora Business Website">
                         <input type="hidden" name="from_name" value="De La Mora Website Inquiry">
@@ -2491,9 +2534,6 @@
                     <a href="#" class="brand-logo" aria-label="De La Mora Business Services" style="text-decoration:none; margin-bottom: 0.85rem;">
                         <img src="assets/dlm-logo.png?v=3" alt="De La Mora Business Services Logo" style="height: 78px; width: auto; max-width: 280px; object-fit: contain; display: block;">
                     </a>
-                    <p data-i18n="footer_brand_desc">
-                        Providing financial precision, cycle count supervision, and operational internal controls to San Diego County businesses.
-                    </p>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="footer_services_title">Core Services</h4>
@@ -2509,7 +2549,7 @@
                     <h4 data-i18n="footer_contact_title">Contact &amp; Details</h4>
                     <ul>
                         <li><a href="tel:6198005102">📞 (619) 800-5102</a></li>
-                        <li><a href="mailto:Karla@DeLaMorabusiness.com">✉️ Karla@DeLaMorabusiness.com</a></li>
+                        <li><a href="mailto:Karla@Delamorabusiness.com">✉️ Karla@Delamorabusiness.com</a></li>
                         <li><span data-i18n="f_loc">📍 San Diego County, CA</span></li>
                         <li><span data-i18n="f_lic">Lic: El Cajon</span></li>
                     </ul>
@@ -2520,12 +2560,6 @@
                 <div>
                     &copy; 2026 De La Mora Business Services. <span data-i18n="rights_reserved">All Rights Reserved.</span>
                 </div>
-                <div>
-                    <span data-i18n="owner_line">Owner: Karla De La Mora &bull; (619) 800-5102</span>
-                </div>
-            </div>
-            <div class="footer-disclaimer" data-i18n="footer_disclaimer_text">
-                <strong>Notice:</strong> Tax return preparation services are offered strictly by referral and are not directly provided. Detailed payment application, individual collections, and third-party audit representations are quoted outside standard bookkeeping packages.
             </div>
         </div>
     </footer>
@@ -2637,6 +2671,7 @@
                 inv_proc_title: "Our Inventory Control Services",
                 inv_proc_text: "We help businesses understand their inventory, identify differences between recorded and physical quantities, spot opportunities for improvement, and improve internal control.",
                 btn_inquire_inv: "Inquire for Inventory",
+                btn_inquire_adv: "Inquire for Advisory",
                 inv_step1_t: "Inventory Checkup (Diagnostic)",
                 inv_step1_d: "Initial assessment of inventory management practices, records, and procedures to establish a clear starting point.",
                 inv_step2_t: "Physical Count & Reconciliation",
@@ -2800,6 +2835,7 @@
                 inv_proc_title: "Nuestros Servicios de Control de Inventario",
                 inv_proc_text: "Ayudamos a las empresas a comprender su inventario, identificar diferencias entre las cantidades registradas y físicas, detectar oportunidades de mejora y fortalecer el control interno.",
                 btn_inquire_inv: "Solicitar Asesoría de Inventarios",
+                btn_inquire_adv: "Solicitar Asesoría de Negocios",
                 inv_step1_t: "Diagnóstico de Inventario (Checkup)",
                 inv_step1_d: "Evaluación inicial de prácticas de gestión de inventarios, registros y procedimientos para establecer un punto de partida claro.",
                 inv_step2_t: "Conteo Físico y Conciliación",
@@ -3078,9 +3114,9 @@
                 feedback.innerHTML = `
                     <strong>${currentLang === 'es' ? '¡Detalles Listos!' : 'Consultation Details Ready!'}</strong><br>
                     <p style="margin: 0.5rem 0 0.75rem; font-size: 0.9rem; color: #475569;">
-                        ${currentLang === 'es' ? 'Haga clic abajo para enviar directamente a' : 'Click below to send directly to'} <strong>Karla@DeLaMorabusiness.com</strong>:
+                        ${currentLang === 'es' ? 'Haga clic abajo para enviar directamente a' : 'Click below to send directly to'} <strong>Karla@Delamorabusiness.com</strong>:
                     </p>
-                    <a href="mailto:Karla@DeLaMorabusiness.com?subject=${subject}&body=${body}" 
+                    <a href="mailto:Karla@Delamorabusiness.com?subject=${subject}&body=${body}" 
                        class="btn btn-primary" 
                        style="display: inline-block; padding: 0.6rem 1.4rem; font-size: 0.9rem;">
                         ✉️ ${currentLang === 'es' ? 'Abrir Correo para Enviar a Karla' : 'Open Email to Send to Karla'}
