@@ -2229,23 +2229,18 @@
             <!-- Inventory Control Process Split Template (Matching Template Layout) -->
             <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3.5vw, 3.25rem); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid #E2E8F0; margin-bottom: 2.5rem;">
                 <div class="inv-split-layout">
-                    <!-- Left Column: Text, Button, and Graphic on bottom left of text -->
+                    <!-- Left Column: Text and Graphic on bottom left -->
                     <div class="inv-split-left">
                         <h3 style="font-family: var(--font-display); font-size: clamp(1.4rem, 2vw, 1.85rem); font-weight: 800; color: #0B2545; margin-bottom: 1rem;" data-i18n="inv_proc_title">Our Inventory Control Services</h3>
                         <p style="font-size: 1.05rem; color: #374151; line-height: 1.65; margin-bottom: 1.75rem;" data-i18n="inv_proc_text">
                             We help businesses understand their inventory, identify differences between recorded and physical quantities, spot opportunities for improvement, and improve internal control.
                         </p>
-                        <div>
-                            <a href="#contact" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #F1B808; color: #0B2545; font-weight: 800; font-size: 0.95rem; padding: 0.8rem 1.85rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 4px 14px rgba(241, 184, 8, 0.35); margin-bottom: 2rem; transition: transform 0.2s ease;" onclick="selectPlan('Inventory Administration')" data-i18n="btn_inquire_inv">
-                                Inquire for Inventory
-                            </a>
-                        </div>
                         <div style="border-radius: 16px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); max-width: 480px;">
-                            <img src="assets/inventory-diagnostic-illustration.jpg" alt="Inventory Checkup Diagnostic Illustration" style="width: 100%; height: auto; display: block;">
+                            <img src="assets/inventory-diagnostic-illustration.jpg?v=2" alt="Inventory Checkup Diagnostic Illustration" style="width: 100%; height: auto; display: block;">
                         </div>
                     </div>
 
-                    <!-- Right Column: Numbered List 1 - 4 -->
+                    <!-- Right Column: Numbered List 1 - 4 + Inquire Button -->
                     <div class="inv-split-right">
                         <div class="inv-step-row">
                             <div class="inv-step-num">1</div>
@@ -2277,6 +2272,12 @@
                                 <h4 data-i18n="inv_step4_t">Internal Control Design &amp; Improvement</h4>
                                 <p data-i18n="inv_step4_d">Evaluation and enhancement of operational controls through identification of operational risks and segregation of duties.</p>
                             </div>
+                        </div>
+
+                        <div style="padding-top: 0.5rem; margin-left: clamp(0px, 3vw, 52px);">
+                            <a href="#contact" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #F1B808; color: #0B2545; font-weight: 800; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 4px 14px rgba(241, 184, 8, 0.35); transition: transform 0.2s ease;" onclick="selectPlan('Inventory Administration')" data-i18n="btn_inquire_inv">
+                                Inquire for Inventory
+                            </a>
                         </div>
                     </div>
                 </div>
