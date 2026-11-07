@@ -1245,280 +1245,99 @@
 
         /* Inventory Administration Section */
         .inventory-section {
-            background: #FFFFFF;
-            border-top: 1px solid var(--border-subtle);
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .inventory-overview-box {
-            background: var(--purple-tint);
-            border: 1.5px solid var(--purple-border);
-            border-radius: var(--radius-lg);
-            padding: 2.25rem;
-            margin-bottom: 3.5rem;
-            color: var(--text-body);
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        .inventory-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-bottom: 3.5rem;
-        }
-
-        .inventory-card {
-            background: #FFFFFF;
-            border: 1.5px solid var(--purple-border);
-            border-radius: var(--radius-lg);
-            padding: 2.25rem;
-            transition: all 0.25s ease;
-            box-shadow: var(--shadow-card);
-        }
-
-        .inventory-card:hover {
-            border-color: var(--purple-main);
-            box-shadow: var(--shadow-card-hover);
-            transform: translateY(-4px);
-        }
-
-        .inv-card-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .inv-number {
-            width: 38px;
-            height: 38px;
-            background: linear-gradient(135deg, var(--purple-dark), var(--purple-vibrant));
-            color: #FFFFFF;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-display);
-            font-weight: 800;
-            font-size: 1rem;
-            flex-shrink: 0;
-            box-shadow: 0 4px 10px rgba(109, 40, 217, 0.25);
-        }
-
-        .inv-title {
-            font-family: var(--font-display);
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .inv-purpose {
-            font-size: 0.98rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .inv-details-block {
-            background: var(--purple-tint);
-            border-radius: var(--radius-md);
-            padding: 1.5rem;
-            margin-bottom: 1.25rem;
-            border: 1px solid var(--purple-border);
-        }
-
-        .inv-details-title {
-            font-size: 0.82rem;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: var(--purple-dark);
-            letter-spacing: 0.06em;
-            margin-bottom: 0.75rem;
-        }
-
-        .inv-details-list {
-            list-style: none;
-            font-size: 0.92rem;
-            color: var(--text-body);
-        }
-
-        .inv-details-list li {
-            padding: 0.35rem 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-        }
-
-        .inv-bullet {
-            width: 6px;
-            height: 6px;
-            background: var(--purple-main);
-            border-radius: 50%;
-            margin-top: 8px;
-            flex-shrink: 0;
-        }
-
-        .inv-deliverables-block {
-            border-top: 1px solid var(--border-subtle);
-            padding-top: 1.25rem;
-            margin-top: 1.25rem;
-        }
-
-        .inv-deliverables-title {
-            font-size: 0.82rem;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: var(--text-muted);
-            letter-spacing: 0.06em;
-            margin-bottom: 0.6rem;
-        }
-
-        .inv-deliverables-list {
-            list-style: none;
-            font-size: 0.92rem;
-            color: var(--text-body);
-        }
-
-        .inv-deliverables-list li {
-            padding: 0.3rem 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-        }
-
-        .inv-note-box {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            background: #F8FAFC;
-            padding: 1rem 1.25rem;
-            border-radius: var(--radius-md);
-            margin-top: 1.25rem;
-            border-left: 4px solid var(--purple-vibrant);
-            line-height: 1.55;
-        }
-
-        /* Methodology Wavy Ribbon Graphic */
-        .methodology-container {
-            background: #FFFFFF;
-            border: 1.5px solid var(--purple-border);
-            border-radius: var(--radius-xl);
-            padding: 3rem;
-            margin-top: 3.5rem;
-            box-shadow: var(--shadow-card);
-        }
-
-        .methodology-header {
-            text-align: center;
-            max-width: 680px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .methodology-header h3 {
-            font-family: var(--font-display);
-            font-size: 1.85rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .methodology-ribbon-graphic {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FA 40%, #FFFFFF 100%);
+            border-top: 1px solid #E2E8F0;
+            padding: 3.5rem 0 5rem 0;
             position: relative;
-            width: 100%;
-            margin: 1.5rem 0 2rem 0;
         }
 
-        .methodology-ribbon-svg {
-            width: 100%;
-            height: 90px;
-            display: block;
-        }
-
-        .methodology-steps-grid {
+        .inv-split-layout {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            text-align: center;
+            grid-template-columns: 1fr 1.15fr;
+            gap: clamp(2rem, 4vw, 3.75rem);
+            align-items: start;
         }
 
-        .methodology-step-box {
-            padding: 1.25rem;
-            background: var(--purple-tint);
-            border: 1px solid var(--purple-border);
-            border-radius: var(--radius-md);
-            transition: all 0.2s ease;
+        .inv-split-left {
+            display: flex;
+            flex-direction: column;
         }
 
-        .methodology-step-box:hover {
-            background: #FFFFFF;
-            border-color: var(--purple-main);
-            box-shadow: var(--shadow-card);
-            transform: translateY(-3px);
+        .inv-split-right {
+            display: flex;
+            flex-direction: column;
+            gap: 2.25rem;
         }
 
-        .meth-icon-circle {
-            width: 52px;
-            height: 52px;
-            background: #FFFFFF;
-            border: 2px solid var(--purple-main);
+        .inv-step-row {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .inv-step-num {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            background: #0B2545;
+            color: #FFFFFF;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
-            color: var(--purple-main);
-            box-shadow: 0 4px 12px rgba(109, 40, 217, 0.15);
+            flex-shrink: 0;
+            margin-top: 2px;
+            box-shadow: 0 4px 10px rgba(11, 37, 69, 0.22);
         }
 
-        .meth-icon-circle svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        .meth-title {
+        .inv-step-body h4 {
             font-family: var(--font-display);
+            font-size: 1.15rem;
             font-weight: 800;
-            color: var(--primary);
-            font-size: 1.05rem;
+            color: #0B2545;
             margin-bottom: 0.35rem;
+            line-height: 1.35;
         }
 
-        .meth-desc {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.45;
+        .inv-step-body p {
+            font-size: 0.96rem;
+            color: #4B5563;
+            line-height: 1.6;
+            margin: 0;
         }
 
-        /* Deloitte Collaboration Box */
+        /* Deloitte Collaboration Box - Clean Navy & Gray */
         .collab-callout {
-            background: linear-gradient(135deg, #FAF8FF 0%, #F5F3FF 100%);
-            border: 1.5px solid var(--purple-border);
-            border-radius: var(--radius-lg);
+            background: #F8FAFD;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 20px;
             padding: 2.25rem;
-            margin-top: 3rem;
+            margin-top: 2.5rem;
             display: flex;
             align-items: center;
             gap: 2rem;
-            box-shadow: var(--shadow-card);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
         }
 
         .collab-badge {
             background: #FFFFFF;
-            border: 1.5px solid var(--purple-border);
+            border: 1.5px solid #E2E8F0;
             padding: 1rem 1.5rem;
-            border-radius: 16px;
+            border-radius: 14px;
             font-family: var(--font-display);
             font-weight: 800;
-            color: var(--purple-main);
+            color: #004AAD;
             font-size: 1.25rem;
             text-align: center;
             flex-shrink: 0;
-            box-shadow: var(--shadow-subtle);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .collab-text {
-            font-size: 1.05rem;
-            color: var(--text-body);
+            font-size: 1.02rem;
+            color: #374151;
             line-height: 1.65;
         }
 
@@ -2061,20 +1880,7 @@
             .pricing-grid { grid-template-columns: 1fr; gap: 2rem; }
             .pricing-card { padding: 2.25rem 1.5rem; }
 
-            .inventory-grid { grid-template-columns: 1fr; gap: 1.75rem; }
-            .inventory-card { padding: 1.75rem 1.35rem; }
-
-            .methodology-container { padding: 2.25rem 1.35rem; }
-            .methodology-ribbon-graphic { display: none; }
-            .methodology-steps-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .methodology-step-box {
-                display: flex;
-                align-items: center;
-                text-align: left;
-                gap: 1.25rem;
-                padding: 1.35rem;
-            }
-            .meth-icon-circle { margin: 0; flex-shrink: 0; width: 48px; height: 48px; }
+            .inv-split-layout { grid-template-columns: 1fr; gap: 2.25rem; }
 
             .collab-callout { flex-direction: column; align-items: flex-start; padding: 1.75rem 1.35rem; gap: 1.25rem; }
             .collab-badge { width: 100%; text-align: center; }
@@ -2409,202 +2215,81 @@
         </div>
     </section>
 
-    <!-- Inventory Administration Section (Matching Gamma Pages 4-9) -->
+    <!-- Inventory Administration Section -->
     <section id="inventory" class="inventory-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-kicker" data-i18n="inv_kicker">Inventory Administration &amp; Control</span>
-                <h2 class="section-title" data-i18n="inv_title">Know Exactly What Is on Your Shelves</h2>
-                <p class="section-subtitle" data-i18n="inv_subtitle">
+            <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #0B2545; margin-bottom: 1.5rem;" data-i18n="inv_kicker">Inventory Administration and Internal Control</h2>
+
+            <!-- Top Overview Box (Matching Previous Section Format) -->
+            <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3vw, 3rem); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid #E2E8F0; margin-bottom: 2.5rem;">
+                <h3 style="font-family: var(--font-display); font-size: clamp(1.5rem, 2.3vw, 2.1rem); font-weight: 800; color: #0B2545; margin-bottom: 0.85rem; line-height: 1.35;" data-i18n="inv_title">Do you know exactly what's on your shelves and what value is reflected in your financial statements?</h3>
+                <p style="font-size: 1.05rem; color: #4B5563; line-height: 1.65; max-width: 860px; margin: 0;" data-i18n="inv_subtitle">
                     Helping business owners understand inventory, identify physical vs. recorded differences, recognize improvement areas, and establish consistent counting practices.
                 </p>
             </div>
 
-            <div class="inventory-overview-box" data-i18n="inv_overview_box">
-                Packages may be engaged individually or combined based on your business size, SKU count, record availability, and level of support required. <strong>Pricing is provided after an initial diagnostic review.</strong>
-            </div>
+            <!-- Inventory Control Process Split Template (Matching Template Layout) -->
+            <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3.5vw, 3.25rem); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid #E2E8F0; margin-bottom: 2.5rem;">
+                <div class="inv-split-layout">
+                    <!-- Left Column: Text, Button, and Graphic on bottom left of text -->
+                    <div class="inv-split-left">
+                        <h3 style="font-family: var(--font-display); font-size: clamp(1.4rem, 2vw, 1.85rem); font-weight: 800; color: #0B2545; margin-bottom: 1rem;" data-i18n="inv_proc_title">Our Inventory Control Services</h3>
+                        <p style="font-size: 1.02rem; color: #374151; line-height: 1.65; margin-bottom: 0.85rem;" data-i18n="inv_proc_p1">
+                            De La Mora Business Services provides inventory administration and control services to small and medium-sized businesses.
+                        </p>
+                        <p style="font-size: 0.98rem; color: #4B5563; line-height: 1.6; margin-bottom: 1.75rem;" data-i18n="inv_proc_p2">
+                            Our goal is to help business owners understand their inventory, identify differences between recorded and physical quantities, recognize opportunities for improvement, and establish consistent counting practices.
+                        </p>
+                        <div>
+                            <a href="#contact" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #F1B808; color: #0B2545; font-weight: 800; font-size: 0.95rem; padding: 0.8rem 1.85rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 4px 14px rgba(241, 184, 8, 0.35); margin-bottom: 2rem; transition: transform 0.2s ease;" onclick="selectPlan('Inventory Administration')" data-i18n="btn_inquire_inv">
+                                Inquire for Inventory
+                            </a>
+                        </div>
+                        <div style="border-radius: 16px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); max-width: 480px;">
+                            <img src="assets/inventory-diagnostic-illustration.jpg" alt="Inventory Checkup Diagnostic Illustration" style="width: 100%; height: auto; display: block;">
+                        </div>
+                    </div>
 
-            <div class="inventory-grid">
-                <!-- Checkup -->
-                <div class="inventory-card">
-                    <div class="inv-card-header">
-                        <div class="inv-number">1</div>
-                        <h3 class="inv-title" data-i18n="inv_c1_title">Inventory Checkup (Diagnostic)</h3>
-                    </div>
-                    <p class="inv-purpose" data-i18n="inv_c1_purpose">Initial assessment of inventory management practices, records, and procedures to establish a clear starting point.</p>
-                    <div class="inv-details-block">
-                        <div class="inv-details-title" data-i18n="label_included">What's Included:</div>
-                        <ul class="inv-details-list">
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c1_i1">Initial site visit &amp; prior diagnostic review of inventory, records, and systems</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c1_i2">Interview with the owner or person responsible for inventory</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c1_i3">Review of purchasing, receiving, storage, and sales processes</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c1_i4">Review of product samples and available inventory records</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c1_i5">Identification of operational risks and improvement opportunities</span></li>
-                        </ul>
-                    </div>
-                    <div class="inv-deliverables-block">
-                        <div class="inv-deliverables-title" data-i18n="label_deliverables">Client Deliverables:</div>
-                        <ul class="inv-deliverables-list">
-                            <li><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="inv_c1_d1">Summary of current inventory practices</span></li>
-                            <li><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="inv_c1_d2">Key weaknesses and risks identified</span></li>
-                            <li><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="inv_c1_d3">Priority recommendations &amp; suggested action plan</span></li>
-                        </ul>
-                    </div>
-                </div>
+                    <!-- Right Column: Numbered List 1 - 4 -->
+                    <div class="inv-split-right">
+                        <div class="inv-step-row">
+                            <div class="inv-step-num">1</div>
+                            <div class="inv-step-body">
+                                <h4 data-i18n="inv_step1_t">Inventory Checkup (Diagnostic)</h4>
+                                <p data-i18n="inv_step1_d">Initial assessment of inventory management practices, records, and procedures to establish a clear starting point.</p>
+                            </div>
+                        </div>
 
-                <!-- Physical Counts -->
-                <div class="inventory-card">
-                    <div class="inv-card-header">
-                        <div class="inv-number">2</div>
-                        <h3 class="inv-title" data-i18n="inv_c2_title">Physical Count &amp; Reconciliation</h3>
-                    </div>
-                    <p class="inv-purpose" data-i18n="inv_c2_purpose">Comprehensive coordination and supervision of your physical inventory counting process with variance reconciliation.</p>
-                    <div class="inv-details-block">
-                        <div class="inv-details-title" data-i18n="label_included">What's Included:</div>
-                        <ul class="inv-details-list">
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c2_i1">Planning meeting to define scope, areas, and count cut-off date/time</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c2_i2">Organization of products by department or category</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c2_i3">Preparation of count sheets or digital data-capture tools</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c2_i4">Physical count supervision of products in agreed scope</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c2_i5">Reconciling physical counts against system balances to identify discrepancies</span></li>
-                        </ul>
-                    </div>
-                    <div class="inv-deliverables-block">
-                        <div class="inv-deliverables-title" data-i18n="label_deliverables">Client Deliverables:</div>
-                        <ul class="inv-deliverables-list">
-                            <li><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="inv_c2_d1">Structured electronic data file formatted for easy system upload/integration</span></li>
-                            <li><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="inv_c2_d2">Comprehensive final inventory report presenting findings &amp; variances</span></li>
-                        </ul>
-                    </div>
-                    <div class="inv-note-box" data-i18n="inv_c2_note">
-                        <strong>Scope Note:</strong> DLM coordinates, organizes, and supervises. Physical counts are performed by client personnel (separate counting labor can be quoted upon request). Available monthly, quarterly, annually, or as needed.
-                    </div>
-                </div>
+                        <div class="inv-step-row">
+                            <div class="inv-step-num">2</div>
+                            <div class="inv-step-body">
+                                <h4 data-i18n="inv_step2_t">Physical Count &amp; Reconciliation</h4>
+                                <p data-i18n="inv_step2_d">Comprehensive coordination and supervision of your physical inventory counting process with variance reconciliation.</p>
+                            </div>
+                        </div>
 
-                <!-- Valuation & Analysis -->
-                <div class="inventory-card">
-                    <div class="inv-card-header">
-                        <div class="inv-number">3</div>
-                        <h3 class="inv-title" data-i18n="inv_c3_title">Inventory Valuation &amp; Analysis</h3>
-                    </div>
-                    <p class="inv-purpose" data-i18n="inv_c3_purpose">Ensuring inventory amounts and costing systems comply with your applicable financial reporting framework.</p>
-                    <div class="inv-details-block">
-                        <div class="inv-details-title" data-i18n="label_included">What's Included:</div>
-                        <ul class="inv-details-list">
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c3_i1">Review of inventory recognition and indirect cost allocation</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c3_i2">Cost determination for items within agreed scope by turnover and risk</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c3_i3">Review of controls supporting inventory valuation</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c3_i4"><strong>Inventory Allowance Review:</strong> analysis of obsolete, damaged, or slow-moving items and calculation of potential valuation adjustments</span></li>
-                        </ul>
-                    </div>
-                    <div class="inv-deliverables-block">
-                        <div class="inv-deliverables-title" data-i18n="label_deliverables">Client Deliverables:</div>
-                        <ul class="inv-deliverables-list">
-                            <li><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="inv_c3_d1">Inventory Valuation Assessment with identified deficiencies</span></li>
-                            <li><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="inv_c3_d2">Inventory Cost Determination calculations &amp; allowance documentation</span></li>
-                        </ul>
-                    </div>
-                </div>
+                        <div class="inv-step-row">
+                            <div class="inv-step-num">3</div>
+                            <div class="inv-step-body">
+                                <h4 data-i18n="inv_step3_t">Inventory Valuation &amp; Analysis</h4>
+                                <p data-i18n="inv_step3_d">Ensuring inventory amounts and costing systems comply with your applicable financial reporting framework.</p>
+                            </div>
+                        </div>
 
-                <!-- Internal Control Design -->
-                <div class="inventory-card">
-                    <div class="inv-card-header">
-                        <div class="inv-number">4</div>
-                        <h3 class="inv-title" data-i18n="inv_c4_title">Internal Control Design &amp; Improvement</h3>
-                    </div>
-                    <p class="inv-purpose" data-i18n="inv_c4_purpose">Evaluation and enhancement of operational controls through identification of operational risks and segregation of duties.</p>
-                    <div class="inv-details-block">
-                        <div class="inv-details-title" data-i18n="label_included">What's Included:</div>
-                        <ul class="inv-details-list">
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c4_i1">Assessment of existing inventory policies &amp; procedures</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c4_i2">Definition of roles, responsibilities, and segregation of duties</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c4_i3">Controls to prevent/detect shrinkage, errors, and unauthorized transactions</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c4_i4">Enhancement of inventory reporting and management monitoring</span></li>
-                            <li><span class="inv-bullet"></span> <span data-i18n="inv_c4_i5">Support implementing and monitoring recommended changes</span></li>
-                        </ul>
-                    </div>
-                    <div class="inv-deliverables-block">
-                        <div class="inv-deliverables-title" data-i18n="inv_c4_cycle_title">Structured Cycle:</div>
-                        <ul class="inv-deliverables-list">
-                            <li><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="inv_c4_d1">Available monthly, bi-monthly, quarterly, semi-annually, or annually</span></li>
-                        </ul>
+                        <div class="inv-step-row">
+                            <div class="inv-step-num">4</div>
+                            <div class="inv-step-body">
+                                <h4 data-i18n="inv_step4_t">Internal Control Design &amp; Improvement</h4>
+                                <p data-i18n="inv_step4_d">Evaluation and enhancement of operational controls through identification of operational risks and segregation of duties.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Methodology Wavy Ribbon Graphic (Matching Gamma PDF Page 9) -->
-            <div class="methodology-container">
-                <div class="methodology-header">
-                    <span class="section-kicker" data-i18n="meth_kicker">Implementation Methodology</span>
-                    <h3 data-i18n="meth_title">Structured Control Design Framework</h3>
-                    <p style="color: var(--text-muted); font-size: 0.98rem;" data-i18n="meth_subtitle">Our proven 4-stage process to evaluate, optimize, and lock in inventory accuracy.</p>
-                </div>
-
-                <!-- Purple Wavy S-Curve Ribbon SVG -->
-                <div class="methodology-ribbon-graphic">
-                    <svg class="methodology-ribbon-svg" viewBox="0 0 1000 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M50 40 C 150 10, 200 70, 350 40 C 500 10, 550 70, 700 40 C 850 10, 900 70, 950 40" stroke="#004AAD" stroke-width="12" stroke-linecap="round" fill="none"/>
-                        <path d="M50 40 C 150 10, 200 70, 350 40 C 500 10, 550 70, 700 40 C 850 10, 900 70, 950 40" stroke="#BAE6FD" stroke-width="4" stroke-linecap="round" fill="none"/>
-                    </svg>
-                </div>
-
-                <div class="methodology-steps-grid">
-                    <div class="methodology-step-box">
-                        <div class="meth-icon-circle">
-                            <!-- Search / Diagnostic Icon -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </div>
-                        <div class="meth-title" data-i18n="meth_s1_t">1. Diagnosis &amp; Understanding</div>
-                        <div class="meth-desc" data-i18n="meth_s1_d">Of the current operating model and stock flow</div>
-                    </div>
-
-                    <div class="methodology-step-box">
-                        <div class="meth-icon-circle">
-                            <!-- Document / SOP Icon -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                            </svg>
-                        </div>
-                        <div class="meth-title" data-i18n="meth_s2_t">2. Redesign &amp; Documentation</div>
-                        <div class="meth-desc" data-i18n="meth_s2_d">Of improved policies, SOPs, and custody procedures</div>
-                    </div>
-
-                    <div class="methodology-step-box">
-                        <div class="meth-icon-circle">
-                            <!-- Implementation Shield Check Icon -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                <polyline points="9 12 11 14 15 10"></polyline>
-                            </svg>
-                        </div>
-                        <div class="meth-title" data-i18n="meth_s3_t">3. Implementation Support</div>
-                        <div class="meth-desc" data-i18n="meth_s3_d">Direct team guidance in implementing improvements</div>
-                    </div>
-
-                    <div class="methodology-step-box">
-                        <div class="meth-icon-circle">
-                            <!-- Analytics / Monitor Icon -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                        </div>
-                        <div class="meth-title" data-i18n="meth_s4_t">4. Reviews &amp; Advisory</div>
-                        <div class="meth-desc" data-i18n="meth_s4_d">Continuous monitoring, cycle counts, and follow-up</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Deloitte Experience Callout -->
+            <!-- Deloitte Experience Callout (Moved to bottom) -->
             <div class="collab-callout">
-                <div class="collab-badge">20+ Years<br><span style="font-size:0.75rem; font-weight:700; color:var(--text-muted); letter-spacing:0.05em;" data-i18n="deloitte_tag">CONSULTING ROOTS</span></div>
+                <div class="collab-badge">20+ Years<br><span style="font-size:0.75rem; font-weight:700; color:#64748B; letter-spacing:0.05em;" data-i18n="deloitte_tag">CONSULTING ROOTS</span></div>
                 <div class="collab-text" data-i18n="deloitte_text">
                     <strong>Professional Collaboration:</strong> We collaborate with consulting professionals with more than 20 years of experience in consulting at <strong>Deloitte</strong>, specialized in process improvement, operational efficiency, risk management, and strengthening internal control.
                 </div>
@@ -3006,60 +2691,21 @@
                 prem_f6: "Close on the 10th of the following month",
                 prem_f7: "Priority support response",
                 btn_inquire_prem: "Inquire for Premium",
-                inv_kicker: "Inventory Administration & Control",
-                inv_title: "Know Exactly What Is on Your Shelves",
+                inv_kicker: "Inventory Administration and Internal Control",
+                inv_title: "Do you know exactly what's on your shelves and what value is reflected in your financial statements?",
                 inv_subtitle: "Helping business owners understand inventory, identify physical vs. recorded differences, recognize improvement areas, and establish consistent counting practices.",
-                inv_overview_box: "Packages may be engaged individually or combined based on your business size, SKU count, record availability, and level of support required. <strong>Pricing is provided after an initial diagnostic review.</strong>",
-                inv_c1_title: "Inventory Checkup (Diagnostic)",
-                inv_c1_purpose: "Initial assessment of inventory management practices, records, and procedures to establish a clear starting point.",
-                label_included: "What's Included:",
-                inv_c1_i1: "Initial site visit & prior diagnostic review of inventory, records, and systems",
-                inv_c1_i2: "Interview with the owner or person responsible for inventory",
-                inv_c1_i3: "Review of purchasing, receiving, storage, and sales processes",
-                inv_c1_i4: "Review of product samples and available inventory records",
-                inv_c1_i5: "Identification of operational risks and improvement opportunities",
-                label_deliverables: "Client Deliverables:",
-                inv_c1_d1: "Summary of current inventory practices",
-                inv_c1_d2: "Key weaknesses and risks identified",
-                inv_c1_d3: "Priority recommendations & suggested action plan",
-                inv_c2_title: "Physical Count & Reconciliation",
-                inv_c2_purpose: "Comprehensive coordination and supervision of your physical inventory counting process with variance reconciliation.",
-                inv_c2_i1: "Planning meeting to define scope, areas, and count cut-off date/time",
-                inv_c2_i2: "Organization of products by department or category",
-                inv_c2_i3: "Preparation of count sheets or digital data-capture tools",
-                inv_c2_i4: "Physical count supervision of products in agreed scope",
-                inv_c2_i5: "Reconciling physical counts against system balances to identify discrepancies",
-                inv_c2_d1: "Structured electronic data file formatted for easy system upload/integration",
-                inv_c2_d2: "Comprehensive final inventory report presenting findings & variances",
-                inv_c2_note: "<strong>Scope Note:</strong> DLM coordinates, organizes, and supervises. Physical counts are performed by client personnel (separate counting labor can be quoted upon request). Available monthly, quarterly, annually, or as needed.",
-                inv_c3_title: "Inventory Valuation & Analysis",
-                inv_c3_purpose: "Ensuring inventory amounts and costing systems comply with your applicable financial reporting framework.",
-                inv_c3_i1: "Review of inventory recognition and indirect cost allocation",
-                inv_c3_i2: "Cost determination for items within agreed scope by turnover and risk",
-                inv_c3_i3: "Review of controls supporting inventory valuation",
-                inv_c3_i4: "<strong>Inventory Allowance Review:</strong> analysis of obsolete, damaged, or slow-moving items and calculation of potential valuation adjustments",
-                inv_c3_d1: "Inventory Valuation Assessment with identified deficiencies",
-                inv_c3_d2: "Inventory Cost Determination calculations & allowance documentation",
-                inv_c4_title: "Internal Control Design & Improvement",
-                inv_c4_purpose: "Evaluation and enhancement of operational controls through identification of operational risks and segregation of duties.",
-                inv_c4_i1: "Assessment of existing inventory policies & procedures",
-                inv_c4_i2: "Definition of roles, responsibilities, and segregation of duties",
-                inv_c4_i3: "Controls to prevent/detect shrinkage, errors, and unauthorized transactions",
-                inv_c4_i4: "Enhancement of inventory reporting and management monitoring",
-                inv_c4_i5: "Support implementing and monitoring recommended changes",
-                inv_c4_cycle_title: "Structured Cycle:",
-                inv_c4_d1: "Available monthly, bi-monthly, quarterly, semi-annually, or annually",
-                meth_kicker: "Implementation Methodology",
-                meth_title: "Structured Control Design Framework",
-                meth_subtitle: "Our proven 4-stage process to evaluate, optimize, and lock in inventory accuracy.",
-                meth_s1_t: "1. Diagnosis & Understanding",
-                meth_s1_d: "Of the current operating model and stock flow",
-                meth_s2_t: "2. Redesign & Documentation",
-                meth_s2_d: "Of improved policies, SOPs, and custody procedures",
-                meth_s3_t: "3. Implementation Support",
-                meth_s3_d: "Direct team guidance in implementing improvements",
-                meth_s4_t: "4. Reviews & Advisory",
-                meth_s4_d: "Continuous monitoring, cycle counts, and follow-up",
+                inv_proc_title: "Our Inventory Control Services",
+                inv_proc_p1: "De La Mora Business Services provides inventory administration and control services to small and medium-sized businesses.",
+                inv_proc_p2: "Our goal is to help business owners understand their inventory, identify differences between recorded and physical quantities, recognize opportunities for improvement, and establish consistent counting practices.",
+                btn_inquire_inv: "Inquire for Inventory",
+                inv_step1_t: "Inventory Checkup (Diagnostic)",
+                inv_step1_d: "Initial assessment of inventory management practices, records, and procedures to establish a clear starting point.",
+                inv_step2_t: "Physical Count & Reconciliation",
+                inv_step2_d: "Comprehensive coordination and supervision of your physical inventory counting process with variance reconciliation.",
+                inv_step3_t: "Inventory Valuation & Analysis",
+                inv_step3_d: "Ensuring inventory amounts and costing systems comply with your applicable financial reporting framework.",
+                inv_step4_t: "Internal Control Design & Improvement",
+                inv_step4_d: "Evaluation and enhancement of operational controls through identification of operational risks and segregation of duties.",
                 deloitte_tag: "CONSULTING ROOTS",
                 deloitte_text: "<strong>Professional Collaboration:</strong> We collaborate with consulting professionals with more than 20 years of experience in consulting at <strong>Deloitte</strong>, specialized in process improvement, operational efficiency, risk management, and strengthening internal control.",
                 adv_kicker: "Business Advisory",
@@ -3209,59 +2855,20 @@
                 prem_f7: "Respuesta de soporte prioritario",
                 btn_inquire_prem: "Solicitar Plan Premium",
                 inv_kicker: "Administración y Control de Inventarios",
-                inv_title: "Conozca con Exactitud lo que Hay en sus Anaqueles",
-                inv_subtitle: "Ayudamos a dueños de negocios a entender su inventario, identificar diferencias entre registros y conteo físico, detectar mejoras y establecer conteos consistentes.",
-                inv_overview_box: "Los paquetes pueden contratarse de forma individual o combinada según el tamaño de su empresa, número de SKUs, registros disponibles y nivel de soporte. <strong>La cotización se entrega tras una revisión diagnóstica inicial.</strong>",
-                inv_c1_title: "Revisión de Inventario (Diagnóstico)",
-                inv_c1_purpose: "Evaluación inicial de las prácticas, registros y procedimientos de inventario para establecer un punto de partida claro.",
-                label_included: "Qué Incluye:",
-                inv_c1_i1: "Visita inicial y revisión diagnóstica del inventario, registros y sistemas",
-                inv_c1_i2: "Entrevista con el propietario o responsable del inventario",
-                inv_c1_i3: "Revisión de procesos de compras, recepción, almacenaje y ventas",
-                inv_c1_i4: "Muestreo de productos y revisión de registros disponibles",
-                inv_c1_i5: "Identificación de riesgos operativos y áreas de mejora",
-                label_deliverables: "Entregables al Cliente:",
-                inv_c1_d1: "Resumen de las prácticas actuales de inventario",
-                inv_c1_d2: "Principales debilidades y riesgos detectados",
-                inv_c1_d3: "Recomendaciones prioritarias y plan de acción sugerido",
-                inv_c2_title: "Conteo Físico y Conciliación",
-                inv_c2_purpose: "Coordinación y supervisión integral de su conteo físico de inventario con conciliación de variaciones.",
-                inv_c2_i1: "Reunión de planeación para definir alcance, áreas y fecha/hora de corte",
-                inv_c2_i2: "Organización de productos por departamento o categoría",
-                inv_c2_i3: "Preparación de hojas de conteo o herramientas digitales de captura",
-                inv_c2_i4: "Supervisión del conteo físico de productos en el alcance acordado",
-                inv_c2_i5: "Conciliación de conteos físicos contra saldos de sistema para detectar diferencias",
-                inv_c2_d1: "Archivo digital estructurado listo para integración o carga en su sistema",
-                inv_c2_d2: "Reporte final detallado para la dirección explicando variaciones clave",
-                inv_c2_note: "<strong>Nota de Alcance:</strong> DLM coordina, organiza y supervisa. Los conteos físicos son ejecutados por el personal del cliente (personal adicional de conteo puede cotizarse por separado). Disponible mensual, trimestral o anual.",
-                inv_c3_title: "Valuación y Análisis de Inventario",
-                inv_c3_purpose: "Verificación de que los costos y métodos de inventario cumplan con el marco contable y financiero aplicable.",
-                inv_c3_i1: "Revisión del reconocimiento de inventarios y asignación de costos indirectos",
-                inv_c3_i2: "Determinación de costos por valor, rotación y riesgo operativo",
-                inv_c3_i3: "Revisión de controles que respaldan la valuación contable",
-                inv_c3_i4: "<strong>Revisión de Estimación de Inventarios:</strong> análisis de mercancía obsoleta, dañada o de lento movimiento y cálculo de ajustes necesarios",
-                inv_c3_d1: "Evaluación de Valuación con deficiencias identificadas",
-                inv_c3_d2: "Cálculos de determinación de costos y documentación de estimaciones",
-                inv_c4_title: "Diseño y Mejora del Control Interno",
-                inv_c4_purpose: "Evaluación y fortalecimiento de controles operativos mediante mitigación de riesgos y segregación de funciones.",
-                inv_c4_i1: "Diagnóstico de políticas y procedimientos actuales de inventario",
-                inv_c4_i2: "Definición de roles, responsabilidades y segregación de funciones",
-                inv_c4_i3: "Controles para prevenir y detectar mermas, errores y salidas no autorizadas",
-                inv_c4_i4: "Mejora de reportes de inventario y monitoreo gerencial",
-                inv_c4_i5: "Acompañamiento en la implementación y seguimiento de mejoras",
-                inv_c4_cycle_title: "Ciclo Estructurado:",
-                inv_c4_d1: "Disponible con periodicidad mensual, bimestral, trimestral o anual",
-                meth_kicker: "Metodología de Implementación",
-                meth_title: "Marco Estructurado de Control y Diseño",
-                meth_subtitle: "Nuestro proceso probado de 4 etapas para evaluar, optimizar y asegurar la precisión del inventario.",
-                meth_s1_t: "1. Diagnóstico y Entendimiento",
-                meth_s1_d: "Del modelo operativo actual y flujo de mercancía",
-                meth_s2_t: "2. Rediseño y Documentación",
-                meth_s2_d: "De políticas mejoradas, manuales SOP y custodia",
-                meth_s3_t: "3. Soporte en Implementación",
-                meth_s3_d: "Guía directa al equipo en la ejecución de mejoras",
-                meth_s4_t: "4. Revisiones y Asesoría",
-                meth_s4_d: "Monitoreo continuo, conteos cíclicos y seguimiento",
+                inv_title: "¿Sabe con exactitud lo que tiene en sus anaqueles y qué valor se refleja en sus estados financieros?",
+                inv_subtitle: "Ayudamos a dueños de negocios a comprender su inventario, identificar diferencias entre registros y conteo físico, detectar áreas de mejora y establecer prácticas de conteo consistentes.",
+                inv_proc_title: "Nuestros Servicios de Control de Inventario",
+                inv_proc_p1: "De La Mora Business Services ofrece servicios de administración y control de inventarios para pequeñas y medianas empresas.",
+                inv_proc_p2: "Nuestro objetivo es ayudar a los empresarios a entender su inventario, identificar diferencias entre cantidades registradas y físicas, detectar oportunidades de mejora y establecer prácticas consistentes de inventario.",
+                btn_inquire_inv: "Solicitar Asesoría de Inventarios",
+                inv_step1_t: "Diagnóstico de Inventario (Checkup)",
+                inv_step1_d: "Evaluación inicial de prácticas de gestión de inventarios, registros y procedimientos para establecer un punto de partida claro.",
+                inv_step2_t: "Conteo Físico y Conciliación",
+                inv_step2_d: "Coordinación y supervisión integral del conteo físico de existencias con conciliación de variaciones.",
+                inv_step3_t: "Valuación y Análisis de Inventarios",
+                inv_step3_d: "Garantizar que los montos de inventario y sistemas de costeo cumplan con su marco de reporte financiero aplicable.",
+                inv_step4_t: "Diseño y Mejora de Control Interno",
+                inv_step4_d: "Evaluación y fortalecimiento de controles operativos mediante identificación de riesgos operativos y segregación de funciones.",
                 deloitte_tag: "RAÍCES EN CONSULTORÍA",
                 deloitte_text: "<strong>Colaboración Profesional:</strong> Colaboramos con profesionales con más de 20 años de experiencia en consultoría en <strong>Deloitte</strong>, especializados en mejora de procesos, eficiencia operativa, gestión de riesgos y fortalecimiento de control interno.",
                 adv_kicker: "Asesoría de Negocios",
