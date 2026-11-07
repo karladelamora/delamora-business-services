@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>About Us | De La Mora Business Services</title>
+    <meta name="description" content="Learn about De La Mora Business Services, our methodology, and our team dedicated to bookkeeping, inventory administration, and business advisory in San Diego County.">
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0B2545;
+            --primary-dark: #07192F;
+            --primary-light: #134074;
+            --brand-blue: #004AAD;
+            --brand-blue-hover: #003680;
+            --brand-cyan: #0072CE;
+            --cyan-accent: #52C1E4;
+            --accent-gold: #F1B808;
+            --accent-orange: #E87E1E;
+            --text-main: #0B2545;
+            --text-body: #475569;
+            --text-muted: #64748B;
+            --bg-light: #F4F8FA;
+            --bg-white: #FFFFFF;
+            --border-subtle: #E2E8F0;
+            --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --shadow-card-hover: 0 12px 30px rgba(0, 0, 0, 0.09);
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-xl: 24px;
+            --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-body);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Staging Banner */
+        .staging-banner {
+            background: #0B2545;
+            color: #FFFFFF;
+            padding: 0.55rem 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .staging-banner a {
+            color: #F1B808;
+            text-decoration: underline;
+            margin-left: 0.5rem;
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 90px;
+        }
+
+        .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .header-logo-img {
+            height: 72px;
+            width: auto;
+            max-width: 280px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-right-cluster {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-body);
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 0.4rem 0.2rem;
+            position: relative;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a.nav-link-bookkeeping:hover { color: #C28800; }
+        .nav-links a.nav-link-inventory:hover { color: #0072CE; }
+        .nav-links a.nav-link-advisory:hover { color: #E87E1E; }
+        .nav-links a.nav-link-about { color: var(--brand-blue); }
+        .nav-links a.nav-link-about::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--brand-blue);
+            border-radius: 9999px;
+            transform: scaleX(1);
+        }
+
+        .nav-contact-btn {
+            background: linear-gradient(135deg, #FF7A00, #E87E1E);
+            color: #FFFFFF !important;
+            padding: 0.65rem 1.45rem;
+            border-radius: 9999px;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 14px rgba(232, 126, 30, 0.35);
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(232, 126, 30, 0.45);
+        }
+
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: #F1F5F9;
+            padding: 0.3rem 0.6rem;
+            border-radius: 9999px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0.2rem 0.45rem;
+            border-radius: 9999px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: #FFFFFF;
+            color: var(--primary);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-drawer {
+            display: none;
+            background: #FFFFFF;
+            border-bottom: 2px solid var(--border-subtle);
+            padding: 1.5rem;
+        }
+        .mobile-menu-drawer.open {
+            display: block;
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .mobile-nav-list a {
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        /* Hero / Page Header */
+        .about-hero {
+            background: linear-gradient(180deg, #F0F6FA 0%, #FFFFFF 100%);
+            padding: 4.5rem 0 3.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-kicker {
+            font-size: 0.88rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--brand-blue);
+            margin-bottom: 0.85rem;
+            display: inline-block;
+        }
+
+        .about-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 3.8vw, 3.25rem);
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.25;
+            max-width: 900px;
+            margin: 0 auto 1.25rem;
+        }
+
+        .about-hero p {
+            font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+            color: var(--text-body);
+            max-width: 820px;
+            margin: 0 auto;
+            line-height: 1.65;
+        }
+
+        /* Section Layouts */
+        .content-section {
+            padding: 4.5rem 0;
+        }
+
+        .content-section.alt-bg {
+            background: #F8FAFC;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-header-block {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-header-block h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.85rem, 2.8vw, 2.45rem);
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.85rem;
+            line-height: 1.3;
+        }
+
+        .section-header-block p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.65;
+        }
+
+        /* Methodology Showcase */
+        .methodology-card {
+            background: #FFFFFF;
+            border-radius: var(--radius-xl);
+            padding: clamp(2rem, 3.5vw, 3.25rem);
+            box-shadow: var(--shadow-card);
+            border: 2px solid var(--cyan-accent);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+        }
+
+        .methodology-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--cyan-accent);
+        }
+
+        .methodology-image-wrap {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-subtle);
+            margin-bottom: 2.5rem;
+            background: #FFFFFF;
+        }
+
+        .methodology-image-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .methodology-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .method-step-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 1.75rem 1.35rem;
+            position: relative;
+            transition: all 0.25s ease;
+        }
+        .method-step-card:hover {
+            transform: translateY(-4px);
+            background: #FFFFFF;
+            border-color: var(--cyan-accent);
+            box-shadow: 0 10px 24px rgba(82, 193, 228, 0.15);
+        }
+
+        .method-step-num {
+            width: 38px;
+            height: 38px;
+            background: var(--primary);
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .method-step-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.35;
+        }
+
+        .method-step-card p {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            line-height: 1.55;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: stretch;
+        }
+
+        .team-card {
+            background: #FFFFFF;
+            border-radius: var(--radius-xl);
+            padding: clamp(2rem, 3.5vw, 3rem);
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card.founder-card {
+            border: 2px solid var(--accent-orange);
+        }
+        .team-card.founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-orange);
+        }
+
+        .team-card.consulting-card {
+            border: 2px solid var(--brand-blue);
+        }
+        .team-card.consulting-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--brand-blue);
+        }
+
+        .team-badge-pill {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            margin-bottom: 1.25rem;
+            width: fit-content;
+        }
+
+        .badge-founder {
+            background: #FFF7ED;
+            color: #C2410C;
+            border: 1px solid #FDBA74;
+        }
+
+        .badge-deloitte {
+            background: #EFF6FF;
+            color: #1E40AF;
+            border: 1px solid #BFDBFE;
+        }
+
+        .team-card h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 2vw, 1.85rem);
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.35rem;
+        }
+
+        .team-role {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .team-desc {
+            font-size: 1rem;
+            color: var(--text-body);
+            line-height: 1.65;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-highlights {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: auto;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .team-highlights li {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .highlight-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--brand-blue);
+            flex-shrink: 0;
+        }
+
+        /* Target Customers / Who We Serve */
+        .collab-callout {
+            background: #F8FAFD;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 20px;
+            padding: 2.25rem;
+            margin-top: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .collab-badge {
+            background: #FFFFFF;
+            border: 1.5px solid #DCE6F1;
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #004AAD;
+            line-height: 1.2;
+            text-align: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0, 74, 173, 0.08);
+        }
+
+        .collab-text {
+            font-size: 1.05rem;
+            color: #334155;
+            line-height: 1.65;
+        }
+
+        .target-card-container {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-card);
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            overflow: hidden;
+        }
+
+        .target-main-content {
+            padding: 3rem;
+        }
+
+        .target-main-content h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 2.2vw, 1.95rem);
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.85rem;
+            line-height: 1.35;
+        }
+
+        .target-main-content p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.65;
+            margin-bottom: 2rem;
+        }
+
+        .target-chips {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .chip-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 0.9rem 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .chip-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #0284C7;
+            flex-shrink: 0;
+        }
+
+        .target-side-graphic {
+            position: relative;
+            min-height: 100%;
+            overflow: hidden;
+            border-left: 1px solid var(--border-subtle);
+        }
+
+        .target-side-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* CTA Banner */
+        .cta-banner-box {
+            background: linear-gradient(135deg, #0B2545 0%, #004AAD 100%);
+            border-radius: var(--radius-xl);
+            padding: clamp(2.5rem, 4vw, 3.75rem);
+            color: #FFFFFF;
+            text-align: center;
+            box-shadow: 0 16px 36px rgba(0, 74, 173, 0.25);
+            margin: 4.5rem 0;
+        }
+
+        .cta-banner-box h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.85rem, 3vw, 2.6rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .cta-banner-box p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 720px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .btn-cta-gold {
+            background: #F1B808;
+            color: #0B2545;
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 6px 20px rgba(241, 184, 8, 0.4);
+            transition: transform 0.2s ease;
+        }
+        .btn-cta-gold:hover {
+            transform: translateY(-2px);
+            background: #E5AC00;
+        }
+
+        /* Footer */
+        footer {
+            background: #FFFFFF;
+            border-top: 1px solid var(--border-subtle);
+            padding: 4.5rem 0 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.65rem;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+        .footer-col ul li a:hover {
+            color: var(--brand-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 960px) {
+            .nav-links { display: none; }
+            .mobile-nav-toggle { display: flex; }
+            .methodology-steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .team-grid { grid-template-columns: 1fr; }
+            .target-card-container { grid-template-columns: 1fr; }
+            .target-side-graphic { height: 200px; border-left: none; border-top: 1px solid var(--border-subtle); }
+            .footer-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+        }
+
+        @media (max-width: 640px) {
+            .methodology-steps-grid { grid-template-columns: 1fr; }
+            .target-chips { grid-template-columns: 1fr; }
+            .target-main-content { padding: 2rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Staging Notification Banner -->
+    <div class="staging-banner">
+        <span>⚡ <span data-i18n="staging_note">Staging / Test Page (Working Draft)</span></span> &nbsp;|&nbsp;
+        <a href="index.html" data-i18n="staging_link">View Live Coming Soon Page →</a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header id="mainHeader">
+        <div class="container nav-wrapper">
+            <a href="test.html" class="brand-logo" aria-label="De La Mora Business Services">
+                <img src="assets/dlm-logo.png?v=3" alt="De La Mora Business Services Logo" class="header-logo-img">
+            </a>
+
+            <div class="nav-right-cluster">
+                <ul class="nav-links">
+                    <li><a href="test.html#bookkeeping" class="nav-link-bookkeeping" data-i18n="nav_bookkeeping">Bookkeeping</a></li>
+                    <li><a href="test.html#inventory" class="nav-link-inventory" data-i18n="nav_inventory">Inventory</a></li>
+                    <li><a href="test.html#advisory" class="nav-link-advisory" data-i18n="nav_advisory">Advisory</a></li>
+                    <li><a href="about.html" class="nav-link-about" data-i18n="nav_about">About Us</a></li>
+                    <li><a href="test.html#contact" class="nav-contact-btn" data-i18n="nav_contact">Book a free consultation</a></li>
+                </ul>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider" style="color:var(--text-muted);">|</span>
+                    <button type="button" class="lang-btn" data-lang="es">ES</button>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+            <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-subtle);">
+                <span style="font-size:0.85rem; font-weight:700; color:var(--text-muted);" data-i18n="lang_select_title">Language / Idioma:</span>
+                <div class="lang-switcher">
+                    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider" style="color:var(--text-muted);">|</span>
+                    <button type="button" class="lang-btn" data-lang="es">ES</button>
+                </div>
+            </div>
+            <ul class="mobile-nav-list">
+                <li><a href="test.html#bookkeeping"><span data-i18n="nav_bookkeeping">Bookkeeping</span> →</a></li>
+                <li><a href="test.html#inventory"><span data-i18n="nav_inventory">Inventory</span> →</a></li>
+                <li><a href="test.html#advisory"><span data-i18n="nav_advisory">Advisory</span> →</a></li>
+                <li><a href="about.html" style="color: var(--brand-blue);"><span data-i18n="nav_about">About Us</span> →</a></li>
+            </ul>
+            <div style="margin-top: 1.5rem;">
+                <a href="test.html#contact" class="nav-contact-btn" style="width: 100%; padding: 0.95rem; text-align: center; justify-content: center;" data-i18n="nav_contact">Book a free consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header / Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <span class="section-kicker" data-i18n="about_hero_kicker">About De La Mora Business Services</span>
+            <h1 data-i18n="about_hero_title">Dedicated to Financial Precision, Operational Control &amp; Client Growth</h1>
+            <p data-i18n="about_hero_desc">
+                We provide small and medium-sized businesses with organized bookkeeping, structured inventory administration, and strategic business advisory support so owners can focus on running their business with complete peace of mind.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 1: Our Implementation Methodology -->
+    <section id="methodology" class="content-section">
+        <div class="container">
+            <div class="section-header-block">
+                <span class="section-kicker" data-i18n="meth_kicker">Structured Control Design Framework</span>
+                <h2 data-i18n="meth_title">Our Implementation Methodology</h2>
+                <p data-i18n="meth_desc">Our proven 4-stage process to evaluate, optimize, document, and lock in operational accuracy across your entire organization.</p>
+            </div>
+
+            <!-- Methodology Card with Winding Ribbon Graphic -->
+            <div class="methodology-card">
+                <div class="methodology-image-wrap">
+                    <img src="assets/methodology-ribbon.jpg" alt="Structured Control Design Framework Winding Ribbon Roadmap" loading="lazy">
+                </div>
+
+                <!-- 4 Interactive Breakdown Cards -->
+                <div class="methodology-steps-grid">
+                    <div class="method-step-card">
+                        <div class="method-step-num">1</div>
+                        <h3 data-i18n="meth_s1_t">Diagnosis &amp; Understanding</h3>
+                        <p data-i18n="meth_s1_d">Detailed analysis of the current operating model, financial record state, stock flow, and identification of risk gaps.</p>
+                    </div>
+
+                    <div class="method-step-card">
+                        <div class="method-step-num">2</div>
+                        <h3 data-i18n="meth_s2_t">Redesign &amp; Documentation</h3>
+                        <p data-i18n="meth_s2_d">Formulation of improved policies, standard operating procedures (SOPs), and rigorous custody protocols.</p>
+                    </div>
+
+                    <div class="method-step-card">
+                        <div class="method-step-num">3</div>
+                        <h3 data-i18n="meth_s3_t">Implementation Support</h3>
+                        <p data-i18n="meth_s3_d">Direct team guidance in executing procedural improvements, counting routines, and controls roll-out.</p>
+                    </div>
+
+                    <div class="method-step-card">
+                        <div class="method-step-num">4</div>
+                        <h3 data-i18n="meth_s4_t">Reviews &amp; Advisory</h3>
+                        <p data-i18n="meth_s4_d">Continuous monitoring, periodic cycle counts, variance reconciliation, and strategic leadership follow-up.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Our Team & Professional Collaboration -->
+    <section id="team" class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header-block">
+                <span class="section-kicker" data-i18n="team_kicker">Leadership &amp; Expertise</span>
+                <h2 data-i18n="team_title">Meet Our Team</h2>
+                <p data-i18n="team_desc">Personalized local dedication backed by world-class consulting rigor and over two decades of institutional experience.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Founder Card: Karla De La Mora -->
+                <div class="team-card founder-card">
+                    <span class="team-badge-pill badge-founder" data-i18n="badge_founder">Founder &amp; Principal Consultant</span>
+                    <h3>Karla De La Mora</h3>
+                    <div class="team-role" data-i18n="karla_role">Lead Consultant &bull; Business Services Specialist</div>
+                    <p class="team-desc" data-i18n="karla_bio">
+                        With extensive experience in financial record-keeping, hands-on inventory count supervision, and client operations, Karla founded De La Mora Business Services with a singular mission: to provide small and medium-sized business owners with the transparent, accessible, and dependable financial partner they need to grow without stress.
+                    </p>
+                    <ul class="team-highlights">
+                        <li><span class="highlight-dot" style="background:#E87E1E;"></span> <span data-i18n="k_h1">QuickBooks setup, catch-up &amp; monthly reconciliation specialist</span></li>
+                        <li><span class="highlight-dot" style="background:#E87E1E;"></span> <span data-i18n="k_h2">On-site inventory count coordination &amp; variance reconciliation</span></li>
+                        <li><span class="highlight-dot" style="background:#E87E1E;"></span> <span data-i18n="k_h3">Direct, personalized communication in English and Spanish</span></li>
+                    </ul>
+                </div>
+
+                <!-- Consulting Network Card: Deloitte Collaboration -->
+                <div class="team-card consulting-card">
+                    <span class="team-badge-pill badge-deloitte" data-i18n="badge_collab">Professional Collaboration &bull; 20+ Years</span>
+                    <h3 data-i18n="deloitte_t">Consulting Network &amp; Advisory</h3>
+                    <div class="team-role" data-i18n="deloitte_sub">Institutional Experience &bull; Deloitte Roots</div>
+                    <p class="team-desc" data-i18n="deloitte_bio">
+                        We collaborate directly with senior consulting professionals bringing more than 20 years of experience at <strong>Deloitte</strong>. This partnership gives our clients access to enterprise-grade frameworks in process improvement, internal control design, operational efficiency, and risk mitigation—scaled perfectly for growing local businesses.
+                    </p>
+                    <ul class="team-highlights">
+                        <li><span class="highlight-dot"></span> <span data-i18n="d_h1">Internal control design &amp; operational risk evaluations</span></li>
+                        <li><span class="highlight-dot"></span> <span data-i18n="d_h2">Standard Operating Procedure (SOP) formalization</span></li>
+                        <li><span class="highlight-dot"></span> <span data-i18n="d_h3">Enterprise-level methodologies adapted for small businesses</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Deloitte Experience Callout (Exact Visual Card) -->
+            <div class="collab-callout">
+                <div class="collab-badge">20+ Years<br><span style="font-size:0.75rem; font-weight:700; color:#64748B; letter-spacing:0.05em;" data-i18n="deloitte_tag">CONSULTING ROOTS</span></div>
+                <div class="collab-text" data-i18n="deloitte_text">
+                    <strong>Professional Collaboration:</strong> We collaborate with consulting professionals with more than 20 years of experience in consulting at <strong>Deloitte</strong>, specialized in process improvement, operational efficiency, risk management, and strengthening internal control.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Who We Serve (Target Market) -->
+    <section id="who-we-serve" class="content-section">
+        <div class="container">
+            <div class="target-card-container">
+                <div class="target-main-content">
+                    <span class="section-kicker" data-i18n="target_kicker">Who We Serve</span>
+                    <h3 data-i18n="target_title">Tailored for San Diego County Small &amp; Medium Businesses</h3>
+                    <p data-i18n="target_desc">
+                        Our primary focus is small and medium-sized businesses throughout San Diego County—particularly companies that require professional financial and administrative support but do not need or wish to take on the overhead of a full-time in-house accounting or finance department.
+                    </p>
+
+                    <div class="target-chips">
+                        <div class="chip-card">
+                            <span class="chip-dot"></span>
+                            <span data-i18n="tc_1">Retail stores</span>
+                        </div>
+                        <div class="chip-card">
+                            <span class="chip-dot"></span>
+                            <span data-i18n="tc_2">Latino markets and grocery stores</span>
+                        </div>
+                        <div class="chip-card">
+                            <span class="chip-dot"></span>
+                            <span data-i18n="tc_3">Hospitality businesses</span>
+                        </div>
+                        <div class="chip-card">
+                            <span class="chip-dot"></span>
+                            <span data-i18n="tc_4">Manufacturers</span>
+                        </div>
+                        <div class="chip-card">
+                            <span class="chip-dot"></span>
+                            <span data-i18n="tc_5">Family-owned businesses</span>
+                        </div>
+                        <div class="chip-card">
+                            <span class="chip-dot"></span>
+                            <span data-i18n="tc_6">Growing businesses without internal accounting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="target-side-graphic">
+                    <img src="assets/gamma-silk-side.jpg" alt="De La Mora Silk Texture Accent" class="target-side-image" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Call to Action Banner -->
+            <div class="cta-banner-box">
+                <h2 data-i18n="cta_title">Ready to Gain Complete Control Over Your Numbers?</h2>
+                <p data-i18n="cta_desc">Whether you need your monthly books handled with precision, your inventory audited, or guidance on internal controls, we are ready to assist.</p>
+                <a href="test.html#contact" class="btn-cta-gold" data-i18n="cta_btn">
+                    Schedule a Free Initial Consultation →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="test.html" class="brand-logo" aria-label="De La Mora Business Services" style="text-decoration:none; margin-bottom: 0.85rem;">
+                        <img src="assets/dlm-logo.png?v=3" alt="De La Mora Business Services Logo" style="height: 78px; width: auto; max-width: 280px; object-fit: contain; display: block;">
+                    </a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_services_title">Core Services</h4>
+                    <ul>
+                        <li><a href="test.html#bookkeeping" data-i18n="f_link_1">Monthly Bookkeeping</a></li>
+                        <li><a href="test.html#bookkeeping" data-i18n="f_link_2">Books Catch &amp; Clean-Up</a></li>
+                        <li><a href="test.html#inventory" data-i18n="f_link_3">Physical Inventory Counts</a></li>
+                        <li><a href="test.html#inventory" data-i18n="f_link_4">Inventory Valuation &amp; Controls</a></li>
+                        <li><a href="test.html#advisory" data-i18n="f_link_5">Business Advisory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_contact_title">Contact &amp; Details</h4>
+                    <ul>
+                        <li><a href="tel:6198005102">📞 (619) 800-5102</a></li>
+                        <li><a href="mailto:Karla@Delamorabusiness.com">✉️ Karla@Delamorabusiness.com</a></li>
+                        <li><span data-i18n="f_loc">📍 San Diego County, CA</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 De La Mora Business Services. <span data-i18n="rights_reserved">All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Translations & Interactions Script -->
+    <script>
+        const i18n = {
+            en: {
+                staging_note: "Staging / Test Page (Working Draft)",
+                staging_link: "View Live Coming Soon Page →",
+                nav_bookkeeping: "Bookkeeping",
+                nav_inventory: "Inventory",
+                nav_advisory: "Advisory",
+                nav_about: "About Us",
+                nav_contact: "Book a free consultation",
+                lang_select_title: "Language / Idioma:",
+                about_hero_kicker: "About De La Mora Business Services",
+                about_hero_title: "Dedicated to Financial Precision, Operational Control & Client Growth",
+                about_hero_desc: "We provide small and medium-sized businesses with organized bookkeeping, structured inventory administration, and strategic business advisory support so owners can focus on running their business with complete peace of mind.",
+                meth_kicker: "Structured Control Design Framework",
+                meth_title: "Our Implementation Methodology",
+                meth_desc: "Our proven 4-stage process to evaluate, optimize, document, and lock in operational accuracy across your entire organization.",
+                meth_s1_t: "Diagnosis & Understanding",
+                meth_s1_d: "Detailed analysis of the current operating model, financial record state, stock flow, and identification of risk gaps.",
+                meth_s2_t: "Redesign & Documentation",
+                meth_s2_d: "Formulation of improved policies, standard operating procedures (SOPs), and rigorous custody protocols.",
+                meth_s3_t: "Implementation Support",
+                meth_s3_d: "Direct team guidance in executing procedural improvements, counting routines, and controls roll-out.",
+                meth_s4_t: "Reviews & Advisory",
+                meth_s4_d: "Continuous monitoring, periodic cycle counts, variance reconciliation, and strategic leadership follow-up.",
+                team_kicker: "Leadership & Expertise",
+                team_title: "Meet Our Team",
+                team_desc: "Personalized local dedication backed by world-class consulting rigor and over two decades of institutional experience.",
+                badge_founder: "Founder & Principal Consultant",
+                karla_role: "Lead Consultant • Business Services Specialist",
+                karla_bio: "With extensive experience in financial record-keeping, hands-on inventory count supervision, and client operations, Karla founded De La Mora Business Services with a singular mission: to provide small and medium-sized business owners with the transparent, accessible, and dependable financial partner they need to grow without stress.",
+                k_h1: "QuickBooks setup, catch-up & monthly reconciliation specialist",
+                k_h2: "On-site inventory count coordination & variance reconciliation",
+                k_h3: "Direct, personalized communication in English and Spanish",
+                badge_collab: "Professional Collaboration • 20+ Years",
+                deloitte_t: "Consulting Network & Advisory",
+                deloitte_sub: "Institutional Experience • Deloitte Roots",
+                deloitte_bio: "We collaborate directly with senior consulting professionals bringing more than 20 years of experience at Deloitte. This partnership gives our clients access to enterprise-grade frameworks in process improvement, internal control design, operational efficiency, and risk mitigation—scaled perfectly for growing local businesses.",
+                d_h1: "Internal control design & operational risk evaluations",
+                d_h2: "Standard Operating Procedure (SOP) formalization",
+                d_h3: "Enterprise-level methodologies adapted for small businesses",
+                target_kicker: "Who We Serve",
+                target_title: "Tailored for San Diego County Small & Medium Businesses",
+                target_desc: "Our primary focus is small and medium-sized businesses throughout San Diego County—particularly companies that require professional financial and administrative support but do not need or wish to take on the overhead of a full-time in-house accounting or finance department.",
+                tc_1: "Retail stores",
+                tc_2: "Latino markets and grocery stores",
+                tc_3: "Hospitality businesses",
+                tc_4: "Manufacturers",
+                tc_5: "Family-owned businesses",
+                tc_6: "Growing businesses without internal accounting",
+                cta_title: "Ready to Gain Complete Control Over Your Numbers?",
+                cta_desc: "Whether you need your monthly books handled with precision, your inventory audited, or guidance on internal controls, we are ready to assist.",
+                cta_btn: "Schedule a Free Initial Consultation →",
+                footer_services_title: "Core Services",
+                f_link_1: "Monthly Bookkeeping",
+                f_link_2: "Books Catch & Clean-Up",
+                f_link_3: "Physical Inventory Counts",
+                f_link_4: "Inventory Valuation & Controls",
+                f_link_5: "Business Advisory",
+                footer_contact_title: "Contact & Details",
+                f_loc: "📍 San Diego County, CA",
+                rights_reserved: "All Rights Reserved."
+            },
+            es: {
+                staging_note: "Página de Pruebas y Desarrollo (Borrador Activo)",
+                staging_link: "Ver Página Principal de Lanzamiento →",
+                nav_bookkeeping: "Contabilidad",
+                nav_inventory: "Inventarios",
+                nav_advisory: "Asesoría",
+                nav_about: "Sobre Nosotros",
+                nav_contact: "Reserva una consulta gratis",
+                lang_select_title: "Language / Idioma:",
+                about_hero_kicker: "Sobre De La Mora Business Services",
+                about_hero_title: "Dedicados a la Precisión Financiera, Control Operativo y Crecimiento de Clientes",
+                about_hero_desc: "Brindamos a pequeñas y medianas empresas contabilidad organizada, administración estructurada de inventarios y asesoría estratégica de negocios para que los propietarios puedan enfocarse en liderar su empresa con total tranquilidad.",
+                meth_kicker: "Marco de Diseño de Control Estructurado",
+                meth_title: "Nuestra Metodología de Implementación",
+                meth_desc: "Nuestro proceso probado de 4 etapas para evaluar, optimizar, documentar y consolidar la precisión operativa en toda su organización.",
+                meth_s1_t: "Diagnóstico y Comprensión",
+                meth_s1_d: "Análisis detallado del modelo operativo actual, estado de registros financieros, flujo de existencias e identificación de brechas de riesgo.",
+                meth_s2_t: "Rediseño y Documentación",
+                meth_s2_d: "Formulación de políticas mejoradas, procedimientos operativos estandarizados (SOPs) y protocolos rigurosos de custodia.",
+                meth_s3_t: "Soporte de Implementación",
+                meth_s3_d: "Acompañamiento directo al equipo en la ejecución de mejoras procedimentales, rutinas de conteo y despliegue de controles.",
+                meth_s4_t: "Revisiones y Asesoría",
+                meth_s4_d: "Monitoreo continuo, conteos cíclicos periódicos, conciliación de variaciones y seguimiento estratégico.",
+                team_kicker: "Liderazgo y Experiencia",
+                team_title: "Conozca a Nuestro Equipo",
+                team_desc: "Dedicación local personalizada respaldada por el rigor de la consultoría de clase mundial y más de dos décadas de experiencia institucional.",
+                badge_founder: "Fundadora y Consultora Principal",
+                karla_role: "Consultora Principal • Especialista en Servicios Empresariales",
+                karla_bio: "Con amplia experiencia en el registro financiero, supervisión directa de conteos de inventario y operaciones de clientes, Karla fundó De La Mora Business Services con una misión clara: ofrecer a los dueños de negocios un aliado financiero transparente, accesible y confiable para crecer sin estrés.",
+                k_h1: "Especialista en configuración de QuickBooks, regularización y conciliación mensual",
+                k_h2: "Coordinación de conteos físicos en sitio y conciliación de diferencias",
+                k_h3: "Comunicación directa y personalizada en inglés y español",
+                badge_collab: "Colaboración Profesional • 20+ Años",
+                deloitte_t: "Red de Consultoría y Asesoría",
+                deloitte_sub: "Experiencia Institucional • Raíces en Deloitte",
+                deloitte_bio: "Colaboramos directamente con profesionales sénior de consultoría con más de 20 años de experiencia en Deloitte. Esta alianza brinda a nuestros clientes acceso a metodologías de nivel corporativo en mejora de procesos, diseño de control interno y mitigación de riesgos, adaptadas a negocios locales.",
+                d_h1: "Diseño de control interno y evaluación de riesgos operativos",
+                d_h2: "Formalización de Procedimientos Operativos Estandarizados (SOPs)",
+                d_h3: "Metodologías de nivel empresarial adaptadas a pequeñas empresas",
+                target_kicker: "A Quién Servimos",
+                target_title: "Diseñado para Pequeñas y Medianas Empresas del Condado de San Diego",
+                target_desc: "Nos enfocamos en pequeñas y medianas empresas en el Condado de San Diego que requieren soporte financiero y administrativo profesional sin incurrir en el costo de un departamento contable interno.",
+                tc_1: "Tiendas minoristas",
+                tc_2: "Mercados y tiendas latinas de abarrotes",
+                tc_3: "Negocios de hospitalidad y restaurantes",
+                tc_4: "Fabricantes y manufactureras",
+                tc_5: "Negocios familiares",
+                tc_6: "Empresas en crecimiento sin departamento contable interno",
+                cta_title: "¿Listo para Obtener Control Total de sus Números?",
+                cta_desc: "Ya sea que requiera su contabilidad mensual con precisión, auditar su inventario o asesoría en controles internos, estamos listos para apoyarle.",
+                cta_btn: "Agendar una Consulta Inicial Gratuita →",
+                footer_services_title: "Servicios Principales",
+                f_link_1: "Contabilidad Mensual",
+                f_link_2: "Puesta al Día y Regularización",
+                f_link_3: "Conteos Físicos de Inventario",
+                f_link_4: "Valuación y Control Interno",
+                f_link_5: "Asesoría de Negocios",
+                footer_contact_title: "Contacto y Detalles",
+                f_loc: "📍 Condado de San Diego, CA",
+                rights_reserved: "Todos los derechos reservados."
+            }
+        };
+
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('dlm_lang', lang);
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang] && i18n[lang][key]) {
+                    el.innerHTML = i18n[lang][key];
+                }
+            });
+        }
+
+        // Initialize Language and Drawer
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('dlm_lang') || 'en';
+            setLanguage(savedLang);
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const l = btn.getAttribute('data-lang');
+                    if (l) setLanguage(l);
+                });
+            });
+
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const drawer = document.getElementById('mobileMenuDrawer');
+            if (mobileBtn && drawer) {
+                mobileBtn.addEventListener('click', () => {
+                    drawer.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

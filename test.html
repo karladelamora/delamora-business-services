@@ -198,12 +198,91 @@
             text-decoration: none;
             color: var(--text-body);
             font-size: 0.95rem;
-            font-weight: 600;
-            transition: color 0.2s;
+            font-weight: 700;
+            padding: 0.4rem 0.2rem;
+            position: relative;
+            transition: color 0.25s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--purple-main);
+        /* Dynamic Nav Link Matching Colors on Hover & Active Scroll State */
+        .nav-links a.nav-link-bookkeeping:hover,
+        .nav-links a.nav-link-bookkeeping.active {
+            color: #C28800;
+        }
+        .nav-links a.nav-link-bookkeeping::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #F1B808;
+            border-radius: 9999px;
+            transform: scaleX(0);
+            transition: transform 0.25s ease;
+        }
+        .nav-links a.nav-link-bookkeeping:hover::after,
+        .nav-links a.nav-link-bookkeeping.active::after {
+            transform: scaleX(1);
+        }
+
+        .nav-links a.nav-link-inventory:hover,
+        .nav-links a.nav-link-inventory.active {
+            color: #0072CE;
+        }
+        .nav-links a.nav-link-inventory::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #0072CE;
+            border-radius: 9999px;
+            transform: scaleX(0);
+            transition: transform 0.25s ease;
+        }
+        .nav-links a.nav-link-inventory:hover::after,
+        .nav-links a.nav-link-inventory.active::after {
+            transform: scaleX(1);
+        }
+
+        .nav-links a.nav-link-advisory:hover,
+        .nav-links a.nav-link-advisory.active {
+            color: #E87E1E;
+        }
+        .nav-links a.nav-link-advisory::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #E87E1E;
+            border-radius: 9999px;
+            transform: scaleX(0);
+            transition: transform 0.25s ease;
+        }
+        .nav-links a.nav-link-advisory:hover::after,
+        .nav-links a.nav-link-advisory.active::after {
+            transform: scaleX(1);
+        }
+
+        /* Mobile drawer matching active states */
+        .mobile-nav-list a.nav-link-bookkeeping.active {
+            color: #C28800;
+            border-left: 4px solid #F1B808;
+            padding-left: 0.65rem;
+        }
+        .mobile-nav-list a.nav-link-inventory.active {
+            color: #0072CE;
+            border-left: 4px solid #0072CE;
+            padding-left: 0.65rem;
+        }
+        .mobile-nav-list a.nav-link-advisory.active {
+            color: #E87E1E;
+            border-left: 4px solid #E87E1E;
+            padding-left: 0.65rem;
         }
 
         .nav-contact-btn {
@@ -1953,9 +2032,10 @@
 
             <div class="nav-right-cluster">
                 <ul class="nav-links">
-                    <li><a href="#bookkeeping" data-i18n="nav_bookkeeping">Bookkeeping</a></li>
-                    <li><a href="#inventory" data-i18n="nav_inventory">Inventory</a></li>
-                    <li><a href="#advisory" data-i18n="nav_advisory">Advisory</a></li>
+                    <li><a href="#bookkeeping" class="nav-link-item nav-link-bookkeeping" data-section="bookkeeping" data-i18n="nav_bookkeeping">Bookkeeping</a></li>
+                    <li><a href="#inventory" class="nav-link-item nav-link-inventory" data-section="inventory" data-i18n="nav_inventory">Inventory</a></li>
+                    <li><a href="#advisory" class="nav-link-item nav-link-advisory" data-section="advisory" data-i18n="nav_advisory">Advisory</a></li>
+                    <li><a href="about.html" class="nav-link-item nav-link-about" data-i18n="nav_about">About Us</a></li>
                     <li><a href="#contact" class="nav-contact-btn" data-i18n="nav_contact">Book a free consultation</a></li>
                 </ul>
 
@@ -1988,9 +2068,10 @@
                 </div>
             </div>
             <ul class="mobile-nav-list">
-                <li><a href="#bookkeeping" class="mobile-nav-link"><span data-i18n="nav_bookkeeping">Bookkeeping</span> →</a></li>
-                <li><a href="#inventory" class="mobile-nav-link"><span data-i18n="nav_inventory">Inventory</span> →</a></li>
-                <li><a href="#advisory" class="mobile-nav-link"><span data-i18n="nav_advisory">Advisory</span> →</a></li>
+                <li><a href="#bookkeeping" class="mobile-nav-link nav-link-bookkeeping" data-section="bookkeeping"><span data-i18n="nav_bookkeeping">Bookkeeping</span> →</a></li>
+                <li><a href="#inventory" class="mobile-nav-link nav-link-inventory" data-section="inventory"><span data-i18n="nav_inventory">Inventory</span> →</a></li>
+                <li><a href="#advisory" class="mobile-nav-link nav-link-advisory" data-section="advisory"><span data-i18n="nav_advisory">Advisory</span> →</a></li>
+                <li><a href="about.html" class="mobile-nav-link nav-link-about"><span data-i18n="nav_about">About Us</span> →</a></li>
             </ul>
             <div class="mobile-nav-cta">
                 <a href="#contact" class="nav-contact-btn mobile-nav-link" style="width: 100%; padding: 0.95rem; text-align: center; justify-content: center;" data-i18n="nav_contact">Book a free consultation</a>
@@ -2306,30 +2387,23 @@
                 </div>
             </div>
 
-            <!-- Deloitte Experience Callout (Moved to bottom) -->
-            <div class="collab-callout">
-                <div class="collab-badge">20+ Years<br><span style="font-size:0.75rem; font-weight:700; color:#64748B; letter-spacing:0.05em;" data-i18n="deloitte_tag">CONSULTING ROOTS</span></div>
-                <div class="collab-text" data-i18n="deloitte_text">
-                    <strong>Professional Collaboration:</strong> We collaborate with consulting professionals with more than 20 years of experience in consulting at <strong>Deloitte</strong>, specialized in process improvement, operational efficiency, risk management, and strengthening internal control.
-                </div>
-            </div>
+
         </div>
     </section>
 
-    <!-- Business Advisory Section (Standardized with Orange Signature) -->
+    <!-- Business Advisory Section (Standardized with Solid Orange Signature) -->
     <section id="advisory" class="advisory-section">
         <div class="container">
-            <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #0B2545; margin-bottom: 1.5rem;" data-i18n="adv_kicker">Business Advisory</h2>
+            <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #E87E1E; margin-bottom: 1.5rem;" data-i18n="adv_kicker">Business Advisory</h2>
 
-            <!-- Top Overview Box (Matching Standard Services Layout with Orange Outline & Accent) -->
-            <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3.5vw, 3.25rem); box-shadow: 0 8px 30px rgba(232, 126, 30, 0.12); border: 2px solid #E87E1E; margin-bottom: 2.5rem; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #E87E1E;"></div>
-                <h3 style="font-family: var(--font-display); font-size: clamp(1.45rem, 2.2vw, 1.95rem); font-weight: 800; color: #0B2545; margin-bottom: 0.85rem; line-height: 1.35;" data-i18n="adv_title">Actionable Insights to Run and Grow</h3>
-                <p style="font-size: 1.05rem; color: #4B5563; line-height: 1.65; max-width: 860px; margin-bottom: 1.75rem;" data-i18n="adv_subtitle">
+            <!-- Top Overview Box (Solid Orange Signature Layout) -->
+            <div style="background: linear-gradient(135deg, #FF7A00 0%, #E87E1E 100%); border-radius: 20px; padding: clamp(2rem, 3.5vw, 3.25rem); box-shadow: 0 10px 32px rgba(232, 126, 30, 0.28); margin-bottom: 2.5rem; position: relative; overflow: hidden;">
+                <h3 style="font-family: var(--font-display); font-size: clamp(1.45rem, 2.2vw, 1.95rem); font-weight: 800; color: #FFFFFF; margin-bottom: 0.85rem; line-height: 1.35;" data-i18n="adv_title">Actionable Insights to Run and Grow</h3>
+                <p style="font-size: 1.05rem; color: rgba(255, 255, 255, 0.95); line-height: 1.65; max-width: 860px; margin-bottom: 1.75rem;" data-i18n="adv_subtitle">
                     Financial guidance to help you streamline processes, reduce costs, and understand the true drivers of your business performance.
                 </p>
                 <div>
-                    <a href="#contact" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #E87E1E; color: #FFFFFF; font-weight: 800; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 4px 14px rgba(232, 126, 30, 0.35); transition: transform 0.2s ease;" onclick="selectPlan('Business Advisory')" data-i18n="btn_inquire_adv">
+                    <a href="#contact" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #FFFFFF; color: #E87E1E; font-weight: 800; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); transition: transform 0.2s ease;" onclick="selectPlan('Business Advisory')" data-i18n="btn_inquire_adv">
                         Inquire for Advisory
                     </a>
                 </div>
@@ -2590,7 +2664,7 @@
                 nav_bookkeeping: "Bookkeeping",
                 nav_inventory: "Inventory",
                 nav_advisory: "Advisory",
-                nav_about: "About",
+                nav_about: "About Us",
                 nav_contact: "Book a free consultation",
                 lang_select_title: "Language / Idioma:",
                 mobile_call: "📞 Call (619) 800-5102",
@@ -2754,7 +2828,7 @@
                 nav_bookkeeping: "Contabilidad",
                 nav_inventory: "Inventarios",
                 nav_advisory: "Asesoría",
-                nav_about: "Nosotros",
+                nav_about: "Sobre Nosotros",
                 nav_contact: "Reserva una consulta gratis",
                 lang_select_title: "Idioma / Language:",
                 mobile_call: "📞 Llamar al (619) 800-5102",
@@ -3125,6 +3199,47 @@
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalBtnText;
             }
+        }
+
+        // Dynamic Navigation Scroll Spy to highlight matching colors on scroll
+        function initNavScrollSpy() {
+            const sections = ['bookkeeping', 'inventory', 'advisory'];
+            const navLinks = document.querySelectorAll('.nav-links a[data-section], .mobile-nav-list a[data-section]');
+
+            function onScroll() {
+                const scrollPos = window.scrollY + 180;
+                let activeId = null;
+
+                for (let i = 0; i < sections.length; i++) {
+                    const el = document.getElementById(sections[i]);
+                    if (el) {
+                        const top = el.offsetTop;
+                        const height = el.offsetHeight;
+                        if (scrollPos >= top && scrollPos < top + height) {
+                            activeId = sections[i];
+                            break;
+                        }
+                    }
+                }
+
+                navLinks.forEach(link => {
+                    if (activeId && link.getAttribute('data-section') === activeId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll, { passive: true });
+            onScroll();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initNavScrollSpy);
+        } else {
+            initNavScrollSpy();
         }
     </script>
 </body>
