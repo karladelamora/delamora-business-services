@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1501,6 +1501,102 @@
             100% { left: 96%; top: 50%; opacity: 0; }
         }
 
+        /* Animated Bar Charts Inside Dashboard Monitor */
+        .board-top-bars {
+            position: absolute;
+            top: 24%;
+            left: 36%;
+            width: 26%;
+            height: 25%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 2px;
+            padding: 0 4px;
+            pointer-events: none;
+        }
+
+        .board-bottom-bars {
+            position: absolute;
+            top: 60%;
+            left: 36%;
+            width: 26%;
+            height: 25%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 3px;
+            padding: 0 4px;
+            pointer-events: none;
+        }
+
+        .board-bar {
+            flex: 1;
+            background: linear-gradient(180deg, #52C1E4 0%, #0072CE 100%);
+            border-radius: 2px 2px 0 0;
+            box-shadow: 0 0 6px rgba(82, 193, 228, 0.6);
+            transform-origin: bottom;
+            opacity: 0.85;
+        }
+
+        .board-bar.bar-1 { height: 65%; animation: barPulseAnim 2.4s ease-in-out infinite alternate; }
+        .board-bar.bar-2 { height: 85%; animation: barPulseAnim 2.8s ease-in-out 0.4s infinite alternate; }
+        .board-bar.bar-3 { height: 45%; animation: barPulseAnim 2.1s ease-in-out 0.8s infinite alternate; }
+        .board-bar.bar-4 { height: 95%; animation: barPulseAnim 3.1s ease-in-out 0.2s infinite alternate; }
+        .board-bar.bar-5 { height: 70%; animation: barPulseAnim 2.5s ease-in-out 0.6s infinite alternate; }
+
+        .board-bar.bar-b1 { height: 50%; animation: barPulseAnim 2.7s ease-in-out 0.5s infinite alternate; }
+        .board-bar.bar-b2 { height: 75%; animation: barPulseAnim 2.3s ease-in-out 0.1s infinite alternate; }
+        .board-bar.bar-b3 { height: 90%; animation: barPulseAnim 3.0s ease-in-out 0.9s infinite alternate; }
+        .board-bar.bar-b4 { height: 60%; animation: barPulseAnim 2.6s ease-in-out 0.3s infinite alternate; }
+
+        @keyframes barPulseAnim {
+            0% { transform: scaleY(0.72); opacity: 0.7; }
+            50% { transform: scaleY(1.08); opacity: 0.95; }
+            100% { transform: scaleY(0.65); opacity: 0.7; }
+        }
+
+        /* Animated Inventory Pie Chart Radar Scan */
+        .board-pie-pulse {
+            position: absolute;
+            top: 59%;
+            left: 9%;
+            width: 21%;
+            height: 27%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .board-pie-ring {
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            border: 1.5px solid #52C1E4;
+            animation: pieRingPulse 3s ease-in-out infinite;
+        }
+
+        .board-pie-sweep {
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, rgba(82, 193, 228, 0.4) 0deg, transparent 60deg, transparent 360deg);
+            animation: pieRadarSweep 4s linear infinite;
+        }
+
+        @keyframes pieRingPulse {
+            0%, 100% { transform: scale(0.9); opacity: 0.3; }
+            50% { transform: scale(1.15); opacity: 0.85; box-shadow: 0 0 8px rgba(82, 193, 228, 0.5); }
+        }
+
+        @keyframes pieRadarSweep {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         /* 3. Diagnostic Radar Eye Pulse Rings */
         .board-radar-eye {
             position: absolute;
@@ -1686,21 +1782,24 @@
             gap: 0.25rem;
         }
 
-        .advisory-callout-kicker {
-            font-size: 0.76rem;
+        .advisory-callout-kicker,
+        .advisory-callout-q {
+            font-family: var(--font-display);
+            font-size: clamp(1.25rem, 2vw, 1.55rem);
             font-weight: 800;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+            margin: 0;
+        }
+
+        .advisory-callout-kicker {
             color: #C2410C;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
         }
 
         .advisory-callout-q {
-            font-family: var(--font-display);
-            font-size: clamp(1.35rem, 2.2vw, 1.7rem);
-            font-weight: 800;
             color: #7C2D12;
-            line-height: 1.25;
-            margin: 0;
         }
 
         .advisory-callout-chips {
@@ -1836,26 +1935,26 @@
             margin-top: 1px;
         }
 
-        /* Operating Model & Internal Control Process Illustration */
+        /* Operating Model & Internal Control Process Illustration - Matching Website Card Style */
         .advisory-illustration-container {
             width: 100%;
             max-width: 960px;
             margin: 0.5rem auto 2.25rem;
             background: #FFFFFF;
-            border: 1.5px solid #FED7AA;
-            border-radius: 18px;
-            padding: clamp(0.75rem, 1.6vw, 1.35rem);
-            box-shadow: 0 8px 26px rgba(232, 126, 30, 0.08);
+            border: 1px solid #E5E7EB;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            transition: transform 0.28s ease, box-shadow 0.28s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .advisory-illustration-container:hover {
             transform: translateY(-3px);
-            box-shadow: 0 14px 32px rgba(232, 126, 30, 0.14);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            border-color: #D1D5DB;
         }
 
         .advisory-illustration-img {
@@ -1864,7 +1963,7 @@
             max-height: 480px;
             object-fit: contain;
             display: block;
-            border-radius: 12px;
+            border-radius: 16px;
         }
 
         .advisory-collab-btn-wrap {
@@ -2859,9 +2958,58 @@
                         <p style="font-size: 1.05rem; color: #4B5563; line-height: 1.65; margin-bottom: 2rem;" data-i18n="inv_subtitle">
                             Helping business owners understand inventory, identify recorded vs. physical differences, recognize improvement areas, and establish consistent counting practices.
                         </p>
-                        <!-- Diagnostic Warehouse Scene (Clean Static) -->
+                        <!-- Diagnostic Warehouse Scene with Animated Graphics Overlay -->
                         <div class="animated-inventory-scene" id="animatedInventoryScene">
                             <img src="assets/inventory-diagnostic-illustration.jpg" alt="Inventory Checkup Diagnostic Illustration" class="inv-scene-base-img" loading="lazy">
+
+                            <!-- Live Animated Dashboard Graphics Overlay -->
+                            <div class="board-animation-container" aria-hidden="true">
+                                <!-- Telemetry Scan Beam sweeping across charts -->
+                                <div class="board-telemetry-scan"></div>
+
+                                <!-- 1. Diagnostic Line Graph Wave Pulse & Tracer -->
+                                <div class="board-diagnostic-graph-pulse">
+                                    <svg class="board-graph-svg" viewBox="0 0 100 45" preserveAspectRatio="none">
+                                        <path d="M 5 36 Q 22 36, 26 28 T 46 12 T 66 32 T 84 8 T 96 24" fill="none" stroke="#0072CE" stroke-width="2.6" stroke-linecap="round" class="board-graph-line"/>
+                                    </svg>
+                                    <span class="board-graph-glow-dot"></span>
+                                </div>
+
+                                <!-- 2. Top Bar Chart Active Dynamic Bars -->
+                                <div class="board-top-bars">
+                                    <span class="board-bar bar-1"></span>
+                                    <span class="board-bar bar-2"></span>
+                                    <span class="board-bar bar-3"></span>
+                                    <span class="board-bar bar-4"></span>
+                                    <span class="board-bar bar-5"></span>
+                                </div>
+
+                                <!-- 3. Bottom Bar Chart Dynamic Telemetry Bars -->
+                                <div class="board-bottom-bars">
+                                    <span class="board-bar bar-b1"></span>
+                                    <span class="board-bar bar-b2"></span>
+                                    <span class="board-bar bar-b3"></span>
+                                    <span class="board-bar bar-b4"></span>
+                                </div>
+
+                                <!-- 4. Inventory Pie Chart Scan & Pulse -->
+                                <div class="board-pie-pulse">
+                                    <div class="board-pie-ring"></div>
+                                    <div class="board-pie-sweep"></div>
+                                </div>
+
+                                <!-- 5. Diagnostic Radar Eye Pulse Rings -->
+                                <div class="board-radar-eye">
+                                    <span class="board-radar-ring"></span>
+                                    <span class="board-radar-ring ring-delayed"></span>
+                                    <span class="board-radar-core"></span>
+                                </div>
+
+                                <!-- 6. Diagnostic Checklist Active Indicator Pings -->
+                                <div class="board-check-ping check-1"></div>
+                                <div class="board-check-ping check-2"></div>
+                                <div class="board-check-ping check-3"></div>
+                            </div>
                         </div>
                     </div>
 
@@ -2949,19 +3097,19 @@
                     <div class="advisory-callout-chips">
                         <div class="advisory-callout-chip">
                             <span class="callout-chip-dot"></span>
-                            <span data-i18n="adv_collab_pain_1">Dependence on key people</span>
+                            <span data-i18n="adv_collab_pain_1">Key-Person Dependency</span>
                         </div>
                         <div class="advisory-callout-chip">
                             <span class="callout-chip-dot"></span>
-                            <span data-i18n="adv_collab_pain_2">Unclear responsibilities</span>
+                            <span data-i18n="adv_collab_pain_2">Unclear Roles &amp; Ownership</span>
                         </div>
                         <div class="advisory-callout-chip">
                             <span class="callout-chip-dot"></span>
-                            <span data-i18n="adv_collab_pain_3">Slow decisions</span>
+                            <span data-i18n="adv_collab_pain_3">Slow Decision-Making</span>
                         </div>
                         <div class="advisory-callout-chip">
                             <span class="callout-chip-dot"></span>
-                            <span data-i18n="adv_collab_pain_4">Duplicated work and unnecessary costs</span>
+                            <span data-i18n="adv_collab_pain_4">Duplicated Work &amp; Costs</span>
                         </div>
                     </div>
                 </div>
@@ -3416,10 +3564,10 @@
                 adv_collab_c1_sub: "We design how your business operates: clear processes, defined roles, and the information management needs to decide well.",
                 adv_collab_callout_kicker: "COMMON OPERATIONAL BOTTLENECKS",
                 adv_collab_c1_callout_q: "Does this sound familiar?",
-                adv_collab_pain_1: "Dependence on key people",
-                adv_collab_pain_2: "Unclear responsibilities",
-                adv_collab_pain_3: "Slow decisions",
-                adv_collab_pain_4: "Duplicated work and unnecessary costs",
+                adv_collab_pain_1: "Key-Person Dependency",
+                adv_collab_pain_2: "Unclear Roles & Ownership",
+                adv_collab_pain_3: "Slow Decision-Making",
+                adv_collab_pain_4: "Duplicated Work & Costs",
                 adv_collab_c1_callout_t: "Dependence on key people &bull; Unclear responsibilities &bull; Slow decisions &bull; Duplicated work and unnecessary costs",
                 adv_collab_c1_b1: "Diagnosis of your current model",
                 adv_collab_c1_b2: "Redesign & documentation of processes and policies",
@@ -3603,10 +3751,10 @@
                 adv_collab_c1_sub: "Diseñamos cómo opera su negocio: procesos claros, roles definidos y la información que la dirección necesita para decidir bien.",
                 adv_collab_c1_callout_q: "¿Le resulta familiar?",
                 adv_collab_callout_kicker: "DESAFÍOS OPERATIVOS FRECUENTES",
-                adv_collab_pain_1: "Dependencia de personas clave",
-                adv_collab_pain_2: "Responsabilidades poco claras",
-                adv_collab_pain_3: "Decisiones lentas",
-                adv_collab_pain_4: "Trabajo duplicado y costos innecesarios",
+                adv_collab_pain_1: "Dependencia de Personas Clave",
+                adv_collab_pain_2: "Roles y Responsabilidades Difusas",
+                adv_collab_pain_3: "Toma de Decisiones Lenta",
+                adv_collab_pain_4: "Trabajo Duplicado y Costos Extra",
                 adv_collab_c1_callout_t: "Dependencia de personas clave &bull; Responsabilidades poco claras &bull; Decisiones lentas &bull; Trabajo duplicado y costos innecesarios",
                 adv_collab_c1_b1: "Diagnóstico de su modelo actual",
                 adv_collab_c1_b2: "Rediseño y documentación de procesos y políticas",
