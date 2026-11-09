@@ -407,22 +407,11 @@
             overflow: hidden;
         }
 
-        .team-card.founder-card {
-            border: 2px solid var(--accent-orange);
-        }
-        .team-card.founder-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--accent-orange);
-        }
-
+        .team-card.founder-card,
         .team-card.consulting-card {
             border: 2px solid var(--cyan-accent);
         }
+        .team-card.founder-card::before,
         .team-card.consulting-card::before {
             content: '';
             position: absolute;
@@ -433,7 +422,7 @@
             background: var(--cyan-accent);
         }
 
-        .consulting-card .highlight-dot {
+        .team-card .highlight-dot {
             background: var(--cyan-accent);
         }
 
@@ -449,12 +438,7 @@
             width: fit-content;
         }
 
-        .badge-founder {
-            background: #FFF7ED;
-            color: #C2410C;
-            border: 1px solid #FDBA74;
-        }
-
+        .badge-founder,
         .badge-deloitte {
             background: #EBF8FC;
             color: #0284C7;
@@ -882,9 +866,9 @@
                         With extensive experience in financial record-keeping, hands-on inventory count supervision, and client operations, Karla founded De La Mora Business Services with a singular mission: to provide small and medium-sized business owners with the transparent, accessible, and dependable financial partner they need to grow without stress.
                     </p>
                     <ul class="team-highlights">
-                        <li><span class="highlight-dot" style="background:#E87E1E;"></span> <span data-i18n="k_h1">QuickBooks setup, catch-up &amp; monthly reconciliation specialist</span></li>
-                        <li><span class="highlight-dot" style="background:#E87E1E;"></span> <span data-i18n="k_h2">On-site inventory count coordination &amp; variance reconciliation</span></li>
-                        <li><span class="highlight-dot" style="background:#E87E1E;"></span> <span data-i18n="k_h3">Direct, personalized communication in English and Spanish</span></li>
+                        <li><span class="highlight-dot"></span> <span data-i18n="k_h1">QuickBooks setup, catch-up &amp; monthly reconciliation specialist</span></li>
+                        <li><span class="highlight-dot"></span> <span data-i18n="k_h2">On-site inventory count coordination &amp; variance reconciliation</span></li>
+                        <li><span class="highlight-dot"></span> <span data-i18n="k_h3">Direct, personalized communication in English and Spanish</span></li>
                     </ul>
                 </div>
 
