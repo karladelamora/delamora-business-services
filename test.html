@@ -1634,50 +1634,111 @@
             margin-bottom: 1.75rem;
         }
 
-        /* Full-Width Striking Problem Callout Banner */
+        /* Full-Width Flagship Problem Callout Banner */
         .advisory-callout-banner {
-            background: #FFF9F2;
-            border: 1.5px solid #FED7AA;
-            border-left: 5px solid #E87E1E;
-            border-radius: 14px;
-            padding: 1.25rem 1.6rem;
-            margin-bottom: 2.25rem;
+            background: linear-gradient(135deg, #FFF9F3 0%, #FFF2E5 45%, #FFE9D6 100%);
+            border: 2px solid #FDBA74;
+            border-left: 6px solid #E87E1E;
+            border-radius: 20px;
+            padding: clamp(1.75rem, 2.6vw, 2.4rem);
+            margin-bottom: 2.5rem;
+            box-shadow: 0 12px 32px rgba(232, 126, 30, 0.12), 0 2px 6px rgba(0, 0, 0, 0.03);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advisory-callout-banner::after {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232, 126, 30, 0.14) 0%, rgba(232, 126, 30, 0) 70%);
+            pointer-events: none;
+        }
+
+        .advisory-callout-top {
             display: flex;
             align-items: center;
-            gap: 1.25rem;
-            box-shadow: 0 4px 16px rgba(232, 126, 30, 0.07);
+            gap: 1.15rem;
+            margin-bottom: 1.35rem;
         }
 
         .advisory-callout-icon-box {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: #FFEDD5;
-            color: #EA580C;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #FFEDD5 0%, #FED7AA 100%);
+            border: 1.5px solid #FDBA74;
+            color: #C2410C;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            box-shadow: 0 4px 14px rgba(232, 126, 30, 0.18);
         }
 
-        .advisory-callout-content {
+        .advisory-callout-heading-wrap {
             display: flex;
             flex-direction: column;
-            gap: 0.3rem;
+            gap: 0.25rem;
+        }
+
+        .advisory-callout-kicker {
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #C2410C;
         }
 
         .advisory-callout-q {
-            font-size: 1rem;
-            font-weight: 800;
-            color: #9A3412;
             font-family: var(--font-display);
+            font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+            font-weight: 800;
+            color: #7C2D12;
+            line-height: 1.25;
+            margin: 0;
         }
 
-        .advisory-callout-text {
-            font-size: 0.95rem;
+        .advisory-callout-chips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 0.95rem;
+        }
+
+        .advisory-callout-chip {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1.5px solid #FED7AA;
+            border-radius: 12px;
+            padding: 0.9rem 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+            font-weight: 700;
             color: #7C2D12;
-            line-height: 1.55;
-            font-weight: 500;
+            line-height: 1.4;
+            box-shadow: 0 2px 8px rgba(232, 126, 30, 0.05);
+            transition: all 0.22s ease;
+        }
+
+        .advisory-callout-chip:hover {
+            background: #FFFFFF;
+            border-color: #F97316;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(232, 126, 30, 0.15);
+        }
+
+        .callout-chip-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #E87E1E;
+            box-shadow: 0 0 0 3px #FFEDD5;
+            flex-shrink: 0;
         }
 
         .advisory-collab-grid {
@@ -2418,7 +2479,11 @@
             .advisory-card { padding: 1.75rem 1.35rem; }
             .advisory-collab-grid { grid-template-columns: 1fr; gap: 1.35rem; }
             .advisory-collab-card { padding: 2rem 1.35rem; }
-            .advisory-callout-banner { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.25rem 1.15rem; }
+            .advisory-callout-banner { padding: 1.6rem 1.25rem; }
+            .advisory-callout-top { gap: 0.9rem; margin-bottom: 1.15rem; }
+            .advisory-callout-icon-box { width: 44px; height: 44px; }
+            .advisory-callout-chips { grid-template-columns: 1fr; gap: 0.75rem; }
+            .advisory-callout-chip { padding: 0.85rem 1rem; }
 
             .target-card-container { grid-template-columns: 1fr; }
             .target-main-content { padding: 2.25rem 1.35rem; }
@@ -2860,18 +2925,38 @@
                     In collaboration with Bibiana King, a consulting professional with more than 20 years of experience, including as a partner at Deloitte, we help businesses run on clear processes and strong controls. We support businesses in identifying and assessing risks, to strengthen their control environment and give them confidence and peace of mind in decision-making.
                 </p>
 
-                <!-- Full-Width Problem Callout Banner Spanning Across Both Columns -->
+                <!-- Full-Width Flagship Problem Callout Banner -->
                 <div class="advisory-callout-banner">
-                    <div class="advisory-callout-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="8" x2="12" y2="12"></line>
-                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
+                    <div class="advisory-callout-top">
+                        <div class="advisory-callout-icon-box">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div class="advisory-callout-heading-wrap">
+                            <span class="advisory-callout-kicker" data-i18n="adv_collab_callout_kicker">COMMON OPERATIONAL BOTTLENECKS</span>
+                            <h4 class="advisory-callout-q" data-i18n="adv_collab_c1_callout_q">Does this sound familiar?</h4>
+                        </div>
                     </div>
-                    <div class="advisory-callout-content">
-                        <span class="advisory-callout-q" data-i18n="adv_collab_c1_callout_q">Does this sound familiar?</span>
-                        <span class="advisory-callout-text" data-i18n="adv_collab_c1_callout_t">Dependence on key people &bull; Unclear responsibilities &bull; Slow decisions &bull; Duplicated work and unnecessary costs</span>
+                    <div class="advisory-callout-chips">
+                        <div class="advisory-callout-chip">
+                            <span class="callout-chip-dot"></span>
+                            <span data-i18n="adv_collab_pain_1">Dependence on key people</span>
+                        </div>
+                        <div class="advisory-callout-chip">
+                            <span class="callout-chip-dot"></span>
+                            <span data-i18n="adv_collab_pain_2">Unclear responsibilities</span>
+                        </div>
+                        <div class="advisory-callout-chip">
+                            <span class="callout-chip-dot"></span>
+                            <span data-i18n="adv_collab_pain_3">Slow decisions</span>
+                        </div>
+                        <div class="advisory-callout-chip">
+                            <span class="callout-chip-dot"></span>
+                            <span data-i18n="adv_collab_pain_4">Duplicated work and unnecessary costs</span>
+                        </div>
                     </div>
                 </div>
 
@@ -3318,7 +3403,12 @@
                 adv_collab_desc: "In collaboration with Bibiana King, a consulting professional with more than 20 years of experience, including as a partner at Deloitte, we help businesses run on clear processes and strong controls. We support businesses in identifying and assessing risks, to strengthen their control environment and give them confidence and peace of mind in decision-making.",
                 adv_collab_c1_t: "Operating Model Design",
                 adv_collab_c1_sub: "We design how your business operates: clear processes, defined roles, and the information management needs to decide well.",
+                adv_collab_callout_kicker: "COMMON OPERATIONAL BOTTLENECKS",
                 adv_collab_c1_callout_q: "Does this sound familiar?",
+                adv_collab_pain_1: "Dependence on key people",
+                adv_collab_pain_2: "Unclear responsibilities",
+                adv_collab_pain_3: "Slow decisions",
+                adv_collab_pain_4: "Duplicated work and unnecessary costs",
                 adv_collab_c1_callout_t: "Dependence on key people &bull; Unclear responsibilities &bull; Slow decisions &bull; Duplicated work and unnecessary costs",
                 adv_collab_c1_b1: "Diagnosis of your current model",
                 adv_collab_c1_b2: "Redesign & documentation of processes and policies",
@@ -3501,6 +3591,11 @@
                 adv_collab_c1_t: "Diseño del Modelo Operativo",
                 adv_collab_c1_sub: "Diseñamos cómo opera su negocio: procesos claros, roles definidos y la información que la dirección necesita para decidir bien.",
                 adv_collab_c1_callout_q: "¿Le resulta familiar?",
+                adv_collab_callout_kicker: "DESAFÍOS OPERATIVOS FRECUENTES",
+                adv_collab_pain_1: "Dependencia de personas clave",
+                adv_collab_pain_2: "Responsabilidades poco claras",
+                adv_collab_pain_3: "Decisiones lentas",
+                adv_collab_pain_4: "Trabajo duplicado y costos innecesarios",
                 adv_collab_c1_callout_t: "Dependencia de personas clave &bull; Responsabilidades poco claras &bull; Decisiones lentas &bull; Trabajo duplicado y costos innecesarios",
                 adv_collab_c1_b1: "Diagnóstico de su modelo actual",
                 adv_collab_c1_b2: "Rediseño y documentación de procesos y políticas",
