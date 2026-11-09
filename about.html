@@ -421,7 +421,7 @@
         }
 
         .team-card.consulting-card {
-            border: 2px solid var(--brand-blue);
+            border: 2px solid var(--cyan-accent);
         }
         .team-card.consulting-card::before {
             content: '';
@@ -430,7 +430,11 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--brand-blue);
+            background: var(--cyan-accent);
+        }
+
+        .consulting-card .highlight-dot {
+            background: var(--cyan-accent);
         }
 
         .team-badge-pill {
@@ -452,9 +456,9 @@
         }
 
         .badge-deloitte {
-            background: #EFF6FF;
-            color: #1E40AF;
-            border: 1px solid #BFDBFE;
+            background: #EBF8FC;
+            color: #0284C7;
+            border: 1px solid #BAE6FD;
         }
 
         .team-card h3 {
@@ -613,34 +617,48 @@
 
         /* CTA Banner */
         .cta-banner-box {
-            background: linear-gradient(135deg, #0B2545 0%, #004AAD 100%);
+            background: #FFFFFF;
+            border: 2px solid var(--accent-orange);
             border-radius: var(--radius-xl);
             padding: clamp(2.5rem, 4vw, 3.75rem);
-            color: #FFFFFF;
+            color: var(--primary);
             text-align: center;
-            box-shadow: 0 16px 36px rgba(0, 74, 173, 0.25);
+            box-shadow: 0 12px 32px rgba(232, 126, 30, 0.12);
             margin: 4.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-orange);
         }
 
         .cta-banner-box h2 {
             font-family: var(--font-display);
             font-size: clamp(1.85rem, 3vw, 2.6rem);
             font-weight: 800;
+            color: #0B2545;
             margin-bottom: 1rem;
             line-height: 1.3;
         }
 
         .cta-banner-box p {
             font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: #4B5563;
             max-width: 720px;
             margin: 0 auto 2rem;
             line-height: 1.6;
         }
 
         .btn-cta-gold {
-            background: #F1B808;
-            color: #0B2545;
+            background: #E87E1E;
+            color: #FFFFFF;
             font-weight: 800;
             font-size: 1.05rem;
             padding: 1rem 2.5rem;
@@ -649,12 +667,14 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            box-shadow: 0 6px 20px rgba(241, 184, 8, 0.4);
-            transition: transform 0.2s ease;
+            box-shadow: 0 6px 18px rgba(232, 126, 30, 0.35);
+            transition: all 0.22s ease;
         }
         .btn-cta-gold:hover {
             transform: translateY(-2px);
-            background: #E5AC00;
+            background: #D76F12;
+            box-shadow: 0 8px 24px rgba(232, 126, 30, 0.45);
+            color: #FFFFFF;
         }
 
         /* Footer */
