@@ -1579,6 +1579,168 @@
             50% { opacity: 1; transform: scale(1.3); box-shadow: 0 0 9px 2px #52C1E4; }
         }
 
+        /* Business Advisory Collaboration Table */
+        .advisory-collab-card {
+            background: linear-gradient(180deg, #FFFDF9 0%, #FAF5EE 100%);
+            border: 1.5px solid #F3DFC9;
+            border-radius: 20px;
+            padding: clamp(2rem, 3.5vw, 3.25rem);
+            margin-top: 2.75rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(232, 126, 30, 0.08);
+        }
+
+        .advisory-collab-top-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #E87E1E;
+        }
+
+        .advisory-collab-heading {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+            font-weight: 800;
+            font-style: italic;
+            color: #111827;
+            margin-bottom: 0.85rem;
+            line-height: 1.35;
+        }
+
+        .advisory-collab-lead {
+            font-size: 1.02rem;
+            color: #374151;
+            line-height: 1.68;
+            max-width: 980px;
+            margin-bottom: 2rem;
+        }
+
+        .advisory-collab-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem;
+            margin-bottom: 2.25rem;
+        }
+
+        .advisory-collab-subcard {
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            border-radius: 16px;
+            padding: 2.25rem 2rem;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .advisory-collab-subcard:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(232, 126, 30, 0.1);
+        }
+
+        .advisory-subcard-title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #0B2545;
+            margin-bottom: 0.5rem;
+        }
+
+        .advisory-subcard-desc {
+            font-size: 0.95rem;
+            color: #4B5563;
+            line-height: 1.55;
+            margin-bottom: 1.35rem;
+        }
+
+        .advisory-callout-box {
+            background: #FFF7ED;
+            border: 1px solid #FFEDD5;
+            border-radius: 10px;
+            padding: 0.95rem 1.15rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .advisory-callout-q {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #9A3412;
+        }
+
+        .advisory-callout-text {
+            font-size: 0.88rem;
+            color: #7C2D12;
+            line-height: 1.5;
+        }
+
+        .advisory-bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .advisory-bullet-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: #374151;
+            line-height: 1.55;
+            padding: 0.6rem 0;
+        }
+
+        .advisory-bullet-list.divided li {
+            border-bottom: 1px solid #F3F4F6;
+            padding: 0.85rem 0;
+        }
+
+        .advisory-bullet-list.divided li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .adv-orange-dot {
+            color: #E87E1E;
+            font-size: 1.35rem;
+            line-height: 1;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .advisory-collab-btn-wrap {
+            padding-top: 0.25rem;
+        }
+
+        .btn-advisory-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #E87E1E;
+            color: #FFFFFF;
+            font-weight: 800;
+            font-size: 0.95rem;
+            padding: 0.85rem 2.25rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(232, 126, 30, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .btn-advisory-cta:hover {
+            background: #D76F12;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(232, 126, 30, 0.45);
+            color: #FFFFFF;
+        }
+
         /* Deloitte Collaboration Box - Clean Navy & Gray */
         .collab-callout {
             background: #F8FAFD;
@@ -2190,6 +2352,8 @@
 
             .advisory-grid { grid-template-columns: 1fr; gap: 1.35rem; }
             .advisory-card { padding: 1.75rem 1.35rem; }
+            .advisory-collab-grid { grid-template-columns: 1fr; gap: 1.35rem; }
+            .advisory-collab-card { padding: 2rem 1.35rem; }
 
             .target-card-container { grid-template-columns: 1fr; }
             .target-main-content { padding: 2.25rem 1.35rem; }
@@ -2688,6 +2852,74 @@
                     <p class="adv-desc" data-i18n="adv_c4_d">Preparation of audit workpapers, financial audit assistance, and liaison support to streamline year-end audits.</p>
                 </div>
             </div>
+
+            <!-- Operating Model Design & Strengthening Internal Control (Deloitte Collaboration Framework) -->
+            <div class="advisory-collab-card">
+                <div class="advisory-collab-top-line"></div>
+                <h3 class="advisory-collab-heading" data-i18n="adv_collab_title">Operating Model Design &amp; Strengthening Internal Control</h3>
+                <p class="advisory-collab-lead" data-i18n="adv_collab_desc">
+                    In collaboration with Bibiana King, a consulting professional with more than 20 years of experience, including as a partner at Deloitte, we help businesses run on clear processes and strong controls. We support businesses in identifying and assessing risks, to strengthen their control environment and give them confidence and peace of mind in decision-making.
+                </p>
+
+                <div class="advisory-collab-grid">
+                    <!-- Left Subcard: Operating Model Design -->
+                    <div class="advisory-collab-subcard">
+                        <h4 class="advisory-subcard-title" data-i18n="adv_collab_c1_t">Operating Model Design</h4>
+                        <p class="advisory-subcard-desc" data-i18n="adv_collab_c1_sub">We design how your business operates: clear processes, defined roles, and the information management needs to decide well.</p>
+                        
+                        <div class="advisory-callout-box">
+                            <span class="advisory-callout-q" data-i18n="adv_collab_c1_callout_q">Does this sound familiar?</span>
+                            <span class="advisory-callout-text" data-i18n="adv_collab_c1_callout_t">Dependence on key people &bull; Unclear responsibilities &bull; Slow decisions &bull; Duplicated work and unnecessary costs</span>
+                        </div>
+
+                        <ul class="advisory-bullet-list">
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c1_b1">Diagnosis of your current model</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c1_b2">Redesign &amp; documentation of processes and policies</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c1_b3">Implementation support &amp; follow-up reviews</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Subcard: Strengthening Internal Control -->
+                    <div class="advisory-collab-subcard">
+                        <h4 class="advisory-subcard-title" data-i18n="adv_collab_c2_t">Strengthening Internal Control</h4>
+                        <p class="advisory-subcard-desc" data-i18n="adv_collab_c2_sub">We identify and evaluate risks so you can decide with confidence &mdash; and keep controls working over time.</p>
+
+                        <ul class="advisory-bullet-list divided">
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c2_b1">Mapping of key processes &amp; risk assessment</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c2_b2">Controls designed for your specific risks</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c2_b3">Risk &amp; control matrices, documented</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c2_b4">Ongoing monitoring of controls</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="advisory-collab-btn-wrap">
+                    <a href="#contact" class="btn btn-advisory-cta" onclick="selectPlan('Business Advisory')" data-i18n="btn_inquire_adv_arrow">
+                        Inquire for Advisory &rarr;
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2988,6 +3220,22 @@
                 adv_c3_d: "Clear internal control recommendations, standard operating procedure (SOP) documentation, and cost-reduction strategies.",
                 adv_c4_t: "Audit Support",
                 adv_c4_d: "Preparation of audit workpapers, financial audit assistance, and liaison support to streamline year-end audits.",
+                adv_collab_title: "Operating Model Design & Strengthening Internal Control",
+                adv_collab_desc: "In collaboration with Bibiana King, a consulting professional with more than 20 years of experience, including as a partner at Deloitte, we help businesses run on clear processes and strong controls. We support businesses in identifying and assessing risks, to strengthen their control environment and give them confidence and peace of mind in decision-making.",
+                adv_collab_c1_t: "Operating Model Design",
+                adv_collab_c1_sub: "We design how your business operates: clear processes, defined roles, and the information management needs to decide well.",
+                adv_collab_c1_callout_q: "Does this sound familiar?",
+                adv_collab_c1_callout_t: "Dependence on key people &bull; Unclear responsibilities &bull; Slow decisions &bull; Duplicated work and unnecessary costs",
+                adv_collab_c1_b1: "Diagnosis of your current model",
+                adv_collab_c1_b2: "Redesign & documentation of processes and policies",
+                adv_collab_c1_b3: "Implementation support & follow-up reviews",
+                adv_collab_c2_t: "Strengthening Internal Control",
+                adv_collab_c2_sub: "We identify and evaluate risks so you can decide with confidence \u2014 and keep controls working over time.",
+                adv_collab_c2_b1: "Mapping of key processes & risk assessment",
+                adv_collab_c2_b2: "Controls designed for your specific risks",
+                adv_collab_c2_b3: "Risk & control matrices, documented",
+                adv_collab_c2_b4: "Ongoing monitoring of controls",
+                btn_inquire_adv_arrow: "Inquire for Advisory \u2192",
                 target_kicker: "Who We Serve",
                 target_title: "Tailored for San Diego County Small & Medium Businesses",
                 target_desc: "The primary target market will be small and medium-sized businesses in San Diego County, particularly businesses that need professional financial and administrative support but may not need or be able to afford a full-time accounting or finance department.",
@@ -3151,6 +3399,22 @@
                 adv_c3_t: "Control Interno y Mejora",
                 adv_c3_d: "Recomendaciones claras de control interno, manuales de procedimientos (SOPs) y estrategias de reducción de costos.",
                 adv_c4_t: "Soporte en Auditorías",
+                adv_collab_title: "Diseño del Modelo Operativo y Fortalecimiento del Control Interno",
+                adv_collab_desc: "En colaboración con Bibiana King, profesional de consultoría con más de 20 años de experiencia, incluyendo como socia en Deloitte, ayudamos a las empresas a operar con procesos claros y controles sólidos. Apoyamos a las empresas en la identificación y evaluación de riesgos, para fortalecer su entorno de control y brindarles confianza y tranquilidad en la toma de decisiones.",
+                adv_collab_c1_t: "Diseño del Modelo Operativo",
+                adv_collab_c1_sub: "Diseñamos cómo opera su negocio: procesos claros, roles definidos y la información que la dirección necesita para decidir bien.",
+                adv_collab_c1_callout_q: "¿Le resulta familiar?",
+                adv_collab_c1_callout_t: "Dependencia de personas clave &bull; Responsabilidades poco claras &bull; Decisiones lentas &bull; Trabajo duplicado y costos innecesarios",
+                adv_collab_c1_b1: "Diagnóstico de su modelo actual",
+                adv_collab_c1_b2: "Rediseño y documentación de procesos y políticas",
+                adv_collab_c1_b3: "Acompañamiento en la implementación y revisiones de seguimiento",
+                adv_collab_c2_t: "Fortalecimiento del Control Interno",
+                adv_collab_c2_sub: "Identificamos y evaluamos riesgos para que pueda decidir con confianza \u2014 y mantener los controles funcionando a lo largo del tiempo.",
+                adv_collab_c2_b1: "Mapeo de procesos clave y evaluación de riesgos",
+                adv_collab_c2_b2: "Controles diseñados para sus riesgos específicos",
+                adv_collab_c2_b3: "Matrices de riesgo y control, documentadas",
+                adv_collab_c2_b4: "Monitoreo continuo de controles",
+                btn_inquire_adv_arrow: "Solicitar Asesoría de Negocios \u2192",
                 adv_c4_d: "Elaboración de papeles de trabajo para auditoría, acompañamiento contable y enlace para agilizar auditorías anuales.",
                 target_kicker: "A Quién Servimos",
                 target_title: "Diseñado para Pequeños y Medianos Negocios de San Diego",
