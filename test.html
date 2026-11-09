@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1836,6 +1836,37 @@
             margin-top: 1px;
         }
 
+        /* Operating Model & Internal Control Process Illustration */
+        .advisory-illustration-container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0.5rem auto 2.25rem;
+            background: #FFFFFF;
+            border: 1.5px solid #FED7AA;
+            border-radius: 18px;
+            padding: clamp(0.75rem, 1.6vw, 1.35rem);
+            box-shadow: 0 8px 26px rgba(232, 126, 30, 0.08);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+        }
+
+        .advisory-illustration-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 32px rgba(232, 126, 30, 0.14);
+        }
+
+        .advisory-illustration-img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: contain;
+            display: block;
+            border-radius: 12px;
+        }
+
         .advisory-collab-btn-wrap {
             padding-top: 0.5rem;
         }
@@ -2479,6 +2510,7 @@
             .advisory-card { padding: 1.75rem 1.35rem; }
             .advisory-collab-grid { grid-template-columns: 1fr; gap: 1.35rem; }
             .advisory-collab-card { padding: 2rem 1.35rem; }
+            .advisory-illustration-container { padding: 0.5rem; margin-bottom: 1.75rem; border-radius: 14px; }
             .advisory-callout-banner { padding: 1.6rem 1.25rem; }
             .advisory-callout-top { gap: 0.9rem; margin-bottom: 1.15rem; }
             .advisory-callout-icon-box { width: 44px; height: 44px; }
@@ -2827,35 +2859,9 @@
                         <p style="font-size: 1.05rem; color: #4B5563; line-height: 1.65; margin-bottom: 2rem;" data-i18n="inv_subtitle">
                             Helping business owners understand inventory, identify recorded vs. physical differences, recognize improvement areas, and establish consistent counting practices.
                         </p>
-                        <!-- Animated Diagnostic Warehouse Scene (Focused Board Animation) -->
+                        <!-- Diagnostic Warehouse Scene (Clean Static) -->
                         <div class="animated-inventory-scene" id="animatedInventoryScene">
-                            <img src="assets/inventory-diagnostic-illustration.jpg?v=3" alt="Inventory Checkup Diagnostic Illustration" class="inv-scene-base-img" loading="lazy">
-
-                            <!-- Diagnostic Dashboard Screen Live Animations -->
-                            <div class="board-animation-container" aria-hidden="true">
-                                <!-- Telemetry Scan Beam sweeping across charts & diagnostic -->
-                                <div class="board-telemetry-scan"></div>
-
-                                <!-- Live Diagnostic Graph Pulse / Active Trace -->
-                                <div class="board-diagnostic-graph-pulse">
-                                    <svg class="board-graph-svg" viewBox="0 0 100 45" preserveAspectRatio="none">
-                                        <path d="M 5 36 Q 22 36, 26 28 T 46 12 T 66 32 T 84 8 T 96 24" fill="none" stroke="#52C1E4" stroke-width="2.5" stroke-linecap="round" class="board-graph-line"/>
-                                    </svg>
-                                    <span class="board-graph-glow-dot"></span>
-                                </div>
-
-                                <!-- Diagnostic Radar Eye Pulse Rings -->
-                                <div class="board-radar-eye">
-                                    <span class="board-radar-ring"></span>
-                                    <span class="board-radar-ring ring-delayed"></span>
-                                    <span class="board-radar-core"></span>
-                                </div>
-
-                                <!-- Diagnostic Checklist Active Indicator Pings -->
-                                <div class="board-check-ping check-1"></div>
-                                <div class="board-check-ping check-2"></div>
-                                <div class="board-check-ping check-3"></div>
-                            </div>
+                            <img src="assets/inventory-diagnostic-illustration.jpg" alt="Inventory Checkup Diagnostic Illustration" class="inv-scene-base-img" loading="lazy">
                         </div>
                     </div>
 
@@ -3023,6 +3029,11 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+
+                <!-- Operating Model & Internal Control Process Illustration -->
+                <div class="advisory-illustration-container">
+                    <img src="assets/advisory-model-illustration.jpg" alt="Operating Model Design and Strengthening Internal Control Framework" class="advisory-illustration-img" loading="lazy">
                 </div>
 
                 <div class="advisory-collab-btn-wrap">
