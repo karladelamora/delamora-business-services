@@ -1231,6 +1231,7 @@
             font-weight: 800;
             color: #0B2545;
             margin-bottom: 0.5rem;
+            text-align: center;
         }
 
         .pricing-tier-desc {
@@ -1239,6 +1240,7 @@
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--border-subtle);
+            text-align: center;
         }
 
         .tier-basic {
@@ -1258,6 +1260,7 @@
             margin: 0.35rem 0 1rem;
             padding-bottom: 0.85rem;
             border-bottom: 1px solid var(--border-subtle);
+            text-align: center;
         }
 
         .price-starting-tag {
@@ -1268,11 +1271,13 @@
             color: #64748B;
             margin-bottom: 0.2rem;
             display: block;
+            text-align: center;
         }
 
         .price-amount-line {
             display: flex;
             align-items: baseline;
+            justify-content: center;
             gap: 0.2rem;
         }
 
@@ -2754,7 +2759,7 @@
                                 <span class="price-unit" data-i18n="price_month">month</span>
                             </div>
                         </div>
-                        <div class="pricing-tier-desc tier-basic" data-i18n="basic_desc">Essential Bookkeeping &bull; Flat-Rate Monthly</div>
+                        <div class="pricing-tier-desc tier-basic" data-i18n="basic_desc">Essential Bookkeeping</div>
                         <ul class="pricing-features">
                             <li>
                                 <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -2762,7 +2767,7 @@
                             </li>
                             <li>
                                 <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span data-i18n="basic_f2">Bank and Credit Card Reconciliation: Up to 3 bank accounts or cards</span>
+                                <span data-i18n="basic_f2">Bank Reconciliation: Up to 3 bank accounts or cards</span>
                             </li>
                             <li>
                                 <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -2796,7 +2801,7 @@
                                 <span class="price-unit" data-i18n="price_month">month</span>
                             </div>
                         </div>
-                        <div class="pricing-tier-desc tier-std" data-i18n="std_desc">Growing Business &bull; Flat-Rate Monthly</div>
+                        <div class="pricing-tier-desc tier-std" data-i18n="std_desc">Growing Business</div>
                         <ul class="pricing-features">
                             <li>
                                 <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -2804,7 +2809,7 @@
                             </li>
                             <li>
                                 <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span data-i18n="std_f2">Bank and Credit Card Reconciliation: Up to 5 bank accounts or cards</span>
+                                <span data-i18n="std_f2">Bank Reconciliation: Up to 5 bank accounts or cards</span>
                             </li>
                             <li>
                                 <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -2841,7 +2846,7 @@
                                 <span class="price-unit" data-i18n="price_month">month</span>
                             </div>
                         </div>
-                        <div class="pricing-tier-desc tier-prem" data-i18n="prem_desc">Comprehensive Control &bull; Flat-Rate Monthly</div>
+                        <div class="pricing-tier-desc tier-prem" data-i18n="prem_desc">Comprehensive Control</div>
                         <ul class="pricing-features">
                             <li>
                                 <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -2849,7 +2854,7 @@
                             </li>
                             <li>
                                 <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span data-i18n="prem_f2">Bank and Credit Card Reconciliation: up to 8 bank accounts or cards</span>
+                                <span data-i18n="prem_f2">Bank Reconciliation: Up to 8 bank accounts or cards</span>
                             </li>
                             <li>
                                 <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -3399,9 +3404,9 @@
                 price_starting: "Starting from:",
                 price_month: "month",
                 basic_title: "Basic Plan",
-                basic_desc: "Essential Bookkeeping • Flat-Rate Monthly",
+                basic_desc: "Essential Bookkeeping",
                 basic_f1: "Bookkeeping up to 150 monthly transactions",
-                basic_f2: "Bank and Credit Card Reconciliation: Up to 3 bank accounts or cards",
+                basic_f2: "Bank Reconciliation: Up to 3 bank accounts or cards",
                 basic_f3: "Income and expense classification",
                 basic_f4: "Income statement and balance sheet",
                 basic_f5: "Close on the 20th of the following month",
@@ -3409,9 +3414,9 @@
                 btn_inquire_basic: "Inquire for Basic",
                 badge_popular: "Most Popular",
                 std_title: "Standard Plan",
-                std_desc: "Growing Business • Flat-Rate Monthly",
+                std_desc: "Growing Business",
                 std_f1: "Bookkeeping up to 300 monthly transactions",
-                std_f2: "Bank and Credit Card Reconciliation: Up to 5 bank accounts or cards",
+                std_f2: "Bank Reconciliation: Up to 5 bank accounts or cards",
                 std_f3: "Everything included in Basic",
                 std_f4: "Recording and classification of accounts receivable and payable",
                 std_f5: "Monthly reports and monthly financial review",
@@ -3419,9 +3424,9 @@
                 std_f7: "Email support plus monthly call",
                 btn_inquire_std: "Inquire for Standard",
                 prem_title: "Premium Plan",
-                prem_desc: "Comprehensive Control • Flat-Rate Monthly",
+                prem_desc: "Comprehensive Control",
                 prem_f1: "Bookkeeping up to 600 transactions",
-                prem_f2: "Bank and Credit Card Reconciliation: up to 8 bank accounts or cards",
+                prem_f2: "Bank Reconciliation: Up to 8 bank accounts or cards",
                 prem_f3: "Everything included in Standard",
                 prem_f4: "Payroll Support",
                 prem_f5: "Cash flow review",
@@ -3591,9 +3596,9 @@
                 price_starting: "A partir de:",
                 price_month: "mes",
                 basic_title: "Plan Básico",
-                basic_desc: "Contabilidad Esencial • Tarifa Fija Mensual",
+                basic_desc: "Contabilidad Esencial",
                 basic_f1: "Contabilidad de hasta 150 transacciones mensuales",
-                basic_f2: "Conciliaci\u00F3n bancaria y tarjetas de cr\u00E9dito: hasta 3 cuentas o tarjetas",
+                basic_f2: "Conciliaci\u00F3n bancaria: hasta 3 cuentas o tarjetas",
                 basic_f3: "Clasificaci\u00F3n de ingresos y gastos",
                 basic_f4: "Estado de resultados y balance general",
                 basic_f5: "Cierre el d\u00EDa 20 del mes siguiente",
@@ -3601,9 +3606,9 @@
                 btn_inquire_basic: "Solicitar Plan Básico",
                 badge_popular: "Más Popular",
                 std_title: "Plan Estándar",
-                std_desc: "Negocio en Crecimiento • Tarifa Fija Mensual",
+                std_desc: "Negocio en Crecimiento",
                 std_f1: "Contabilidad de hasta 300 transacciones mensuales",
-                std_f2: "Conciliaci\u00F3n bancaria y tarjetas de cr\u00E9dito: hasta 5 cuentas o tarjetas",
+                std_f2: "Conciliaci\u00F3n bancaria: hasta 5 cuentas o tarjetas",
                 std_f3: "Todo lo incluido en el Plan B\u00E1sico",
                 std_f4: "Registro y clasificaci\u00F3n de cuentas por cobrar y por pagar",
                 std_f5: "Reportes mensuales y revisi\u00F3n financiera mensual",
@@ -3611,9 +3616,9 @@
                 std_f7: "Soporte por correo electr\u00F3nico m\u00E1s llamada mensual",
                 btn_inquire_std: "Solicitar Plan Estándar",
                 prem_title: "Plan Premium",
-                prem_desc: "Control Integral • Tarifa Fija Mensual",
+                prem_desc: "Control Integral",
                 prem_f1: "Contabilidad de hasta 600 transacciones",
-                prem_f2: "Conciliaci\u00F3n bancaria y tarjetas de cr\u00E9dito: hasta 8 cuentas o tarjetas",
+                prem_f2: "Conciliaci\u00F3n bancaria: hasta 8 cuentas o tarjetas",
                 prem_f3: "Todo lo incluido en el Plan Est\u00E1ndar",
                 prem_f4: "Soporte de n\u00F3mina (Payroll Support)",
                 prem_f5: "Revisi\u00F3n de flujo de efectivo",
