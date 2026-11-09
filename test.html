@@ -1579,16 +1579,16 @@
             50% { opacity: 1; transform: scale(1.3); box-shadow: 0 0 9px 2px #52C1E4; }
         }
 
-        /* Business Advisory Collaboration Table */
+        /* Business Advisory Flagship Independent Collaboration Table */
         .advisory-collab-card {
-            background: linear-gradient(180deg, #FFFDF9 0%, #FAF5EE 100%);
-            border: 1.5px solid #F3DFC9;
+            background: #FFFFFF;
+            border: 2px solid #E87E1E;
             border-radius: 20px;
-            padding: clamp(2rem, 3.5vw, 3.25rem);
-            margin-top: 2.75rem;
+            padding: clamp(2rem, 3.5vw, 3.5rem);
+            margin-bottom: 3.5rem;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(232, 126, 30, 0.08);
+            box-shadow: 0 10px 36px rgba(232, 126, 30, 0.12);
         }
 
         .advisory-collab-top-line {
@@ -1600,22 +1600,84 @@
             background: #E87E1E;
         }
 
+        .advisory-executive-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #FFF7ED;
+            border: 1px solid #FDBA74;
+            color: #C2410C;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.95rem;
+            border-radius: 9999px;
+            margin-bottom: 1.25rem;
+        }
+
         .advisory-collab-heading {
             font-family: var(--font-display);
-            font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+            font-size: clamp(1.45rem, 2.3vw, 2rem);
             font-weight: 800;
             font-style: italic;
-            color: #111827;
+            color: #0B2545;
             margin-bottom: 0.85rem;
             line-height: 1.35;
         }
 
         .advisory-collab-lead {
-            font-size: 1.02rem;
+            font-size: 1.05rem;
             color: #374151;
-            line-height: 1.68;
+            line-height: 1.7;
             max-width: 980px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
+        }
+
+        /* Full-Width Striking Problem Callout Banner */
+        .advisory-callout-banner {
+            background: #FFF9F2;
+            border: 1.5px solid #FED7AA;
+            border-left: 5px solid #E87E1E;
+            border-radius: 14px;
+            padding: 1.25rem 1.6rem;
+            margin-bottom: 2.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            box-shadow: 0 4px 16px rgba(232, 126, 30, 0.07);
+        }
+
+        .advisory-callout-icon-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: #FFEDD5;
+            color: #EA580C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .advisory-callout-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .advisory-callout-q {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #9A3412;
+            font-family: var(--font-display);
+        }
+
+        .advisory-callout-text {
+            font-size: 0.95rem;
+            color: #7C2D12;
+            line-height: 1.55;
+            font-weight: 500;
         }
 
         .advisory-collab-grid {
@@ -1627,18 +1689,39 @@
 
         .advisory-collab-subcard {
             background: #FFFFFF;
-            border: 1px solid #E5E7EB;
+            border: 1.5px solid #E2E8F0;
             border-radius: 16px;
             padding: 2.25rem 2rem;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
             display: flex;
             flex-direction: column;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            transition: all 0.28s ease;
         }
 
         .advisory-collab-subcard:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 24px rgba(232, 126, 30, 0.1);
+            transform: translateY(-4px);
+            border-color: #FDBA74;
+            box-shadow: 0 14px 32px rgba(232, 126, 30, 0.14);
+        }
+
+        .advisory-subcard-header {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .advisory-subcard-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #FFF7ED;
+            border: 1.5px solid #FDBA74;
+            color: #E87E1E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
         .advisory-subcard-title {
@@ -1646,37 +1729,14 @@
             font-size: 1.35rem;
             font-weight: 800;
             color: #0B2545;
-            margin-bottom: 0.5rem;
+            margin: 0;
         }
 
         .advisory-subcard-desc {
             font-size: 0.95rem;
             color: #4B5563;
             line-height: 1.55;
-            margin-bottom: 1.35rem;
-        }
-
-        .advisory-callout-box {
-            background: #FFF7ED;
-            border: 1px solid #FFEDD5;
-            border-radius: 10px;
-            padding: 0.95rem 1.15rem;
             margin-bottom: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.35rem;
-        }
-
-        .advisory-callout-q {
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: #9A3412;
-        }
-
-        .advisory-callout-text {
-            font-size: 0.88rem;
-            color: #7C2D12;
-            line-height: 1.5;
         }
 
         .advisory-bullet-list {
@@ -1694,7 +1754,7 @@
             font-size: 0.95rem;
             color: #374151;
             line-height: 1.55;
-            padding: 0.6rem 0;
+            padding: 0.65rem 0;
         }
 
         .advisory-bullet-list.divided li {
@@ -1716,7 +1776,7 @@
         }
 
         .advisory-collab-btn-wrap {
-            padding-top: 0.25rem;
+            padding-top: 0.5rem;
         }
 
         .btn-advisory-cta {
@@ -1726,19 +1786,23 @@
             background: #E87E1E;
             color: #FFFFFF;
             font-weight: 800;
-            font-size: 0.95rem;
-            padding: 0.85rem 2.25rem;
+            font-size: 1rem;
+            padding: 0.95rem 2.5rem;
             border-radius: 9999px;
             text-decoration: none;
-            box-shadow: 0 4px 14px rgba(232, 126, 30, 0.35);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            box-shadow: 0 6px 18px rgba(232, 126, 30, 0.35);
+            transition: all 0.22s ease;
         }
 
         .btn-advisory-cta:hover {
             background: #D76F12;
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(232, 126, 30, 0.45);
+            box-shadow: 0 8px 24px rgba(232, 126, 30, 0.45);
             color: #FFFFFF;
+        }
+
+        .advisory-grid-header {
+            margin-bottom: 1.75rem;
         }
 
         /* Deloitte Collaboration Box - Clean Navy & Gray */
@@ -2354,6 +2418,7 @@
             .advisory-card { padding: 1.75rem 1.35rem; }
             .advisory-collab-grid { grid-template-columns: 1fr; gap: 1.35rem; }
             .advisory-collab-card { padding: 2rem 1.35rem; }
+            .advisory-callout-banner { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.25rem 1.15rem; }
 
             .target-card-container { grid-template-columns: 1fr; }
             .target-main-content { padding: 2.25rem 1.35rem; }
@@ -2776,25 +2841,119 @@
         </div>
     </section>
 
-    <!-- Business Advisory Section (Standardized with Solid Orange Signature) -->
+    <!-- Business Advisory Section -->
     <section id="advisory" class="advisory-section">
         <div class="container">
             <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #0B2545; margin-bottom: 1.5rem;" data-i18n="adv_kicker">Business Advisory</h2>
 
-            <!-- Top Overview Box -->
-            <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(2rem, 3.5vw, 3.25rem); box-shadow: 0 8px 30px rgba(232, 126, 30, 0.12); border: 2px solid #E87E1E; margin-bottom: 2.5rem; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #E87E1E;"></div>
-                <h3 style="font-family: var(--font-display); font-size: clamp(1.45rem, 2.2vw, 1.95rem); font-weight: 800; color: #0B2545; margin-bottom: 0.85rem; line-height: 1.35;" data-i18n="adv_title">Actionable Insights to Run and Grow</h3>
-                <p style="font-size: 1.05rem; color: #4B5563; line-height: 1.65; max-width: 860px; margin-bottom: 1.75rem;" data-i18n="adv_subtitle">
-                    Financial guidance to help you streamline processes, reduce costs, and understand the true drivers of your business performance.
+            <!-- Flagship Independent Collaboration Table (Placed Prominently Before the Cards) -->
+            <div class="advisory-collab-card">
+                <div class="advisory-collab-top-line"></div>
+                
+                <div class="advisory-executive-pill">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    <span data-i18n="adv_collab_badge">EXECUTIVE COLLABORATION &bull; 20+ YEARS DELOITTE CONSULTING ROOTS</span>
+                </div>
+
+                <h3 class="advisory-collab-heading" data-i18n="adv_collab_title">Operating Model Design &amp; Strengthening Internal Control</h3>
+                <p class="advisory-collab-lead" data-i18n="adv_collab_desc">
+                    In collaboration with Bibiana King, a consulting professional with more than 20 years of experience, including as a partner at Deloitte, we help businesses run on clear processes and strong controls. We support businesses in identifying and assessing risks, to strengthen their control environment and give them confidence and peace of mind in decision-making.
                 </p>
-                <div>
-                    <a href="#contact" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #E87E1E; color: #FFFFFF; font-weight: 800; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 4px 14px rgba(232, 126, 30, 0.35); transition: transform 0.2s ease;" onclick="selectPlan('Business Advisory')" data-i18n="btn_inquire_adv">
-                        Inquire for Advisory
+
+                <!-- Full-Width Problem Callout Banner Spanning Across Both Columns -->
+                <div class="advisory-callout-banner">
+                    <div class="advisory-callout-icon-box">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <div class="advisory-callout-content">
+                        <span class="advisory-callout-q" data-i18n="adv_collab_c1_callout_q">Does this sound familiar?</span>
+                        <span class="advisory-callout-text" data-i18n="adv_collab_c1_callout_t">Dependence on key people &bull; Unclear responsibilities &bull; Slow decisions &bull; Duplicated work and unnecessary costs</span>
+                    </div>
+                </div>
+
+                <div class="advisory-collab-grid">
+                    <!-- Left Subcard: Operating Model Design -->
+                    <div class="advisory-collab-subcard">
+                        <div class="advisory-subcard-header">
+                            <div class="advisory-subcard-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h4 class="advisory-subcard-title" data-i18n="adv_collab_c1_t">Operating Model Design</h4>
+                        </div>
+                        <p class="advisory-subcard-desc" data-i18n="adv_collab_c1_sub">We design how your business operates: clear processes, defined roles, and the information management needs to decide well.</p>
+                        
+                        <ul class="advisory-bullet-list">
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c1_b1">Diagnosis of your current model</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c1_b2">Redesign &amp; documentation of processes and policies</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c1_b3">Implementation support &amp; follow-up reviews</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Subcard: Strengthening Internal Control -->
+                    <div class="advisory-collab-subcard">
+                        <div class="advisory-subcard-header">
+                            <div class="advisory-subcard-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <polyline points="9 12 11 14 15 10"></polyline>
+                                </svg>
+                            </div>
+                            <h4 class="advisory-subcard-title" data-i18n="adv_collab_c2_t">Strengthening Internal Control</h4>
+                        </div>
+                        <p class="advisory-subcard-desc" data-i18n="adv_collab_c2_sub">We identify and evaluate risks so you can decide with confidence &mdash; and keep controls working over time.</p>
+
+                        <ul class="advisory-bullet-list divided">
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c2_b1">Mapping of key processes &amp; risk assessment</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c2_b2">Controls designed for your specific risks</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c2_b3">Risk &amp; control matrices, documented</span>
+                            </li>
+                            <li>
+                                <span class="adv-orange-dot">&bull;</span>
+                                <span data-i18n="adv_collab_c2_b4">Ongoing monitoring of controls</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="advisory-collab-btn-wrap">
+                    <a href="#contact" class="btn btn-advisory-cta" onclick="selectPlan('Business Advisory')" data-i18n="btn_inquire_adv_arrow">
+                        Inquire for Advisory &rarr;
                     </a>
                 </div>
             </div>
 
+            <!-- Core Advisory Capabilities Heading -->
+            <div class="advisory-grid-header">
+                <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: #0B2545; margin-bottom: 0.35rem;" data-i18n="adv_capabilities_title">Core Advisory Capabilities</h3>
+                <p style="font-size: 1rem; color: #4B5563;" data-i18n="adv_capabilities_desc">Ongoing financial insight, reporting, and audit workpapers to keep your business running smoothly.</p>
+            </div>
+
+            <!-- The 4 Advisory Cards -->
             <div class="advisory-grid">
                 <div class="advisory-card">
                     <div class="adv-icon-badge">
@@ -2850,74 +3009,6 @@
                     </div>
                     <h3 class="adv-title" data-i18n="adv_c4_t">Audit Support</h3>
                     <p class="adv-desc" data-i18n="adv_c4_d">Preparation of audit workpapers, financial audit assistance, and liaison support to streamline year-end audits.</p>
-                </div>
-            </div>
-
-            <!-- Operating Model Design & Strengthening Internal Control (Deloitte Collaboration Framework) -->
-            <div class="advisory-collab-card">
-                <div class="advisory-collab-top-line"></div>
-                <h3 class="advisory-collab-heading" data-i18n="adv_collab_title">Operating Model Design &amp; Strengthening Internal Control</h3>
-                <p class="advisory-collab-lead" data-i18n="adv_collab_desc">
-                    In collaboration with Bibiana King, a consulting professional with more than 20 years of experience, including as a partner at Deloitte, we help businesses run on clear processes and strong controls. We support businesses in identifying and assessing risks, to strengthen their control environment and give them confidence and peace of mind in decision-making.
-                </p>
-
-                <div class="advisory-collab-grid">
-                    <!-- Left Subcard: Operating Model Design -->
-                    <div class="advisory-collab-subcard">
-                        <h4 class="advisory-subcard-title" data-i18n="adv_collab_c1_t">Operating Model Design</h4>
-                        <p class="advisory-subcard-desc" data-i18n="adv_collab_c1_sub">We design how your business operates: clear processes, defined roles, and the information management needs to decide well.</p>
-                        
-                        <div class="advisory-callout-box">
-                            <span class="advisory-callout-q" data-i18n="adv_collab_c1_callout_q">Does this sound familiar?</span>
-                            <span class="advisory-callout-text" data-i18n="adv_collab_c1_callout_t">Dependence on key people &bull; Unclear responsibilities &bull; Slow decisions &bull; Duplicated work and unnecessary costs</span>
-                        </div>
-
-                        <ul class="advisory-bullet-list">
-                            <li>
-                                <span class="adv-orange-dot">&bull;</span>
-                                <span data-i18n="adv_collab_c1_b1">Diagnosis of your current model</span>
-                            </li>
-                            <li>
-                                <span class="adv-orange-dot">&bull;</span>
-                                <span data-i18n="adv_collab_c1_b2">Redesign &amp; documentation of processes and policies</span>
-                            </li>
-                            <li>
-                                <span class="adv-orange-dot">&bull;</span>
-                                <span data-i18n="adv_collab_c1_b3">Implementation support &amp; follow-up reviews</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Right Subcard: Strengthening Internal Control -->
-                    <div class="advisory-collab-subcard">
-                        <h4 class="advisory-subcard-title" data-i18n="adv_collab_c2_t">Strengthening Internal Control</h4>
-                        <p class="advisory-subcard-desc" data-i18n="adv_collab_c2_sub">We identify and evaluate risks so you can decide with confidence &mdash; and keep controls working over time.</p>
-
-                        <ul class="advisory-bullet-list divided">
-                            <li>
-                                <span class="adv-orange-dot">&bull;</span>
-                                <span data-i18n="adv_collab_c2_b1">Mapping of key processes &amp; risk assessment</span>
-                            </li>
-                            <li>
-                                <span class="adv-orange-dot">&bull;</span>
-                                <span data-i18n="adv_collab_c2_b2">Controls designed for your specific risks</span>
-                            </li>
-                            <li>
-                                <span class="adv-orange-dot">&bull;</span>
-                                <span data-i18n="adv_collab_c2_b3">Risk &amp; control matrices, documented</span>
-                            </li>
-                            <li>
-                                <span class="adv-orange-dot">&bull;</span>
-                                <span data-i18n="adv_collab_c2_b4">Ongoing monitoring of controls</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="advisory-collab-btn-wrap">
-                    <a href="#contact" class="btn btn-advisory-cta" onclick="selectPlan('Business Advisory')" data-i18n="btn_inquire_adv_arrow">
-                        Inquire for Advisory &rarr;
-                    </a>
                 </div>
             </div>
         </div>
@@ -3220,6 +3311,9 @@
                 adv_c3_d: "Clear internal control recommendations, standard operating procedure (SOP) documentation, and cost-reduction strategies.",
                 adv_c4_t: "Audit Support",
                 adv_c4_d: "Preparation of audit workpapers, financial audit assistance, and liaison support to streamline year-end audits.",
+                adv_capabilities_title: "Core Advisory Capabilities",
+                adv_capabilities_desc: "Ongoing financial insight, reporting, and audit workpapers to keep your business running smoothly.",
+                adv_collab_badge: "EXECUTIVE COLLABORATION \u2022 20+ YEARS DELOITTE CONSULTING ROOTS",
                 adv_collab_title: "Operating Model Design & Strengthening Internal Control",
                 adv_collab_desc: "In collaboration with Bibiana King, a consulting professional with more than 20 years of experience, including as a partner at Deloitte, we help businesses run on clear processes and strong controls. We support businesses in identifying and assessing risks, to strengthen their control environment and give them confidence and peace of mind in decision-making.",
                 adv_collab_c1_t: "Operating Model Design",
@@ -3399,6 +3493,9 @@
                 adv_c3_t: "Control Interno y Mejora",
                 adv_c3_d: "Recomendaciones claras de control interno, manuales de procedimientos (SOPs) y estrategias de reducción de costos.",
                 adv_c4_t: "Soporte en Auditorías",
+                adv_capabilities_title: "Capacidades Clave de Asesoría",
+                adv_capabilities_desc: "Información financiera continua, reportes gerenciales y papeles de trabajo de auditoría para respaldar su crecimiento.",
+                adv_collab_badge: "COLABORACIÓN EJECUTIVA \u2022 MÁS DE 20 AÑOS DE EXPERIENCIA EN DELOITTE",
                 adv_collab_title: "Diseño del Modelo Operativo y Fortalecimiento del Control Interno",
                 adv_collab_desc: "En colaboración con Bibiana King, profesional de consultoría con más de 20 años de experiencia, incluyendo como socia en Deloitte, ayudamos a las empresas a operar con procesos claros y controles sólidos. Apoyamos a las empresas en la identificación y evaluación de riesgos, para fortalecer su entorno de control y brindarles confianza y tranquilidad en la toma de decisiones.",
                 adv_collab_c1_t: "Diseño del Modelo Operativo",
