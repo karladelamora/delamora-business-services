@@ -1414,265 +1414,119 @@
             -webkit-user-drag: none;
         }
 
-        /* Diagnostic Dashboard Screen Animation Overlay */
-        .board-animation-container {
+        /* Animated Overlay: Gears and Clipboard */
+        .inv-scene-anim-overlay {
             position: absolute;
-            top: 16.5%;
-            left: 54.5%;
-            width: 36%;
-            height: 30.2%;
+            inset: 0;
             pointer-events: none;
             overflow: hidden;
-            border-radius: 4px;
         }
 
-        /* 1. Telemetry Scan Beam sweeping across charts & diagnostic */
-        .board-telemetry-scan {
+        .inv-gear-wrap {
             position: absolute;
-            top: 12%;
-            bottom: 5%;
-            width: 2.5px;
-            background: linear-gradient(180deg, transparent 0%, #52C1E4 20%, #FFFFFF 50%, #52C1E4 80%, transparent 100%);
-            box-shadow: 0 0 10px 2px rgba(82, 193, 228, 0.85);
-            animation: boardTelemetrySweep 4s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        @keyframes boardTelemetrySweep {
-            0% { left: 4%; opacity: 0; }
-            12% { opacity: 0.95; }
-            75% { opacity: 0.95; }
-            90% { left: 63%; opacity: 0; }
-            100% { left: 63%; opacity: 0; }
-        }
-
-        /* 2. Live Diagnostic Wave Pulse & Moving Tracer Dot */
-        .board-diagnostic-graph-pulse {
-            position: absolute;
-            top: 24%;
-            left: 6%;
-            width: 27%;
-            height: 25%;
-            pointer-events: none;
-        }
-
-        .board-graph-svg {
+        .inv-animated-gear {
             width: 100%;
             height: 100%;
             display: block;
-            overflow: visible;
+            transform-origin: center center;
+            filter: drop-shadow(0 1px 3px rgba(139, 174, 185, 0.25));
         }
 
-        .board-graph-line {
-            stroke-dasharray: 120;
-            stroke-dashoffset: 120;
-            animation: graphTraceDraw 4s ease-in-out infinite;
-            filter: drop-shadow(0 0 3px rgba(82, 193, 228, 0.7));
+        /* Gear 1 (Next to clipboard) */
+        .gear-mid-wrap {
+            left: 52.8%;
+            top: 5.8%;
+            width: 8.7%;
+            height: 11.7%;
         }
 
-        @keyframes graphTraceDraw {
-            0% { stroke-dashoffset: 120; opacity: 0.2; }
-            30% { stroke-dashoffset: 0; opacity: 0.95; }
-            75% { stroke-dashoffset: 0; opacity: 0.95; }
-            95%, 100% { stroke-dashoffset: 120; opacity: 0; }
+        /* Gear 2 (Top-right large gear) */
+        .gear-r1-wrap {
+            left: 78.7%;
+            top: 8.2%;
+            width: 9.0%;
+            height: 12.1%;
         }
 
-        .board-graph-glow-dot {
+        /* Gear 3 (Top-right upper gear) */
+        .gear-r2-wrap {
+            left: 89.1%;
+            top: 11.7%;
+            width: 8.7%;
+            height: 11.7%;
+        }
+
+        /* Gear 4 (Top-right lower gear) */
+        .gear-r3-wrap {
+            left: 90.8%;
+            top: 23.4%;
+            width: 8.0%;
+            height: 10.7%;
+        }
+
+        .gear-spin-cw {
+            animation: gearRotateCW 14s linear infinite;
+        }
+
+        .gear-spin-cw-slow {
+            animation: gearRotateCW 18s linear infinite;
+        }
+
+        .gear-spin-ccw {
+            animation: gearRotateCCW 13s linear infinite;
+        }
+
+        .gear-spin-cw-fast {
+            animation: gearRotateCW 10s linear infinite;
+        }
+
+        @keyframes gearRotateCW {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes gearRotateCCW {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+
+        /* Clipboard Checkmark Live Inspection Indicator */
+        .inv-clipboard-overlay {
             position: absolute;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #FFFFFF;
-            border: 1.5px solid #0072CE;
-            box-shadow: 0 0 8px #52C1E4, 0 0 12px #52C1E4;
-            animation: graphDotTravel 4s ease-in-out infinite;
-            top: 50%;
-            left: 0;
-            transform: translate(-50%, -50%);
-        }
-
-        @keyframes graphDotTravel {
-            0% { left: 5%; top: 75%; opacity: 0; }
-            10% { opacity: 1; }
-            22% { left: 26%; top: 58%; }
-            40% { left: 46%; top: 25%; }
-            58% { left: 66%; top: 68%; }
-            75% { left: 84%; top: 16%; opacity: 1; }
-            90% { left: 96%; top: 50%; opacity: 0; }
-            100% { left: 96%; top: 50%; opacity: 0; }
-        }
-
-        /* Animated Bar Charts Inside Dashboard Monitor */
-        .board-top-bars {
-            position: absolute;
-            top: 24%;
-            left: 36%;
-            width: 26%;
-            height: 25%;
+            left: 45%;
+            top: 10.5%;
+            width: 7.6%;
+            height: 16.8%;
             display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 2px;
-            padding: 0 4px;
-            pointer-events: none;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-left: 17%;
+            padding-bottom: 24%;
+            gap: 14%;
         }
 
-        .board-bottom-bars {
-            position: absolute;
-            top: 60%;
-            left: 36%;
-            width: 26%;
-            height: 25%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 3px;
-            padding: 0 4px;
-            pointer-events: none;
-        }
-
-        .board-bar {
-            flex: 1;
-            background: linear-gradient(180deg, #52C1E4 0%, #0072CE 100%);
-            border-radius: 2px 2px 0 0;
-            box-shadow: 0 0 6px rgba(82, 193, 228, 0.6);
-            transform-origin: bottom;
-            opacity: 0.85;
-        }
-
-        .board-bar.bar-1 { height: 65%; animation: barPulseAnim 2.4s ease-in-out infinite alternate; }
-        .board-bar.bar-2 { height: 85%; animation: barPulseAnim 2.8s ease-in-out 0.4s infinite alternate; }
-        .board-bar.bar-3 { height: 45%; animation: barPulseAnim 2.1s ease-in-out 0.8s infinite alternate; }
-        .board-bar.bar-4 { height: 95%; animation: barPulseAnim 3.1s ease-in-out 0.2s infinite alternate; }
-        .board-bar.bar-5 { height: 70%; animation: barPulseAnim 2.5s ease-in-out 0.6s infinite alternate; }
-
-        .board-bar.bar-b1 { height: 50%; animation: barPulseAnim 2.7s ease-in-out 0.5s infinite alternate; }
-        .board-bar.bar-b2 { height: 75%; animation: barPulseAnim 2.3s ease-in-out 0.1s infinite alternate; }
-        .board-bar.bar-b3 { height: 90%; animation: barPulseAnim 3.0s ease-in-out 0.9s infinite alternate; }
-        .board-bar.bar-b4 { height: 60%; animation: barPulseAnim 2.6s ease-in-out 0.3s infinite alternate; }
-
-        @keyframes barPulseAnim {
-            0% { transform: scaleY(0.72); opacity: 0.7; }
-            50% { transform: scaleY(1.08); opacity: 0.95; }
-            100% { transform: scaleY(0.65); opacity: 0.7; }
-        }
-
-        /* Animated Inventory Pie Chart Radar Scan */
-        .board-pie-pulse {
-            position: absolute;
-            top: 59%;
-            left: 9%;
-            width: 21%;
-            height: 27%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: none;
-        }
-
-        .board-pie-ring {
-            position: absolute;
-            width: 85%;
-            height: 85%;
-            border-radius: 50%;
-            border: 1.5px solid #52C1E4;
-            animation: pieRingPulse 3s ease-in-out infinite;
-        }
-
-        .board-pie-sweep {
-            position: absolute;
-            width: 85%;
-            height: 85%;
-            border-radius: 50%;
-            background: conic-gradient(from 0deg, rgba(82, 193, 228, 0.4) 0deg, transparent 60deg, transparent 360deg);
-            animation: pieRadarSweep 4s linear infinite;
-        }
-
-        @keyframes pieRingPulse {
-            0%, 100% { transform: scale(0.9); opacity: 0.3; }
-            50% { transform: scale(1.15); opacity: 0.85; box-shadow: 0 0 8px rgba(82, 193, 228, 0.5); }
-        }
-
-        @keyframes pieRadarSweep {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* 3. Diagnostic Radar Eye Pulse Rings */
-        .board-radar-eye {
-            position: absolute;
-            top: 31%;
-            left: 81%;
-            transform: translate(-50%, -50%);
-            width: 28px;
-            height: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: none;
-        }
-
-        .board-radar-ring {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 1.8px solid #52C1E4;
-            animation: radarEyeWave 2.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
-        }
-
-        .board-radar-ring.ring-delayed {
-            animation-delay: 1.4s;
-        }
-
-        .board-radar-core {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #0072CE;
-            box-shadow: 0 0 8px #52C1E4, 0 0 12px #52C1E4;
-            animation: radarDotPulse 2.8s ease-in-out infinite;
-        }
-
-        @keyframes radarEyeWave {
-            0% { transform: scale(0.5); opacity: 0.95; }
-            65%, 100% { transform: scale(2.1); opacity: 0; }
-        }
-
-        @keyframes radarDotPulse {
-            0%, 100% { opacity: 0.4; transform: scale(0.9); }
-            50% { opacity: 1; transform: scale(1.25); }
-        }
-
-        /* 4. Diagnostic Checklist Active Indicator Pings */
-        .board-check-ping {
-            position: absolute;
-            left: 68.5%;
+        .clipboard-check-dot {
             width: 5px;
             height: 5px;
             border-radius: 50%;
             background: #52C1E4;
             box-shadow: 0 0 6px 1px #52C1E4;
-            pointer-events: none;
+            opacity: 0.25;
+            transition: opacity 0.3s;
         }
 
-        .board-check-ping.check-1 {
-            top: 51%;
-            animation: checkPingPulse 2.6s ease-in-out infinite;
-        }
+        .clipboard-check-dot.check-1 { animation: checkDotBlink 2.4s ease-in-out infinite; }
+        .clipboard-check-dot.check-2 { animation: checkDotBlink 2.4s ease-in-out 0.6s infinite; }
+        .clipboard-check-dot.check-3 { animation: checkDotBlink 2.4s ease-in-out 1.2s infinite; }
 
-        .board-check-ping.check-2 {
-            top: 62.5%;
-            animation: checkPingPulse 2.6s ease-in-out 0.45s infinite;
-        }
-
-        .board-check-ping.check-3 {
-            top: 74%;
-            animation: checkPingPulse 2.6s ease-in-out 0.9s infinite;
-        }
-
-        @keyframes checkPingPulse {
-            0%, 100% { opacity: 0.3; transform: scale(0.85); }
-            50% { opacity: 1; transform: scale(1.3); box-shadow: 0 0 9px 2px #52C1E4; }
+        @keyframes checkDotBlink {
+            0%, 100% { opacity: 0.2; transform: scale(0.85); }
+            50% { opacity: 1; transform: scale(1.4); box-shadow: 0 0 8px 2px #52C1E4; }
         }
 
         /* Business Advisory Flagship Independent Collaboration Table */
@@ -2958,57 +2812,46 @@
                         <p style="font-size: 1.05rem; color: #4B5563; line-height: 1.65; margin-bottom: 2rem;" data-i18n="inv_subtitle">
                             Helping business owners understand inventory, identify recorded vs. physical differences, recognize improvement areas, and establish consistent counting practices.
                         </p>
-                        <!-- Diagnostic Warehouse Scene with Animated Graphics Overlay -->
+                        <!-- Diagnostic Warehouse Scene with Animated Gears and Clipboard -->
                         <div class="animated-inventory-scene" id="animatedInventoryScene">
                             <img src="assets/inventory-diagnostic-illustration.jpg" alt="Inventory Checkup Diagnostic Illustration" class="inv-scene-base-img" loading="lazy">
 
-                            <!-- Live Animated Dashboard Graphics Overlay -->
-                            <div class="board-animation-container" aria-hidden="true">
-                                <!-- Telemetry Scan Beam sweeping across charts -->
-                                <div class="board-telemetry-scan"></div>
-
-                                <!-- 1. Diagnostic Line Graph Wave Pulse & Tracer -->
-                                <div class="board-diagnostic-graph-pulse">
-                                    <svg class="board-graph-svg" viewBox="0 0 100 45" preserveAspectRatio="none">
-                                        <path d="M 5 36 Q 22 36, 26 28 T 46 12 T 66 32 T 84 8 T 96 24" fill="none" stroke="#0072CE" stroke-width="2.6" stroke-linecap="round" class="board-graph-line"/>
+                            <!-- Top Animated Gears & Clipboard Overlay -->
+                            <div class="inv-scene-anim-overlay" aria-hidden="true">
+                                <!-- Gear 1 (Next to clipboard) -->
+                                <div class="inv-gear-wrap gear-mid-wrap">
+                                    <svg viewBox="0 0 100 100" class="inv-animated-gear gear-spin-cw">
+                                        <path d="M43 5 h14 v12 a35 35 0 0 1 10 4 l9-9 10 10 -9 9 a35 35 0 0 1 4 10 h12 v14 h-12 a35 35 0 0 1 -4 10 l9 9 -10 10 -9-9 a35 35 0 0 1 -10 4 v12 h-14 v-12 a35 35 0 0 1 -10 -4 l-9 9 -10-10 9-9 a35 35 0 0 1 -4 -10 h-12 v-14 h12 a35 35 0 0 1 4 -10 l-9-9 10-10 9 9 a35 35 0 0 1 10 -4 z M50 34 a16 16 0 1 0 0 32 a16 16 0 1 0 0 -32" fill="#EDF4F7" stroke="#87A9B9" stroke-width="4.5" stroke-linejoin="round"/>
                                     </svg>
-                                    <span class="board-graph-glow-dot"></span>
                                 </div>
 
-                                <!-- 2. Top Bar Chart Active Dynamic Bars -->
-                                <div class="board-top-bars">
-                                    <span class="board-bar bar-1"></span>
-                                    <span class="board-bar bar-2"></span>
-                                    <span class="board-bar bar-3"></span>
-                                    <span class="board-bar bar-4"></span>
-                                    <span class="board-bar bar-5"></span>
+                                <!-- Gear 2 (Top-right large gear) -->
+                                <div class="inv-gear-wrap gear-r1-wrap">
+                                    <svg viewBox="0 0 100 100" class="inv-animated-gear gear-spin-cw-slow">
+                                        <path d="M43 5 h14 v12 a35 35 0 0 1 10 4 l9-9 10 10 -9 9 a35 35 0 0 1 4 10 h12 v14 h-12 a35 35 0 0 1 -4 10 l9 9 -10 10 -9-9 a35 35 0 0 1 -10 4 v12 h-14 v-12 a35 35 0 0 1 -10 -4 l-9 9 -10-10 9-9 a35 35 0 0 1 -4 -10 h-12 v-14 h12 a35 35 0 0 1 4 -10 l-9-9 10-10 9 9 a35 35 0 0 1 10 -4 z M50 34 a16 16 0 1 0 0 32 a16 16 0 1 0 0 -32" fill="#EDF4F7" stroke="#87A9B9" stroke-width="4.5" stroke-linejoin="round"/>
+                                    </svg>
                                 </div>
 
-                                <!-- 3. Bottom Bar Chart Dynamic Telemetry Bars -->
-                                <div class="board-bottom-bars">
-                                    <span class="board-bar bar-b1"></span>
-                                    <span class="board-bar bar-b2"></span>
-                                    <span class="board-bar bar-b3"></span>
-                                    <span class="board-bar bar-b4"></span>
+                                <!-- Gear 3 (Top-right upper gear, reverse meshing) -->
+                                <div class="inv-gear-wrap gear-r2-wrap">
+                                    <svg viewBox="0 0 100 100" class="inv-animated-gear gear-spin-ccw">
+                                        <path d="M43 5 h14 v12 a35 35 0 0 1 10 4 l9-9 10 10 -9 9 a35 35 0 0 1 4 10 h12 v14 h-12 a35 35 0 0 1 -4 10 l9 9 -10 10 -9-9 a35 35 0 0 1 -10 4 v12 h-14 v-12 a35 35 0 0 1 -10 -4 l-9 9 -10-10 9-9 a35 35 0 0 1 -4 -10 h-12 v-14 h12 a35 35 0 0 1 4 -10 l-9-9 10-10 9 9 a35 35 0 0 1 10 -4 z M50 34 a16 16 0 1 0 0 32 a16 16 0 1 0 0 -32" fill="#EDF4F7" stroke="#87A9B9" stroke-width="4.5" stroke-linejoin="round"/>
+                                    </svg>
                                 </div>
 
-                                <!-- 4. Inventory Pie Chart Scan & Pulse -->
-                                <div class="board-pie-pulse">
-                                    <div class="board-pie-ring"></div>
-                                    <div class="board-pie-sweep"></div>
+                                <!-- Gear 4 (Top-right lower gear) -->
+                                <div class="inv-gear-wrap gear-r3-wrap">
+                                    <svg viewBox="0 0 100 100" class="inv-animated-gear gear-spin-cw-fast">
+                                        <path d="M43 5 h14 v12 a35 35 0 0 1 10 4 l9-9 10 10 -9 9 a35 35 0 0 1 4 10 h12 v14 h-12 a35 35 0 0 1 -4 10 l9 9 -10 10 -9-9 a35 35 0 0 1 -10 4 v12 h-14 v-12 a35 35 0 0 1 -10 -4 l-9 9 -10-10 9-9 a35 35 0 0 1 -4 -10 h-12 v-14 h12 a35 35 0 0 1 4 -10 l-9-9 10-10 9 9 a35 35 0 0 1 10 -4 z M50 34 a16 16 0 1 0 0 32 a16 16 0 1 0 0 -32" fill="#EDF4F7" stroke="#87A9B9" stroke-width="4.5" stroke-linejoin="round"/>
+                                    </svg>
                                 </div>
 
-                                <!-- 5. Diagnostic Radar Eye Pulse Rings -->
-                                <div class="board-radar-eye">
-                                    <span class="board-radar-ring"></span>
-                                    <span class="board-radar-ring ring-delayed"></span>
-                                    <span class="board-radar-core"></span>
+                                <!-- Clipboard Checkmark Inspection Glow -->
+                                <div class="inv-clipboard-overlay">
+                                    <div class="clipboard-check-dot check-1"></div>
+                                    <div class="clipboard-check-dot check-2"></div>
+                                    <div class="clipboard-check-dot check-3"></div>
                                 </div>
-
-                                <!-- 6. Diagnostic Checklist Active Indicator Pings -->
-                                <div class="board-check-ping check-1"></div>
-                                <div class="board-check-ping check-2"></div>
-                                <div class="board-check-ping check-3"></div>
                             </div>
                         </div>
                     </div>
