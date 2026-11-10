@@ -1380,6 +1380,98 @@
             box-shadow: 0 6px 18px rgba(241, 184, 8, 0.45);
         }
 
+        /* Bookkeeping Consultation Help Banner */
+        .pricing-footer-banner {
+            margin-top: 2.5rem;
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+            border: 1.5px solid #BAE6FD;
+            border-radius: 14px;
+            padding: 1.35rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.08);
+        }
+
+        .pricing-footer-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .pricing-footer-icon {
+            width: 44px;
+            height: 44px;
+            background: #FFFFFF;
+            border: 1px solid #BAE6FD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #0284C7;
+            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.12);
+        }
+
+        .pricing-footer-text {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #1E293B;
+            margin: 0;
+        }
+
+        .pricing-footer-text strong {
+            display: inline;
+            color: #0B2545;
+            font-weight: 800;
+            margin-right: 0.35rem;
+        }
+
+        .btn-consult-banner {
+            background: #0284C7;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 0.92rem;
+            padding: 0.75rem 1.6rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-shrink: 0;
+        }
+
+        .btn-consult-banner:hover {
+            background: #0369A1;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .pricing-footer-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem 1.25rem;
+                gap: 1.25rem;
+            }
+
+            .pricing-footer-left {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.75rem;
+            }
+
+            .btn-consult-banner {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
         /* Inventory Administration Section */
         .inventory-section {
             background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FA 40%, #FFFFFF 100%);
@@ -2888,6 +2980,30 @@
                         <a href="#contact" class="btn btn-outline-plan" onclick="selectPlan('Premium Plan')" data-i18n="btn_inquire_prem">Inquire for Premium</a>
                     </div>
                 </div>
+
+                <!-- Bookkeeping Consultation Question -->
+                <div class="pricing-footer-banner">
+                    <div class="pricing-footer-left">
+                        <div class="pricing-footer-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                        </div>
+                        <p class="pricing-footer-text">
+                            <strong data-i18n="bk_help_question">Not sure which plan is right for you?</strong>
+                            <span data-i18n="bk_help_desc">Schedule a free consultation, and let's find the right solution for your business.</span>
+                        </p>
+                    </div>
+                    <a href="#contact" class="btn btn-consult-banner">
+                        <span data-i18n="bk_help_btn">Schedule a Free Consultation</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -3435,6 +3551,9 @@
                 prem_f8: "Close on the 10th",
                 prem_f9: "Priority support",
                 btn_inquire_prem: "Inquire for Premium",
+                bk_help_question: "Not sure which plan is right for you?",
+                bk_help_desc: "Schedule a free consultation, and let's find the right solution for your business.",
+                bk_help_btn: "Schedule a Free Consultation",
                 inv_kicker: "Inventory Administration and Internal Control",
                 inv_title: "Do you know exactly what's on your shelves and what value is reflected in your financial statements?",
                 inv_subtitle: "Helping business owners understand inventory, identify recorded vs. physical differences, recognize improvement areas, and establish consistent counting practices.",
@@ -3627,6 +3746,9 @@
                 prem_f8: "Cierre el d\u00EDa 10",
                 prem_f9: "Soporte prioritario",
                 btn_inquire_prem: "Solicitar Plan Premium",
+                bk_help_question: "\u00BFNo est\u00E1s seguro de qu\u00E9 plan es el adecuado para ti?",
+                bk_help_desc: "Agenda una consulta gratuita y encontremos la soluci\u00F3n indicada para tu negocio.",
+                bk_help_btn: "Agendar Consulta Gratuita",
                 inv_kicker: "Administración y Control de Inventarios",
                 inv_title: "¿Sabe con exactitud lo que tiene en sus anaqueles y qué valor se refleja en sus estados financieros?",
                 inv_subtitle: "Ayudamos a dueños de negocios a comprender su inventario, identificar diferencias entre registros y conteo físico, detectar áreas de mejora y establecer prácticas de conteo consistentes.",
