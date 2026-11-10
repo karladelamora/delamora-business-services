@@ -1121,6 +1121,37 @@
             margin-top: 0.4rem;
         }
 
+        /* Bookkeeping Process Illustration */
+        .bookkeeping-illustration-container {
+            width: 100%;
+            max-width: 660px;
+            margin: 2.25rem auto 0;
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bookkeeping-illustration-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            border-color: #D1D5DB;
+        }
+
+        .bookkeeping-illustration-img {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: contain;
+            display: block;
+            border-radius: 16px;
+        }
+
         /* Monthly Services Plans Sub-section */
         .monthly-plans-wrap {
             margin-top: 3.5rem;
@@ -2814,6 +2845,11 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Bookkeeping Process Workflow Illustration -->
+                <div class="bookkeeping-illustration-container">
+                    <img src="assets/bookkeeping-process-illustration.jpg?v=1" alt="Bookkeeping Reconciliation and Financial Process Workflow" class="bookkeeping-illustration-img" loading="lazy">
+                </div>
             </div>
 
             <!-- Monthly Services Plans Container -->
@@ -3234,7 +3270,7 @@
                         </svg>
                     </div>
                     <h3 class="adv-title" data-i18n="adv_c2_t">Financial Analysis &amp; Reporting</h3>
-                    <p class="adv-desc" data-i18n="adv_c2_d">Accounts payable and accounts receivable management, in-depth financial analysis, cash-flow forecasting, management summaries, and business performance tracking.</p>
+                    <p class="adv-desc" data-i18n="adv_c2_d">Financial analysis, cash-flow analysis, management and performance reporting.</p>
                 </div>
 
                 <div class="advisory-card">
@@ -3553,7 +3589,7 @@
                 adv_c1_t: "Operational Support",
                 adv_c1_d: "Client and vendor portfolio analysis, customer profitability evaluations, and support with material purchase quotations.",
                 adv_c2_t: "Financial Analysis & Reporting",
-                adv_c2_d: "Accounts payable and accounts receivable management, in-depth financial analysis, cash-flow forecasting, management summaries, and business performance tracking.",
+                adv_c2_d: "Financial analysis, cash-flow analysis, management and performance reporting.",
                 adv_c3_t: "Internal Control & Improvement",
                 adv_c3_d: "Clear internal control recommendations, standard operating procedure (SOP) documentation, and cost-reduction strategies.",
                 adv_c4_t: "Audit Support",
@@ -3748,7 +3784,7 @@
                 adv_c1_t: "Soporte Operativo",
                 adv_c1_d: "Análisis de cartera de clientes y proveedores, rentabilidad y apoyo en cotizaciones de compras de materiales.",
                 adv_c2_t: "Análisis y Reportes Financieros",
-                adv_c2_d: "Gesti\u00F3n de cuentas por pagar y cuentas por cobrar (AP/AR), an\u00E1lisis financiero profundo, proyecci\u00F3n de flujo de caja, res\u00FAmenes gerenciales y m\u00E9tricas de desempe\u00F1o.",
+                adv_c2_d: "An\u00E1lisis financiero, an\u00E1lisis de flujo de efectivo, reportes gerenciales y de desempe\u00F1o.",
                 adv_c3_t: "Control Interno y Mejora",
                 adv_c3_d: "Recomendaciones claras de control interno, manuales de procedimientos (SOPs) y estrategias de reducción de costos.",
                 adv_c4_t: "Soporte en Auditorías",
