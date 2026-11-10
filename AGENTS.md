@@ -6,10 +6,12 @@
 - **Auto-Commit & Push**: Whenever changes or improvements are made to website files in this workspace, **always automatically stage, commit, and push directly to `main`**. Use the local machine's configured user identity or detect whether Karla or Wade is the session user.
 - Note: Avoid creating `.github/workflows/` files unless explicitly requested, as standard GitHub PATs require special `workflow` scope.
 
-## Page Structure & Mobile Experience
-- **Live Page (`index.html`)**: Current public-facing page (Coming Soon landing page). Do not overwrite without explicit instruction to launch the site.
-- **Staging / Test Page (`test.html`)**: Working draft containing the full website, services grid, interactive estimator, and new features being tested before going live. All content edits and experiments belong here first.
-- **Mobile-First Dynamic Quality**: Always ensure website files in this workspace are fully dynamic and look amazing on phones (fluid typography with clamp, minimum 48px touch targets, font-size >= 16px on inputs to prevent iOS auto-zoom, and responsive interactive navigation).
+## Page Structure & Status
+- **Live Page (`index.html`)**: Production live website with full services, pricing tiers, action plan, contact form, local SEO, Schema.org markup, and Google Tag (`GTM-MD4ZM8XW`).
+- **About Page (`about.html`)**: In-depth about page detailing Karla De La Mora's 20+ year background, methodology, and Deloitte consulting partnership.
+- **Staging / Test Page (`test.html`)**: Working staging draft for experimenting with new features before pushing to `index.html`.
+- **SEO & Indexing**: `robots.txt` and `sitemap.xml` with bilingual English/Spanish hreflang tags.
+- **Analytics & CRO**: Built-in privacy-focused tracker (`assets/dlm-analytics.js`) + Google Tag (`GTM-MD4ZM8XW`) with admin dashboard (`Ctrl+Shift+A` or `?analytics=view`).
 
 ## Automated Deployment
 - GitHub Pages is configured to deploy directly from `main` branch root (`/`). Every push automatically builds and updates the live site.
