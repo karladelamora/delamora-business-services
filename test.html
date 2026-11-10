@@ -1416,34 +1416,57 @@
             margin-top: 2.5rem;
             background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
             border: 1.5px solid #FDE68A;
-            border-radius: 16px;
-            padding: 1.5rem 2.25rem;
+            border-radius: 18px;
+            padding: 1.75rem 2.25rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 1.75rem;
+            gap: 2rem;
             box-shadow: 0 4px 14px rgba(245, 158, 11, 0.1);
         }
 
         .pricing-footer-content {
             display: flex;
             flex-direction: column;
+            flex: 1 1 55%;
         }
 
         .pricing-footer-q {
             font-family: var(--font-display);
-            font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+            font-size: clamp(1.25rem, 1.8vw, 1.5rem);
             font-weight: 800;
             color: #0B2545;
-            margin: 0 0 0.35rem 0;
+            margin: 0 0 0.45rem 0;
             line-height: 1.3;
         }
 
         .pricing-footer-desc {
-            font-size: 1rem;
+            font-size: 1.02rem;
             color: #475569;
-            line-height: 1.5;
-            margin: 0;
+            line-height: 1.55;
+            margin: 0 0 1.25rem 0;
+        }
+
+        .pricing-footer-btn-wrap {
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-footer-img-wrap {
+            flex: 0 0 260px;
+            max-width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pricing-footer-img {
+            width: 100%;
+            height: auto;
+            max-height: 190px;
+            object-fit: contain;
+            border-radius: 12px;
+            mix-blend-mode: multiply;
         }
 
         .btn-consult-banner {
@@ -1474,12 +1497,20 @@
             .pricing-footer-banner {
                 flex-direction: column;
                 text-align: center;
-                padding: 1.5rem 1.25rem;
-                gap: 1.25rem;
+                padding: 1.75rem 1.25rem;
+                gap: 1.5rem;
             }
 
             .pricing-footer-content {
                 text-align: center;
+            }
+
+            .pricing-footer-btn-wrap {
+                justify-content: center;
+            }
+
+            .pricing-footer-img-wrap {
+                max-width: 220px;
             }
 
             .btn-consult-banner {
@@ -2129,6 +2160,53 @@
             font-size: 0.95rem;
             color: var(--text-body);
             line-height: 1.6;
+        }
+
+        /* Audit Support Sub-items Grid */
+        .audit-subitems-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.15rem 1.35rem;
+            margin-top: 1.35rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(232, 126, 30, 0.2);
+        }
+
+        .audit-subitem {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+        }
+
+        .audit-subitem-icon {
+            width: 20px;
+            height: 20px;
+            color: #E87E1E;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .audit-subitem strong {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #0B2545;
+            margin-bottom: 0.2rem;
+            line-height: 1.3;
+        }
+
+        .audit-subitem p {
+            font-size: 0.85rem;
+            color: #4B5563;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .audit-subitems-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
         }
 
         /* Target Customers Section */
@@ -2845,11 +2923,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Bookkeeping Process Workflow Illustration -->
-                <div class="bookkeeping-illustration-container">
-                    <img src="assets/bookkeeping-process-illustration.jpg?v=1" alt="Bookkeeping Reconciliation and Financial Process Workflow" class="bookkeeping-illustration-img" loading="lazy">
-                </div>
             </div>
 
             <!-- Monthly Services Plans Container -->
@@ -3007,14 +3080,19 @@
                     <div class="pricing-footer-content">
                         <h4 class="pricing-footer-q" data-i18n="bk_help_question">Not sure which plan is right for you?</h4>
                         <p class="pricing-footer-desc" data-i18n="bk_help_desc">Schedule a free consultation, and let's find the right solution for your business.</p>
+                        <div class="pricing-footer-btn-wrap">
+                            <a href="#contact" class="btn btn-consult-banner">
+                                <span data-i18n="bk_help_btn">Schedule a Free Consultation</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                    <a href="#contact" class="btn btn-consult-banner">
-                        <span data-i18n="bk_help_btn">Schedule a Free Consultation</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
+                    <div class="pricing-footer-img-wrap">
+                        <img src="assets/bookkeeping-process-illustration.jpg?v=2" alt="Bookkeeping Reconciliation Process Workflow" class="pricing-footer-img" loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
@@ -3131,7 +3209,96 @@
         <div class="container">
             <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #0B2545; margin-bottom: 1.5rem;" data-i18n="adv_kicker">Business Advisory</h2>
 
-            <!-- Flagship Independent Collaboration Table (Placed Prominently Before the Cards) -->
+            <!-- Core Advisory Capabilities Heading -->
+            <div class="advisory-grid-header">
+                <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: #0B2545; margin-bottom: 0.35rem;" data-i18n="adv_capabilities_title">Core Advisory Capabilities</h3>
+                <p style="font-size: 1rem; color: #4B5563;" data-i18n="adv_capabilities_desc">Ongoing financial insight, reporting, and audit workpapers to keep your business running smoothly.</p>
+            </div>
+
+            <!-- The 2 Advisory Cards -->
+            <div class="advisory-grid" style="margin-bottom: 2.75rem;">
+                <div class="advisory-card">
+                    <div class="adv-icon-badge">
+                        <!-- Financial Analysis & Reporting Spreadsheet -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="3" y1="15" x2="21" y2="15"></line>
+                            <line x1="9" y1="3" x2="9" y2="21"></line>
+                            <line x1="15" y1="3" x2="15" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="adv-title" data-i18n="adv_c2_t">Financial Analysis &amp; Reporting</h3>
+                    <p class="adv-desc" data-i18n="adv_c2_d">Financial analysis, cash-flow analysis, management and performance reporting.</p>
+                </div>
+
+                <div class="advisory-card">
+                    <div class="adv-icon-badge">
+                        <!-- Audit Support Workpapers -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <circle cx="11.5" cy="14.5" r="2.5"></circle>
+                            <line x1="13.25" y1="16.25" x2="16" y2="19"></line>
+                        </svg>
+                    </div>
+                    <h3 class="adv-title" data-i18n="adv_c4_t">Audit Support</h3>
+                    <p class="adv-desc" data-i18n="adv_c4_d">Financial Audit Preparation &amp; Assistance. Helping businesses prepare for and navigate financial audits through organized documentation, technical support, and effective coordination with external auditors.</p>
+
+                    <div class="audit-subitems-grid">
+                        <div class="audit-subitem">
+                            <svg class="audit-subitem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                            <div>
+                                <strong data-i18n="audit_item1_t">Audit Workpapers</strong>
+                                <p data-i18n="audit_item1_d">Preparation and organization of audit documentation.</p>
+                            </div>
+                        </div>
+                        <div class="audit-subitem">
+                            <svg class="audit-subitem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                                <polyline points="9 13 12 16 17 11"></polyline>
+                            </svg>
+                            <div>
+                                <strong data-i18n="audit_item2_t">Financial Documentation</strong>
+                                <p data-i18n="audit_item2_d">Compilation of supporting financial records.</p>
+                            </div>
+                        </div>
+                        <div class="audit-subitem">
+                            <svg class="audit-subitem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                <line x1="9" y1="12" x2="11" y2="12"></line>
+                                <line x1="9" y1="16" x2="11" y2="16"></line>
+                                <line x1="14" y1="12" x2="15" y2="12"></line>
+                                <line x1="14" y1="16" x2="15" y2="16"></line>
+                            </svg>
+                            <div>
+                                <strong data-i18n="audit_item3_t">Audit Requests</strong>
+                                <p data-i18n="audit_item3_d">Assistance gathering requested information.</p>
+                            </div>
+                        </div>
+                        <div class="audit-subitem">
+                            <svg class="audit-subitem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <div>
+                                <strong data-i18n="audit_item4_t">Auditor Coordination</strong>
+                                <p data-i18n="audit_item4_d">Communication and coordination with external auditors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flagship Independent Collaboration Table (Executive Collaboration) -->
             <div class="advisory-collab-card">
                 <div class="advisory-collab-top-line"></div>
                 
@@ -3247,44 +3414,6 @@
                     <a href="#contact" class="btn btn-advisory-cta" onclick="selectPlan('Business Advisory')" data-i18n="btn_inquire_adv_arrow">
                         Inquire for Advisory &rarr;
                     </a>
-                </div>
-            </div>
-
-            <!-- Core Advisory Capabilities Heading -->
-            <div class="advisory-grid-header">
-                <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: #0B2545; margin-bottom: 0.35rem;" data-i18n="adv_capabilities_title">Core Advisory Capabilities</h3>
-                <p style="font-size: 1rem; color: #4B5563;" data-i18n="adv_capabilities_desc">Ongoing financial insight, reporting, and audit workpapers to keep your business running smoothly.</p>
-            </div>
-
-            <!-- The 2 Advisory Cards -->
-            <div class="advisory-grid">
-                <div class="advisory-card">
-                    <div class="adv-icon-badge">
-                        <!-- Financial Analysis & Reporting Spreadsheet -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="3" y1="9" x2="21" y2="9"></line>
-                            <line x1="3" y1="15" x2="21" y2="15"></line>
-                            <line x1="9" y1="3" x2="9" y2="21"></line>
-                            <line x1="15" y1="3" x2="15" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 class="adv-title" data-i18n="adv_c2_t">Financial Analysis &amp; Reporting</h3>
-                    <p class="adv-desc" data-i18n="adv_c2_d">Financial analysis, cash-flow analysis, management and performance reporting.</p>
-                </div>
-
-                <div class="advisory-card">
-                    <div class="adv-icon-badge">
-                        <!-- Audit Support Workpapers -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <circle cx="11.5" cy="14.5" r="2.5"></circle>
-                            <line x1="13.25" y1="16.25" x2="16" y2="19"></line>
-                        </svg>
-                    </div>
-                    <h3 class="adv-title" data-i18n="adv_c4_t">Audit Support</h3>
-                    <p class="adv-desc" data-i18n="adv_c4_d">Preparation of audit workpapers, financial audit assistance, and liaison support to streamline year-end audits.</p>
                 </div>
             </div>
         </div>
@@ -3593,7 +3722,15 @@
                 adv_c3_t: "Internal Control & Improvement",
                 adv_c3_d: "Clear internal control recommendations, standard operating procedure (SOP) documentation, and cost-reduction strategies.",
                 adv_c4_t: "Audit Support",
-                adv_c4_d: "Preparation of audit workpapers, financial audit assistance, and liaison support to streamline year-end audits.",
+                adv_c4_d: "Financial Audit Preparation & Assistance. Helping businesses prepare for and navigate financial audits through organized documentation, technical support, and effective coordination with external auditors.",
+                audit_item1_t: "Audit Workpapers",
+                audit_item1_d: "Preparation and organization of audit documentation.",
+                audit_item2_t: "Financial Documentation",
+                audit_item2_d: "Compilation of supporting financial records.",
+                audit_item3_t: "Audit Requests",
+                audit_item3_d: "Assistance gathering requested information.",
+                audit_item4_t: "Auditor Coordination",
+                audit_item4_d: "Communication and coordination with external auditors.",
                 adv_capabilities_title: "Core Advisory Capabilities",
                 adv_capabilities_desc: "Ongoing financial insight, reporting, and audit workpapers to keep your business running smoothly.",
                 adv_collab_badge: "EXECUTIVE COLLABORATION \u2022 20+ YEARS DELOITTE CONSULTING ROOTS",
@@ -3812,7 +3949,15 @@
                 adv_collab_c2_b3: "Matrices de riesgo y control, documentadas",
                 adv_collab_c2_b4: "Monitoreo continuo de controles",
                 btn_inquire_adv_arrow: "Solicitar Asesoría de Negocios \u2192",
-                adv_c4_d: "Elaboración de papeles de trabajo para auditoría, acompañamiento contable y enlace para agilizar auditorías anuales.",
+                adv_c4_d: "Preparaci\u00F3n y Asistencia en Auditor\u00EDas Financieras. Ayudamos a las empresas a prepararse y gestionar auditor\u00EDas financieras mediante documentaci\u00F3n organizada, soporte t\u00E9cnico y coordinaci\u00F3n efectiva con auditores externos.",
+                audit_item1_t: "Papeles de Trabajo de Auditoría",
+                audit_item1_d: "Preparaci\u00F3n y organizaci\u00F3n de la documentaci\u00F3n de auditor\u00EDa.",
+                audit_item2_t: "Documentación Financiera",
+                audit_item2_d: "Recopilaci\u00F3n de registros y soportes financieros.",
+                audit_item3_t: "Requerimientos de Auditoría",
+                audit_item3_d: "Asistencia en la recopilaci\u00F3n de la informaci\u00F3n solicitada.",
+                audit_item4_t: "Coordinación con Auditores",
+                audit_item4_d: "Comunicaci\u00F3n y coordinaci\u00F3n con auditores externos.",
                 target_kicker: "A Quién Servimos",
                 target_title: "Diseñado para Pequeños y Medianos Negocios de San Diego",
                 target_desc: "Nuestro mercado principal son empresas pequeñas y medianas en el Condado de San Diego que requieren apoyo financiero y administrativo profesional con alto nivel de precisión sin el costo fijo de un departamento contable interno.",
