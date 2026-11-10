@@ -2175,31 +2175,47 @@
 
         .audit-subitem {
             display: flex;
-            align-items: flex-start;
-            gap: 0.85rem;
+            flex-direction: column;
         }
 
-        .audit-subitem-icon {
-            width: 30px;
-            height: 30px;
+        .audit-subitem-header {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .audit-subitem-icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #FFF7ED;
+            border: 1.5px solid #FDBA74;
             color: #E87E1E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex-shrink: 0;
-            margin-top: 2px;
+        }
+
+        .audit-subitem-icon-box svg {
+            width: 20px;
+            height: 20px;
         }
 
         .audit-subitem strong {
-            display: block;
-            font-size: 1.2rem;
+            font-family: var(--font-display);
+            font-size: 1.35rem;
             font-weight: 800;
             color: #0B2545;
-            margin-bottom: 0.3rem;
+            margin: 0;
             line-height: 1.3;
         }
 
         .audit-subitem p {
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             color: #4B5563;
-            line-height: 1.5;
+            line-height: 1.55;
             margin: 0;
         }
 
@@ -3240,29 +3256,35 @@
 
                     <div class="audit-subitems-grid">
                         <div class="audit-subitem">
-                            <svg class="audit-subitem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="audit-subitem-header">
+                                <div class="audit-subitem-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
                                 <line x1="16" y1="17" x2="8" y2="17"></line>
                             </svg>
-                            <div>
+                                </div>
                                 <strong data-i18n="audit_item1_t">Audit Workpapers</strong>
-                                <p data-i18n="audit_item1_d">Preparation and organization of audit documentation.</p>
                             </div>
+                            <p data-i18n="audit_item1_d">Preparation and organization of audit documentation.</p>
                         </div>
                         <div class="audit-subitem">
-                            <svg class="audit-subitem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="audit-subitem-header">
+                                <div class="audit-subitem-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
                                 <polyline points="9 13 12 16 17 11"></polyline>
                             </svg>
-                            <div>
+                                </div>
                                 <strong data-i18n="audit_item2_t">Financial Documentation</strong>
-                                <p data-i18n="audit_item2_d">Compilation of supporting financial records.</p>
                             </div>
+                            <p data-i18n="audit_item2_d">Compilation of supporting financial records.</p>
                         </div>
                         <div class="audit-subitem">
-                            <svg class="audit-subitem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="audit-subitem-header">
+                                <div class="audit-subitem-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
                                 <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
                                 <line x1="9" y1="12" x2="11" y2="12"></line>
@@ -3270,22 +3292,24 @@
                                 <line x1="14" y1="12" x2="15" y2="12"></line>
                                 <line x1="14" y1="16" x2="15" y2="16"></line>
                             </svg>
-                            <div>
+                                </div>
                                 <strong data-i18n="audit_item3_t">Audit Requests</strong>
-                                <p data-i18n="audit_item3_d">Assistance gathering requested information.</p>
                             </div>
+                            <p data-i18n="audit_item3_d">Assistance gathering requested information.</p>
                         </div>
                         <div class="audit-subitem">
-                            <svg class="audit-subitem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="audit-subitem-header">
+                                <div class="audit-subitem-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="9" cy="7" r="4"></circle>
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                             </svg>
-                            <div>
+                                </div>
                                 <strong data-i18n="audit_item4_t">Auditor Coordination</strong>
-                                <p data-i18n="audit_item4_d">Communication and coordination with external auditors.</p>
                             </div>
+                            <p data-i18n="audit_item4_d">Communication and coordination with external auditors.</p>
                         </div>
                     </div>
                     <div style="margin-top: 1.75rem; text-align: center;">
