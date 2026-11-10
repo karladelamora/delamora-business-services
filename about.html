@@ -728,6 +728,24 @@
             }
         }
 
+        .footer-logo {
+            height: 120px;
+            width: auto;
+            max-width: 380px;
+            object-fit: contain;
+            display: block;
+            animation: footer-logo-colors 8s ease-in-out infinite;
+        }
+        @keyframes footer-logo-colors {
+            0% { filter: drop-shadow(0 0 10px rgba(0, 74, 173, 0.45)) hue-rotate(0deg); }
+            33% { filter: drop-shadow(0 0 16px rgba(82, 193, 228, 0.55)) hue-rotate(25deg); }
+            66% { filter: drop-shadow(0 0 16px rgba(232, 126, 30, 0.50)) hue-rotate(-20deg); }
+            100% { filter: drop-shadow(0 0 10px rgba(0, 74, 173, 0.45)) hue-rotate(0deg); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .footer-logo { animation: none; }
+        }
+
         .footer-col h4 {
             font-family: var(--font-display);
             font-size: 1.05rem;
@@ -944,7 +962,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="test.html" class="brand-logo" aria-label="De La Mora Business Services" style="text-decoration:none; margin-bottom: 0.85rem;">
-                        <img src="assets/dlm-logo.png?v=3" alt="De La Mora Business Services Logo" style="height: 78px; width: auto; max-width: 280px; object-fit: contain; display: block;">
+                        <img src="assets/dlm-logo.png?v=3" alt="De La Mora Business Services Logo" class="footer-logo">
                     </a>
                 </div>
                 <div class="footer-col footer-services">
