@@ -3258,12 +3258,22 @@
                             </div>
                         </div>
                     </div>
+                    <div style="margin-top: 1.75rem;">
+                        <a href="#contact" class="btn btn-advisory-cta" onclick="selectPlan('Audit Support')" data-i18n="btn_inquire_audit">
+                            Inquire for Audit Support &rarr;
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Financial Analysis & Reporting (Abajo) -->
                 <div class="advisory-card">
                     <h3 class="adv-title" data-i18n="adv_c2_t">Financial Analysis &amp; Reporting</h3>
                     <p class="adv-desc" data-i18n="adv_c2_d">Financial analysis, cash-flow analysis, management and performance reporting.</p>
+                    <div style="margin-top: 1.75rem;">
+                        <a href="#contact" class="btn btn-advisory-cta" onclick="selectPlan('Financial Analysis')" data-i18n="btn_inquire_fin">
+                            Inquire for Financial Analysis &rarr;
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -3706,6 +3716,8 @@
                 adv_collab_c2_b3: "Risk & control matrices, documented",
                 adv_collab_c2_b4: "Ongoing monitoring of controls",
                 btn_inquire_adv_arrow: "Inquire for Advisory \u2192",
+                btn_inquire_audit: "Inquire for Audit Support \u2192",
+                btn_inquire_fin: "Inquire for Financial Analysis \u2192",
                 target_kicker: "Who We Serve",
                 target_title: "Tailored for San Diego County Small & Medium Businesses",
                 target_desc: "The primary target market will be small and medium-sized businesses in San Diego County, particularly businesses that need professional financial and administrative support but may not need or be able to afford a full-time accounting or finance department.",
@@ -3892,6 +3904,8 @@
                 adv_collab_c2_b3: "Matrices de riesgo y control, documentadas",
                 adv_collab_c2_b4: "Monitoreo continuo de controles",
                 btn_inquire_adv_arrow: "Solicitar Asesoría de Negocios \u2192",
+                btn_inquire_audit: "Solicitar Apoyo de Auditoría \u2192",
+                btn_inquire_fin: "Solicitar Análisis Financiero \u2192",
                 adv_c4_d: "Preparaci\u00F3n y Asistencia en Auditor\u00EDas Financieras. Ayudamos a las empresas a prepararse y gestionar auditor\u00EDas financieras mediante documentaci\u00F3n organizada, soporte t\u00E9cnico y coordinaci\u00F3n efectiva con auditores externos.",
                 audit_item1_t: "Papeles de Trabajo de Auditoría",
                 audit_item1_d: "Preparaci\u00F3n y organizaci\u00F3n de la documentaci\u00F3n de auditor\u00EDa.",
@@ -4029,7 +4043,7 @@
             const check = (id) => { const el = document.getElementById(id); if (el) el.checked = true; };
             if (planName.includes('Inventory Administration')) {
                 check('chkInvAdmin');
-            } else if (planName.includes('Business Advisory')) {
+            } else if (planName.includes('Business Advisory') || planName.includes('Audit Support') || planName.includes('Financial Analysis')) {
                 check('chkAdvisory');
             } else {
                 // Basic / Standard / Premium plans and Clean-Up all map to Monthly Bookkeeping
