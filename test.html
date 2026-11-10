@@ -1411,32 +1411,35 @@
             box-shadow: 0 6px 18px rgba(241, 184, 8, 0.45);
         }
 
-        /* Bookkeeping Consultation Help Banner */
-        .pricing-footer-banner {
-            margin-top: 2.5rem;
-            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
-            border: 1.5px solid #FDE68A;
-            border-radius: 18px;
-            padding: 1.75rem 2.25rem;
+        /* Bookkeeping Consultation Help Banner & Outside Illustration */
+        .pricing-consult-outer {
+            margin-top: 2.75rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 2rem;
+            gap: 2.5rem;
+        }
+
+        .pricing-footer-banner {
+            flex: 1 1 auto;
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+            border: 1.5px solid #FDE68A;
+            border-radius: 18px;
+            padding: 2rem 2.5rem;
             box-shadow: 0 4px 14px rgba(245, 158, 11, 0.1);
         }
 
         .pricing-footer-content {
             display: flex;
             flex-direction: column;
-            flex: 1 1 55%;
         }
 
         .pricing-footer-q {
             font-family: var(--font-display);
-            font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+            font-size: clamp(1.25rem, 1.8vw, 1.55rem);
             font-weight: 800;
             color: #0B2545;
-            margin: 0 0 0.45rem 0;
+            margin: 0 0 0.5rem 0;
             line-height: 1.3;
         }
 
@@ -1444,7 +1447,7 @@
             font-size: 1.02rem;
             color: #475569;
             line-height: 1.55;
-            margin: 0 0 1.25rem 0;
+            margin: 0 0 1.35rem 0;
         }
 
         .pricing-footer-btn-wrap {
@@ -1453,8 +1456,8 @@
         }
 
         .pricing-footer-img-wrap {
-            flex: 0 0 260px;
-            max-width: 280px;
+            flex: 0 0 280px;
+            max-width: 320px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1463,10 +1466,8 @@
         .pricing-footer-img {
             width: 100%;
             height: auto;
-            max-height: 190px;
+            max-height: 220px;
             object-fit: contain;
-            border-radius: 12px;
-            mix-blend-mode: multiply;
         }
 
         .btn-consult-banner {
@@ -1494,15 +1495,21 @@
         }
 
         @media (max-width: 768px) {
-            .pricing-footer-banner {
+            .pricing-consult-outer {
                 flex-direction: column;
+                gap: 1.75rem;
+                margin-top: 2rem;
+            }
+
+            .pricing-footer-banner {
+                width: 100%;
                 text-align: center;
                 padding: 1.75rem 1.25rem;
-                gap: 1.5rem;
             }
 
             .pricing-footer-content {
                 text-align: center;
+                align-items: center;
             }
 
             .pricing-footer-btn-wrap {
@@ -1510,7 +1517,8 @@
             }
 
             .pricing-footer-img-wrap {
-                max-width: 220px;
+                max-width: 240px;
+                margin: 0 auto;
             }
 
             .btn-consult-banner {
@@ -2149,17 +2157,17 @@
 
         .adv-title {
             font-family: var(--font-display);
-            font-size: 1.25rem;
+            font-size: clamp(1.45rem, 2.3vw, 2rem);
             font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-            line-height: 1.3;
+            color: #0B2545;
+            margin-bottom: 0.85rem;
+            line-height: 1.35;
         }
 
         .adv-desc {
-            font-size: 0.95rem;
-            color: var(--text-body);
-            line-height: 1.6;
+            font-size: 1.05rem;
+            color: #374151;
+            line-height: 1.65;
         }
 
         /* Audit Support Sub-items Grid */
@@ -3082,23 +3090,25 @@
                     </div>
                 </div>
 
-                <!-- Bookkeeping Consultation Question -->
-                <div class="pricing-footer-banner">
-                    <div class="pricing-footer-content">
-                        <h4 class="pricing-footer-q" data-i18n="bk_help_question">Not sure which plan is right for you?</h4>
-                        <p class="pricing-footer-desc" data-i18n="bk_help_desc">Schedule a free consultation, and let's find the right solution for your business.</p>
-                        <div class="pricing-footer-btn-wrap">
-                            <a href="#contact" class="btn btn-consult-banner">
-                                <span data-i18n="bk_help_btn">Schedule a Free Consultation</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </a>
+                <!-- Bookkeeping Consultation Row -->
+                <div class="pricing-consult-outer">
+                    <div class="pricing-footer-banner">
+                        <div class="pricing-footer-content">
+                            <h4 class="pricing-footer-q" data-i18n="bk_help_question">Not sure which plan is right for you?</h4>
+                            <p class="pricing-footer-desc" data-i18n="bk_help_desc">Schedule a free consultation, and let's find the right solution for your business.</p>
+                            <div class="pricing-footer-btn-wrap">
+                                <a href="#contact" class="btn btn-consult-banner">
+                                    <span data-i18n="bk_help_btn">Schedule a Free Consultation</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="pricing-footer-img-wrap">
-                        <img src="assets/bookkeeping-process-illustration.jpg?v=2" alt="Bookkeeping Reconciliation Process Workflow" class="pricing-footer-img" loading="lazy">
+                        <img src="assets/bookkeeping-process-illustration.jpg?v=3" alt="Bookkeeping Reconciliation Process Workflow" class="pricing-footer-img" loading="lazy">
                     </div>
                 </div>
             </div>
