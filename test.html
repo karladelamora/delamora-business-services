@@ -2364,28 +2364,30 @@
 
         .contact-direct-cards {
             display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
+            flex-direction: row;
+            gap: 1rem;
             margin-bottom: 2.5rem;
         }
 
         .contact-direct-item {
-            background: #FFFFFF;
-            border: 1.5px solid var(--purple-border);
+            background: transparent;
+            border: none;
             border-radius: 16px;
-            padding: 1.4rem;
+            padding: 0;
+            width: 56px;
+            height: 56px;
             display: flex;
             align-items: center;
-            gap: 1.25rem;
+            justify-content: center;
             text-decoration: none;
             color: inherit;
-            box-shadow: var(--shadow-card);
+            box-shadow: none;
             transition: all 0.25s;
         }
 
         .contact-direct-item:hover {
             border-color: var(--purple-main);
-            transform: translateX(6px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-card-hover);
         }
 
@@ -3442,28 +3444,28 @@
                     <a href="#leadForm" class="btn btn-primary" style="background: linear-gradient(135deg, #FF7A00, #E87E1E); box-shadow: 0 4px 16px rgba(232, 126, 30, 0.35); margin-bottom: 2rem;" data-i18n="contact_cta">Schedule Your Free Consultation</a>
 
                     <div class="contact-direct-cards">
-                        <a href="tel:6198005102" class="contact-direct-item">
+                        <a href="tel:6198005102" class="contact-direct-item" aria-label="Call (619) 800-5102" title="Call (619) 800-5102">
                             <div class="contact-icon-box">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                 </svg>
                             </div>
-                            <div>
-                                <div class="contact-item-title" data-i18n="label_phone">Direct Telephone</div>
-                                <div class="contact-item-value">(619) 800-5102</div>
-                            </div>
                         </a>
 
-                        <a href="mailto:Karla@Delamorabusiness.com" class="contact-direct-item">
+                        <a href="mailto:Karla@Delamorabusiness.com" class="contact-direct-item" aria-label="Email Karla@Delamorabusiness.com" title="Email Karla@Delamorabusiness.com">
                             <div class="contact-icon-box">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                     <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
                             </div>
-                            <div>
-                                <div class="contact-item-title" data-i18n="label_email">Owner Direct Email</div>
-                                <div class="contact-item-value">Karla@Delamorabusiness.com</div>
+                        </a>
+
+                        <a href="https://www.facebook.com/profile.php?id=61596280654011" class="contact-direct-item" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+                            <div class="contact-icon-box" style="color: #1877F2;">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                                </svg>
                             </div>
                         </a>
                     </div>
@@ -3755,8 +3757,6 @@
                 contact_desc_2: "Whether you need help organizing your books, improving inventory management, or gaining a better understanding of your business finances, we're here to help you find the right solutions for your business.",
                 contact_desc_3: "Let's discuss your goals and find the right support to help your business move forward.",
                 contact_cta: "Schedule Your Free Consultation",
-                label_phone: "Direct Telephone",
-                label_email: "Owner Direct Email",
                 form_title: "Request an Initial Consultation",
                 form_desc: "Fill out the form below and we will follow up to review your specific requirements.",
                 f_name: "Your Name",
@@ -3952,8 +3952,6 @@
                 contact_desc_2: "Ya sea que necesites ayuda para organizar tus libros, mejorar la administración de inventarios o entender mejor las finanzas de tu negocio, estamos aquí para ayudarte a encontrar las soluciones adecuadas para tu negocio.",
                 contact_desc_3: "Hablemos de tus metas y encontremos el apoyo adecuado para ayudar a tu negocio a avanzar.",
                 contact_cta: "Agenda Tu Consulta Gratuita",
-                label_phone: "Teléfono Directo",
-                label_email: "Correo Directo de la Propietaria",
                 form_title: "Solicite una Consulta Inicial",
                 form_desc: "Llene el siguiente formulario y nos comunicaremos con usted para revisar sus necesidades específicas.",
                 f_name: "Su Nombre",
