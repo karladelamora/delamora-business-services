@@ -2537,32 +2537,6 @@
             height: 18px;
         }
 
-        .plan-summary-box {
-            background: var(--purple-tint);
-            border: 1px solid var(--purple-border);
-            border-radius: 10px;
-            padding: 1.15rem 1.35rem;
-            margin: 1.75rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .plan-summary-label {
-            font-size: 0.82rem;
-            font-weight: 800;
-            color: var(--purple-dark);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .plan-summary-val {
-            font-family: var(--font-display);
-            font-weight: 800;
-            color: var(--primary);
-            font-size: 1.15rem;
-        }
-
         /* Footer */
         footer {
             background: #FFFFFF;
@@ -3533,15 +3507,15 @@
                             <label data-i18n="f_services_label">Services of Interest</label>
                             <div class="services-selection-grid">
                                 <label class="checkbox-card">
-                                    <input type="checkbox" name="services" value="Monthly Bookkeeping" id="chkBookkeeping" checked onchange="updateSummary()">
+                                    <input type="checkbox" name="services" value="Monthly Bookkeeping" id="chkBookkeeping" checked>
                                     <span data-i18n="svc_chk_1">Monthly Bookkeeping</span>
                                 </label>
                                 <label class="checkbox-card">
-                                    <input type="checkbox" name="services" value="Inventory Administration" id="chkInvAdmin" onchange="updateSummary()">
+                                    <input type="checkbox" name="services" value="Inventory Administration" id="chkInvAdmin">
                                     <span data-i18n="svc_chk_2">Inventory Administration</span>
                                 </label>
                                 <label class="checkbox-card">
-                                    <input type="checkbox" name="services" value="Business Advisory" id="chkAdvisory" onchange="updateSummary()">
+                                    <input type="checkbox" name="services" value="Business Advisory" id="chkAdvisory">
                                     <span data-i18n="svc_chk_3">Business Advisory</span>
                                 </label>
                             </div>
@@ -3550,16 +3524,6 @@
                         <div class="form-group">
                             <label for="clientNotes" data-i18n="f_notes_label">Brief Note or Current Challenges</label>
                             <textarea id="clientNotes" name="message" class="form-control" rows="3" placeholder="Tell us about your business type, SKU volume, or how many months of backlog you may have..." data-i18n-ph="ph_notes"></textarea>
-                        </div>
-
-                        <div class="plan-summary-box">
-                            <div>
-                                <div class="plan-summary-label" data-i18n="summary_lbl">Services Selected</div>
-                                <div class="plan-summary-val" id="summaryEstimate">Monthly Bookkeeping</div>
-                            </div>
-                            <div style="font-size:0.85rem; color:var(--text-muted); text-align:right;" data-i18n="summary_sub">
-                                Direct delivery to us
-                            </div>
                         </div>
 
                         <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; padding: 1.1rem;" data-i18n="btn_submit">
@@ -3804,8 +3768,6 @@
                 svc_chk_2: "Inventory Administration",
                 svc_chk_3: "Business Advisory",
                 f_notes_label: "Brief Note or Current Challenges",
-                summary_lbl: "Services Selected",
-                summary_sub: "Direct delivery to us",
                 btn_submit: "Send Consultation Request",
                 footer_brand_desc: "Providing financial precision, cycle count supervision, and operational internal controls to San Diego County businesses.",
                 footer_services_title: "Core Services",
@@ -4003,8 +3965,6 @@
                 svc_chk_2: "Administración de Inventarios",
                 svc_chk_3: "Asesoría de Negocios",
                 f_notes_label: "Breve Nota o Retos Actuales",
-                summary_lbl: "Servicios Seleccionados",
-                summary_sub: "Entrega directa a nosotros",
                 btn_submit: "Enviar Solicitud de Consulta",
                 footer_brand_desc: "Brindando precisión financiera, supervisión de conteos físicos y control interno operativo a negocios del Condado de San Diego.",
                 footer_services_title: "Servicios Principales",
@@ -4071,7 +4031,6 @@
                 waBtn.href = "https://wa.me/16198005102?text=" + encodeURIComponent(translations[lang].wa_msg);
             }
 
-            updateSummary();
         }
 
         // Language Button Event Listeners
@@ -4115,24 +4074,6 @@
                 // Basic / Standard / Premium plans and Clean-Up all map to Monthly Bookkeeping
                 check('chkBookkeeping');
             }
-            updateSummary();
-        }
-
-        function updateSummary() {
-            const labels = {
-                chkBookkeeping: { en: 'Monthly Bookkeeping', es: 'Contabilidad Mensual' },
-                chkInvAdmin: { en: 'Inventory Administration', es: 'Administración de Inventarios' },
-                chkAdvisory: { en: 'Business Advisory', es: 'Asesoría de Negocios' }
-            };
-            const selected = [];
-            Object.keys(labels).forEach((id) => {
-                const el = document.getElementById(id);
-                if (el && el.checked) selected.push(labels[id][currentLang] || labels[id].en);
-            });
-            const text = selected.length > 0
-                ? selected.join(', ')
-                : (currentLang === 'es' ? 'Seleccione un servicio' : 'Select a service');
-            document.getElementById('summaryEstimate').textContent = text;
         }
 
         async function handleFormSubmit(e) {
@@ -4191,8 +4132,7 @@
                         ? "✅ <strong>¡Gracias!</strong> Su solicitud de consulta ha sido enviada directamente a Karla De La Mora. Revisaremos sus requerimientos y nos pondremos en contacto con usted a la brevedad."
                         : "✅ <strong>Thank you!</strong> Your consultation request has been sent directly to Karla De La Mora. We will review your business requirements and follow up with you promptly.";
                     form.reset();
-                    updateSummary();
-                } else {
+                        } else {
                     throw new Error(result.message || 'Submission failed');
                 }
             } catch (err) {
