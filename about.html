@@ -711,9 +711,21 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 1.4fr 1.8fr 1fr;
             gap: 3.5rem;
             margin-bottom: 3rem;
+        }
+
+        /* Core Services list in 2 columns */
+        .footer-services ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1.75rem;
+        }
+        @media (max-width: 640px) {
+            .footer-services ul {
+                grid-template-columns: 1fr;
+            }
         }
 
         .footer-col h4 {
@@ -935,7 +947,7 @@
                         <img src="assets/dlm-logo.png?v=3" alt="De La Mora Business Services Logo" style="height: 78px; width: auto; max-width: 280px; object-fit: contain; display: block;">
                     </a>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col footer-services">
                     <h4 data-i18n="footer_services_title">Core Services</h4>
                     <ul>
                         <li><a href="test.html#bookkeeping" data-i18n="f_link_1">Monthly Bookkeeping</a></li>
