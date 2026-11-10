@@ -3481,7 +3481,7 @@
                 <!-- Right Form (Direct Web3Forms Background Submission) -->
                 <div class="contact-form-card">
                     <h3 data-i18n="form_title">Request an Initial Consultation</h3>
-                    <p data-i18n="form_desc">Fill out the form below and Karla will follow up to review your specific requirements.</p>
+                    <p data-i18n="form_desc">Fill out the form below and we will follow up to review your specific requirements.</p>
 
                     <form id="leadForm" onsubmit="handleFormSubmit(event)">
                         <!-- Active Web3Forms Key connected to Karla@Delamorabusiness.com -->
@@ -3520,28 +3520,14 @@
                                     <span data-i18n="svc_chk_1">Monthly Bookkeeping</span>
                                 </label>
                                 <label class="checkbox-card">
-                                    <input type="checkbox" name="services" value="Books Catch-Up & Clean-Up" id="chkCleanup" onchange="updateSummary()">
-                                    <span data-i18n="svc_chk_2">Books Catch-Up &amp; Clean-Up</span>
+                                    <input type="checkbox" name="services" value="Inventory Administration" id="chkInvAdmin" onchange="updateSummary()">
+                                    <span data-i18n="svc_chk_2">Inventory Administration</span>
                                 </label>
                                 <label class="checkbox-card">
-                                    <input type="checkbox" name="services" value="Physical Inventory Counts" id="chkInvCount" onchange="updateSummary()">
-                                    <span data-i18n="svc_chk_3">Inventory Physical Counts</span>
-                                </label>
-                                <label class="checkbox-card">
-                                    <input type="checkbox" name="services" value="Inventory Control & Valuation" id="chkInvVal" onchange="updateSummary()">
-                                    <span data-i18n="svc_chk_4">Inventory Controls / Valuation</span>
+                                    <input type="checkbox" name="services" value="Business Advisory" id="chkAdvisory" onchange="updateSummary()">
+                                    <span data-i18n="svc_chk_3">Business Advisory</span>
                                 </label>
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="planPreference" data-i18n="f_tier_label">Bookkeeping Tier Preference</label>
-                            <select id="planPreference" name="plan_preference" class="form-control" onchange="updateSummary()">
-                                <option value="Standard Plan" data-i18n-opt="opt_std">Standard Plan — Recommended</option>
-                                <option value="Basic Plan" data-i18n-opt="opt_basic">Basic Plan</option>
-                                <option value="Premium Plan" data-i18n-opt="opt_prem">Premium Plan</option>
-                                <option value="Custom / Inventory Only" data-i18n-opt="opt_custom">Custom / Inventory &amp; Advisory Only</option>
-                            </select>
                         </div>
 
                         <div class="form-group">
@@ -3551,11 +3537,11 @@
 
                         <div class="plan-summary-box">
                             <div>
-                                <div class="plan-summary-label" data-i18n="summary_lbl">Estimated Engagement</div>
-                                <div class="plan-summary-val" id="summaryEstimate">Standard Plan</div>
+                                <div class="plan-summary-label" data-i18n="summary_lbl">Services Selected</div>
+                                <div class="plan-summary-val" id="summaryEstimate">Monthly Bookkeeping</div>
                             </div>
                             <div style="font-size:0.85rem; color:var(--text-muted); text-align:right;" data-i18n="summary_sub">
-                                Direct delivery to Karla
+                                Direct delivery to us
                             </div>
                         </div>
 
@@ -3789,16 +3775,15 @@
                 label_phone: "Direct Telephone",
                 label_email: "Owner Direct Email",
                 form_title: "Request an Initial Consultation",
-                form_desc: "Fill out the form below and Karla will follow up to review your specific requirements.",
+                form_desc: "Fill out the form below and we will follow up to review your specific requirements.",
                 f_name: "Your Name",
                 f_bname: "Business Name",
                 f_email: "Email Address",
                 f_phone: "Phone Number",
                 f_services_label: "Services of Interest",
                 svc_chk_1: "Monthly Bookkeeping",
-                svc_chk_2: "Books Catch-Up & Clean-Up",
-                svc_chk_3: "Inventory Physical Counts",
-                svc_chk_4: "Inventory Controls / Valuation",
+                svc_chk_2: "Inventory Administration",
+                svc_chk_3: "Business Advisory",
                 f_tier_label: "Bookkeeping Tier Preference",
                 opt_std: "Standard Plan — from $450/mo (Recommended)",
                 opt_basic: "Basic Plan — from $250/mo",
@@ -3806,7 +3791,7 @@
                 opt_custom: "Custom / Inventory & Advisory Only",
                 f_notes_label: "Brief Note or Current Challenges",
                 summary_lbl: "Estimated Engagement",
-                summary_sub: "Direct delivery to Karla",
+                summary_sub: "Direct delivery to us",
                 btn_submit: "Send Consultation Request",
                 footer_brand_desc: "Providing financial precision, cycle count supervision, and operational internal controls to San Diego County businesses.",
                 footer_services_title: "Core Services",
@@ -3992,24 +3977,23 @@
                 label_phone: "Teléfono Directo",
                 label_email: "Correo Directo de la Propietaria",
                 form_title: "Solicite una Consulta Inicial",
-                form_desc: "Llene el siguiente formulario y Karla se comunicará con usted para revisar sus necesidades específicas.",
+                form_desc: "Llene el siguiente formulario y nos comunicaremos con usted para revisar sus necesidades específicas.",
                 f_name: "Su Nombre",
                 f_bname: "Nombre de su Negocio",
                 f_email: "Correo Electrónico",
                 f_phone: "Número de Teléfono",
                 f_services_label: "Servicios de Interés",
                 svc_chk_1: "Contabilidad Mensual",
-                svc_chk_2: "Puesta al Día y Regularización de Libros",
-                svc_chk_3: "Conteos Físicos de Inventario",
-                svc_chk_4: "Control y Valuación de Inventario",
+                svc_chk_2: "Administración de Inventarios",
+                svc_chk_3: "Asesoría de Negocios",
                 f_tier_label: "Preferencia de Plan Contable",
                 opt_std: "Plan Estándar — desde $450/mes (Recomendado)",
                 opt_basic: "Plan Básico — desde $250/mes",
                 opt_prem: "Plan Premium — desde $690/mes",
                 opt_custom: "Personalizado / Sólo Inventarios y Asesoría",
                 f_notes_label: "Breve Nota o Retos Actuales",
-                summary_lbl: "Alcance Estimado",
-                summary_sub: "Entrega directa a Karla",
+                summary_lbl: "Servicios Seleccionados",
+                summary_sub: "Entrega directa a nosotros",
                 btn_submit: "Enviar Solicitud de Consulta",
                 footer_brand_desc: "Brindando precisión financiera, supervisión de conteos físicos y control interno operativo a negocios del Condado de San Diego.",
                 footer_services_title: "Servicios Principales",
@@ -4111,44 +4095,32 @@
         }
 
         function selectPlan(planName) {
-            const select = document.getElementById('planPreference');
-            if (planName.includes('Basic')) {
-                select.value = 'Basic Plan';
-            } else if (planName.includes('Standard')) {
-                select.value = 'Standard Plan';
-            } else if (planName.includes('Premium')) {
-                select.value = 'Premium Plan';
-            }
-            if (planName.includes('Clean-Up')) {
-                const chk = document.getElementById('chkCleanup');
-                if (chk) chk.checked = true;
+            const check = (id) => { const el = document.getElementById(id); if (el) el.checked = true; };
+            if (planName.includes('Inventory Administration')) {
+                check('chkInvAdmin');
+            } else if (planName.includes('Business Advisory')) {
+                check('chkAdvisory');
+            } else {
+                // Basic / Standard / Premium plans and Clean-Up all map to Monthly Bookkeeping
+                check('chkBookkeeping');
             }
             updateSummary();
         }
 
         function updateSummary() {
-            const plan = document.getElementById('planPreference').value;
-            const cleanup = document.getElementById('chkCleanup').checked;
-            const invCount = document.getElementById('chkInvCount').checked;
-            const invVal = document.getElementById('chkInvVal').checked;
-
-            let planDisplayName = plan;
-            if (currentLang === 'es') {
-                if (plan === 'Basic Plan') planDisplayName = 'Plan Básico';
-                else if (plan === 'Standard Plan') planDisplayName = 'Plan Estándar';
-                else if (plan === 'Premium Plan') planDisplayName = 'Plan Premium';
-                else planDisplayName = 'Personalizado / Inventarios';
-            }
-
-            let text = planDisplayName;
-            let extras = [];
-            if (cleanup) extras.push(currentLang === 'es' ? '+ Regularización' : '+ Clean-Up');
-            if (invCount || invVal) extras.push(currentLang === 'es' ? '+ Inventario' : '+ Inventory Review');
-
-            if (extras.length > 0) {
-                text += ' (' + extras.join(', ') + ')';
-            }
-
+            const labels = {
+                chkBookkeeping: { en: 'Monthly Bookkeeping', es: 'Contabilidad Mensual' },
+                chkInvAdmin: { en: 'Inventory Administration', es: 'Administración de Inventarios' },
+                chkAdvisory: { en: 'Business Advisory', es: 'Asesoría de Negocios' }
+            };
+            const selected = [];
+            Object.keys(labels).forEach((id) => {
+                const el = document.getElementById(id);
+                if (el && el.checked) selected.push(labels[id][currentLang] || labels[id].en);
+            });
+            const text = selected.length > 0
+                ? selected.join(', ')
+                : (currentLang === 'es' ? 'Seleccione un servicio' : 'Select a service');
             document.getElementById('summaryEstimate').textContent = text;
         }
 
@@ -4162,7 +4134,6 @@
             const business = document.getElementById('businessName').value;
             const email = document.getElementById('clientEmail').value;
             const phone = document.getElementById('clientPhone').value;
-            const plan = document.getElementById('planPreference').value;
             const notes = document.getElementById('clientNotes').value;
 
             const selectedServices = [];
@@ -4184,7 +4155,6 @@
                 email: email,
                 phone: phone,
                 language: currentLang,
-                plan_preference: plan,
                 services_requested: selectedServices.join(", "),
                 message: notes
             };
