@@ -711,26 +711,25 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1.4fr 1.8fr 1fr;
-            gap: 3.5rem;
+            grid-template-columns: 1.1fr 2.1fr 1fr;
+            gap: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        /* Core Services list in 2 equal columns, tight rows */
-        .footer-services ul {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Core Services list in 2 tight columns with no gaps between items */
+        .footer-col.footer-services ul {
+            column-count: 2;
             column-gap: 2rem;
-            row-gap: 0.65rem;
             width: 100%;
         }
-        .footer-services ul li {
-            min-width: 0;
-            margin-bottom: 0;
+        .footer-col.footer-services ul li {
+            break-inside: avoid;
+            margin-bottom: 0.15rem;
+            line-height: 1.35;
         }
         @media (max-width: 640px) {
-            .footer-services ul {
-                grid-template-columns: 1fr;
+            .footer-col.footer-services ul {
+                column-count: 1;
             }
         }
 
