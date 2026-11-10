@@ -2551,11 +2551,16 @@
             margin-bottom: 3rem;
         }
 
-        /* Core Services list in 2 columns */
+        /* Core Services list in 2 equal columns */
         .footer-services ul {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 1.75rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-auto-rows: 1fr;
+            column-gap: 2rem;
+            width: 100%;
+        }
+        .footer-services ul li {
+            min-width: 0;
         }
         @media (max-width: 640px) {
             .footer-services ul {
