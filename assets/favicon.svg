@@ -5,7 +5,7 @@
   <path fill="#FFFFFF" d="M196 120h48v122h44v48H196Z"/>
   <path fill="#FFFFFF" d="M308 290V120h48l26 60l26-60h48V290h-48V200l-26 52l-26-52V290Z"/>
   <!-- 3 signature dots from the logo -->
-  <circle cx="176" cy="372" r="30" fill="#52C1E4"/>
-  <circle cx="256" cy="372" r="30" fill="#E87E1E"/>
-  <circle cx="336" cy="372" r="30" fill="#F1B808"/>
+  <circle cx="158" cy="376" r="42" fill="#52C1E4"/>
+  <circle cx="256" cy="376" r="42" fill="#E87E1E"/>
+  <circle cx="354" cy="376" r="42" fill="#F1B808"/>
 </svg>
