@@ -1,11 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#0B2545"/>
-  <!-- DLM monogram (paths, no font dependency) -->
-  <path fill="#FFFFFF" fill-rule="evenodd" d="M56 120H116A60 85 0 0 1 116 290H56ZM104 168H116A12 37 0 0 1 116 242H104Z"/>
-  <path fill="#FFFFFF" d="M196 120h48v122h44v48H196Z"/>
-  <path fill="#FFFFFF" d="M308 290V120h48l26 60l26-60h48V290h-48V200l-26 52l-26-52V290Z"/>
-  <!-- 3 signature dots from the logo -->
-  <circle cx="158" cy="376" r="42" fill="#52C1E4"/>
-  <circle cx="256" cy="376" r="42" fill="#E87E1E"/>
-  <circle cx="354" cy="376" r="42" fill="#F1B808"/>
+  <!-- DE LA MORA favicon: three signature dots, blue / orange / yellow -->
+  <circle cx="94" cy="256" r="76" fill="#52C1E4"/>
+  <circle cx="256" cy="256" r="76" fill="#E87E1E"/>
+  <circle cx="418" cy="256" r="76" fill="#FFD400"/>
 </svg>
