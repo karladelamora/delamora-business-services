@@ -1031,17 +1031,13 @@
             border-color: #CBD5E1;
         }
 
-        /* Top colored accent borders */
-        .testim-card.accent-blue    { border-top: 4px solid #0072CE; }
-        .testim-card.accent-orange  { border-top: 4px solid #EA580C; }
-        .testim-card.accent-amber   { border-top: 4px solid #F59E0B; }
-        .testim-card.accent-navy    { border-top: 4px solid #0B2545; }
-        .testim-card.accent-emerald { border-top: 4px solid #059669; }
-        .testim-card.accent-purple  { border-top: 4px solid #7C3AED; }
-        .testim-card.accent-teal    { border-top: 4px solid #0D9488; }
-        .testim-card.accent-indigo  { border-top: 4px solid #4F46E5; }
+        /* Top colored accent borders (restricted to: Azul Nuevo, Naranja, Amarillo, Azul Cielo) */
+        .testim-card.accent-blue    { border-top: 4px solid #0072CE; } /* Este azul nuevo */
+        .testim-card.accent-orange  { border-top: 4px solid #E87E1E; } /* Naranja */
+        .testim-card.accent-yellow  { border-top: 4px solid #F1B808; } /* Amarillo */
+        .testim-card.accent-sky     { border-top: 4px solid #52C1E4; } /* Azul cielo */
 
-        /* Top-left mini gradient capsule pill */
+        /* Top-left mini gradient capsule pill (using strictly the 4 requested colors) */
         .testim-pill-bar {
             width: 44px;
             height: 5px;
@@ -1049,14 +1045,14 @@
             margin-bottom: 1.15rem;
         }
 
-        .pill-orange-blue  { background: linear-gradient(90deg, #F59E0B 0%, #0072CE 100%); }
-        .pill-blue-orange  { background: linear-gradient(90deg, #0072CE 0%, #EA580C 100%); }
-        .pill-cyan-amber   { background: linear-gradient(90deg, #52C1E4 0%, #F59E0B 100%); }
-        .pill-cyan-navy    { background: linear-gradient(90deg, #52C1E4 0%, #0B2545 100%); }
-        .pill-emerald-cyan { background: linear-gradient(90deg, #059669 0%, #52C1E4 100%); }
-        .pill-purple-amber { background: linear-gradient(90deg, #7C3AED 0%, #F59E0B 100%); }
-        .pill-teal-blue    { background: linear-gradient(90deg, #0D9488 0%, #0072CE 100%); }
-        .pill-rose-orange  { background: linear-gradient(90deg, #E11D48 0%, #EA580C 100%); }
+        .pill-blue-sky     { background: linear-gradient(90deg, #0072CE 0%, #52C1E4 100%); }
+        .pill-orange-yellow{ background: linear-gradient(90deg, #E87E1E 0%, #F1B808 100%); }
+        .pill-yellow-blue  { background: linear-gradient(90deg, #F1B808 0%, #0072CE 100%); }
+        .pill-sky-orange   { background: linear-gradient(90deg, #52C1E4 0%, #E87E1E 100%); }
+        .pill-blue-orange  { background: linear-gradient(90deg, #0072CE 0%, #E87E1E 100%); }
+        .pill-orange-blue  { background: linear-gradient(90deg, #E87E1E 0%, #0072CE 100%); }
+        .pill-yellow-sky   { background: linear-gradient(90deg, #F1B808 0%, #52C1E4 100%); }
+        .pill-sky-blue     { background: linear-gradient(90deg, #52C1E4 0%, #0072CE 100%); }
 
         .testim-heading {
             font-family: var(--font-display);
@@ -1242,7 +1238,564 @@
         </div>
     </section>
 
-    <!-- Section 1: Meet Our Team & Professional Collaboration -->
+    <!-- Section 1: Our Implementation Methodology -->
+    <section id="methodology" class="content-section">
+        <div class="container">
+            <div class="section-header-block">
+                <h2 data-i18n="meth_title">Our Methodology</h2>
+                <p data-i18n="meth_desc">Our proven 4-stage process to evaluate, optimize, document, and lock in operational accuracy across your entire organization.</p>
+            </div>
+
+            <!-- Methodology Card with Winding Ribbon Graphic -->
+            <div class="methodology-card">
+                <div class="methodology-image-wrap">
+                    <img src="assets/methodology-framework.jpg" alt="Structured Control Design Framework Winding Ribbon Roadmap" width="1344" height="788" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Client & Colleague Testimonials Carousel (What Colleagues & Clients Say) -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="testimonials-header-flex">
+                <div class="testimonials-header-text">
+                    <div class="testimonials-kicker-pill">
+                        <span>★</span>
+                        <span data-i18n="testim_kicker">VERIFIED PROFESSIONAL ENDORSEMENTS</span>
+                    </div>
+                    <h2 data-i18n="testim_title">What Colleagues &amp; Clients Say</h2>
+                    <p data-i18n="testim_desc">Real recommendations from Deloitte partners, multinational financial controllers, and cross-border leaders who have worked alongside Karla De La Mora.</p>
+                </div>
+                <div class="carousel-nav-controls">
+                    <button type="button" class="carousel-nav-btn" id="testimPrevBtn" aria-label="Previous Testimonials" title="Scroll Left">‹</button>
+                    <button type="button" class="carousel-nav-btn" id="testimNextBtn" aria-label="Next Testimonials" title="Scroll Right">›</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Outer Viewport -->
+        <div class="testimonials-carousel-wrapper" id="testimonialsWrapper">
+            <div class="testimonials-track-container" id="testimonialsTrackContainer">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- ================= SET 1 (Palette: Azul Nuevo, Naranja, Amarillo, Azul Cielo) ================= -->
+                    <!-- Card 1: Mario Morales -->
+                    <div class="testim-card accent-blue">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-blue-sky"></div>
+                            <h3 class="testim-heading" data-i18n="t_card1_title">Top Maquiladora CPA!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card1_quote">"Karla de la Mora is one of most proficient CPAs in the maquiladora industry at both side of the border! Congratulations!"</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0072CE;">MM</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Mario Morales</div>
+                                <div class="testim-role" data-i18n="t_card1_role">Cross-Border Industry Leader</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Roberto Arriaga -->
+                    <div class="testim-card accent-orange">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-orange-yellow"></div>
+                            <h3 class="testim-heading" data-i18n="t_card2_title">Exceptional Leadership!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card2_quote">"Karla always shows high capabilities in Audit techniques, US GAAP and tax compliance. She contributed major improvements from an internal control standpoint."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #E87E1E;">RA</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Roberto Arriaga</div>
+                                <div class="testim-role" data-i18n="t_card2_role">Financial Controller, Kimberly-Clark</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Blanca María Montaño Rique -->
+                    <div class="testim-card accent-yellow">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-yellow-blue"></div>
+                            <h3 class="testim-heading" data-i18n="t_card3_title">Highly Recommended!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card3_quote">"Karla is a great professional, teammate, goal oriented, and above all, focused on the client and on bringing her expertise to getting the job done!"</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #D97706;">BM</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Blanca María Montaño Rique</div>
+                                <div class="testim-role" data-i18n="t_card3_role">Tax Partner | US-MX Advisor</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Rosa Hedges (Saucedo) -->
+                    <div class="testim-card accent-sky">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-sky-orange"></div>
+                            <h3 class="testim-heading" data-i18n="t_card4_title">Smart Problem Solver!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card4_quote">"She is a smart problem solver, organized, diligent and fast learner. Her great sense of humor and people skills make her easy to work with!"</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0284C7;">RH</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Rosa Hedges (Saucedo)</div>
+                                <div class="testim-role" data-i18n="t_card4_role">Financial Controller</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Marco Diaz -->
+                    <div class="testim-card accent-blue">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-blue-orange"></div>
+                            <h3 class="testim-heading" data-i18n="t_card5_title">Commitment &amp; Vision!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card5_quote">"Karla is a great professional. We collaborated for about ten years and she always demonstrated her commitment and dedication in the projects she was involved. She has the ability to connect with people."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0072CE;">MD</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Marco Diaz</div>
+                                <div class="testim-role" data-i18n="t_card5_role">Tax Partner at Deloitte México</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Kenia Albarran -->
+                    <div class="testim-card accent-orange">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-orange-blue"></div>
+                            <h3 class="testim-heading" data-i18n="t_card6_title">Audit Rigor &amp; Leadership!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card6_quote">"Karla has a strong professional background in audit-accounting for multinational organizations. With problem solving and team leadership skills, always willing to take new opportunities."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #E87E1E;">KA</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Kenia Albarran</div>
+                                <div class="testim-role" data-i18n="t_card6_role">Brand &amp; Marketing Manager, Deloitte México</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Sr. Martín Guillermo Manrique Gómez -->
+                    <div class="testim-card accent-yellow">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-yellow-sky"></div>
+                            <h3 class="testim-heading" data-i18n="t_card7_title">Tenacity &amp; Goal Achievement!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card7_quote">"Karla es una profesional muy tenaz, mesurada en el establecimiento de sus objetivos profesionales. No establece una meta como un propósito, establece una meta para cumplirla. En la parte humana es una gran persona."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #D97706;">MM</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Sr. Martín G. Manrique Gómez</div>
+                                <div class="testim-role" data-i18n="t_card7_role">Retired Audit Partner, Deloitte México</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Hector Silva -->
+                    <div class="testim-card accent-sky">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-sky-blue"></div>
+                            <h3 class="testim-heading" data-i18n="t_card8_title">Enthusiastic &amp; Client-Focused!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card8_quote">"As a former tax partner at Deloitte, I met Karla on several client assignments. She stood out for her enthusiastic work, desire to finish the job in the best way, and genuine desire to assist in solving problems."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0284C7;">HS</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Hector Silva</div>
+                                <div class="testim-role" data-i18n="t_card8_role">CPC &amp; Tax Partner at Deloitte</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 9: Claudia Beltrán -->
+                    <div class="testim-card accent-blue">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-blue-sky"></div>
+                            <h3 class="testim-heading" data-i18n="t_card9_title">Exceeding Expectations!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card9_quote">"Karla is such a great professional and committed auditor, always working with her team to meet and mostly exceed client expectations. Great communication skills to understand needs. Hard working and ETHICAL."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0072CE;">CB</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Claudia Beltrán</div>
+                                <div class="testim-role" data-i18n="t_card9_role">Audit Executive, Deloitte</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 10: Karina Cortés -->
+                    <div class="testim-card accent-orange">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-orange-yellow"></div>
+                            <h3 class="testim-heading" data-i18n="t_card10_title">Inspiring Professionalism!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card10_quote">"Tuve la oportunidad de laborar 5 años con Karla. Su profesionalismo y entrega laboral inspiran. Mujer inteligente y perseverante. Challenge her and she'll eat the world!"</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #E87E1E;">KC</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Karina Cortés</div>
+                                <div class="testim-role" data-i18n="t_card10_role">Business Intelligence, Pasteurizadora Jersey</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 11: Josafat Vázquez -->
+                    <div class="testim-card accent-yellow">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-yellow-blue"></div>
+                            <h3 class="testim-heading" data-i18n="t_card11_title">Proactive &amp; Solution-Oriented!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card11_quote">"Karla siempre se mostró súper profesional y con mucha energía en sus labores, siempre con alguna solución a los problemas que se enfrentaban en la compañía. La recomiendo ampliamente."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #D97706;">JV</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Josafat Vázquez</div>
+                                <div class="testim-role" data-i18n="t_card11_role">Senior Finance Manager</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 12: Salvador Acevedo Pinto -->
+                    <div class="testim-card accent-sky">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-sky-orange"></div>
+                            <h3 class="testim-heading" data-i18n="t_card12_title">Results &amp; Relationship Builder!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card12_quote">"Karla es una gran profesional, tuve la fortuna de trabajar con ella en Deloitte, donde comprobé que es una profesional sobresaliente, orientada a resultados y con gran capacidad de construir relaciones."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0284C7;">SA</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Salvador Acevedo Pinto</div>
+                                <div class="testim-role" data-i18n="t_card12_role">Corporate Internal Audit Manager</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 13: Claudia Sierra -->
+                    <div class="testim-card accent-blue">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-blue-orange"></div>
+                            <h3 class="testim-heading" data-i18n="t_card13_title">Customer-Oriented &amp; Capable!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card13_quote">"Karla is a very capable and professional person. She's always trying to meet customer expectations and is exceptionally result oriented."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0072CE;">CS</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Claudia Sierra</div>
+                                <div class="testim-role" data-i18n="t_card13_role">Accountant, Ibáñez Soltero Gómez Paz y Monroy</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 14: Eliseo Bravo -->
+                    <div class="testim-card accent-orange">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-orange-yellow"></div>
+                            <h3 class="testim-heading" data-i18n="t_card14_title">Friendly &amp; Professional Auditing!</h3>
+                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card14_quote">"I had the pleasure of working with Karla for several years while she led our company's audits. I can attest to her professionalism and willingness to work as a team, always focused on achieving good results. Auditors like Karla bring a friendly and approachable side to the auditing profession."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #E87E1E;">EB</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Eliseo Bravo</div>
+                                <div class="testim-role" data-i18n="t_card14_role">Finance, Tax &amp; Controlling | IMMEX-Maquiladora</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= SET 2 (Cloned for Infinite Smooth Loop) ================= -->
+                    <!-- Card 1 Clone -->
+                    <div class="testim-card accent-blue" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-blue-sky"></div>
+                            <h3 class="testim-heading" data-i18n="t_card1_title">Top Maquiladora CPA!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card1_quote">"Karla de la Mora is one of most proficient CPAs in the maquiladora industry at both side of the border! Congratulations!"</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0072CE;">MM</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Mario Morales</div>
+                                <div class="testim-role" data-i18n="t_card1_role">Cross-Border Industry Leader</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 Clone -->
+                    <div class="testim-card accent-orange" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-orange-yellow"></div>
+                            <h3 class="testim-heading" data-i18n="t_card2_title">Exceptional Leadership!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card2_quote">"Karla always shows high capabilities in Audit techniques, US GAAP and tax compliance. She contributed major improvements from an internal control standpoint."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #E87E1E;">RA</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Roberto Arriaga</div>
+                                <div class="testim-role" data-i18n="t_card2_role">Financial Controller, Kimberly-Clark</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 Clone -->
+                    <div class="testim-card accent-yellow" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-yellow-blue"></div>
+                            <h3 class="testim-heading" data-i18n="t_card3_title">Highly Recommended!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card3_quote">"Karla is a great professional, teammate, goal oriented, and above all, focused on the client and on bringing her expertise to getting the job done!"</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #D97706;">BM</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Blanca María Montaño Rique</div>
+                                <div class="testim-role" data-i18n="t_card3_role">Tax Partner | US-MX Advisor</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 Clone -->
+                    <div class="testim-card accent-sky" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-sky-orange"></div>
+                            <h3 class="testim-heading" data-i18n="t_card4_title">Smart Problem Solver!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card4_quote">"She is a smart problem solver, organized, diligent and fast learner. Her great sense of humor and people skills make her easy to work with!"</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0284C7;">RH</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Rosa Hedges (Saucedo)</div>
+                                <div class="testim-role" data-i18n="t_card4_role">Financial Controller</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 Clone -->
+                    <div class="testim-card accent-blue" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-blue-orange"></div>
+                            <h3 class="testim-heading" data-i18n="t_card5_title">Commitment &amp; Vision!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card5_quote">"Karla is a great professional. We collaborated for about ten years and she always demonstrated her commitment and dedication in the projects she was involved. She has the ability to connect with people."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0072CE;">MD</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Marco Diaz</div>
+                                <div class="testim-role" data-i18n="t_card5_role">Tax Partner at Deloitte México</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 Clone -->
+                    <div class="testim-card accent-orange" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-orange-blue"></div>
+                            <h3 class="testim-heading" data-i18n="t_card6_title">Audit Rigor &amp; Leadership!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card6_quote">"Karla has a strong professional background in audit-accounting for multinational organizations. With problem solving and team leadership skills, always willing to take new opportunities."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #E87E1E;">KA</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Kenia Albarran</div>
+                                <div class="testim-role" data-i18n="t_card6_role">Brand &amp; Marketing Manager, Deloitte México</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 Clone -->
+                    <div class="testim-card accent-yellow" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-yellow-sky"></div>
+                            <h3 class="testim-heading" data-i18n="t_card7_title">Tenacity &amp; Goal Achievement!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card7_quote">"Karla es una profesional muy tenaz, mesurada en el establecimiento de sus objetivos profesionales. No establece una meta como un propósito, establece una meta para cumplirla. En la parte humana es una gran persona."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #D97706;">MM</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Sr. Martín G. Manrique Gómez</div>
+                                <div class="testim-role" data-i18n="t_card7_role">Retired Audit Partner, Deloitte México</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 Clone -->
+                    <div class="testim-card accent-sky" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-sky-blue"></div>
+                            <h3 class="testim-heading" data-i18n="t_card8_title">Enthusiastic &amp; Client-Focused!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card8_quote">"As a former tax partner at Deloitte, I met Karla on several client assignments. She stood out for her enthusiastic work, desire to finish the job in the best way, and genuine desire to assist in solving problems."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0284C7;">HS</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Hector Silva</div>
+                                <div class="testim-role" data-i18n="t_card8_role">CPC &amp; Tax Partner at Deloitte</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 Clone -->
+                    <div class="testim-card accent-blue" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-blue-sky"></div>
+                            <h3 class="testim-heading" data-i18n="t_card9_title">Exceeding Expectations!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card9_quote">"Karla is such a great professional and committed auditor, always working with her team to meet and mostly exceed client expectations. Great communication skills to understand needs. Hard working and ETHICAL."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0072CE;">CB</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Claudia Beltrán</div>
+                                <div class="testim-role" data-i18n="t_card9_role">Audit Executive, Deloitte</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 10 Clone -->
+                    <div class="testim-card accent-orange" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-orange-yellow"></div>
+                            <h3 class="testim-heading" data-i18n="t_card10_title">Inspiring Professionalism!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card10_quote">"Tuve la oportunidad de laborar 5 años con Karla. Su profesionalismo y entrega laboral inspiran. Mujer inteligente y perseverante. Challenge her and she'll eat the world!"</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #E87E1E;">KC</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Karina Cortés</div>
+                                <div class="testim-role" data-i18n="t_card10_role">Business Intelligence, Pasteurizadora Jersey</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 11 Clone -->
+                    <div class="testim-card accent-yellow" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-yellow-blue"></div>
+                            <h3 class="testim-heading" data-i18n="t_card11_title">Proactive &amp; Solution-Oriented!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card11_quote">"Karla siempre se mostró súper profesional y con mucha energía en sus labores, siempre con alguna solución a los problemas que se enfrentaban en la compañía. La recomiendo ampliamente."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #D97706;">JV</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Josafat Vázquez</div>
+                                <div class="testim-role" data-i18n="t_card11_role">Senior Finance Manager</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 12 Clone -->
+                    <div class="testim-card accent-sky" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-sky-orange"></div>
+                            <h3 class="testim-heading" data-i18n="t_card12_title">Results &amp; Relationship Builder!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card12_quote">"Karla es una gran profesional, tuve la fortuna de trabajar con ella en Deloitte, donde comprobé que es una profesional sobresaliente, orientada a resultados y con gran capacidad de construir relaciones."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0284C7;">SA</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Salvador Acevedo Pinto</div>
+                                <div class="testim-role" data-i18n="t_card12_role">Corporate Internal Audit Manager</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 13 Clone -->
+                    <div class="testim-card accent-blue" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-blue-orange"></div>
+                            <h3 class="testim-heading" data-i18n="t_card13_title">Customer-Oriented &amp; Capable!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card13_quote">"Karla is a very capable and professional person. She's always trying to meet customer expectations and is exceptionally result oriented."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #0072CE;">CS</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Claudia Sierra</div>
+                                <div class="testim-role" data-i18n="t_card13_role">Accountant, Ibáñez Soltero Gómez Paz y Monroy</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 14 Clone -->
+                    <div class="testim-card accent-orange" aria-hidden="true">
+                        <div class="testim-card-header">
+                            <div class="testim-pill-bar pill-orange-yellow"></div>
+                            <h3 class="testim-heading" data-i18n="t_card14_title">Friendly &amp; Professional Auditing!</h3>
+                            <div class="testim-stars">★★★★★</div>
+                        </div>
+                        <p class="testim-quote" data-i18n="t_card14_quote">"I had the pleasure of working with Karla for several years while she led our company's audits. I can attest to her professionalism and willingness to work as a team, always focused on achieving good results. Auditors like Karla bring a friendly and approachable side to the auditing profession."</p>
+                        <div class="testim-author">
+                            <div class="testim-avatar" style="background: #E87E1E;">EB</div>
+                            <div class="testim-meta">
+                                <div class="testim-name">Eliseo Bravo</div>
+                                <div class="testim-role" data-i18n="t_card14_role">Finance, Tax &amp; Controlling | IMMEX-Maquiladora</div>
+                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="testim-hint-pause">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7;"><circle cx="12" cy="12" r="10"></circle><line x1="10" y1="15" x2="10" y2="9"></line><line x1="14" y1="15" x2="14" y2="9"></line></svg>
+                <span data-i18n="testim_hint">Hover or tap cards to pause scrolling • Use arrows to browse</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Meet Our Team & Professional Collaboration -->
     <section id="team" class="content-section">
         <div class="container">
             <div class="section-header-block">
@@ -1289,527 +1842,6 @@
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <!-- Section 2: Client & Colleague Testimonials Carousel (Moving Right to Left) -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <div class="testimonials-header-flex">
-                <div class="testimonials-header-text">
-                    <div class="testimonials-kicker-pill">
-                        <span>★</span>
-                        <span data-i18n="testim_kicker">VERIFIED PROFESSIONAL ENDORSEMENTS</span>
-                    </div>
-                    <h2 data-i18n="testim_title">What Colleagues &amp; Clients Say</h2>
-                    <p data-i18n="testim_desc">Real recommendations from Deloitte partners, multinational financial controllers, and cross-border leaders who have worked alongside Karla De La Mora.</p>
-                </div>
-                <div class="carousel-nav-controls">
-                    <button type="button" class="carousel-nav-btn" id="testimPrevBtn" aria-label="Previous Testimonials" title="Scroll Left">‹</button>
-                    <button type="button" class="carousel-nav-btn" id="testimNextBtn" aria-label="Next Testimonials" title="Scroll Right">›</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Carousel Outer Viewport -->
-        <div class="testimonials-carousel-wrapper" id="testimonialsWrapper">
-            <div class="testimonials-track-container" id="testimonialsTrackContainer">
-                <div class="testimonials-track" id="testimonialsTrack">
-                    <!-- ================= SET 1 ================= -->
-                    <!-- Card 1: Mario Morales -->
-                    <div class="testim-card accent-blue">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-orange-blue"></div>
-                            <h3 class="testim-heading" data-i18n="t_card1_title">Top Maquiladora CPA!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card1_quote">"Karla de la Mora is one of most proficient CPAs in the maquiladora industry at both side of the border! Congratulations!"</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #0072CE;">MM</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Mario Morales</div>
-                                <div class="testim-role" data-i18n="t_card1_role">Cross-Border Industry Leader</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Roberto Arriaga -->
-                    <div class="testim-card accent-orange">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-blue-orange"></div>
-                            <h3 class="testim-heading" data-i18n="t_card2_title">Exceptional Leadership!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card2_quote">"Karla always shows high capabilities in Audit techniques, US GAAP and tax compliance. She contributed major improvements from an internal control standpoint."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #EA580C;">RA</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Roberto Arriaga</div>
-                                <div class="testim-role" data-i18n="t_card2_role">Financial Controller, Kimberly-Clark</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Blanca María Montaño Rique -->
-                    <div class="testim-card accent-amber">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-cyan-amber"></div>
-                            <h3 class="testim-heading" data-i18n="t_card3_title">Highly Recommended!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card3_quote">"Karla is a great professional, teammate, goal oriented, and above all, focused on the client and on bringing her expertise to getting the job done!"</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #D97706;">BM</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Blanca María Montaño Rique</div>
-                                <div class="testim-role" data-i18n="t_card3_role">Tax Partner | US-MX Advisor</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4: Rosa Hedges (Saucedo) -->
-                    <div class="testim-card accent-navy">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-cyan-navy"></div>
-                            <h3 class="testim-heading" data-i18n="t_card4_title">Smart Problem Solver!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card4_quote">"She is a smart problem solver, organized, diligent and fast learner. Her great sense of humor and people skills make her easy to work with!"</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #0B2545;">RH</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Rosa Hedges (Saucedo)</div>
-                                <div class="testim-role" data-i18n="t_card4_role">Financial Controller</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 5: Marco Diaz -->
-                    <div class="testim-card accent-emerald">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-emerald-cyan"></div>
-                            <h3 class="testim-heading" data-i18n="t_card5_title">Commitment &amp; Vision!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card5_quote">"Karla is a great professional. We collaborated for about ten years and she always demonstrated her commitment and dedication in the projects she was involved. She has the ability to connect with people."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #059669;">MD</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Marco Diaz</div>
-                                <div class="testim-role" data-i18n="t_card5_role">Tax Partner at Deloitte México</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 6: Kenia Albarran -->
-                    <div class="testim-card accent-purple">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-purple-amber"></div>
-                            <h3 class="testim-heading" data-i18n="t_card6_title">Audit Rigor &amp; Leadership!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card6_quote">"Karla has a strong professional background in audit-accounting for multinational organizations. With problem solving and team leadership skills, always willing to take new opportunities."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #7C3AED;">KA</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Kenia Albarran</div>
-                                <div class="testim-role" data-i18n="t_card6_role">Brand &amp; Marketing Manager, Deloitte México</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 7: Sr. Martín Guillermo Manrique Gómez -->
-                    <div class="testim-card accent-navy">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-orange-blue"></div>
-                            <h3 class="testim-heading" data-i18n="t_card7_title">Tenacity &amp; Goal Achievement!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card7_quote">"Karla es una profesional muy tenaz, mesurada en el establecimiento de sus objetivos profesionales. No establece una meta como un propósito, establece una meta para cumplirla. En la parte humana es una gran persona."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #1E3A8A;">MM</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Sr. Martín G. Manrique Gómez</div>
-                                <div class="testim-role" data-i18n="t_card7_role">Retired Audit Partner, Deloitte México</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 8: Hector Silva -->
-                    <div class="testim-card accent-indigo">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-blue-orange"></div>
-                            <h3 class="testim-heading" data-i18n="t_card8_title">Enthusiastic &amp; Client-Focused!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card8_quote">"As a former tax partner at Deloitte, I met Karla on several client assignments. She stood out for her enthusiastic work, desire to finish the job in the best way, and genuine desire to assist in solving problems."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #4F46E5;">HS</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Hector Silva</div>
-                                <div class="testim-role" data-i18n="t_card8_role">CPC &amp; Tax Partner at Deloitte</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 9: Claudia Beltrán -->
-                    <div class="testim-card accent-teal">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-teal-blue"></div>
-                            <h3 class="testim-heading" data-i18n="t_card9_title">Exceeding Expectations!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card9_quote">"Karla is such a great professional and committed auditor, always working with her team to meet and mostly exceed client expectations. Great communication skills to understand needs. Hard working and ETHICAL."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #0D9488;">CB</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Claudia Beltrán</div>
-                                <div class="testim-role" data-i18n="t_card9_role">Audit Executive, Deloitte</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 10: Karina Cortés -->
-                    <div class="testim-card accent-orange">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-rose-orange"></div>
-                            <h3 class="testim-heading" data-i18n="t_card10_title">Inspiring Professionalism!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card10_quote">"Tuve la oportunidad de laborar 5 años con Karla. Su profesionalismo y entrega laboral inspiran. Mujer inteligente y perseverante. Challenge her and she'll eat the world!"</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #E11D48;">KC</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Karina Cortés</div>
-                                <div class="testim-role" data-i18n="t_card10_role">Business Intelligence, Pasteurizadora Jersey</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 11: Josafat Vázquez -->
-                    <div class="testim-card accent-amber">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-cyan-amber"></div>
-                            <h3 class="testim-heading" data-i18n="t_card11_title">Proactive &amp; Solution-Oriented!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card11_quote">"Karla siempre se mostró súper profesional y con mucha energía en sus labores, siempre con alguna solución a los problemas que se enfrentaban en la compañía. La recomiendo ampliamente."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #B45309;">JV</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Josafat Vázquez</div>
-                                <div class="testim-role" data-i18n="t_card11_role">Senior Finance Manager</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 12: Salvador Acevedo Pinto -->
-                    <div class="testim-card accent-blue">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-orange-blue"></div>
-                            <h3 class="testim-heading" data-i18n="t_card12_title">Results &amp; Relationship Builder!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card12_quote">"Karla es una gran profesional, tuve la fortuna de trabajar con ella en Deloitte, donde comprobé que es una profesional sobresaliente, orientada a resultados y con gran capacidad de construir relaciones."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #0284C7;">SA</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Salvador Acevedo Pinto</div>
-                                <div class="testim-role" data-i18n="t_card12_role">Corporate Internal Audit Manager</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 13: Claudia Sierra -->
-                    <div class="testim-card accent-emerald">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-emerald-cyan"></div>
-                            <h3 class="testim-heading" data-i18n="t_card13_title">Customer-Oriented &amp; Capable!</h3>
-                            <div class="testim-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card13_quote">"Karla is a very capable and professional person. She's always trying to meet customer expectations and is exceptionally result oriented."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #16A34A;">CS</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Claudia Sierra</div>
-                                <div class="testim-role" data-i18n="t_card13_role">Accountant, Ibáñez Soltero Gómez Paz y Monroy</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ================= SET 2 (Cloned for Infinite Smooth Loop) ================= -->
-                    <!-- Card 1 Clone -->
-                    <div class="testim-card accent-blue" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-orange-blue"></div>
-                            <h3 class="testim-heading" data-i18n="t_card1_title">Top Maquiladora CPA!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card1_quote">"Karla de la Mora is one of most proficient CPAs in the maquiladora industry at both side of the border! Congratulations!"</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #0072CE;">MM</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Mario Morales</div>
-                                <div class="testim-role" data-i18n="t_card1_role">Cross-Border Industry Leader</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 Clone -->
-                    <div class="testim-card accent-orange" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-blue-orange"></div>
-                            <h3 class="testim-heading" data-i18n="t_card2_title">Exceptional Leadership!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card2_quote">"Karla always shows high capabilities in Audit techniques, US GAAP and tax compliance. She contributed major improvements from an internal control standpoint."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #EA580C;">RA</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Roberto Arriaga</div>
-                                <div class="testim-role" data-i18n="t_card2_role">Financial Controller, Kimberly-Clark</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 Clone -->
-                    <div class="testim-card accent-amber" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-cyan-amber"></div>
-                            <h3 class="testim-heading" data-i18n="t_card3_title">Highly Recommended!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card3_quote">"Karla is a great professional, teammate, goal oriented, and above all, focused on the client and on bringing her expertise to getting the job done!"</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #D97706;">BM</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Blanca María Montaño Rique</div>
-                                <div class="testim-role" data-i18n="t_card3_role">Tax Partner | US-MX Advisor</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 Clone -->
-                    <div class="testim-card accent-navy" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-cyan-navy"></div>
-                            <h3 class="testim-heading" data-i18n="t_card4_title">Smart Problem Solver!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card4_quote">"She is a smart problem solver, organized, diligent and fast learner. Her great sense of humor and people skills make her easy to work with!"</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #0B2545;">RH</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Rosa Hedges (Saucedo)</div>
-                                <div class="testim-role" data-i18n="t_card4_role">Financial Controller</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 Clone -->
-                    <div class="testim-card accent-emerald" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-emerald-cyan"></div>
-                            <h3 class="testim-heading" data-i18n="t_card5_title">Commitment &amp; Vision!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card5_quote">"Karla is a great professional. We collaborated for about ten years and she always demonstrated her commitment and dedication in the projects she was involved. She has the ability to connect with people."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #059669;">MD</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Marco Diaz</div>
-                                <div class="testim-role" data-i18n="t_card5_role">Tax Partner at Deloitte México</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 6 Clone -->
-                    <div class="testim-card accent-purple" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-purple-amber"></div>
-                            <h3 class="testim-heading" data-i18n="t_card6_title">Audit Rigor &amp; Leadership!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card6_quote">"Karla has a strong professional background in audit-accounting for multinational organizations. With problem solving and team leadership skills, always willing to take new opportunities."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #7C3AED;">KA</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Kenia Albarran</div>
-                                <div class="testim-role" data-i18n="t_card6_role">Brand &amp; Marketing Manager, Deloitte México</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 7 Clone -->
-                    <div class="testim-card accent-navy" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-orange-blue"></div>
-                            <h3 class="testim-heading" data-i18n="t_card7_title">Tenacity &amp; Goal Achievement!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card7_quote">"Karla es una profesional muy tenaz, mesurada en el establecimiento de sus objetivos profesionales. No establece una meta como un propósito, establece una meta para cumplirla. En la parte humana es una gran persona."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #1E3A8A;">MM</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Sr. Martín G. Manrique Gómez</div>
-                                <div class="testim-role" data-i18n="t_card7_role">Retired Audit Partner, Deloitte México</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 8 Clone -->
-                    <div class="testim-card accent-indigo" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-blue-orange"></div>
-                            <h3 class="testim-heading" data-i18n="t_card8_title">Enthusiastic &amp; Client-Focused!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card8_quote">"As a former tax partner at Deloitte, I met Karla on several client assignments. She stood out for her enthusiastic work, desire to finish the job in the best way, and genuine desire to assist in solving problems."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #4F46E5;">HS</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Hector Silva</div>
-                                <div class="testim-role" data-i18n="t_card8_role">CPC &amp; Tax Partner at Deloitte</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 9 Clone -->
-                    <div class="testim-card accent-teal" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-teal-blue"></div>
-                            <h3 class="testim-heading" data-i18n="t_card9_title">Exceeding Expectations!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card9_quote">"Karla is such a great professional and committed auditor, always working with her team to meet and mostly exceed client expectations. Great communication skills to understand needs. Hard working and ETHICAL."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #0D9488;">CB</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Claudia Beltrán</div>
-                                <div class="testim-role" data-i18n="t_card9_role">Audit Executive, Deloitte</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 10 Clone -->
-                    <div class="testim-card accent-orange" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-rose-orange"></div>
-                            <h3 class="testim-heading" data-i18n="t_card10_title">Inspiring Professionalism!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card10_quote">"Tuve la oportunidad de laborar 5 años con Karla. Su profesionalismo y entrega laboral inspiran. Mujer inteligente y perseverante. Challenge her and she'll eat the world!"</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #E11D48;">KC</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Karina Cortés</div>
-                                <div class="testim-role" data-i18n="t_card10_role">Business Intelligence, Pasteurizadora Jersey</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 11 Clone -->
-                    <div class="testim-card accent-amber" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-cyan-amber"></div>
-                            <h3 class="testim-heading" data-i18n="t_card11_title">Proactive &amp; Solution-Oriented!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card11_quote">"Karla siempre se mostró súper profesional y con mucha energía en sus labores, siempre con alguna solución a los problemas que se enfrentaban en la compañía. La recomiendo ampliamente."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #B45309;">JV</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Josafat Vázquez</div>
-                                <div class="testim-role" data-i18n="t_card11_role">Senior Finance Manager</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 12 Clone -->
-                    <div class="testim-card accent-blue" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-orange-blue"></div>
-                            <h3 class="testim-heading" data-i18n="t_card12_title">Results &amp; Relationship Builder!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card12_quote">"Karla es una gran profesional, tuve la fortuna de trabajar con ella en Deloitte, donde comprobé que es una profesional sobresaliente, orientada a resultados y con gran capacidad de construir relaciones."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #0284C7;">SA</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Salvador Acevedo Pinto</div>
-                                <div class="testim-role" data-i18n="t_card12_role">Corporate Internal Audit Manager</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 13 Clone -->
-                    <div class="testim-card accent-emerald" aria-hidden="true">
-                        <div class="testim-card-header">
-                            <div class="testim-pill-bar pill-emerald-cyan"></div>
-                            <h3 class="testim-heading" data-i18n="t_card13_title">Customer-Oriented &amp; Capable!</h3>
-                            <div class="testim-stars">★★★★★</div>
-                        </div>
-                        <p class="testim-quote" data-i18n="t_card13_quote">"Karla is a very capable and professional person. She's always trying to meet customer expectations and is exceptionally result oriented."</p>
-                        <div class="testim-author">
-                            <div class="testim-avatar" style="background: #16A34A;">CS</div>
-                            <div class="testim-meta">
-                                <div class="testim-name">Claudia Sierra</div>
-                                <div class="testim-role" data-i18n="t_card13_role">Accountant, Ibáñez Soltero Gómez Paz y Monroy</div>
-                                <div class="testim-linkedin-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span data-i18n="verified_rec">Verified Recommendation</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="testim-hint-pause">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7;"><circle cx="12" cy="12" r="10"></circle><line x1="10" y1="15" x2="10" y2="9"></line><line x1="14" y1="15" x2="14" y2="9"></line></svg>
-                <span data-i18n="testim_hint">Hover or tap cards to pause scrolling • Use arrows to browse</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 3: Our Implementation Methodology -->
-    <section id="methodology" class="content-section">
-        <div class="container">
-            <div class="section-header-block">
-                <h2 data-i18n="meth_title">Our Methodology</h2>
-                <p data-i18n="meth_desc">Our proven 4-stage process to evaluate, optimize, document, and lock in operational accuracy across your entire organization.</p>
-            </div>
-
-            <!-- Methodology Card with Winding Ribbon Graphic -->
-            <div class="methodology-card">
-                <div class="methodology-image-wrap">
-                    <img src="assets/methodology-framework.jpg" alt="Structured Control Design Framework Winding Ribbon Roadmap" width="1344" height="788" loading="lazy" decoding="async">
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1965,6 +1997,9 @@
                 t_card13_title: "Customer-Oriented &amp; Capable!",
                 t_card13_quote: "\"Karla is a very capable and professional person. She is always striving to meet customer expectations and is exceptionally result oriented.\"",
                 t_card13_role: "Accountant, Ibáñez Soltero Gómez Paz y Monroy",
+                t_card14_title: "Friendly &amp; Professional Auditing!",
+                t_card14_quote: "\"I had the pleasure of working with Karla for several years while she led our company's audits. I can attest to her professionalism and willingness to work as a team, always focused on achieving good results. Auditors like Karla bring a friendly and approachable side to the auditing profession.\"",
+                t_card14_role: "Finance, Tax &amp; Controlling | IMMEX-Maquiladora",
                 footer_services_title: "Core Services",
                 f_link_1: "Monthly Bookkeeping",
                 f_link_2: "Books Catch & Clean-Up",
@@ -2074,6 +2109,9 @@
                 t_card13_title: "¡Capacidad y Enfoque al Cliente!",
                 t_card13_quote: "\"Karla es una persona muy capaz y profesional. Siempre está buscando cumplir las expectativas del cliente y está altamente orientada a resultados.\"",
                 t_card13_role: "Contadora, Ibáñez Soltero Gómez Paz y Monroy",
+                t_card14_title: "¡Profesionalismo y Calidez en Auditoría!",
+                t_card14_quote: "\"Tuve el gusto de trabajar con Karla durante varios años mientras lideró las auditorías de nuestra empresa. Doy fe de su profesionalismo y disposición para trabajar en equipo, siempre enfocada en lograr buenos resultados. Auditoras como Karla le dan un lado cercano y humano a la profesión contable.\"",
+                t_card14_role: "Finanzas, Impuestos y Contraloría | IMMEX-Maquiladora",
                 footer_services_title: "Servicios Principales",
                 f_link_1: "Contabilidad Mensual",
                 f_link_2: "Puesta al Día y Regularización",
