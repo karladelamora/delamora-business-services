@@ -2754,6 +2754,21 @@
             height: 18px;
         }
 
+        /* Calendly inline booking calendar */
+        .calendly-embed {
+            margin-top: 3.5rem;
+        }
+
+        .calendly-embed h3 {
+            font-family: var(--font-display);
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
         /* Footer */
         footer {
             background: #FFFFFF;
@@ -2977,6 +2992,7 @@
 
             .contact-container { grid-template-columns: 1fr; gap: 2.5rem; }
             .contact-form-card { padding: 2rem 1.35rem; }
+            .calendly-embed h3 { font-size: 1.35rem; }
             .form-row { grid-template-columns: 1fr; }
             .services-selection-grid { grid-template-columns: 1fr; }
             .form-control { font-size: 16px !important; min-height: 48px; } /* Prevents iOS auto-zoom */
@@ -3743,8 +3759,7 @@
                     <p data-i18n="contact_desc_3">
                         Let's discuss your goals and find the right support to help your business move forward.
                     </p>
-                    <a href="#leadForm" class="btn btn-primary" style="background: linear-gradient(135deg, #FF7A00, #E87E1E); box-shadow: 0 4px 16px rgba(232, 126, 30, 0.35); margin-bottom: 0.75rem;" data-i18n="contact_cta">Schedule Your Free Consultation</a>
-                    <a href="https://calendly.com/karla-delamora/30min" target="_blank" rel="noopener" class="btn btn-secondary" style="display: flex; width: fit-content; margin-bottom: 2rem;" data-i18n="contact_calendly">Or book a time directly on my calendar</a>
+                    <a href="#leadForm" class="btn btn-primary" style="background: linear-gradient(135deg, #FF7A00, #E87E1E); box-shadow: 0 4px 16px rgba(232, 126, 30, 0.35); margin-bottom: 2rem;" data-i18n="contact_cta">Schedule Your Free Consultation</a>
 
                     <div class="contact-direct-cards">
                         <a href="tel:6198005102" class="contact-direct-item" aria-label="Call (619) 800-5102" title="Call (619) 800-5102">
@@ -3863,6 +3878,13 @@
                     </form>
                     <div id="formFeedback" style="display:none; margin-top: 1.25rem; padding: 1.25rem; border-radius: 12px; font-size: 0.95rem; text-align: center; line-height: 1.5;"></div>
                 </div>
+            </div>
+
+            <!-- Calendly inline booking calendar -->
+            <div class="calendly-embed">
+                <h3 data-i18n="contact_calendly">Or book a time directly on my calendar</h3>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/karla-delamora/30min" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
         </div>
     </section>
